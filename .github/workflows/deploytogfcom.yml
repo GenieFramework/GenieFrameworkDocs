@@ -27,13 +27,15 @@ jobs:
     - name: Checkout Docs Repo
       uses: actions/checkout@v2
       with:
-        repository: GenieFramework/GenieFramework.com.git   # Replace with your target repository
+        repository: PGimenez/geniesite   # Replace with your target repository
         path: gfcom
+        ref: main
+        token: ${{secrets.PAT}}
 
     - name: Copy Build Output to Docs Repo
       run: |
         rm -rf gfcom/docs/*
-        cp -r .output/public/* gfcom/docs/
+        cp -r public/* gfcom/docs/
 
     - name: Push to Docs Repo
       run: |
@@ -43,3 +45,5 @@ jobs:
         git add .
         git commit -m "Update docs with new build"
         git push
+      env:
+        GH_TOKEN: ${{secrets.PAT}}
