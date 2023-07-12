@@ -3,7 +3,7 @@ export default defineAppConfig({
     title: 'Genie Cloud Resource Hub',
     description: '',
     layout: '',
-    image: '/meta.png',
+    image: '/assets/meta.png',
     url: '',
     debug: false,
     socials: {
