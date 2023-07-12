@@ -13,6 +13,7 @@ jobs:
       with:
         repository: GenieFramework/GenieFramework.com   # Replace with your target repository
         path: gfcom
+        ref: main
 
     - name: Copy Build Output to Docs Repo
       run: |
