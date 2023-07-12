@@ -1,0 +1,45 @@
+name: Build and Push to gf.com
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '19'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Checkout Docs Repo
+      uses: actions/checkout@v2
+      with:
+        repository: GenieFramework/GenieFramework.com   # Replace with your target repository
+        path: gfsite
+
+    - name: Copy Build Output to Docs Repo
+      run: |
+        rm -rf gfsite/docs/*
+        cp -r .output/public/* gfsite/docs/
+
+    - name: Push to Docs Repo
+      run: |
+        cd repo
+        git config user.name "PGimenez"
+        git config user.email "gimenezfebrer@gmail.com"
+        git add .
+        git commit -m "Update docs with new build"
+        git push
