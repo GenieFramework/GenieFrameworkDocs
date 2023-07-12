@@ -11,7 +11,7 @@ jobs:
     - name: Checkout Docs Repo
       uses: actions/checkout@v2
       with:
-        repository: https://github.com/GenieFramework/GenieFramework.com.git   # Replace with your target repository
+        repository: GenieFramework/GenieFramework.com   # Replace with your target repository
         path: gfcom
 
     - name: Copy Build Output to Docs Repo
