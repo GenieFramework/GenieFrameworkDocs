@@ -11,7 +11,7 @@ jobs:
     - name: Checkout Docs Repo
       uses: actions/checkout@v2
       with:
-        repository: GenieFramework/GenieFramework.com   # Replace with your target repository
+        repository: PGimenez/geniesite   # Replace with your target repository
         path: gfcom
         ref: main
 
