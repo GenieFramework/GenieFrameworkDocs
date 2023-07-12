@@ -21,9 +21,6 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Build
-      run: npm run build
-
     - name: Checkout Docs Repo
       uses: actions/checkout@v2
       with:
@@ -31,6 +28,10 @@ jobs:
         path: gfcom
         ref: main
         token: ${{secrets.PAT}}
+
+    - name: Build
+      run: npm run build
+
 
     - name: Copy Build Output to Docs Repo
       run: |
