@@ -35,7 +35,8 @@ jobs:
     - name: Copy Build Output to Docs Repo
       run: |
         rm -rf gfcom/docs/*
-        cp -r public/* gfcom/docs/
+        cp -r .output/public/* gfcom/docs/
+        cp -r gfcom/docs/assets/* gfcom/assets/
 
     - name: Push to Docs Repo
       run: |
