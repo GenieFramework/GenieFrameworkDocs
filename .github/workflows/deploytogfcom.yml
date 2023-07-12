@@ -27,17 +27,17 @@ jobs:
     - name: Checkout Docs Repo
       uses: actions/checkout@v2
       with:
-        repository: GenieFramework/GenieFramework.com   # Replace with your target repository
-        path: gfsite
+        repository: GenieFramework/GenieFramework.com.git   # Replace with your target repository
+        path: gfcom
 
     - name: Copy Build Output to Docs Repo
       run: |
-        rm -rf gfsite/docs/*
-        cp -r .output/public/* gfsite/docs/
+        rm -rf gfcom/docs/*
+        cp -r .output/public/* gfcom/docs/
 
     - name: Push to Docs Repo
       run: |
-        cd repo
+        cd gfcom
         git config user.name "PGimenez"
         git config user.email "gimenezfebrer@gmail.com"
         git add .

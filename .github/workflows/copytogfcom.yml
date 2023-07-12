@@ -1,0 +1,23 @@
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Copy Build Output to Docs Repo
+      run: |
+        rm -rf gfcom/docs/*
+        cp -r .output/public/* gfcom/docs/
+
+    - name: Push to Docs Repo
+      run: |
+        cd gfcom
+        git config user.name "PGimenez"
+        git config user.email "gimenezfebrer@gmail.com"
+        git add .
+        git commit -m "Update docs with new build"
+        git push
