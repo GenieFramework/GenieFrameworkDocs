@@ -17,13 +17,13 @@ export default defineNuxtConfig({
         baseURL: '/docs/'
     },
       build: {
-    publicPath: 'https://cdn.nuxtjs.org'
+    publicPath: 'https://genieframework.com/docs/'
   },
     ogImage: {
         defaults: {
             component: 'OgImage',
         },
-        host: 'https://learn.geniecloud.io',
+        host: 'https://genieframework.com/docs',
 
     },
     nitro: {
@@ -48,8 +48,8 @@ export default defineNuxtConfig({
         },
     },
     github: {
-        owner: "PGimenez",
-        repo: "geniedocssite",
+        owner: "GenieFramework",
+        repo: "genieframeworkdocs",
         branch: "main",
         edit: true,
     },

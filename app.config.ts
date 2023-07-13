@@ -1,6 +1,6 @@
 export default defineAppConfig({
   docus: {
-    title: 'Genie Cloud Resource Hub',
+    title: 'Genie Framework Documentation',
     description: '',
     layout: '',
     image: '/assets/meta.png',
@@ -12,8 +12,8 @@ export default defineAppConfig({
     },
     github: {
       root: 'content',
-    owner: "PGimenez",
-    repo: "geniedocssite",
+    owner: "GenieFramework",
+    repo: "genieframeworkdocs",
     branch: "main",
       edit: false,
       releases: true
