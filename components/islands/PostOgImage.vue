@@ -25,7 +25,7 @@ const initialStyles = {
             <p :style="{ fontSize: '35px', lineHeight: '1.5em' }" class="" v-html="description"></p>
         </div>
         <div class="flex items-center flex-row absolute left-25 top-20" :style="{ width: '1000px', left: '85px' }">
-            <img src="/assets/genie-cloud.svg" width="160" height="65" class="rounded-xl mr-5">
+            <img src="/assets/genie-framework-logo.svg" width="160" height="65" class="rounded-xl mr-5">
         </div>
     </div>
 </template>
