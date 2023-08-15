@@ -1,6 +1,6 @@
 export default defineAppConfig({
   docus: {
-    title: 'Genie Framework Documentation',
+    title: 'Genie Framework Resource Center',
     description: '',
     layout: '',
     image: '/assets/meta.png',

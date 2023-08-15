@@ -6,12 +6,6 @@ defineProps({
   }
 })
 
-// let exhaustive;
-// const { result, search } = useAlgoliaSearch('resources')
-// onMounted(async () => {
-//   exhaustive = await search({ query: 'v' })
-//  console.log(exhaustive);
-// })
 
 
 </script>
