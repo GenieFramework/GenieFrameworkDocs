@@ -32,6 +32,26 @@ export default defineAppConfig({
       showLinkIcon: true,
       exclude: [],
       fluid: true
+    },
+footer: {
+      credits: {
+        icon: "IconDocus",
+        text: "Powered by Docus",
+        href: "https://docus.dev"
+      },
+      iconLinks: [
+        {
+          label: 'Discord',
+          href: 'https://discord.gg/9zyZbD6J7H',
+          icon: "ic:baseline-discord"
+        },
+      ],
+      textLinks: [
+        {
+          text: 'Hosted by Netlify',
+          href: 'https://netlify.com',
+        },
+      ]
     }
   },
     contentMermaid: {
