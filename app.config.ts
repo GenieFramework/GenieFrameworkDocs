@@ -33,7 +33,16 @@ export default defineAppConfig({
       exclude: [],
       fluid: true
     }
-  }
+  },
+    contentMermaid: {
+        enabled: true,
+        /**
+     * @default 'default'
+     * @description 'default' or '@nuxtjs/color-mode'
+     */
+        color: 'default',
+        spinnerComponent: 'DAnimationSpinner'
+    }
 })
 
 // export default defineAppConfig({

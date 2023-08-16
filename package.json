@@ -19,6 +19,7 @@
         "nuxt": "^3.6.2"
     },
     "dependencies": {
+        "@d0rich/nuxt-content-mermaid": "^0.1.2",
         "@nuxtjs/tailwindcss": "^6.8.0",
         "nuxt-og-image": "^2.0.6"
     }
