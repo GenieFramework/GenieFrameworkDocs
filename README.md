@@ -13,7 +13,7 @@ npm run dev
 
 # Deploying to production
 
-On each commit to `main`, the workflow in `.workflows/deploytogfcom.yml` builds the site as a static site and copies it to the `/docs` folder on the [GenieFramework.com](github.com/genieframework/genieframework.com). After that, the pages on the GenieFramework.com repository are deployed to Netlify at [https://nimble-heliotrope-cc0270.netlify.app/](https://nimble-heliotrope-cc0270.netlify.app/)
+On each commit to `main`, the site will be automatically deployed to learn.genieframework.com. When a pull request is created, a new preview site will be automatically linked in the comments.
 
 # Adding content
 
