@@ -11,6 +11,8 @@ on:
 
 jobs:
   merge-to-devel:
+    # This condition checks if the PR has the "automerge" label
+    if: contains(github.event.pull_request.labels.*.name, 'automerge')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
