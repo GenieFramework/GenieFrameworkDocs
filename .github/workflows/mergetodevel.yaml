@@ -1,0 +1,26 @@
+name: Auto Merge PR branches to Devel
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  merge-to-devel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Merge to Devel
+        run: |
+          git checkout devel
+          git merge --no-ff --no-commit origin/${{ github.head_ref }}
+          git commit -m "Merged ${{ github.head_ref }} into devel (from PR)"
+          git push origin devel
