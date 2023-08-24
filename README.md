@@ -2,6 +2,8 @@
 
 This repository merges the docs from genieframework.com and learn.geniecloud.io into a single site. It is a Nuxt site built with the [Docus](docus.dev) template.
 
+To preview the site with all the work in progress, see the [Staging site](https://github.com/GenieFramework/GenieFrameworkDocs/pull/31) pull request.
+
 # Running locally
 
 To run the site locally, execute
