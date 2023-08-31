@@ -1,12 +1,7 @@
 name: Build API Docs
 
 on:
-  push:
-    branches:
-      - main  # Trigger the workflow on push to the main branch
-  pull_request:
-    branches:
-      - main  # Trigger the workflow on pull requests to the main branch
+  workflow_dispatch:  # Allows manual triggering from the GitHub Actions tab
 
 jobs:
   build:
