@@ -1,0 +1,40 @@
+name: Build API Docs
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger the workflow on pull requests to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Julia
+      uses: julia-actions/setup-julia@v1
+      with:
+        version: '1.9'  # Set the Julia version you want to use
+
+    - name: Setup permissions for buildapidocs.sh
+      run: chmod +x ./buildapidocs.sh
+
+    - name: Run buildapidocs.sh
+      run: ./buildapidocs.sh
+
+    # Commit and push changes
+    - name: Configure Git
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<email@example.com>"
+
+    - name: Commit and Push Changes
+      run: |
+        git add -A
+        git commit -m "Automatically update API docs"
+        git push
