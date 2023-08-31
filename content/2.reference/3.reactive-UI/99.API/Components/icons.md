@@ -8,7 +8,7 @@
 icon(name::Union{String,Symbol}, args...; content::Union{String,Vector,Function} = "", kwargs...)
 ```
 
-Stipple supports out of the box: [Material Icons](https://fonts.google.com/icons?selected=Material+Icons) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](https://ionic.io/ionicons), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons/#/), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) and [Bootstrap Icons](https://icons.getbootstrap.com/).
+Stipple supports out of the box: [Material Icons](https://fonts.google.com/icons) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](https://ionic.io/ionicons), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons/#/), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) and [Bootstrap Icons](https://icons.getbootstrap.com/).
 
 Furthermore you can [add support by yourself](https://v1.quasar.dev/vue-components/icon#custom-mapping) for any icon lib.
 
