@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         // https://github.com/nuxt/devtools
         '@nuxt/devtools',
         "@nuxtjs/tailwindcss", "nuxt-og-image",
+        '@nuxtjs/mdc'
     ],
     ssr: true,
     ogImage: {
