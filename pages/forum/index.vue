@@ -1,21 +1,23 @@
 <template>
-    <div v-if="thread && thread.guild" class="forum-thread mx-auto max-w-2xl mt-10">
-        <div class="channel-info bg-gray-100 p-4 rounded-lg mb-6">
-            <h2 class="text-xl font-semibold">{{ thread.channel.name }}</h2>
-            <p v-if="thread.channel.topic" class="text-gray-600 mt-2">{{ thread.channel.topic }}</p>
+    <div v-if="thread && thread.guild" class="mx-auto max-w-5xl mt-10">
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+            <a :href="`https://discord.com/channels/${thread.guild.id}/${thread.channel.id}`">
+                <h2 class="text-xl font-semibold">{{ thread.channel.name }}</h2>
+                <p v-if="thread.channel.topic" class="text-gray-600 mt-2">{{ thread.channel.topic }}</p>
+            </a>
         </div>
 
-        <div class="messages space-y-6">
-            <div v-for="message in parsedMessages" :key="message.id" class="message flex space-x-4">
-                <img :src="message.author.avatarUrl" alt="Author Avatar" class="author-avatar w-10 h-10 rounded-full" />
-                <div class="message-content flex-1">
+        <div class="space-y-6">
+            <div v-for="message in parsedMessages" :key="message.id" class="flex space-x-6">
+                <div class="flex-1 bg-white p-4 rounded-lg shadow mb-4">
                     <a :href="`https://discord.com/channels/${thread.guild.id}/${thread.channel.id}/${message.id}`"
                         target="_blank" class="block hover:underline">
-                        <div class="author-info flex justify-between items-center mb-2">
-                            <span class="author-name font-medium" :style="{ color: message.author.color }">{{
-                                message.author.nickname || message.author.name }}</span>
-                            <span class="timestamp text-gray-500 text-sm">{{ new Date(message.timestamp).toLocaleString()
-                            }}</span>
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="font-medium flex items-center space-x-2" :style="{ color: message.author.color }">
+                                <img :src="message.author.avatarUrl" alt="Author Avatar" class="w-10 h-10 rounded-full" />
+                                <span class="ml-2"> {{ message.author.nickname || message.author.name }}</span>
+                            </div>
+                            <span class="text-gray-500 text-sm">{{ new Date(message.timestamp).toLocaleString() }}</span>
                         </div>
                     </a>
                     <ContentRendererMarkdown :value="message.parsedContent" />
@@ -113,4 +115,5 @@ export default {
 
 .timestamp {
     color: #888;
-}</style>
+}
+</style>
