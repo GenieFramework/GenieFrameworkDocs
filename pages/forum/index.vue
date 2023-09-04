@@ -9,12 +9,15 @@
             <div v-for="message in parsedMessages" :key="message.id" class="message flex space-x-4">
                 <img :src="message.author.avatarUrl" alt="Author Avatar" class="author-avatar w-10 h-10 rounded-full" />
                 <div class="message-content flex-1">
-                    <div class="author-info flex justify-between items-center mb-2">
-                        <span class="author-name font-medium" :style="{ color: message.author.color }">{{
-                            message.author.nickname || message.author.name }}</span>
-                        <span class="timestamp text-gray-500 text-sm">{{ new Date(message.timestamp).toLocaleString()
-                        }}</span>
-                    </div>
+                    <a :href="`https://discord.com/channels/${thread.guild.id}/${thread.channel.id}/${message.id}`"
+                        target="_blank" class="block hover:underline">
+                        <div class="author-info flex justify-between items-center mb-2">
+                            <span class="author-name font-medium" :style="{ color: message.author.color }">{{
+                                message.author.nickname || message.author.name }}</span>
+                            <span class="timestamp text-gray-500 text-sm">{{ new Date(message.timestamp).toLocaleString()
+                            }}</span>
+                        </div>
+                    </a>
                     <ContentRendererMarkdown :value="message.parsedContent" />
                 </div>
             </div>
@@ -110,5 +113,4 @@ export default {
 
 .timestamp {
     color: #888;
-}
-</style>
+}</style>
