@@ -33,7 +33,7 @@
 <script>
 
 import markdownParser from '@nuxt/content/transformers/markdown'
-const getThread = (id) => import(`../../static/${id}.json`).then(m => m.default || m)
+const getThread = (id) => import(`../../static/threads/${id}.json`).then(m => m.default || m)
 
 
 export default {
