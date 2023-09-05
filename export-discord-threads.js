@@ -2,8 +2,7 @@ const { execSync } = require("child_process");
 const { readdirSync, writeFileSync, renameSync, readFileSync } = require("fs");
 
 // how to obtain token https://github.com/Tyrrrz/DiscordChatExporter/blob/master/.docs/Token-and-IDs.md
-const token =
-  "MzY1ODU5ODMxODc5MzAzMTc4.G14QTG.DcpaRhGDCohzEE651BQilBhbzOsCvTuwNcUMAU";
+const token = "";
 
 const guildId = "774897545717219328";
 
