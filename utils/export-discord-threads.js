@@ -10,12 +10,15 @@ const guildId = "774897545717219328";
 
 // Fetch all channels (including threads) from the specified Discord server
 const allChannels = execSync(
-  `docker run --rm tyrrrz/discordchatexporter:latest channels -t ${token}  -g ${guildId} --include-threads `
+  `docker run --rm tyrrrz/discordchatexporter:latest channels -t ${token}  -g ${guildId} --include-threads all`
 )
   .toString()
   .split("\n");
 
-console.log("All channels:", allChannels);
+// Iterate over the channel list and print the channel
+for (const channel of allChannels) {
+  console.log(channel);
+}
 
 // Find the index of the "forum" channel in the list
 const helpForumIndex = allChannels.findIndex((channel) =>
