@@ -63,6 +63,19 @@ footer: {
         color: 'default',
         spinnerComponent: 'DAnimationSpinner'
     }
+<<<<<<< HEAD
+  },
+    contentMermaid: {
+        enabled: true,
+        /**
+     * @default 'default'
+     * @description 'default' or '@nuxtjs/color-mode'
+     */
+        color: 'default',
+        spinnerComponent: 'DAnimationSpinner'
+    }
+=======
+>>>>>>> main
 })
 
 // export default defineAppConfig({
