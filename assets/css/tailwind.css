@@ -54509,8 +54509,7 @@ video {
   align-items: center;
 }
 .navbar-logo span::before{
-  content: url('./../img/logo_genue.png');  
-  border-radius: 50%; 
+  border-radius: 50%;
   margin-right: 15px;
   height: 40px;
 }
