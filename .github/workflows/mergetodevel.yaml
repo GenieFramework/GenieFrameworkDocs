@@ -1,0 +1,31 @@
+name: Auto Merge PR branches to Devel
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  merge-to-devel:
+    # This condition checks if the PR has the "automerge" label
+    if: contains(github.event.pull_request.labels.*.name, 'automerge')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set Git User
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
+      - name: Merge to Devel
+        run: |
+          git checkout devel
+          git merge --no-ff --no-commit origin/${{ github.head_ref }}
+          git commit -m "Merged ${{ github.head_ref }} into devel (from PR)"
+          git push origin devel
