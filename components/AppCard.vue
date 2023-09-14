@@ -23,26 +23,27 @@ defineProps({
                 <a :href="post.url">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ post.title }}</h5>
                 </a>
-                <NuxtLink :to="post.url" v-if="post.url">
-                    <span class="mb-2 text-l tracking-tight text-gray-900 dark:text-white">Open app
+                <div class="space-x-4 mb-2">
+                    <NuxtLink :to="post.url" v-if="post.url" class="pr-3 text-l  text-gray-900 dark:text-white">
+                        App
                         <Icon name="ph:arrow-square-out" />
-                    </span>
-                </NuxtLink>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a :href="post.repo" v-if="post.repo">
-                    <span class="mb-2 text-l  tracking-tight text-gray-900 dark:text-white">View code
+                    </NuxtLink>
+                    <NuxtLink :href="post.repo" v-if="post.repo"
+                        class="pr-3 text-l tracking-tight text-gray-900 dark:text-white">
+                        Code
                         <Icon name="ph:arrow-square-out" />
-                    </span>
-                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                <NuxtLink :to="post.tutorial" v-if="post.tutorial">
-                    <span class="mb-2 text-l  tracking-tight text-gray-900 dark:text-white">Read tutorial
+                    </NuxtLink>
+                    <NuxtLink :to="post.tutorial" v-if="post.tutorial"
+                        class="pr-3 text-l tracking-tight text-gray-900 dark:text-white">
+                        Tutorial
                         <Icon name="ph:arrow-square-out" />
-                    </span>&nbsp;&nbsp;&nbsp;&nbsp;
-                </NuxtLink>
-                <a :href="post.video" v-if="post.video">
-                    <span class="mb-2 text-l  tracking-tight text-gray-900 dark:text-white">Watch video
+                    </NuxtLink>
+                    <a :href="post.video" v-if="post.video"
+                        class="pr-3 text-l tracking-tight text-gray-900 dark:text-white">
+                        Video
                         <Icon name="ph:arrow-square-out" />
-                    </span>
-                </a><br>
+                    </a>
+                </div>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ post.description }}</p>
                 <div class="flex">
                     <div v-for="(tag, idx) of post.tags" :key="idx">
