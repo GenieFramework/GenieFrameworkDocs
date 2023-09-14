@@ -36,6 +36,9 @@ export default defineNuxtConfig({
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/assets/icon.svg' },
             ],
+      meta:[
+        { hid: 'og-image',  content: '/assets/meta.svg' },
+      ]
         },
     },
     content: {
@@ -57,6 +60,10 @@ export default defineNuxtConfig({
         preference: "light",
         classSuffix: ""
     },
+    buildModules: ["@nuxtjs/google-analytics"],
+    googleAnalytics: {
+        id: 'G-F590JX609F'
+    }
 })
 
 // import { resolve } from "pathe";
