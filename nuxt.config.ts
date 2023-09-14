@@ -11,6 +11,7 @@ export default defineNuxtConfig({
         '@nuxt/devtools',
         "@nuxtjs/tailwindcss", "nuxt-og-image",
     ],
+    buildModules: ["@nuxtjs/google-analytics"],
     ssr: true,
     ogImage: {
         defaults: {
@@ -37,7 +38,7 @@ export default defineNuxtConfig({
                 { rel: 'icon', type: 'image/x-icon', href: '/assets/icon.svg' },
             ],
       meta:[
-        { hid: 'og-image',  content: '/assets/meta.svg' },
+        { hid: 'og-image',  content: '/assets/meta.png' },
       ]
         },
     },
@@ -60,7 +61,6 @@ export default defineNuxtConfig({
         preference: "light",
         classSuffix: ""
     },
-    buildModules: ["@nuxtjs/google-analytics"],
     googleAnalytics: {
         id: 'G-F590JX609F'
     }
