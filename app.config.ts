@@ -1,65 +1,65 @@
 export default defineAppConfig({
-  docus: {
-    title: 'Genie Framework Resource Center',
-    description: '',
-    layout: '',
-    image: '/assets/meta.png',
-    url: '',
-    debug: false,
-    socials: {
-      twitter: '@genieMVC',
-      github: 'genieframework'
-    },
-    github: {
-      root: 'content',
-    owner: "GenieFramework",
-    repo: "genieframeworkdocs",
-    branch: "main",
-      edit: false,
-      releases: true
-    },
-    aside: {
-      level: 1,
-      collapsed: false,
-      exclude: []
-    },
-    main: {
-      padded: false,
-      fluid: false
-    },
-    header: {
-      logo: true,
-      showLinkIcon: true,
-      exclude: [],
-      fluid: true
-    },
-footer: {
-      credits: {
-        icon: "IconDocus",
-        text: "Powered by Docus",
-        href: "https://docus.dev"
-      },
-      iconLinks: [
-        {
-          label: 'Discord',
-          href: 'https://discord.gg/9zyZbD6J7H',
-          icon: "ic:baseline-discord"
+    docus: {
+        title: 'Genie Framework Resource Center',
+        description: '',
+        layout: '',
+        image: '/assets/meta.png',
+        url: '',
+        debug: false,
+        socials: {
+            twitter: '@genieMVC',
+            github: 'genieframework'
         },
-      ],
-      textLinks: [
-        {
-          text: 'Hosted by Netlify',
-          href: 'https://netlify.com',
+        github: {
+            root: 'content',
+            owner: "GenieFramework",
+            repo: "genieframeworkdocs",
+            branch: "main",
+            edit: true,
+            releases: true
         },
-      ]
-    }
-  },
+        aside: {
+            level: 1,
+            collapsed: false,
+            exclude: []
+        },
+        main: {
+            padded: false,
+            fluid: false
+        },
+        header: {
+            logo: true,
+            showLinkIcon: true,
+            exclude: [],
+            fluid: true
+        },
+        footer: {
+            credits: {
+                icon: "IconDocus",
+                text: "Powered by Docus",
+                href: "https://docus.dev"
+            },
+            iconLinks: [
+                {
+                    label: 'Discord',
+                    href: 'https://discord.gg/9zyZbD6J7H',
+                    icon: "ic:baseline-discord"
+                },
+            ],
+            textLinks: [
+                {
+                    text: 'Hosted by Netlify',
+                    href: 'https://netlify.com',
+                },
+            ]
+        },
+    },
     contentMermaid: {
         enabled: true,
         /**
-     * @default 'default'
-     * @description 'default' or '@nuxtjs/color-mode'
-     */
+         * @default 'default'
+         * @description 'default' or '@nuxtjs/color-mode'
+         */
         color: 'default',
         spinnerComponent: 'DAnimationSpinner'
     }
