@@ -31,6 +31,13 @@ export default defineNuxtConfig({
             failOnError: false,
         }
     },
+    app: {
+        head: {
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/assets/icon.svg' },
+            ],
+        },
+    },
     content: {
         highlight: {
             theme: {
