@@ -1,13 +1,10 @@
 export default defineNuxtConfig({
-    // https://github.com/nuxt-themes/docus
     extends: [
         '@d0rich/nuxt-content-mermaid',
         '@nuxt-themes/docus'
     ],
     modules: [
-        // https://github.com/nuxt-modules/plausible
         '@nuxtjs/plausible',
-        // https://github.com/nuxt/devtools
         '@nuxt/devtools',
         "@nuxtjs/tailwindcss", "nuxt-og-image",
     ],
@@ -37,9 +34,14 @@ export default defineNuxtConfig({
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/assets/icon.svg' },
             ],
-      meta:[
-        { hid: 'og-image',  content: '/assets/meta.png' },
-      ]
+            meta:[
+                { hid: 'og-image',  content: '/assets/meta.png' },
+            ],
+            script: [
+                { src:"https://www.googletagmanager.com/gtag/js?id=G-F590JX609F"},
+                { children: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-F591JX609F'); "},
+            ],
+
         },
     },
     content: {
