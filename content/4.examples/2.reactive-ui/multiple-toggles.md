@@ -21,7 +21,7 @@ using GenieFramework
     end
 end
 
-@page("/", "multiple_toggles.html")
+@page("/", "multiple-toggles.html")
 Server.up()
 end
 ````
