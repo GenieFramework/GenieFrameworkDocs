@@ -7,6 +7,10 @@ description: Detect mouse events on a plot.
 
 **Detect mouse events on a plot.**
 
+To capture click events on a plot, use the @mounted watchplots() instruction. This will execute watchplots() when the page is loaded, which will generate the code and dictionary variables **in the front end** to capture click events. The name of these dictionaries and the information they capture is is:
+
+To make these variables accessible from the Julia code, define an input variable with @in with the same name. Then, their contents can be watched with an @onchange block.
+
 ````julia
 module App
 using GenieFramework, PlotlyBase, StipplePlotly
@@ -15,33 +19,36 @@ using GenieFramework, PlotlyBase, StipplePlotly
 trace1 = scatter(; x=1:4, y=[0, 2, 3, 5], fill="tozeroy")
 trace2 = scatter(; x=1:4, y=[3, 5, 1, 7], fill="tonexty")
 
-@app EventsModel begin
+@app begin
     @out traces = [trace1, trace2]
     @out plotlayout = PlotlyBase.Layout(title="Filled line chart")
-    @mixin traces::PlotlyEvents
-    @onchange traces_click begin
-        @show traces_click
+    @in data_click = Dict{String,Any}()
+    @in data_hover = Dict{String,Any}()
+    @in data_selected = Dict{String,Any}()
+    @in data_cursor = Dict{String,Any}()
+    @in data_relayout = Dict{String,Any}()
+    @onchange data_click begin
+        @show data_click
     end
-    @onchange traces_hover begin
-        @show traces_hover
+    @onchange data_hover begin
+        @show data_hover
     end
-    @onchange traces_selected begin
-        @show traces_selected
+    @onchange data_selected begin
+        @show data_selected
     end
-    @onchange traces_relayout begin
-        @show traces_relayout
+    @onchange data_cursor begin
+        @show data_cursor
+    end
+    @onchange data_relayout begin
+        @show data_relayout
     end
 end
 
-@mounted EventsModel watchplots()
+@mounted watchplots()
 
-ui() = [plot(:traces, layout=:plotlayout, syncevents = true)]
+ui() = plot(:traces, layout=:plotlayout, class="sync_data")
 
-route("/") do
-    global model
-    model = EventsModel |> init |> handlers
-    page(model, ui()) |> html
-end
+@page("/", ui)
 
 Server.isrunning() || Server.up()
 end
