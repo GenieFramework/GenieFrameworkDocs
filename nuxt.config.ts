@@ -38,7 +38,7 @@ export default defineNuxtConfig({
                 { hid: 'og-image',  content: '/assets/meta.png' },
             ],
             script: [
-                { src:"https://www.googletagmanager.com/gtag/js?id=G-F590JX609F"},
+                { src:"https://www.googletagmanager.com/gtag/js?id=G-906HKC9QM5"},
                 { children: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-906HKC9QM5'); "},
             ],
 
