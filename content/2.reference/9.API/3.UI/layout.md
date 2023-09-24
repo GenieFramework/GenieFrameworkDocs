@@ -87,7 +87,7 @@ Creates a `div` HTML element with Quasar flex grid CSS class named `col`. If siz
   * Integer values between `0` and `12`; `0` means no specification
   * AbStractString values `"1"` - `"12"`, `""` or `"auto"`; `""` means no specification, `"auto"` means height/width from content
 
-If tag classes (`xs`, `sm`, `md`, `lg`, `xl`) are specified, the respective classes `col-$tag-$md` are added, e.g. `col-sm-6`. The cells should be included within [`row`](layout.md#Stipple.Layout.row)s or [`column`](@ref)s.
+If tag classes (`xs`, `sm`, `md`, `lg`, `xl`) are specified, the respective classes `col-$tag-$md` are added, e.g. `col-sm-6`. The cells should be included within [`row`](layout.md#Stipple.Layout.row)s or [`column`]()s.
 
 Moreover, cells are of the class `st-col`, which is controlled by the Stipple theme.
 

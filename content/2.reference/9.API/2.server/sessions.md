@@ -1,19 +1,27 @@
 
 
 
-::alert{type="info"}Missing docstring for `Session`. ::
+::alert{type="info"}
+Missing docstring for `Session`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `id`. ::
+::alert{type="info"}
+Missing docstring for `id`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `start`. ::
+::alert{type="info"}
+Missing docstring for `start`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `set!`. ::
+::alert{type="info"}
+Missing docstring for `set!`. 
+::
 
 
 ::ApiCard{object="Base.get" category="Function"}
@@ -50,7 +58,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -114,7 +122,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -149,7 +157,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -184,7 +192,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -197,26 +205,38 @@ end
 
 ::
 
-::alert{type="info"}Missing docstring for `unset!`. ::
+::alert{type="info"}
+Missing docstring for `unset!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `isset`. ::
+::alert{type="info"}
+Missing docstring for `isset`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `persist`. ::
+::alert{type="info"}
+Missing docstring for `persist`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `load`. ::
+::alert{type="info"}
+Missing docstring for `load`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `session`. ::
+::alert{type="info"}
+Missing docstring for `session`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `init`. ::
+::alert{type="info"}
+Missing docstring for `init`. 
+::
 
 

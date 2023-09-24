@@ -1,19 +1,27 @@
 
 
 
-::alert{type="info"}Missing docstring for `DatabaseMigration`. ::
+::alert{type="info"}
+Missing docstring for `DatabaseMigration`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `IrreversibleMigrationException`. ::
+::alert{type="info"}
+Missing docstring for `IrreversibleMigrationException`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `ExistingMigrationException`. ::
+::alert{type="info"}
+Missing docstring for `ExistingMigrationException`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `MigrationNotFoundException`. ::
+::alert{type="info"}
+Missing docstring for `MigrationNotFoundException`. 
+::
 
 
 ::ApiCard{object="SearchLight.Migration.new_table" category="Function"}
@@ -39,7 +47,9 @@ Creates a new default migration file and persists it to disk in the configured m
 
 ::
 
-::alert{type="info"}Missing docstring for `relationship_table_name`. ::
+::alert{type="info"}
+Missing docstring for `relationship_table_name`. 
+::
 
 
 ::ApiCard{object="new" category="Keyword"}
@@ -50,7 +60,7 @@ Creates a new default migration file and persists it to disk in the configured m
 new, or new{A,B,...}
 ```
 
-Special function available to inner constructors which creates a new object of the type. The form new{A,B,...} explicitly specifies values of parameters for parametric types. See the manual section on [Inner Constructor Methods](@ref man-inner-constructor-methods) for more information.
+Special function available to inner constructors which creates a new object of the type. The form new{A,B,...} explicitly specifies values of parameters for parametric types. See the manual section on [Inner Constructor Methods]() for more information.
 
 
 <a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/docs/basedocs.jl#L1345-L1352' class='documenter-source'>source</a><br>
@@ -147,7 +157,9 @@ Runs up the migration corresponding to `migration_module_name`.
 
 ::
 
-::alert{type="info"}Missing docstring for `up_by_module_name`. ::
+::alert{type="info"}
+Missing docstring for `up_by_module_name`. 
+::
 
 
 ::ApiCard{object="SearchLight.Migration.down" category="Function"}
@@ -163,7 +175,9 @@ Runs down the migration corresponding to `migration_module_name`.
 
 ::
 
-::alert{type="info"}Missing docstring for `down_by_module_name`. ::
+::alert{type="info"}
+Missing docstring for `down_by_module_name`. 
+::
 
 
 ::ApiCard{object="SearchLight.Migration.migration_by_module_name" category="Function"}
@@ -310,90 +324,134 @@ Runs all migrations `up`.
 
 ::
 
-::alert{type="info"}Missing docstring for `create_table`. ::
+::alert{type="info"}
+Missing docstring for `create_table`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `column`. ::
+::alert{type="info"}
+Missing docstring for `column`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `columns`. ::
+::alert{type="info"}
+Missing docstring for `columns`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `column_id`. ::
+::alert{type="info"}
+Missing docstring for `column_id`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `add_index`. ::
+::alert{type="info"}
+Missing docstring for `add_index`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `add_indexes`. ::
+::alert{type="info"}
+Missing docstring for `add_indexes`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `add_column`. ::
+::alert{type="info"}
+Missing docstring for `add_column`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `add_columns`. ::
+::alert{type="info"}
+Missing docstring for `add_columns`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `drop_table`. ::
+::alert{type="info"}
+Missing docstring for `drop_table`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `remove_column`. ::
+::alert{type="info"}
+Missing docstring for `remove_column`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `remove_columns`. ::
+::alert{type="info"}
+Missing docstring for `remove_columns`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `remove_index`. ::
+::alert{type="info"}
+Missing docstring for `remove_index`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `remove_indexes`. ::
+::alert{type="info"}
+Missing docstring for `remove_indexes`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `remove_indices`. ::
+::alert{type="info"}
+Missing docstring for `remove_indices`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `create_sequence`. ::
+::alert{type="info"}
+Missing docstring for `create_sequence`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `constraint`. ::
+::alert{type="info"}
+Missing docstring for `constraint`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `nextval`. ::
+::alert{type="info"}
+Missing docstring for `nextval`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `column_id_sequence`. ::
+::alert{type="info"}
+Missing docstring for `column_id_sequence`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `remove_sequence`. ::
+::alert{type="info"}
+Missing docstring for `remove_sequence`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `drop_sequence`. ::
+::alert{type="info"}
+Missing docstring for `drop_sequence`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `create_migrations_table`. ::
+::alert{type="info"}
+Missing docstring for `create_migrations_table`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `init`. ::
+::alert{type="info"}
+Missing docstring for `init`. 
+::
 
 

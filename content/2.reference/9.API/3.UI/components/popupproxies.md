@@ -45,7 +45,9 @@ julia> btn("Handles click", push=true, color="primary", [
 
 ::
 
-::alert{type="info"}Missing docstring for `PopupProxy`. ::
+::alert{type="info"}
+Missing docstring for `PopupProxy`. 
+::
 
 
 ::ApiCard{object="Base.string" category="Function"}
@@ -58,7 +60,7 @@ string(n::Integer; base::Integer = 10, pad::Integer = 1)
 
 Convert an integer `n` to a string in the given `base`, optionally specifying a number of digits to pad to.
 
-See also [`digits`](@ref), [`bitstring`](@ref), [`count_zeros`](@ref).
+See also [`digits`](), [`bitstring`](), [`count_zeros`]().
 
 **Examples**
 
@@ -78,11 +80,11 @@ julia> string(-13, base = 5, pad = 4)
 string(xs...)
 ```
 
-Create a string from any values using the [`print`](@ref) function.
+Create a string from any values using the [`print`]() function.
 
 `string` should usually not be defined directly. Instead, define a method `print(io::IO, x::MyType)`. If `string(x)` for a certain type needs to be highly efficient, then it may make sense to add a method to `string` and define `print(io::IO, x::MyType) = print(io, string(x))` to ensure the functions are consistent.
 
-See also: [`String`](@ref), [`repr`](@ref), [`sprint`](@ref), [`show`](@ref @show).
+See also: [`String`](), [`repr`](), [`sprint`](), [`show`]().
 
 **Examples**
 

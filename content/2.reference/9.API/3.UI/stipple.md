@@ -1,7 +1,9 @@
 
 
 
-::alert{type="info"}Missing docstring for `Reactive`. ::
+::alert{type="info"}
+Missing docstring for `Reactive`. 
+::
 
 
 ::ApiCard{object="Stipple.ReactiveModel" category="Type"}
@@ -27,23 +29,33 @@ end
 
 ::
 
-::alert{type="info"}Missing docstring for `@reactors`. ::
+::alert{type="info"}
+Missing docstring for `@reactors`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `@reactive`. ::
+::alert{type="info"}
+Missing docstring for `@reactive`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `@reactive!`. ::
+::alert{type="info"}
+Missing docstring for `@reactive!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `Settings`. ::
+::alert{type="info"}
+Missing docstring for `Settings`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `MissingPropertyException`. ::
+::alert{type="info"}
+Missing docstring for `MissingPropertyException`. 
+::
 
 
 ::ApiCard{object="Stipple.render" category="Function"}
@@ -368,11 +380,15 @@ Change the field of a ReactiveModel without triggering the listeners. If keys ar
 
 ::
 
-::alert{type="info"}Missing docstring for `convertvalue`. ::
+::alert{type="info"}
+Missing docstring for `convertvalue`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `stipple_parse`. ::
+::alert{type="info"}
+Missing docstring for `stipple_parse`. 
+::
 
 
 ::ApiCard{object="Stipple.init" category="Function"}
@@ -399,7 +415,9 @@ hs_model = Stipple.init(HelloPie)
 
 ::
 
-::alert{type="info"}Missing docstring for `stipple_deps`. ::
+::alert{type="info"}
+Missing docstring for `stipple_deps`. 
+::
 
 
 ::ApiCard{object="Stipple.setup" category="Function"}
@@ -477,7 +495,9 @@ Replaces all JSONText values on a copy of the input, see [`replace_jsfunction!`]
 
 ::
 
-::alert{type="info"}Missing docstring for `deps_routes`. ::
+::alert{type="info"}
+Missing docstring for `deps_routes`. 
+::
 
 
 ::ApiCard{object="Stipple.deps" category="Function"}
@@ -492,7 +512,9 @@ Outputs the HTML code necessary for injecting the dependencies in the page (the 
 
 ::
 
-::alert{type="info"}Missing docstring for `@R_str`. ::
+::alert{type="info"}
+Missing docstring for `@R_str`. 
+::
 
 
 ::ApiCard{object="Observables.on" category="Function"}
@@ -505,7 +527,7 @@ on(f, observable::AbstractObservable; weak = false, priority=0, update=false)::O
 
 Adds function `f` as listener to `observable`. Whenever `observable`'s value is set via `observable[] = val`, `f` is called with `val`.
 
-Returns an [`ObserverFunction`](@ref) that wraps `f` and `observable` and allows to disconnect easily by calling `off(observerfunction)` instead of `off(f, observable)`. If instead you want to compute a new `Observable` from an old one, use [`map(f, ::Observable)`](@ref).
+Returns an [`ObserverFunction`]() that wraps `f` and `observable` and allows to disconnect easily by calling `off(observerfunction)` instead of `off(f, observable)`. If instead you want to compute a new `Observable` from an old one, use [`map(f, ::Observable)`]().
 
 If `weak = true` is set, the new connection will be removed as soon as the returned `ObserverFunction` is not referenced anywhere and is garbage collected. This is useful if some parent object makes connections to outside observables and stores the resulting `ObserverFunction` instances. Then, once that parent object is garbage collected, the weak observable connections are removed automatically.
 
