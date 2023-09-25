@@ -1,35 +1,51 @@
 
 
 
-::alert{type="info"}Missing docstring for `connect`. ::
+::alert{type="info"}
+Missing docstring for `connect`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `disconnect`. ::
+::alert{type="info"}
+Missing docstring for `disconnect`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `connection`. ::
+::alert{type="info"}
+Missing docstring for `connection`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `UnsupportedException`. ::
+::alert{type="info"}
+Missing docstring for `UnsupportedException`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `DataFrames.DataFrame`. ::
+::alert{type="info"}
+Missing docstring for `DataFrames.DataFrame`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `find`. ::
+::alert{type="info"}
+Missing docstring for `find`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `onereduce`. ::
+::alert{type="info"}
+Missing docstring for `onereduce`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `findone`. ::
+::alert{type="info"}
+Missing docstring for `findone`. 
+::
 
 
 ::ApiCard{object="Base.one" category="Function"}
@@ -45,9 +61,9 @@ Return a multiplicative identity for `x`: a value such that `one(x)*x == x*one(x
 
 If possible, `one(x)` returns a value of the same type as `x`, and `one(T)` returns a value of type `T`.  However, this may not be the case for types representing dimensionful quantities (e.g. time in days), since the multiplicative identity must be dimensionless.  In that case, `one(x)` should return an identity value of the same precision (and shape, for matrices) as `x`.
 
-If you want a quantity that is of the same type as `x`, or of type `T`, even if `x` is dimensionful, use [`oneunit`](@ref) instead.
+If you want a quantity that is of the same type as `x`, or of type `T`, even if `x` is dimensionful, use [`oneunit`]() instead.
 
-See also the [`identity`](@ref) function, and `I` in [`LinearAlgebra`](@ref man-linalg) for the identity matrix.
+See also the [`identity`]() function, and `I` in [`LinearAlgebra`]() for the identity matrix.
 
 **Examples**
 
@@ -67,7 +83,9 @@ julia> import Dates; one(Dates.Day(1))
 
 ::
 
-::alert{type="info"}Missing docstring for `randone`. ::
+::alert{type="info"}
+Missing docstring for `randone`. 
+::
 
 
 ::ApiCard{object="Base.all" category="Function"}
@@ -78,11 +96,11 @@ julia> import Dates; one(Dates.Day(1))
 all(itr) -> Bool
 ```
 
-Test whether all elements of a boolean collection are `true`, returning `false` as soon as the first `false` value in `itr` is encountered (short-circuiting). To short-circuit on `true`, use [`any`](@ref).
+Test whether all elements of a boolean collection are `true`, returning `false` as soon as the first `false` value in `itr` is encountered (short-circuiting). To short-circuit on `true`, use [`any`]().
 
-If the input contains [`missing`](@ref) values, return `missing` if all non-missing values are `true` (or equivalently, if the input contains no `false` value), following [three-valued logic](https://en.wikipedia.org/wiki/Three-valued_logic).
+If the input contains [`missing`]() values, return `missing` if all non-missing values are `true` (or equivalently, if the input contains no `false` value), following [three-valued logic](https://en.wikipedia.org/wiki/Three-valued_logic).
 
-See also: [`all!`](@ref), [`any`](@ref), [`count`](@ref), [`&`](@ref), , [`&&`](@ref), [`allunique`](@ref).
+See also: [`all!`](), [`any`](), [`count`](), [`&`](), , [`&&`](), [`allunique`]().
 
 **Examples**
 
@@ -117,9 +135,9 @@ missing
 all(p, itr) -> Bool
 ```
 
-Determine whether predicate `p` returns `true` for all elements of `itr`, returning `false` as soon as the first item in `itr` for which `p` returns `false` is encountered (short-circuiting). To short-circuit on `true`, use [`any`](@ref).
+Determine whether predicate `p` returns `true` for all elements of `itr`, returning `false` as soon as the first item in `itr` for which `p` returns `false` is encountered (short-circuiting). To short-circuit on `true`, use [`any`]().
 
-If the input contains [`missing`](@ref) values, return `missing` if all non-missing values are `true` (or equivalently, if the input contains no `false` value), following [three-valued logic](https://en.wikipedia.org/wiki/Three-valued_logic).
+If the input contains [`missing`]() values, return `missing` if all non-missing values are `true` (or equivalently, if the input contains no `false` value), following [three-valued logic](https://en.wikipedia.org/wiki/Three-valued_logic).
 
 **Examples**
 
@@ -204,59 +222,87 @@ julia> all(i -> i > 0, A, dims=2)
 
 ::
 
-::alert{type="info"}Missing docstring for `first`. ::
+::alert{type="info"}
+Missing docstring for `first`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `last`. ::
+::alert{type="info"}
+Missing docstring for `last`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `save`. ::
+::alert{type="info"}
+Missing docstring for `save`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `save!`. ::
+::alert{type="info"}
+Missing docstring for `save!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `save!!`. ::
+::alert{type="info"}
+Missing docstring for `save!!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `_save!!`. ::
+::alert{type="info"}
+Missing docstring for `_save!!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `updatewith!`. ::
+::alert{type="info"}
+Missing docstring for `updatewith!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `convertmethod`. ::
+::alert{type="info"}
+Missing docstring for `convertmethod`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `booltypes`. ::
+::alert{type="info"}
+Missing docstring for `booltypes`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `autoconvert`. ::
+::alert{type="info"}
+Missing docstring for `autoconvert`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `updatewith!!`. ::
+::alert{type="info"}
+Missing docstring for `updatewith!!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `updatewith`. ::
+::alert{type="info"}
+Missing docstring for `updatewith`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `createwith`. ::
+::alert{type="info"}
+Missing docstring for `createwith`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `updateby_or_create`. ::
+::alert{type="info"}
+Missing docstring for `updateby_or_create`. 
+::
 
 
 ::ApiCard{object="SearchLight.update_or_create" category="Function"}
@@ -275,7 +321,9 @@ julia>
 
 ::
 
-::alert{type="info"}Missing docstring for `findone_or_create`. ::
+::alert{type="info"}
+Missing docstring for `findone_or_create`. 
+::
 
 
 ::ApiCard{object="SearchLight.to_models" category="Function"}
@@ -336,47 +384,69 @@ julia> SearchLight.to_models(Stat, DataFrame(Stat, SQLWhereExpression("date >= ?
 
 ::
 
-::alert{type="info"}Missing docstring for `to_model`. ::
+::alert{type="info"}
+Missing docstring for `to_model`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_model!!`. ::
+::alert{type="info"}
+Missing docstring for `to_model!!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_select_part`. ::
+::alert{type="info"}
+Missing docstring for `to_select_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_from_part`. ::
+::alert{type="info"}
+Missing docstring for `to_from_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_where_part`. ::
+::alert{type="info"}
+Missing docstring for `to_where_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_order_part`. ::
+::alert{type="info"}
+Missing docstring for `to_order_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_group_part`. ::
+::alert{type="info"}
+Missing docstring for `to_group_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_limit_part`. ::
+::alert{type="info"}
+Missing docstring for `to_limit_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_offset_part`. ::
+::alert{type="info"}
+Missing docstring for `to_offset_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_having_part`. ::
+::alert{type="info"}
+Missing docstring for `to_having_part`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_join_part`. ::
+::alert{type="info"}
+Missing docstring for `to_join_part`. 
+::
 
 
 ::ApiCard{object="SearchLight.columns_from_joins" category="Function"}
@@ -389,143 +459,213 @@ Extracts columns from joins param and adds to be used for the SELECT part
 
 ::
 
-::alert{type="info"}Missing docstring for `column_data_to_column_name`. ::
+::alert{type="info"}
+Missing docstring for `column_data_to_column_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `prepare_column_name`. ::
+::alert{type="info"}
+Missing docstring for `prepare_column_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `columns_names_by_table`. ::
+::alert{type="info"}
+Missing docstring for `columns_names_by_table`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `dataframes_by_table`. ::
+::alert{type="info"}
+Missing docstring for `dataframes_by_table`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_find_sql`. ::
+::alert{type="info"}
+Missing docstring for `to_find_sql`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_fetch_sql`. ::
+::alert{type="info"}
+Missing docstring for `to_fetch_sql`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_store_sql`. ::
+::alert{type="info"}
+Missing docstring for `to_store_sql`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_sqlinput`. ::
+::alert{type="info"}
+Missing docstring for `to_sqlinput`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `delete_all`. ::
+::alert{type="info"}
+Missing docstring for `delete_all`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `deleteall`. ::
+::alert{type="info"}
+Missing docstring for `deleteall`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `delete`. ::
+::alert{type="info"}
+Missing docstring for `delete`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `query`. ::
+::alert{type="info"}
+Missing docstring for `query`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `clone`. ::
+::alert{type="info"}
+Missing docstring for `clone`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `columns`. ::
+::alert{type="info"}
+Missing docstring for `columns`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `ispersisted`. ::
+::alert{type="info"}
+Missing docstring for `ispersisted`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `column_field_name`. ::
+::alert{type="info"}
+Missing docstring for `column_field_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `persistable_fields`. ::
+::alert{type="info"}
+Missing docstring for `persistable_fields`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `settable_fields`. ::
+::alert{type="info"}
+Missing docstring for `settable_fields`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `table`. ::
+::alert{type="info"}
+Missing docstring for `table`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `pk`. ::
+::alert{type="info"}
+Missing docstring for `pk`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `primary_key_name`. ::
+::alert{type="info"}
+Missing docstring for `primary_key_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `strip_table_name`. ::
+::alert{type="info"}
+Missing docstring for `strip_table_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `is_fully_qualified`. ::
+::alert{type="info"}
+Missing docstring for `is_fully_qualified`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `from_fully_qualified`. ::
+::alert{type="info"}
+Missing docstring for `from_fully_qualified`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `strip_module_name`. ::
+::alert{type="info"}
+Missing docstring for `strip_module_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_fully_qualified`. ::
+::alert{type="info"}
+Missing docstring for `to_fully_qualified`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_sql_column_names`. ::
+::alert{type="info"}
+Missing docstring for `to_sql_column_names`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_sql_column_name`. ::
+::alert{type="info"}
+Missing docstring for `to_sql_column_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_fully_qualified_sql_column_names`. ::
+::alert{type="info"}
+Missing docstring for `to_fully_qualified_sql_column_names`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `fo_fully_qualified_sql_column_name`. ::
+::alert{type="info"}
+Missing docstring for `fo_fully_qualified_sql_column_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `from_literal_column_name`. ::
+::alert{type="info"}
+Missing docstring for `from_literal_column_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_dict`. ::
+::alert{type="info"}
+Missing docstring for `to_dict`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `to_string_dict`. ::
+::alert{type="info"}
+Missing docstring for `to_string_dict`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `enclosure`. ::
+::alert{type="info"}
+Missing docstring for `enclosure`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `update_query_part`. ::
+::alert{type="info"}
+Missing docstring for `update_query_part`. 
+::
 
 
 ::ApiCard{object="SearchLight.escape_column_name" category="Function"}
@@ -552,11 +692,15 @@ Sanitizes input to be used as values in SQL queries.
 
 ::
 
-::alert{type="info"}Missing docstring for `index_name`. ::
+::alert{type="info"}
+Missing docstring for `index_name`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `sql`. ::
+::alert{type="info"}
+Missing docstring for `sql`. 
+::
 
 
 ::ApiCard{object="SearchLight.add_quotes" category="Function"}
@@ -593,7 +737,9 @@ Checks weather or not `str` is quoted.
 
 ::
 
-::alert{type="info"}Missing docstring for `expand_nullable`. ::
+::alert{type="info"}
+Missing docstring for `expand_nullable`. 
+::
 
 
 ::ApiCard{object="Core.NamedTuple" category="Type"}
@@ -604,15 +750,15 @@ Checks weather or not `str` is quoted.
 NamedTuple
 ```
 
-`NamedTuple`s are, as their name suggests, named [`Tuple`](@ref)s. That is, they're a tuple-like collection of values, where each entry has a unique name, represented as a [`Symbol`](@ref). Like `Tuple`s, `NamedTuple`s are immutable; neither the names nor the values can be modified in place after construction.
+`NamedTuple`s are, as their name suggests, named [`Tuple`]()s. That is, they're a tuple-like collection of values, where each entry has a unique name, represented as a [`Symbol`](). Like `Tuple`s, `NamedTuple`s are immutable; neither the names nor the values can be modified in place after construction.
 
-Accessing the value associated with a name in a named tuple can be done using field access syntax, e.g. `x.a`, or using [`getindex`](@ref), e.g. `x[:a]` or `x[(:a, :b)]`. A tuple of the names can be obtained using [`keys`](@ref), and a tuple of the values can be obtained using [`values`](@ref).
+Accessing the value associated with a name in a named tuple can be done using field access syntax, e.g. `x.a`, or using [`getindex`](), e.g. `x[:a]` or `x[(:a, :b)]`. A tuple of the names can be obtained using [`keys`](), and a tuple of the values can be obtained using [`values`]().
 
 !!! note
-    Iteration over `NamedTuple`s produces the *values* without the names. (See example below.) To iterate over the name-value pairs, use the [`pairs`](@ref) function.
+    Iteration over `NamedTuple`s produces the *values* without the names. (See example below.) To iterate over the name-value pairs, use the [`pairs`]() function.
 
 
-The [`@NamedTuple`](@ref) macro can be used for conveniently declaring `NamedTuple` types.
+The [`@NamedTuple`]() macro can be used for conveniently declaring `NamedTuple` types.
 
 **Examples**
 

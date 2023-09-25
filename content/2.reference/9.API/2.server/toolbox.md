@@ -1,19 +1,27 @@
 
 
 
-::alert{type="info"}Missing docstring for `TaskInfo`. ::
+::alert{type="info"}
+Missing docstring for `TaskInfo`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `TaskResult`. ::
+::alert{type="info"}
+Missing docstring for `TaskResult`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `tasks`. ::
+::alert{type="info"}
+Missing docstring for `tasks`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `VoidTaskResult`. ::
+::alert{type="info"}
+Missing docstring for `VoidTaskResult`. 
+::
 
 
 ::ApiCard{object="Genie.Toolbox.validtaskname" category="Function"}
@@ -64,7 +72,7 @@ Prints a list of all the registered Genie tasks to the standard output.
 new, or new{A,B,...}
 ```
 
-Special function available to inner constructors which creates a new object of the type. The form new{A,B,...} explicitly specifies values of parameters for parametric types. See the manual section on [Inner Constructor Methods](@ref man-inner-constructor-methods) for more information.
+Special function available to inner constructors which creates a new object of the type. The form new{A,B,...} explicitly specifies values of parameters for parametric types. See the manual section on [Inner Constructor Methods]() for more information.
 
 
 <a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/docs/basedocs.jl#L1345-L1352' class='documenter-source'>source</a><br>

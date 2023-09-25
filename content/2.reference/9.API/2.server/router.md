@@ -32,11 +32,11 @@ show([io::IO = stdout], x)
 
 Write a text representation of a value `x` to the output stream `io`. New types `T` should overload `show(io::IO, x::T)`. The representation used by `show` generally includes Julia-specific formatting and type information, and should be parseable Julia code when possible.
 
-[`repr`](@ref) returns the output of `show` as a string.
+[`repr`]() returns the output of `show` as a string.
 
-For a more verbose human-readable text output for objects of type `T`, define `show(io::IO, ::MIME"text/plain", ::T)` in addition. Checking the `:compact` [`IOContext`](@ref) key (often checked as `get(io, :compact, false)::Bool`) of `io` in such methods is recommended, since some containers show their elements by calling this method with `:compact => true`.
+For a more verbose human-readable text output for objects of type `T`, define `show(io::IO, ::MIME"text/plain", ::T)` in addition. Checking the `:compact` [`IOContext`]() key (often checked as `get(io, :compact, false)::Bool`) of `io` in such methods is recommended, since some containers show their elements by calling this method with `:compact => true`.
 
-See also [`print`](@ref), which writes un-decorated representations.
+See also [`print`](), which writes un-decorated representations.
 
 **Examples**
 
@@ -55,7 +55,7 @@ Hello World!
 show(io::IO, mime, x)
 ```
 
-The [`display`](@ref) functions ultimately call `show` in order to write an object `x` as a given `mime` type to a given I/O stream `io` (usually a memory buffer), if possible. In order to provide a rich multimedia representation of a user-defined type `T`, it is only necessary to define a new `show` method for `T`, via: `show(io, ::MIME"mime", x::T) = ...`, where `mime` is a MIME-type string and the function body calls [`write`](requests.md#Base.write) (or similar) to write that representation of `x` to `io`. (Note that the `MIME""` notation only supports literal strings; to construct `MIME` types in a more flexible manner use `MIME{Symbol("")}`.)
+The [`display`]() functions ultimately call `show` in order to write an object `x` as a given `mime` type to a given I/O stream `io` (usually a memory buffer), if possible. In order to provide a rich multimedia representation of a user-defined type `T`, it is only necessary to define a new `show` method for `T`, via: `show(io, ::MIME"mime", x::T) = ...`, where `mime` is a MIME-type string and the function body calls [`write`](requests.md#Base.write) (or similar) to write that representation of `x` to `io`. (Note that the `MIME""` notation only supports literal strings; to construct `MIME` types in a more flexible manner use `MIME{Symbol("")}`.)
 
 For example, if you define a `MyImage` type and know how to write it to a PNG file, you could define a function `show(io, ::MIME"image/png", x::MyImage) = ...` to allow your images to be displayed on any PNG-capable `AbstractDisplay` (such as IJulia). As usual, be sure to `import Base.show` in order to add new methods to the built-in Julia function `show`.
 
@@ -76,7 +76,7 @@ julia> Day(1)
 1 day
 ```
 
-Container types generally implement 3-argument `show` by calling `show(io, MIME"text/plain"(), x)` for elements `x`, with `:compact => true` set in an [`IOContext`](@ref) passed as the first argument.
+Container types generally implement 3-argument `show` by calling `show(io, MIME"text/plain"(), x)` for elements `x`, with `:compact => true` set in an [`IOContext`]() passed as the first argument.
 
 
 <a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/multimedia.jl#L79-L121' class='documenter-source'>source</a><br>
@@ -170,11 +170,11 @@ julia> push!([1, 2, 3], 4, 5, 6)
  6
 ```
 
-If `collection` is ordered, use [`append!`](@ref) to add all the elements of another collection to it. The result of the preceding example is equivalent to `append!([1, 2, 3], [4, 5, 6])`. For `AbstractSet` objects, [`union!`](@ref) can be used instead.
+If `collection` is ordered, use [`append!`]() to add all the elements of another collection to it. The result of the preceding example is equivalent to `append!([1, 2, 3], [4, 5, 6])`. For `AbstractSet` objects, [`union!`]() can be used instead.
 
-See [`sizehint!`](@ref) for notes about the performance model.
+See [`sizehint!`]() for notes about the performance model.
 
-See also [`pushfirst!`](@ref).
+See also [`pushfirst!`]().
 
 
 <a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/array.jl#L1030-L1055' class='documenter-source'>source</a><br>
@@ -275,11 +275,15 @@ Gets the `Route` corresponding to `routename`
 
 ::
 
-::alert{type="info"}Missing docstring for `routes`. ::
+::alert{type="info"}
+Missing docstring for `routes`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `channels`. ::
+::alert{type="info"}
+Missing docstring for `channels`. 
+::
 
 
 ::ApiCard{object="Genie.Router.delete!" category="Function"}
@@ -366,7 +370,9 @@ Sets up the :action_controller, :action, and :controller key - value pairs of th
 
 ::
 
-::alert{type="info"}Missing docstring for `run_hook`. ::
+::alert{type="info"}
+Missing docstring for `run_hook`. 
+::
 
 
 ::ApiCard{object="Genie.Router.match_routes" category="Function"}
@@ -546,7 +552,9 @@ The collection containing the request variables collection.
 
 ::
 
-::alert{type="info"}Missing docstring for `_params_`. ::
+::alert{type="info"}
+Missing docstring for `_params_`. 
+::
 
 
 ::ApiCard{object="Genie.Router.request" category="Function"}
@@ -602,7 +610,9 @@ Checks if the requested resource is a static file.
 
 ::
 
-::alert{type="info"}Missing docstring for `to_uri`. ::
+::alert{type="info"}
+Missing docstring for `to_uri`. 
+::
 
 
 ::ApiCard{object="Genie.Router.escape_resource_path" category="Function"}
@@ -703,6 +713,8 @@ Returns the file headers of `f`.
 
 ::
 
-::alert{type="info"}Missing docstring for `ormatch`. ::
+::alert{type="info"}
+Missing docstring for `ormatch`. 
+::
 
 

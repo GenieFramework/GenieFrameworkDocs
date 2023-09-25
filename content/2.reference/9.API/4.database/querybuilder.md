@@ -1,47 +1,69 @@
 
 
 
-::alert{type="info"}Missing docstring for `MissingModel`. ::
+::alert{type="info"}
+Missing docstring for `MissingModel`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `QueryPart`. ::
+::alert{type="info"}
+Missing docstring for `QueryPart`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `from`. ::
+::alert{type="info"}
+Missing docstring for `from`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `select`. ::
+::alert{type="info"}
+Missing docstring for `select`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `where`. ::
+::alert{type="info"}
+Missing docstring for `where`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `limit`. ::
+::alert{type="info"}
+Missing docstring for `limit`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `offset`. ::
+::alert{type="info"}
+Missing docstring for `offset`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `order`. ::
+::alert{type="info"}
+Missing docstring for `order`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `group`. ::
+::alert{type="info"}
+Missing docstring for `group`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `having`. ::
+::alert{type="info"}
+Missing docstring for `having`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `prepare`. ::
+::alert{type="info"}
+Missing docstring for `prepare`. 
+::
 
 
 ::ApiCard{object="Base.:+" category="Function"}
@@ -280,9 +302,9 @@ Stat
 first(coll)
 ```
 
-Get the first element of an iterable collection. Return the start point of an [`AbstractRange`](@ref) even if it is empty.
+Get the first element of an iterable collection. Return the start point of an [`AbstractRange`]() even if it is empty.
 
-See also: [`only`](@ref), [`firstindex`](@ref), [`last`](querybuilder.md#Base.last).
+See also: [`only`](), [`firstindex`](), [`last`](querybuilder.md#Base.last).
 
 **Examples**
 
@@ -304,7 +326,7 @@ first(itr, n::Integer)
 
 Get the first `n` elements of the iterable collection `itr`, or fewer elements if `itr` is not long enough.
 
-See also: [`startswith`](@ref), [`Iterators.take`](@ref).
+See also: [`startswith`](), [`Iterators.take`]().
 
 !!! compat "Julia 1.6"
     This method requires at least Julia 1.6.
@@ -450,9 +472,9 @@ The value of the lower endpoint. When the lower endpoint is unbounded `nothing` 
 last(coll)
 ```
 
-Get the last element of an ordered collection, if it can be computed in O(1) time. This is accomplished by calling [`lastindex`](@ref) to get the last index. Return the end point of an [`AbstractRange`](@ref) even if it is empty.
+Get the last element of an ordered collection, if it can be computed in O(1) time. This is accomplished by calling [`lastindex`]() to get the last index. Return the end point of an [`AbstractRange`]() even if it is empty.
 
-See also [`first`](querybuilder.md#Base.first), [`endswith`](@ref).
+See also [`first`](querybuilder.md#Base.first), [`endswith`]().
 
 **Examples**
 
@@ -590,7 +612,9 @@ The value of the upper endpoint. When the upper endpoint is unbounded `nothing` 
 
 ::
 
-::alert{type="info"}Missing docstring for `SearchLight.count`. ::
+::alert{type="info"}
+Missing docstring for `SearchLight.count`. 
+::
 
 
 ::ApiCard{object="SearchLight.sql" category="Function"}
