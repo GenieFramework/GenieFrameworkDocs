@@ -5,4 +5,4 @@ curl -L -o forum.tar.gz "https://www.dropbox.com/scl/fi/sm74dpgkd0yor50heeu8w/fo
 tar -xzvf forum.tar.gz -C static/
 
 echo "Building site"
-npm run build
+npm run generate
