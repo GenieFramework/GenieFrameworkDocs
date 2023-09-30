@@ -19,7 +19,8 @@ export default defineTheme({
         ul:{margin:'8px 0'},
         p:{
             margin: '15px 0'
-        }
+        },
+        code:{block:{pre:{padding:'5px'}}}
     },
     typography:{font: { body: 'Inter, sans-serif'}},
 
