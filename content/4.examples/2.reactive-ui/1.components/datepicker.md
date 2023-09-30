@@ -1,34 +1,14 @@
 ---
-title: Components
-description: Most common components and how to use them.
+title: Date picker
+description: Using a date picker with a specific date format.
 ---
 
-## Table
-
-```julia[app.jl]
-module App
-using GenieFramework
-using DataFrames
-@genietools
-
-@app begin
-    @out table = DataTable(DataFrame(a = rand(5) , b = rand(5)))
-end
-
-@page("/", "app.jl.html")
-end
-```
-
-```html[app.jl.html]
-<q-table :data="table.data" :columns="table.columns"></q-table>
-```
-
-The type of the `table` variable is `GenieFramework.Tables.DataTable`.
-
-
 ## Date picker
+**Using a date picker with a specific date format.**
 
-```julia[app.jl]
+````julia
+# Date picker
+
 module App
 using GenieFramework
 @genietools
@@ -47,7 +27,7 @@ end
 @page("/", "app.jl.html")
 
 end
-```
+````
 
 ```html[app.jl.html]
 <h4> MWE </h4>
@@ -58,3 +38,6 @@ end
 
 
 The `mask` parameter in the `q-date` component is required if you want to use the `Date` type. Otherwise, the `date` variable should be of `String` type.
+
+
+[source](https://github.com/GenieFramework/CodeExamples/blob/main/src/2.reactive-ui/datepicker.jl)
