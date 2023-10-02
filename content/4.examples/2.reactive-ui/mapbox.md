@@ -49,11 +49,8 @@ longs = [v[2] for v in values(cities_coordinates)]
             zoom=6.5
         )
     )
-````
 
-this is for detecting click events
-
-````julia
+    # this is for detecting click events
     @in data_click = Dict{String,Any}()  # data from map click event
     @in data_cursor = Dict{String,Any}()
 
@@ -62,11 +59,8 @@ this is for detecting click events
         @show data_cursor
     end
 end
-````
 
-activate detection of click events
-
-````julia
+# activate detection of click events
 @mounted watchplots()
 
 ui() = plot(:trace, layout=:layout, class="sync_data")
