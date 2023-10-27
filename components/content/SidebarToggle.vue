@@ -23,8 +23,8 @@ export default {
         toggleSidebar() {
             const sidebar = document.querySelector('.aside-nav');
             if (sidebar) {
-                this.isSidebarVisible = sidebar.style.display !== 'none';
                 sidebar.style.display = this.isSidebarVisible ? 'none' : 'block';
+                this.isSidebarVisible = sidebar.style.display !== 'none';
             }
         },
         openInNewTab() {
