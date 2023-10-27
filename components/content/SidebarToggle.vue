@@ -16,7 +16,7 @@ export default {
     },
     computed: {
         toggleIndicator() {
-            return this.isSidebarVisible ? '>>' : '<< Navigation';
+            return this.isSidebarVisible ? '<< Navigation' : '>>';
         }
     },
     methods: {
