@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/examples/*"
+  to = "/docs/examples/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/reference/*"
+  to = "/docs/reference/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/*"
+  to = "/docs/guides/:splat"
+  status = 301
+  force = true
