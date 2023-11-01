@@ -20,12 +20,8 @@ const BASEURL = "/demo.png"
     @out imageurl = "/demo.png"
     @onchange refresh begin
         img = rand(RGB, 100, 100)
-````
-
-add an (invalid) anchor to the imagepath in order to trigger a reload in the Quasar/Vue backend
-
-````julia
         save(IMGPATH, img)
+        # add an (invalid) anchor to the imagepath in order to trigger a reload in the Quasar/Vue backend
         imageurl = "$BASEURL#$(Base.time())"
     end
 end

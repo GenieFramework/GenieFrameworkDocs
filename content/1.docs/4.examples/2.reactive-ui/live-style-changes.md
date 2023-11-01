@@ -1,5 +1,5 @@
 ---
-title: Keypress detection
+title: Live style style changes
 description: Change the style of an element on the fly.
 ---
 

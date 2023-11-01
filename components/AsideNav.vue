@@ -35,7 +35,7 @@ const links = [
     {
         label: 'API',
         icon: 'ph:puzzle-piece',
-        to: '/docs/api',
+        to: '/docs/api/server/assets',
     },
 ];
 
