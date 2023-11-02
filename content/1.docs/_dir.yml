@@ -1,2 +1,4 @@
 title: 'Docs'
 icon: ph:book-open
+aside:
+  collapsed: true
