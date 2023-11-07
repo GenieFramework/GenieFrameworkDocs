@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center justify-center p-6">
-        <h1 class="text-3xl font-bold mb-4">Ask a Question</h1>
+        <h1 class="text-3xl font-bold mb-4">Ask a question</h1>
         <div class="mb-4 w-full max-w-xl">
             <input type="text" v-model="question" placeholder="Enter your question"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
@@ -11,9 +11,9 @@
             <span v-if="isLoading" class="mr-2">Loading...</span>
             <span v-if="!isLoading">Submit </span>
         </button>
-        <div v-if="answer" class="mt-6 p-4 border rounded bg-green-100">
+        <div v-if="answer" class="mt-6 p-4 border rounded">
             <h2 class="text-xl font-semibold">Answer</h2>
-            <p class="text-gray-700">{{ answer }}</p>
+            <ContentRendererMarkdown :value="ttt" />
         </div>
         <div v-if="error" class="mt-6 p-4 border rounded bg-red-100">
             <h2 class="text-xl font-semibold">Error</h2>
@@ -24,6 +24,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import markdownParser from '@nuxt/content/transformers/markdown'
+
+let ttt = await markdownParser.parse("", "**hello there**");
 
 const question = ref('');
 const answer = ref(null);
@@ -48,6 +51,7 @@ const askQuestion = async () => {
 
         console.log("Response received:", response);
         answer.value = response.answer;
+        ttt = await markdownParser.parse("", response.answer);
         error.value = null;
         console.log("Answer set:", answer.value);
     } catch (e) {

@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@nuxt/devtools": "^0.8.5",
+        "@nuxtjs/axios": "^5.13.6",
         "@nuxtjs/tailwindcss": "^6.8.0",
         "highlight.js": "^11.8.0"
     }
