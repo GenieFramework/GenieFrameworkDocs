@@ -8,7 +8,7 @@
         <button @click="askQuestion"
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             :disabled="isLoading">
-            <span v-if="isLoading" class="mr-2">Loading...</span>
+            <span v-if="isLoading" class="mr-2">Thinking...</span>
             <span v-if="!isLoading">Submit </span>
         </button>
         <div v-if="answer" class="mt-6 p-4 border rounded">
@@ -49,7 +49,7 @@ const askQuestion = async () => {
     isLoading.value = true;
     console.log("Asking question:", question.value);
     try {
-        const response = await $fetch('http://34.138.71.250/api/question', {
+        const response = await $fetch('https://learn.genieframework.com/docsbot/api/question', {
             method: 'POST',
             body: {
                 query: question.value
