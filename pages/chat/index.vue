@@ -13,7 +13,13 @@
         </button>
         <div v-if="answer" class="mt-6 p-4 border rounded">
             <h2 class="text-xl font-semibold">Answer</h2>
-            <ContentRendererMarkdown :value="ttt" />
+            <ContentRendererMarkdown :value="markdown_answer" />
+        </div>
+        <div v-if="answer" class="mt-6 p-4 border rounded">
+            <h4 class="text-xl font-semibold">Context</h4>
+            <div v-for="c in context" class="mt-2">
+                {{ c }}
+            </div>
         </div>
         <div v-if="error" class="mt-6 p-4 border rounded bg-red-100">
             <h2 class="text-xl font-semibold">Error</h2>
@@ -26,7 +32,8 @@
 import { ref } from 'vue';
 import markdownParser from '@nuxt/content/transformers/markdown'
 
-let ttt = await markdownParser.parse("", "**hello there**");
+let markdown_answer = await markdownParser.parse("", "**hello there**");
+let context = "";
 
 const question = ref('');
 const answer = ref(null);
@@ -42,7 +49,7 @@ const askQuestion = async () => {
     isLoading.value = true;
     console.log("Asking question:", question.value);
     try {
-        const response = await $fetch('https://apps.peregimenez.com/docsbot/api/question', {
+        const response = await $fetch('http://34.138.71.250/api/question', {
             method: 'POST',
             body: {
                 query: question.value
@@ -51,7 +58,8 @@ const askQuestion = async () => {
 
         console.log("Response received:", response);
         answer.value = response.answer;
-        ttt = await markdownParser.parse("", response.answer);
+        markdown_answer = await markdownParser.parse("", response.answer);
+        context = response.context;
         error.value = null;
         console.log("Answer set:", answer.value);
     } catch (e) {
