@@ -49,7 +49,7 @@ const askQuestion = async () => {
     isLoading.value = true;
     console.log("Asking question:", question.value);
     try {
-        const response = await $fetch('https://learn.genieframework.com/docsbot/api/question', {
+        const response = await $fetch('https://apps.peregimenez.com/docsbot/api/question', {
             method: 'POST',
             body: {
                 query: question.value
