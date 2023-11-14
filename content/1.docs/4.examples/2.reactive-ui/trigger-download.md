@@ -18,12 +18,15 @@ using GenieFramework
         # do some processing and write to a file
         write("./public/data.zip", string(randn(10)))
         sleep(2)
-        # change the link url to trigger the file download script. The URL will still point to the same file, but the link href will have a different anchor after the #
+        # change the link url to trigger the file download script. The URL will still point to
+        # the same file, but the link href will have a different anchor after the #
         linkhref = "/data.zip#($(rand(1)))"
     end
 end
 
-# Define a script that will watch the href attribute in the link, and click it when it changes. This @mounted block will be run when the page is loaded in the browser. The script is activated with a 2 second delay to allow the browser to render the link first
+# Define a script that will watch the href attribute in the link, and click it when it changes.
+# This @mounted block will be run when the page is loaded in the browser. The script is activated
+# with a 2 second delay to allow the browser to render the link first
 @mounted """
     setTimeout(() => {
         var linkToWatch = document.getElementById('dynamicLink');
@@ -46,7 +49,7 @@ end
 """
 
 ui() = [
-    # "dynamicLink" i the id of the link to be watched by the script
+    # "dynamicLink" is the id of the link to be watched by the script
     # var":href" is set so that the href attribute takes its value from a reactive variable
     a(id="dynamicLink", var":href"="linkhref", "Dynamic Link"),
     btn("Download", @click(:dfile), loading=:dfile)
