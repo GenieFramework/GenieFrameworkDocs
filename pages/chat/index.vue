@@ -14,6 +14,14 @@
         <div v-if="answer" class="mt-6 p-4 border rounded">
             <h2 class="text-xl font-semibold">Answer</h2>
             <ContentRendererMarkdown :value="markdown_answer" />
+            <div v-if="answer" class="mt-6 flex justify-center items-center">
+                <span class="mr-2">Was this helpful?</span>
+                <button @click="sendFeedback(1)" class="mr-4">👍</button>
+                <button @click="sendFeedback(0)">👎</button>
+            </div>
+            <div v-if="feedbackSent" class="mt-6 text-center text-green-500">
+                Thanks for your feedback!
+            </div>
         </div>
         <div v-if="answer" class="mt-6 p-4 border rounded">
             <h4 class="text-xl font-semibold">Context</h4>
@@ -34,6 +42,8 @@ import markdownParser from '@nuxt/content/transformers/markdown'
 
 let markdown_answer = await markdownParser.parse("", "**hello there**");
 let context = "";
+let id = ""
+const feedbackSent = ref(false);
 
 const question = ref('');
 const answer = ref(null);
@@ -47,6 +57,7 @@ const askQuestion = async () => {
     }
 
     isLoading.value = true;
+    feedbackSent.value = false;
     console.log("Asking question:", question.value);
     try {
         const response = await $fetch('https://apps.peregimenez.com/docsbot/api/question', {
@@ -60,6 +71,7 @@ const askQuestion = async () => {
         answer.value = response.answer;
         markdown_answer = await markdownParser.parse("", response.answer);
         context = response.context;
+        id = response.doc_id;
         error.value = null;
         console.log("Answer set:", answer.value);
     } catch (e) {
@@ -69,6 +81,17 @@ const askQuestion = async () => {
         console.log("Error set:", error.value);
     } finally {
         isLoading.value = false;
+    }
+};
+const sendFeedback = async (feedback) => {
+    try {
+        await $fetch(`https://apps.peregimenez.com/docsbot/api/feedback/${id}/${feedback}`, {
+            method: 'GET'
+        });
+        console.log(`Feedback sent: ${feedback}`);
+        feedbackSent.value = true;
+    } catch (e) {
+        console.error("Error sending feedback:", e);
     }
 };
 </script>
