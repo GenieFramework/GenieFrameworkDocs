@@ -11,6 +11,10 @@ export default defineNuxtConfig({
         "@nuxtjs/tailwindcss", "nuxt-og-image", '@zadigetvoltaire/nuxt-gtm'
     ],
     buildModules: ["@nuxtjs/google-analytics"],
+    axios: {
+    // Axios module configuration
+    baseURL: 'https://apps.peregimenez.com/', // Can be used as base URL for all axios requests
+  },
     ssr: true,
     ogImage: {
         defaults: {
