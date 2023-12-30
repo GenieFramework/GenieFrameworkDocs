@@ -1,0 +1,467 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1062217064053489704",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "API for dummies",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:09:11.4291465+00:00",
+  "messages": [
+    {
+      "id": "1062217064053489704",
+      "type": "Default",
+      "timestamp": "2023-01-10T03:51:23.109+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi! \nI have a friend that's building a web app using Supabase on the back end and React on the front end. I am developing the analytics engine this web app will use in Julia. As part of this, I need develop an API that will run the Julia script I've developed... However, I know nothing about web dev! Is this my only tutorial to go off of? https://genieframework.com/docs/genie/docs/guides/Simple-API-backend.html\n\nIf my script can accept JSON, I assume the api \"response\" is the \"return\" from my script function? \n\nI'm really not sure where to start and would appreciate any guidance. (Even if there is an article / tutorial that is in a different language but would give me more context on how this stuff works.) I am really starting from \"level 0\" here.",
+      "author": {
+        "id": "84679554479706112",
+        "name": "snowysnowcones",
+        "discriminator": "0000",
+        "nickname": "Snowy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/84679554479706112/422d465188e221a0c3e82d75ab9a980d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Framework - Highly Productive Web Development with Julia",
+          "url": "https://genieframework.com/docs/genie/docs/guides/Simple-API-backend.html",
+          "timestamp": null,
+          "description": "Documentation for Genie Framework, the highly productive web development framework for Julia. It includes all you need to quickly build production ready web applications with Julia Lang.",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1062242080665128970",
+      "type": "Default",
+      "timestamp": "2023-01-10T05:30:47.534+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I recommend these guides:::\n\n* Building MVC App - https://genieframework.com/docs/genie/v5.11/tutorials/Developing-MVC-Web-Apps.html\n* Simple API backend - https://genieframework.com/docs/genie/v5.11/docs/guides/Simple-API-backend.html\n* Working with Genie APps - https://genieframework.com/docs/genie/v5.11/docs/guides/Working-With-Genie-Apps.html",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1062242614964916274",
+      "type": "Default",
+      "timestamp": "2023-01-10T05:32:54.921+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "also it's kind of inconvenience but you I highly recommend using this book for learning(It's upto with Genie 5): https://www.packtpub.com/product/web-development-with-julia-and-genie/9781801811132\n\nDon't know about your country but I can read this ebook for $4.85",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Web Development with Julia and Genie | Packt",
+          "url": "https://www.packtpub.com/product/web-development-with-julia-and-genie/9781801811132",
+          "timestamp": null,
+          "description": "Get a practical overview of web development in Julia and learn how to build MVC applications with a REST API, and an interactive data dashboard using the Genie web framework",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/llZRFMeUB--vF__0XV9lxRoZnCO4WvdcRhEOoPAlUrY/https/static.packt-cdn.com/products/9781801811132/cover/smaller",
+            "width": 250,
+            "height": 309
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069416997647028285",
+      "type": "Default",
+      "timestamp": "2023-01-30T00:41:21.046+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "So I bought the book and read the links... The links seem more focused to handling single variable inputs. But what about if I need to accept a LOT of data? For example, this data will be uploaded by the user and might contain tens of thousands of rows. Is the method of setting up an API as described here: https://genieframework.com/docs/genie/v5.11/docs/guides/Simple-API-backend.html still the way to go? I guess I'm confused on how the best way to get very large data sets to the api",
+      "author": {
+        "id": "84679554479706112",
+        "name": "snowysnowcones",
+        "discriminator": "0000",
+        "nickname": "Snowy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/84679554479706112/422d465188e221a0c3e82d75ab9a980d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Documentation - Genie Framework",
+          "url": "https://genieframework.com/docs/genie/v5.11/docs/guides/Simple-API-backend.html",
+          "timestamp": null,
+          "description": "Genie Framework includes all you need to quickly build production-ready web applications with Julia. Develop Julia backends, create beautiful web UIs, build data applications and dashboards, integrate with databases and set up high-performance web services and APIs.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/IHMzYUPMPs2-rWWw8zm0dkJpGHQ4Io0THX1XuZKnJaM/https/genieframework.com/assets/img/meta-image.jpg",
+            "width": 1614,
+            "height": 679
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069481800415588382",
+      "type": "Reply",
+      "timestamp": "2023-01-30T04:58:51.23+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "what's the format of data user will might upload. Is it going to be like `form input` or `tar` or `gzip`? Thinking about it so I can give correct answers and what will happen to the data once user uploads it. Will it be rendered on plots/tables? etc?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "84679554479706112",
+          "name": "snowysnowcones",
+          "discriminator": "0000",
+          "nickname": "Snowy",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/84679554479706112/422d465188e221a0c3e82d75ab9a980d.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1069416997647028285",
+        "channelId": "1062217064053489704",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1069622944206176428",
+      "type": "Reply",
+      "timestamp": "2023-01-30T14:19:42.532+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "User will upload a csv file with data and make a few selections about what is in the data (column name matching)\n\nSo as an example, a user might upload a csv of time series data, then select which columns in the csv map to required fields needed to properly ingest the data uploaded",
+      "author": {
+        "id": "84679554479706112",
+        "name": "snowysnowcones",
+        "discriminator": "0000",
+        "nickname": "Snowy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/84679554479706112/422d465188e221a0c3e82d75ab9a980d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1069481800415588382",
+        "channelId": "1062217064053489704",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1069623376072671252",
+      "type": "Default",
+      "timestamp": "2023-01-30T14:21:25.497+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The output will also be time series data (a subset of the input data based on certain correlations from the input)",
+      "author": {
+        "id": "84679554479706112",
+        "name": "snowysnowcones",
+        "discriminator": "0000",
+        "nickname": "Snowy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/84679554479706112/422d465188e221a0c3e82d75ab9a980d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069624358043140096",
+      "type": "Default",
+      "timestamp": "2023-01-30T14:25:19.617+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "uploading a large CSV is straight forward. You can check CSV Uploader example. I am just worried about rendering CSV with more than 25k rows in Quasar table. As it might slow down things",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069624614898114681",
+      "type": "Default",
+      "timestamp": "2023-01-30T14:26:20.856+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You can start with this example: https://github.com/GenieFramework/GenieFrameworkDemos_NewAPI/tree/main/CSVAnalysis",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069625030448783390",
+      "type": "Default",
+      "timestamp": "2023-01-30T14:27:59.931+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://quasar.dev/vue-components/uploader#julia-genie",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Uploader | Quasar Framework",
+          "url": "https://quasar.dev/vue-components/uploader",
+          "timestamp": null,
+          "description": "The QUploader Vue component is a way for the user to upload files to a backend server.",
+          "color": "#00B4FF",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/b7726cidXYh1HSwiaL2_Dywxd8pCzBz8QF_A8XyPaWc/https/cdn.quasar.dev/logo-v2/social-cover.jpg",
+            "width": 500,
+            "height": 281
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069660760961200139",
+      "type": "Default",
+      "timestamp": "2023-01-30T16:49:58.749+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes but we’re not using Julia or Genie for the app. Julia is only used for the data processing, and Genie only for setting up a web service to accept the data and kick off the data processing process before sending the results back",
+      "author": {
+        "id": "84679554479706112",
+        "name": "snowysnowcones",
+        "discriminator": "0000",
+        "nickname": "Snowy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/84679554479706112/422d465188e221a0c3e82d75ab9a980d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070003295109795942",
+      "type": "Reply",
+      "timestamp": "2023-01-31T15:31:05.254+00:00",
+      "timestampEdited": "2023-01-31T15:31:15.647+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You can use this example and try some large CSV from Kaggle and let me know if you need any help or issues",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "84679554479706112",
+          "name": "snowysnowcones",
+          "discriminator": "0000",
+          "nickname": "Snowy",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/84679554479706112/422d465188e221a0c3e82d75ab9a980d.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1069622944206176428",
+        "channelId": "1062217064053489704",
+        "guildId": "774897545717219328"
+      }
+    }
+  ],
+  "messageCount": 12
+}

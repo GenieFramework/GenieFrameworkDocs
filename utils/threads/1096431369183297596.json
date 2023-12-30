@@ -1,0 +1,133 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1096431369183297596",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Request failed with status code 422",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:24:49.3168209+00:00",
+  "messages": [
+    {
+      "id": "1096431369183297596",
+      "type": "Default",
+      "timestamp": "2023-04-14T13:46:49.123+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am trying to do a new app on genie cloud, and after filling in the title and description, I get a \"Request failed with status code 422 \" error message at the bottom of the screen.\n\nHas anyone run into the same problem before?",
+      "author": {
+        "id": "806939055127396382",
+        "name": "tpoisot",
+        "discriminator": "0000",
+        "nickname": "Timothée",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/806939055127396382/d0d6bf970e0bbf618cf35b6a9df2b2b2.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1097405676193595482",
+      "type": "Default",
+      "timestamp": "2023-04-17T06:18:22.016+00:00",
+      "timestampEdited": "2023-04-17T06:18:41.684+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This can happen if you're using the name of an already existing app. Otherwise app creation should work fine. You can also try creating the app from the development environment window. \n\nIf this problem persists please send us a message through the intercom chat (bottom right icon on the screenshot below) and we'll help you right away",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1097405676013228083",
+          "url": "https://cdn.discordapp.com/attachments/1096431369183297596/1097405676013228083/image.png?ex=653f4aad&is=652cd5ad&hm=786bc6adf6342008aba910f973693d6c9088da0397559e9f47f51442e5a3b73f&",
+          "fileName": "image.png",
+          "fileSizeBytes": 99594
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1100332426951139338",
+      "type": "Default",
+      "timestamp": "2023-04-25T08:08:13.773+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Timothée are you using `-` or `_` in app names resulting in this error? If yes I am fixing it",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "806939055127396382",
+          "name": "tpoisot",
+          "discriminator": "0000",
+          "nickname": "Timothée",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/806939055127396382/d0d6bf970e0bbf618cf35b6a9df2b2b2.png?size=512"
+        }
+      ]
+    }
+  ],
+  "messageCount": 3
+}

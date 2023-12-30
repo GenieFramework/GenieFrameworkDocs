@@ -1,0 +1,147 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1091444338485112892",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Genie Auth fails",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:14:23.4234076+00:00",
+  "messages": [
+    {
+      "id": "1091444338485112892",
+      "type": "Default",
+      "timestamp": "2023-03-31T19:30:08.35+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi team, I really like the GenieAuth\nBut when I am making a multi page app and routing apps. Using controllers.index \n\n@page macro is bypassing the genie auth.\n\n\nCan you please help me in solving this issue?\n\nJust for your info, I am using authenticated command even in routes.jl as well as in controllers.index function also before @page .\n\nBut it is failing.",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092437022985171105",
+      "type": "Default",
+      "timestamp": "2023-04-03T13:14:42.778+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This seems hard to debug without any further information. Could you create a minimum working example in which this happens? That is, a minimal app with multiple pages and routes where you're using GenieAuth",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092739951407398982",
+      "type": "Default",
+      "timestamp": "2023-04-04T09:18:26.542+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sure, I will share it by this weekend!!",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092757108451180564",
+      "type": "Default",
+      "timestamp": "2023-04-04T10:26:37.1+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This is closed in Github.... just posting link for reference https://github.com/GenieFramework/Stipple.jl/issues/188",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Authentication Issue · Issue #188 · GenieFramework/Stipple.jl",
+          "url": "https://github.com/GenieFramework/Stipple.jl/issues/188",
+          "timestamp": null,
+          "description": "While using @page (page macro from stipple) It overrides the genie authentication rules and allows a person directly to access routes even which I have bound with authentication. Sharing sample cod...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/y6MJufkoUuGGymf3SFXFQ4MWQLC53GlpsRr4gVNpWxI/https/opengraph.githubassets.com/d7b528f78042cb0ebce41a12fb0911b9c936848441797789dedc0d4170cf5fd6/GenieFramework/Stipple.jl/issues/188",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

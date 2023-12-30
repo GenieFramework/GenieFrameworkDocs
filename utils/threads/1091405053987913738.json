@@ -1,0 +1,84 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1091405053987913738",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "SearchLight/SQLAlchemy interoperabiliity",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:25:39.6381646+00:00",
+  "messages": [
+    {
+      "id": "1091405053987913738",
+      "type": "Default",
+      "timestamp": "2023-03-31T16:54:02.196+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I need to create a database that will be accessed by both Julia and Python users.  I really liked the ActiveRecord ORM from Ruby on Rails so I'm hoping that there are ORM tools in Julia and Python that can both operate with the same database schema.  Is it possible to use SearchLight's ORM to access a database created with SQLAlchemy (or other Python ORM tool)?  Is it possible to use SQLAlchemy's ORM (or other Python ORM tool) to access a database created with SearchLight?",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092725007194542080",
+      "type": "Default",
+      "timestamp": "2023-04-04T08:19:03.564+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I don't know much about SQLAlchemy, but apparently it supports SQLite\n\nhttps://docs.sqlalchemy.org/en/20/dialects/sqlite.html\n\nSearchLight does too, so you should be able to use both on the same DB",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

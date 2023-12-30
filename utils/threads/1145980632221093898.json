@@ -1,0 +1,140 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1145980632221093898",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Reusing an @in or @out variable?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:24:53.9135097+00:00",
+  "messages": [
+    {
+      "id": "1145980632221093898",
+      "type": "Default",
+      "timestamp": "2023-08-29T07:17:54.012+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Apparently, when I write something like:\n```\n@in var = 2\n@in another_var = var\n```\nI get a 'var undefined' error. Is there a way around this? Otherwise I am forced to duplicate code in some cases, which can easily lead to errors should that code be changed.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1145991415369842688",
+      "type": "Default",
+      "timestamp": "2023-08-29T08:00:44.915+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Solved it! Figured out I need to declare the variable OUTSIDE of the @app macro and then use it in the @in and @out macros.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1045283774247751770",
+          "name": "ap",
+          "discriminator": "1201",
+          "nickname": "ap",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ]
+    },
+    {
+      "id": "1145996456902271047",
+      "type": "Default",
+      "timestamp": "2023-08-29T08:20:46.91+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yep! reactive variables do not actually exist until the page is loaded, so they cannot be used to initialize others.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

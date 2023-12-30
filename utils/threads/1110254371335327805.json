@@ -1,0 +1,99 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1110254371335327805",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Is some restricted url acces sharing possible for a colaborative work team ??",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:20:37.6535516+00:00",
+  "messages": [
+    {
+      "id": "1110254371335327805",
+      "type": "Default",
+      "timestamp": "2023-05-22T17:14:29.655+00:00",
+      "timestampEdited": "2023-05-22T17:16:41.563+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I've just gotten my Genie web access and see from your demo Video that sharing a webpage will be possible - I havent tested that yet : Question will it be possible to create various group of users and share each page with specific users [email/Pw or whatever Auth method ] ? \nThanks for any experiment return",
+      "author": {
+        "id": "648706862752989206",
+        "name": "kirik_1",
+        "discriminator": "0000",
+        "nickname": "Kirik",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/648706862752989206/580940822eba865e49c0a3884172d74e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1110479828693557278",
+      "type": "Default",
+      "timestamp": "2023-05-23T08:10:22.878+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi Kirik! I understand you got access to Genie Cloud. We do not offer out-of-box user authentication at the moment, but we will in future as a paid feature. Meanwhile, you can extend the functionality of your app by implementing Genie’s authentication plugin:\u00A0https://github.com/GenieFramework/GenieAuthentication.jl?\n\nWe can offer some support if you need help - I’ll DM you.",
+      "author": {
+        "id": "779260637724672000",
+        "name": "cipa1",
+        "discriminator": "0000",
+        "nickname": "Cinzia",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/779260637724672000/dbc39c60a8cfc37769c68ceca31661a4.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - GenieFramework/GenieAuthentication.jl: Authentication plug...",
+          "url": "https://github.com/GenieFramework/GenieAuthentication.jl?",
+          "timestamp": null,
+          "description": "Authentication plugin for Genie framework. Contribute to GenieFramework/GenieAuthentication.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/jWBw0YPhWbu6xacnaAdkFaudbFufNF8Z0ecr-QAi4C8/https/opengraph.githubassets.com/95039c28015aa8a30c3da86824085a5996185e4a0a8edc0f8ce319b222b06f1c/GenieFramework/GenieAuthentication.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

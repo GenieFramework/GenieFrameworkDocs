@@ -1,0 +1,222 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1142819913120088185",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Can I delay triggering @onchange when I'm making changes to more than one variable?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:10:25.9180434+00:00",
+  "messages": [
+    {
+      "id": "1142819913120088185",
+      "type": "Default",
+      "timestamp": "2023-08-20T13:58:19.855+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have an @onchange block that changes the value of two variables. A change in those variables triggers another @onchange block but I would like to postpone that trigger until both variables are changed. Is that possible?\n\nHere's the code:\n```\n@onchange remove_dem_tier begin\n        if !isempty(dem_amounts)\n            @show dem_percentages\n            pop!(dem_percentages)\n            dem_percentages = copy(dem_percentages)\n\n            @show dem_amounts\n            pop!(dem_amounts)\n            dem_amounts = copy(dem_amounts)\n        end\n    end\n\n@onchange set_telo, guaranteed_income, demurrage_free, dem_amounts, dem_percentages begin\n        @show sumsy_initial_wealth\n\n        if set_telo\n            dem_tiers::Vector{Tuple{Real, Real}} = Vector{Tuple{Real, Real}}()\n\n            for index in eachindex(dem_amounts)\n                push!(dem_tiers, (dem_amounts[index], dem_percentages[index]/100))\n            end\n\n            sumsy_initial_wealth = Integer(round(telo(guaranteed_income, demurrage_free, dem_tiers)))\n        end\n    end\n```\n\nAs can be seen, if the second @onchange block is triggered after I pop from percentages, I get an index error.\nBoth arrays should always be kept at the exact same length before doing anything with them.\n\nThanks in advance!",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143187455655301213",
+      "type": "Default",
+      "timestamp": "2023-08-21T14:18:48.824+00:00",
+      "timestampEdited": "2023-08-21T14:19:09.712+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Genie relies on Observables.jl to implement reactivity. I see in the docs that there is support for callback priorization \nhttps://juliagizmos.github.io/Observables.jl/stable/#Priority\n\nso I guess it could be done. However, the current version of Stipple.jl does not allow for this kind of behavior.\n\nI can think of two ways to implement what you need:\n1. watch only the dem_amounts variable and remove dem_percentages from @onchange. When the reactive handler is triggered due to a change in dem_amounts, we know that dem_percentages has also changed as the code shows a few lines above.\n\n2. Add a private reactive variable with \n`@private twovars = 0`,\n\n and watch that one with @onchange twovars,.... Then, in the first reactive handler simply modify this twovars variable at the end of the block to trigger the other handler",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1143187992375206048",
+      "type": "Default",
+      "timestamp": "2023-08-21T14:20:56.788+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks!",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143188816396566558",
+      "type": "Default",
+      "timestamp": "2023-08-21T14:24:13.25+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Now I have another, related question however. I thought by myself, what if I just put the data in one multi dimensional array? That works ... but only in one direction it seems. I can display the data with 'dem_tiers[index][0]' for example. but when I make changes to it, it's not registered. Is there a way to bind components to elements in a multi dimensional array or am I wishing for unicorns here? \uD83D\uDE09",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143471715599515678",
+      "type": "Default",
+      "timestamp": "2023-08-22T09:08:21.676+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Things are a bit more complicated then I described above it seems. I have the following html code: ```\n                <div class=\"row\" v-for=\"dem_tier, index in dem_tiers\">\n                    <q-input v-model=\"dem_tiers[index][0]\"\n                                v-if=\"index == 0\"\n                                dense\n                                label=\"Demurrage from\"\n                                type=\"Number\"\n                                readonly>\n                    </q-input>\n                    <q-input v-model=\"dem_tiers[index][0]\"\n                                v-if=\"index > 0\"\n                                dense\n                                label=\"Demurrage from\"\n                                type=\"Number\"\n                                :step=\"1000\"\n                                :rules = \"[val => (index == 0 || val > dem_tiers[index - 1][0]) || 'Amount must be higher than previous tier']\"\n                                no-error-icon\n                                debounce=\"100\">\n                    </q-input>\n                    <p>&nbsp;</p>\n                    <q-input v-model=\"dem_tiers[index][1]\"\n                                dense\n                                label=\"Demurrage\"\n                                type=\"Number\"\n                                suffix=\"%\"\n                                :step=\"0.01\"\n                                :rules = \"[val => (val => 0 && val <= 100) || 'Demurrage percentage must be between 0 and 100']\"\n                                no-error-icon\n                                debounce=\"100\">\n                    </q-input>\n                </div>\n```\nWhen I  change the value of a dem_tiers[index][0] field, everything works fine and the value is changed in the model. But when I change the value of a dem_tiers[index][1] field, the change is not propagated to the model. Even the rules are not triggered.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143476523312091186",
+      "type": "Default",
+      "timestamp": "2023-08-22T09:27:27.924+00:00",
+      "timestampEdited": "2023-08-22T09:28:01.904+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Figured out why the rules are not triggered. Typo in the rules \uD83D\uDE42 . I now changed '=>' into '>=' and the rules now work AND I figured out why I had a problem updating the data in the model. I initialised the array as 'dem_tiers = [[0, 1]]' and then tried to store a Float in it. It didn't trigger a (visible) error but it clearly didn't work. I changed the initialisation code to 'dem_tiers = [[0, 1.0]]' and now everything works fine. Thus, problem solved! \uD83D\uDE42",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC9B",
+            "code": "yellow_heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f49b.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

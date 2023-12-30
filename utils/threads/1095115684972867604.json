@@ -1,0 +1,174 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1095115684972867604",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "GenieFramework & Heatmap",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:14:36.2249828+00:00",
+  "messages": [
+    {
+      "id": "1095115684972867604",
+      "type": "Default",
+      "timestamp": "2023-04-10T22:38:45.563+00:00",
+      "timestampEdited": "2023-04-10T22:39:14.405+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am creating a webapp that loads an image and outputs a heatmap of that image. How would I create a `PlotData()` variable for a heatmap? The code below attempts this in two different ways, but neither attempt works\n\n```julia\n# /dashboard.jl\nslice = rand(84, 84)\nimage_viewer1 = PlotData(z=slice, plot=\"heatmap\")\nimage_viewer2 = PlotData(slice, plot=\"heatmap\")\n\n# /ui.jl\nplot(:image_viewer)\nplot(:image_viewer2)\n```\n\nError 1:\n```julia\nMethodError: no method matching (Vector)(::Matrix{Float64})\n\n\n```\n\nError 2:\n```julia\nMethodError: no method matching StipplePlotly.Charts.PlotData(::Matrix{Float64}; plot=\"heatmap\")\n```",
+      "author": {
+        "id": "664690471796342794",
+        "name": "daleblack",
+        "discriminator": "0000",
+        "nickname": "Dale",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1095272962791325698",
+      "type": "Default",
+      "timestamp": "2023-04-11T09:03:43.517+00:00",
+      "timestampEdited": "2023-04-11T09:04:26.395+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You need to use the correct type from StipplePlotly.Charts, and use an array of arrays instead of a matrix. Here's an example:\n\nhttps://github.com/GenieFramework/GenieFrameworkDemos_NewAPI/tree/main/huggingface\n\nThe relevant code is:\n```       \n vec_matrix = [similarity_matrix[:,i] for i in 1:n_words]\n\nhmap = PlotData(\n                      z = similarity_matrix,\n                      x = tokens,\n                      y = tokens,\n                      plot = StipplePlotly.Charts.PLOT_TYPE_HEATMAP,\n                     )\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GenieFrameworkDemos_NewAPI/huggingface at main · GenieFramework/Gen...",
+          "url": "https://github.com/GenieFramework/GenieFrameworkDemos_NewAPI/tree/main/huggingface",
+          "timestamp": null,
+          "description": "Demos for new reactive API. Contribute to GenieFramework/GenieFrameworkDemos_NewAPI development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/kLfGuACrY_8-4zX2qj6kRerTOprKXalZx72utVBRcQA/https/opengraph.githubassets.com/74a89fdcf69079ca5e77a6cf9e3d2da0d64e5f8449a807a3ba308b345e08cfa1/GenieFramework/GenieFrameworkDemos_NewAPI",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1096246999340286003",
+      "type": "Default",
+      "timestamp": "2023-04-14T01:34:11.927+00:00",
+      "timestampEdited": "2023-04-14T01:34:16.473+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks, that repo will be super helpful. Is there anything unique about StipplePlotly and PlotlyJS with regards to syntax? If I set it up to work with PlotlyJS, the same code should essentially work with StipplePlotly, right?",
+      "author": {
+        "id": "664690471796342794",
+        "name": "daleblack",
+        "discriminator": "0000",
+        "nickname": "Dale",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1096338882645200917",
+      "type": "Default",
+      "timestamp": "2023-04-14T07:39:18.614+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you can use either syntax, here's an example using PlotlyJS\n\nhttps://learn.geniecloud.io/examples/reactive-ui/plotlyjs-syntax",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Cloud - Resource Hub",
+          "url": "https://learn.geniecloud.io/examples/reactive-ui/plotlyjs-syntax",
+          "timestamp": null,
+          "description": "Everything you need to learn how to build Genie apps.",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/RCNlUuNxfdfKTdahS9xgM5CSCBNgZpOon08tSqW2N4I/https/learn.geniecloud.io/meta.png",
+            "width": 1200,
+            "height": 627
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

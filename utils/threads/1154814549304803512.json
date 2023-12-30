@@ -1,0 +1,344 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1154814549304803512",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "deploy on fly.io",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:12:27.5034602+00:00",
+  "messages": [
+    {
+      "id": "1154814549304803512",
+      "type": "Default",
+      "timestamp": "2023-09-22T16:20:43.971+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello all, \n\nwas anyone able to deploy an app on fly.io following the guide here https://learn.genieframework.com/docs/guides/deploying-genie-apps\n\nI am not able to get this going and continuously get the problem that the service cannot be reached:\n\n```\nWARNING The app is not listening on the expected address and will not be reachable by fly-proxy.\nYou can fix this by configuring your app to listen on the following addresses:\n  - 0.0.0.0:8000\nFound these processes inside the machine with open listening sockets:\n  PROCESS        | ADDRESSES                             \n-----------------*---------------------------------------\n  /.fly/hallpass | [fdaa:3:161a:a7b:126:2066:a8dc:2]:22  \n\nCreating a second machine to increase service availability\n  Machine 48ed67dc301148 [app] update finished: success\nFinished launching new machines\n\nNOTE: The machines for [app] have services with 'auto_stop_machines = true' that will be stopped when idling\n\n\nVisit your newly deployed app at https://baseappzwei.fly.dev/\n```\n\nI have tested the requried Dockerfile and the app in the container listens at 0.0.0.0:8000, I also have scaled RAM to allow fast enough loading of the app, which appears to be a common issue according to the fly.io community... \n\nSo if anyone made it, could you share your fly.toml and Dockerfile with me?\n\nMany thanks\nSven",
+      "author": {
+        "id": "750329841580113940",
+        "name": "sven8112",
+        "discriminator": "0000",
+        "nickname": "Sven",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Deploying Genie apps",
+          "url": "https://learn.genieframework.com/docs/guides/deploying-genie-apps",
+          "timestamp": null,
+          "description": "How to deploy Genie apps online.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/jMjzLk2zx1yf5fUrSZky8cbVgbaDyVhk3S52A-Q5oSw/https/learn.genieframework.com/docs/guides/deploying-genie-apps/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1155298760268726284",
+      "type": "Default",
+      "timestamp": "2023-09-24T00:24:48.861+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I think @essenciary deployed to fly.io long time back",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "738049963250155580",
+          "name": "essenciary",
+          "discriminator": "0000",
+          "nickname": "essenciary",
+          "color": "#F1C40F",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "907230418414215179",
+              "name": "@admin",
+              "color": "#F1C40F",
+              "position": 12
+            },
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1155623741544480820",
+      "type": "Default",
+      "timestamp": "2023-09-24T21:56:10.435+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "There are issues sometimes deploying to fly.io. Apparently the app doesn't load fast enough and a connection to the port 8000 cannot be established from the browser. I'm looking into improving the dockerfile to solve this",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1155623859635097762",
+      "type": "Default",
+      "timestamp": "2023-09-24T21:56:38.59+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Still, running the Docker image locally or on a server with docker should work",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1155783633899114516",
+      "type": "Default",
+      "timestamp": "2023-09-25T08:31:31.743+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello all, I kept on trying, following findings:\n\n- as a default fly.io, provides two VMs of which both auto start and stop depending on demand. This is basically a good thing, but as @Pere mentioned, pulling the Docker container out of sleep mode seems difficult on fly.io, ie. it takes very long for Genie to perform the final up(). This is something I could not replicate locally in a Docker Container, it works fine there. I think what happens as a result is, that the Genie app gets bombarded straight away with requests, perhaps causing the app to fail and crash the respective VM. \n- fly.io throws a warning and after starting the VM even errors, that the app is not reachable on address  \"0.0.0.0\":8000, after lots of trial and error, I am pretty sure that this is not the case with the given Dockerfile. In other words the Dockerfile provided on the Genie Guide page is correct and does its job. How do I know? I figured that setting fly.toml file to keep at least one VM running permanently shows, that once that app has loaded it works as expected. \n```\n[http_service]\n  min_machines_running = 1\n```\n\n- In the logs I found \"out of memory\" ie. OOM errors, so scaling the RAM is vital, as well as adding another CPU.  I did:\n```\nfly scale vm shared-cpu-2x\nfly scale memory 2048 \n```\n\nSo with the above I have a very basic app running now, unfortunately the above settings sort of undermine the main idea of using fly.io, ie. only pay for usage whereas now the app runs permanently even when nobody calls it.\n\nSo the issue to be solved is the latency for starting the container and Genie, and consequently listening on the port. I think there are several further settings in thy fly.toml that I can try, so I will keep on trying for a while. \n\nUnder the bottomline, deploying to fly.io, was not so straight forward for me.",
+      "author": {
+        "id": "750329841580113940",
+        "name": "sven8112",
+        "discriminator": "0000",
+        "nickname": "Sven",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1155788287135457381",
+      "type": "Default",
+      "timestamp": "2023-09-25T08:50:01.161+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for sharing your findings Sven! I'd forgotten about the min_machines_running option but yes that makes it expensive to have an app running. \n\nI managed to reduce the startup time by compiling all packages in the image with PackageCompiler.jl. To use this on fly.io you need to add the --local-only flag so that it used your local docker install to build the image. It needs a lot of ram so fly.io's builder runs out of memory. However, one major drawback is that it takes VERY long (3h on my computer) to build the image this way. \n\nI'm exploring other alternatives like Google Cloud right now.\n\nHere's the dockerfile\n\n```dockerfile\n# pull latest julia image\nFROM julia:latest\n# C compiler for PackageCompiler\nUSER root\nRUN apt-get update && apt-get install -y g++\n#create dedicated user\nRUN useradd --create-home --shell /bin/bash genie && \\\n    mkdir /home/genie/app && \\\n    chown -R genie:genie /home/\n# set up the app\nWORKDIR /home/genie/app\nCOPY . /home/genie/app\nRUN chown -R genie:genie /home/genie/app\n\n# switch user\nUSER genie\n# Compile all packages in Project.toml into a system image\nRUN julia --project -e \"\\\nusing Pkg;\\\nPkg.activate(\\\".\\\");\\\nPkg.add(\\\"PackageCompiler\\\");\\\nusing PackageCompiler;\\\npackages = [ x for x in keys(Pkg.installed())] ;\\\nPackageCompiler.create_sysimage(\\\n    packages;\\\n    sysimage_path=\\\"sysimg.so\\\",\\\n    cpu_target=PackageCompiler.default_app_cpu_target()\\\n);\\\n\"\n# ports\nEXPOSE 8000\nEXPOSE 80\n# set up app environment\nENV JULIA_DEPOT_PATH \"/home/genie/.julia\"\nENV JULIA_REVISE = \"off\"\nENV GENIE_ENV \"prod\"\nENV GENIE_HOST \"0.0.0.0\"\nENV PORT \"8000\"\nENV WSPORT \"8000\"\nENTRYPOINT [\"julia\", \"--sysimage\", \"/home/genie/app/sysimg.so\",\"--project\", \"-e\", \"using GenieFramework; Genie.loadapp(); up(async=false);\"]\n\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE00",
+            "code": "grinning",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f600.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "750329841580113940",
+              "name": "sven8112",
+              "discriminator": "0000",
+              "nickname": "Sven",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1163790154394247218",
+      "type": "Default",
+      "timestamp": "2023-10-17T10:46:34.983+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Sven an update. To make Genie attach earlier to the port so that fly.io detects it as running, add `ENV EARLYBIND \"true\"`to the dockerfile.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "750329841580113940",
+          "name": "sven8112",
+          "discriminator": "0000",
+          "nickname": "Sven",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+        }
+      ]
+    }
+  ],
+  "messageCount": 7
+}

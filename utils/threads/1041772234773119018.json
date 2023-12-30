@@ -1,0 +1,727 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1041772234773119018",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Starting Genie Builder Server",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:25:54.6749857+00:00",
+  "messages": [
+    {
+      "id": "1041772234773119018",
+      "type": "Default",
+      "timestamp": "2022-11-14T17:50:55.962+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I tried to start Genie Builder but got the error: \"cannot bind to port; may already be in use or access denied\". I am using windows and Julia version 1.8.2.",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1041920942810611732",
+      "type": "Default",
+      "timestamp": "2022-11-15T03:41:50.721+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@eli always stop/shut down your server using Ctrl+C key. this will close the genie server and free the port. Right now your that port is already occupied.  You can restart your PC, this will automatically free your port. or else you can change the port number in configuration and run the server on some other port.",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "758105189633753148",
+          "name": "epivo",
+          "discriminator": "0000",
+          "nickname": "eli",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1042036538495741972",
+      "type": "Default",
+      "timestamp": "2022-11-15T11:21:10.88+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "on *nix you can also kill all the Julia processes via terminal, with `sudo killall julia`",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042036603406782595",
+      "type": "Default",
+      "timestamp": "2022-11-15T11:21:26.356+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sometimes the apps don't get properly stopped - we'll look into it",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042036695496933496",
+      "type": "Default",
+      "timestamp": "2022-11-15T11:21:48.312+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "on windows you could kill all julia processes with `taskkill /F /IM julia.exe /T`",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042036760936452126",
+      "type": "Default",
+      "timestamp": "2022-11-15T11:22:03.914+00:00",
+      "timestampEdited": "2022-11-15T11:22:09.506+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "then just restart the Genie Builder server (and/or VSCode)",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042077780919210159",
+      "type": "Default",
+      "timestamp": "2022-11-15T14:05:03.84+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you both! I tried restarting the PC yesterday and the error occurred again, but restarting again today seems to have fixed it. However, launching the no code editor still results in a blank screen:",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042077796798836746",
+      "type": "Default",
+      "timestamp": "2022-11-15T14:05:07.626+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [
+        {
+          "id": "1042077796358438972",
+          "url": "https://cdn.discordapp.com/attachments/1041772234773119018/1042077796358438972/image.png?ex=65410993&is=652e9493&hm=3449677785db634d0d033f6dc667845ede16304384bb03dec5f5be3ec14ed676&",
+          "fileName": "image.png",
+          "fileSizeBytes": 141869
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042083439618310285",
+      "type": "Default",
+      "timestamp": "2022-11-15T14:27:32.979+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, I have only gotten the Genie Builder Server running after changing App Server Port to 8000. When set to the default 10101, it doesn't seem to finish starting. But with 8000, I still get the blank screen.",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042600766541664286",
+      "type": "Default",
+      "timestamp": "2022-11-17T00:43:13.329+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@essenciary Any ideas what I'm doing wrong?",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "738049963250155580",
+          "name": "essenciary",
+          "discriminator": "0000",
+          "nickname": "essenciary",
+          "color": "#F1C40F",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "907230418414215179",
+              "name": "@admin",
+              "color": "#F1C40F",
+              "position": 12
+            },
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1042809788662296587",
+      "type": "Default",
+      "timestamp": "2022-11-17T14:33:48.086+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@eli can you try with the GB insider version on VScode? Also, try resetting the environment by deleting the ~/.julia/geniebuilder folder",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "758105189633753148",
+          "name": "epivo",
+          "discriminator": "0000",
+          "nickname": "eli",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1042810061849903254",
+      "type": "Default",
+      "timestamp": "2022-11-17T14:34:53.219+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Will try now!",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042815441497772152",
+      "type": "Default",
+      "timestamp": "2022-11-17T14:56:15.827+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Pere So I uninstalled GB and installed GB insider, then deleted ~/.julia/geniebulder and left the port at default 10101. Now when I click Start Server it goes through the loading process and Current Status changes from \"starting\" to \"running\" for a few moments before changing back to \"stopped\". It allow me to click \"create app\" but then gives the error that it appears no server is running. It appears there are julia processes running in the background for the server because when I run the kill all julia processes it kills 2 processes.",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1042824034217373831",
+      "type": "Default",
+      "timestamp": "2022-11-17T15:30:24.491+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I thought I would try GB Insider in Windows Subsystem for Linux to get around a potential problem with windows. Unfortunately, this didn't work either. The server appeared to start correctly. However, when I tried to launch an app there was an issue with the GenieBuilder environment not being instantiated. After manually instantiating the environment, I ran into the following error:",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [
+        {
+          "id": "1042824033978306642",
+          "url": "https://cdn.discordapp.com/attachments/1041772234773119018/1042824033978306642/error.txt?ex=653a8610&is=65281110&hm=c57c77e7629cfcf8c4c1e6d67878878080982ef74bc3b468be68f748274ae260&",
+          "fileName": "error.txt",
+          "fileSizeBytes": 5875
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042857440988893266",
+      "type": "Default",
+      "timestamp": "2022-11-17T17:43:09.286+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@eli don't know what to say, should work equally well on windows",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "758105189633753148",
+          "name": "epivo",
+          "discriminator": "0000",
+          "nickname": "eli",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1042857663194742794",
+      "type": "Default",
+      "timestamp": "2022-11-17T17:44:02.264+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "what versions of Julia, VSCode and GenieBuilder are you using?",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042860956205723689",
+      "type": "Default",
+      "timestamp": "2022-11-17T17:57:07.379+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I suggest opening an issue on Github so we can dive in it",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1042861219847098379",
+      "type": "Default",
+      "timestamp": "2022-11-17T17:58:10.236+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/GenieFramework/GenieBuilder.jl/issues",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Issues · GenieFramework/GenieBuilder.jl",
+          "url": "https://github.com/GenieFramework/GenieBuilder.jl/issues",
+          "timestamp": null,
+          "description": "Contribute to GenieFramework/GenieBuilder.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/PRJ0ASmQQoB7p-dM_kRwClY54J5eGJDZYwN_S6TRAGE/https/opengraph.githubassets.com/cbb6359014f58b6ddaa34d3ef273f0d67fbd13a63969b7ce0b099f68a63f5c2c/GenieFramework/GenieBuilder.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1046888860082249739",
+      "type": "Default",
+      "timestamp": "2022-11-28T20:42:34.498+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Genie Builder is now working for me!",
+      "author": {
+        "id": "758105189633753148",
+        "name": "epivo",
+        "discriminator": "0000",
+        "nickname": "eli",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "❤️",
+            "code": "heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2764.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "738049963250155580",
+              "name": "essenciary",
+              "discriminator": "0000",
+              "nickname": "essenciary",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 19
+}

@@ -1,0 +1,102 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1090732188951126137",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Page does not load on windows when using GenieBuilder",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:22:43.6828884+00:00",
+  "messages": [
+    {
+      "id": "1090732188951126137",
+      "type": "Default",
+      "timestamp": "2023-03-29T20:20:18.67+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi all,\n\nI have used GenieBuilder on Linux without any problems. However, the page does not load in the browser when using Windows. There were no errors displayed in the REPL. Interestingly, the app loads when launched from the command line. \n\n\nWhat could be the problem?",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1090849979142254692",
+      "type": "Default",
+      "timestamp": "2023-03-30T04:08:22.04+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "could be some problem with ws connection(maybe the firewall). Try again. If not remove `~/.julia/geniebuilder` directory and install the extension again. I use the extension on windows without any problem",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1090922669668573254",
+      "type": "Default",
+      "timestamp": "2023-03-30T08:57:12.812+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for the idea. I didn't even consider the possibility it is a firewall blocking the page.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

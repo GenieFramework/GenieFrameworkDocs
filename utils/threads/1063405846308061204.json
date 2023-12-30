@@ -1,0 +1,47 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1063405846308061204",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Is there a list of   @in @out   variable types for each  Form ?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:20:39.4529007+00:00",
+  "messages": [
+    {
+      "id": "1063646828052103299",
+      "type": "ChannelNameChange",
+      "timestamp": "2023-01-14T02:32:45.41+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Changed the channel name: Is there a list of   @in @out   variable types for each  Form ?",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 1
+}

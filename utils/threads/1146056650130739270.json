@@ -1,0 +1,430 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1146056650130739270",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "include acts \"weird\"...?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:19:42.9166303+00:00",
+  "messages": [
+    {
+      "id": "1146056650130739270",
+      "type": "Default",
+      "timestamp": "2023-08-29T12:19:58.094+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I wrote a module, placed in the `lib` folder, and used by the controllers. In order to simplify it a bit, I cutout a part of its code to a separate `.jl` file, and left a `include(\"file.jl\")` in the module. Now I get weird errors that seem to indicate that the included code in the file is evaluated *before* the code in the module...? I even tried `Base.include(MyModule, \"file.jl\")` but to no avail...\n\nIt's weird cause everything seems to actually work, except I get an error:\n```julia\njulia> using GenieFramework; Genie.loadapp(); up()\n\n\n ██████╗ ███████╗███╗   ██╗██╗███████╗    ███████╗\n██╔════╝ ██╔════╝████╗  ██║██║██╔════╝    ██╔════╝\n██║  ███╗█████╗  ██╔██╗ ██║██║█████╗      ███████╗\n██║   ██║██╔══╝  ██║╚██╗██║██║██╔══╝      ╚════██║\n╚██████╔╝███████╗██║ ╚████║██║███████╗    ███████║\n ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═╝╚══════╝    ╚══════╝\n\n| Website  https://genieframework.com\n| GitHub   https://github.com/genieframework\n| Docs     https://genieframework.com/docs\n| Discord  https://discord.com/invite/9zyZbD6J7H\n| Twitter  https://twitter.com/essenciary\n\nActive env: DEV\n\nLoading libsERROR: UndefVarError: `SVector` not defined\nStacktrace:\n [1] top-level scope\n   @ ~/new_projects/dancing queen/project/app/lib/detection.jl:1\nin expression starting at /home/yakir/new_projects/dancing queen/project/app/lib/detection.jl:1\n[ Info: 2023-08-29 14:09:23 Watching [\"/home/yakir/new_projects/dancing queen/project/app\"]\n\nReady! \n\n┌ Info: 2023-08-29 14:09:27 \n└ Web Server starting at http://127.0.0.1:8000 \nGenie.Server.ServersCollection(Task (runnable) @0x00007f8be6c7d780, nothing)\n\njulia> [ Info: 2023-08-29 14:09:27 Listening on: 127.0.0.1:8000, thread id: 3\n```\nand here are the first few lines in my module:\n```julia\nmodule Cameras\n\nusing Dates, LinearAlgebra\nusing Observables, AprilTags, StaticArrays\nusing VideoIO # remove\n\nBase.include(Cameras, \"detection.jl\") # or include(\"detection.jl\")\n```\nNote the `using ... **StaticArrays**` before the `include(\"detection.jl\")`",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146073554769682502",
+      "type": "Default",
+      "timestamp": "2023-08-29T13:27:08.474+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Does it work if you manually include your app with `include(\"app.jl\")`and start the server with `up()`?",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146074208774922310",
+      "type": "Reply",
+      "timestamp": "2023-08-29T13:29:44.401+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes, it does.",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1146073554769682502",
+        "channelId": "1146056650130739270",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1146076902688292975",
+      "type": "Default",
+      "timestamp": "2023-08-29T13:40:26.68+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Then this is be a conflict with Genie's automatic loading of files in the \"/lib\" folder\n\nhttps://genieframework.com/docs/genie/tutorials/Publishing-Your-Julia-Code-Online-With-Genie-Apps.html\n\nI usually include files manually , but it's true that with loadapp() the lib/ folder is automatically available and you can just do `using .MyModule`",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Framework - Highly Productive Web Development with Julia",
+          "url": "https://genieframework.com/docs/genie/tutorials/Publishing-Your-Julia-Code-Online-With-Genie-Apps.html",
+          "timestamp": null,
+          "description": "Documentation for Genie Framework, the highly productive web development framework for Julia. It includes all you need to quickly build production ready web applications with Julia Lang.",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146077611315966002",
+      "type": "Default",
+      "timestamp": "2023-08-29T13:43:15.63+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ok, I'll stick to include(\"app.jl\") from now on then, and avoid loadapp",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146079361590628423",
+      "type": "Default",
+      "timestamp": "2023-08-29T13:50:12.928+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Best way would be to fix the imports in the module. loadapp enables features like logging and hot reloading which are pretty useful",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146082432626475109",
+      "type": "Default",
+      "timestamp": "2023-08-29T14:02:25.12+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"fix the imports in the module\" but how? The link only explains how to include a module into the app, which I'm already doing and it works. But I want to include a file with some code into a module that is already included into the app. and that doesn't work.",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146344473777942630",
+      "type": "Default",
+      "timestamp": "2023-08-30T07:23:40.599+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Forgive me, I reread my response here and it comes through as quite harsh. It was unintended, sorry.",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146345240744181831",
+      "type": "Default",
+      "timestamp": "2023-08-30T07:26:43.458+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Following is an illustration of what I mean:\n```\napp\n├── app.jl\n├── controllers\n│\u00A0\u00A0 └── ...\n├── lib\n│\u00A0\u00A0 ├── MyModule.jl\n│\u00A0\u00A0 └── file.jl\n├── Manifest.toml\n├── pages\n│\u00A0\u00A0 └── ...\n└── Project.toml\n```\nand in `MyModule.jl` I have:\n```\nmodule MyModule\ninclude(\"file.jl\")\nend\n```\nand `file.jl` is just:\n```\nfun(x) = 2x\n```",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1148246142304407683",
+      "type": "Default",
+      "timestamp": "2023-09-04T13:20:13.707+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "That's okay @yakir12 \uD83D\uDE42 \n\nThere's an `autoload`function that can be set to watch files in a folder with Revise.jl. This is automatically set for `lib/`. I suppose this is a `Revise`limitation, as code imported via a standard `include`cannot be hot reloaded\n\nAnother possiblity is that this is due to the order in which the modules are loaded. It is possible to change this order, so that you could load first the .jl file and then the module\n\nhttps://github.com/GenieFramework/Genie.jl/blob/47e81df11838c6e63aa6bc66cd6f778579412697/src/Loader.jl#L245",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "679661866166910986",
+          "name": "yakir12.",
+          "discriminator": "0000",
+          "nickname": "yakir12",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1148612055209869322",
+      "type": "Default",
+      "timestamp": "2023-09-05T13:34:14.142+00:00",
+      "timestampEdited": "2023-09-05T13:34:24.999+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Awesome! From your link I learned about `.autoload_ignore`, so I just plumped a `.autoload_ignore` file in the `lib` folder and now \n```julia\njulia> using GenieFramework; Genie.loadapp(); up()\n```\njust works! Thank you.",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE80",
+            "code": "rocket",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f680.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 11
+}

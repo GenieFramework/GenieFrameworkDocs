@@ -1,0 +1,463 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1082454172672213032",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "How to get Plotly events using new GenieFramework API?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:17:35.1063882+00:00",
+  "messages": [
+    {
+      "id": "1082454172672213032",
+      "type": "Default",
+      "timestamp": "2023-03-07T00:06:25.791+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I can create plotly plots using the new GenieFramework API, but I cannot figure out how to get my app to react to plotly events such as hover or click.  All of the tutorials I have found online that show this feature (primarily the otherwise great Oscars demo) use the \"old\" API with a user-defined subtype of `ReactiveModel`.  I haven't found any that show how to do this using the \"new\" API (`@handlers`, `@in`, `@out`, etc.).  How can add this functionality to my Genie(Builder) apps that use the new GenieFramework API?  Is there a version of the Oscars demo that uses the new GenieFramework API?",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082804561149952021",
+      "type": "Default",
+      "timestamp": "2023-03-07T23:18:44.914+00:00",
+      "timestampEdited": "2023-03-07T23:19:11.449+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Most of it is very much the same:\n- place `@mixin data::StipplePlotly.Charts.PlotlyEvents` in the `@app` section\n- add `@methods watchplots()` to the code\n- add `class=sync_data` to the plot in the ui",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1082804839077138523",
+      "type": "Default",
+      "timestamp": "2023-03-07T23:19:51.177+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Unfortunately you cannot (yet) just use PlotlyEvents for the mixin (I don't know why)",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082907633616441425",
+      "type": "Default",
+      "timestamp": "2023-03-08T06:08:19.305+00:00",
+      "timestampEdited": "2023-03-08T06:09:36.629+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for the suggestions, but it's still not working for me.\n\nI am using GenieBuilder and my `app.jl` file doesn't have an `@app` section.  should I just add `@app @mixin data::StipplePlotly.Charts.PlotlyEvents` before the `@handlers` section?  Or maybe within or after???\n\nWhen I used `@methods watchplots()` the web page only showed the Genie logo, but none of my UI.  If I changed that to `@mounted watchplots()` I was able to see my UI.  Does it matter where this goes in `app.jl`?\n\nHow do I actually get the events?  I tried adding an `@onchange data_click` handler, but I got an undefined variable error.  I added `@in data_click` and that made the error go away, but this handler was never called.\n\nI did have the `class=\"sync_data\"` added to the  `<plotly>` tag.\n\nThanks again. I'll post an MWE if I don't get it working after clarifying these points.",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086123511719927889",
+      "type": "Default",
+      "timestamp": "2023-03-17T03:07:04.393+00:00",
+      "timestampEdited": "2023-03-17T03:10:43.037+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I got a chance to look at this again, but I still can't get it to work.  When the page loads, I can see this message in the browser console:\n```\nSyncing plot of class 'sync_data js-plotly-plot' to Main_App_varMain_App_ReactiveModel.data\n```\nWhen I click on a point in the plot, I can see that the `plotly_click` event is being handled in `syncplot.js` and it is setting `model['data_click']` to `filteredEventData.out` which looks like what I would expect, but the `@onchange data_click` handler in `app.jl` never gets called.\n\nHere is my current `app.jl` file:\n```julia\nmodule App\n\nusing GenieFramework\n@genietools\n\n# Using @methods instead of @mounted results in a blank page (genie logo only)\n#@methods watchplots()\n@mounted watchplots()\n\n@handlers begin\n  @out message = \"Hello World!\"\n  @out layout = PlotLayout(title=PlotLayoutTitle(text=\"my plot\"))\n  @out data = PlotData[]\n  @mixin data::StipplePlotly.Charts.PlotlyEvents\n  # It seems like data_click should be defined by the @mixin,\n  # but if I don't define it explicitly then the `@onchange data_click`\n  # handler below throws `UndefVarError: data_click not defined`.\n  @in data_click = Dict{String,Any}()\n\n  @onchange isready begin\n    @info \"App is loaded\"\n    data = [ PlotData(x=1:50, y=rand(50)) ]\n  end\n\n  # This handler never gets called even though syncplot.js seems\n  # to be setting `model['data_click'] to `filteredEventData.out`.\n  @onchange data_click begin\n    @info \"data click\" data_click\n  end\nend\n\n@page(\"/\", \"app.jl.html\")\n\nend\n```\nHere's my `app.jl.html` file:\n```html\n<h1>{{message}}</h1>\n<plotly :data=\"data\" :layout=\"layout\" v-if=\"!isprocessing\" class=\"sync_data\"></plotly>\n```\nIt seems like I'm missing something simple, but I can't figure out what it is.",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086665283571286096",
+      "type": "Default",
+      "timestamp": "2023-03-18T14:59:52.868+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm stuck at exactly the same issue! Please let me know if you make any progress.",
+      "author": {
+        "id": "208688005144248321",
+        "name": "phreakit",
+        "discriminator": "0000",
+        "nickname": "Phreakit",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/208688005144248321/7342ef1e28e049e3566c347704f039c0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086726630912835745",
+      "type": "Default",
+      "timestamp": "2023-03-18T19:03:39.214+00:00",
+      "timestampEdited": "2023-03-18T19:04:06.98+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I managed to solve it! It actually is a similar issue I had before, when the data change was not caught by the handlers. The issue is the definition of `data_click`, apparently most of these things are supposed to be arrays, so `@in data_click = Dict{String, Any}[]`. Modifying your example, we can delete points by clicking at them: ```julia\nmodule App\n\nusing GenieFramework\n@genietools\n\n@mounted watchplots()\n\n\n@handlers begin\n  @out message = \"Hello World!\"\n\n  @out layout = PlotLayout(title=PlotLayoutTitle(text=\"my plot\"))\n  @out data = PlotData[]\n  @out x_p = collect(1:50)\n  @out y_p = rand(50)\n\n  @in data_click = Dict{String, Any}[]\n\n  @onchange isready begin\n    @info \"App is loaded\"\n    data = [ PlotData(x=x_p, y=y_p) ]\n  end\n\n  # This handler never gets called even though syncplot.js seems\n  # to be setting `model['data_click'] to `filteredEventData.out`.\n  @onchange data_click begin\n    @info \"data click\" data_click\n    num_del = data_click[][\"points\"][][\"pointNumber\"]+1\n    deleteat!(x_p, num_del)\n    deleteat!(y_p, num_del)\n\n    data = [ PlotData(x=x_p, y=y_p) ]\n  end\n\nend\n\n@page(\"/\", \"app.jl.html\")\n\nend```",
+      "author": {
+        "id": "208688005144248321",
+        "name": "phreakit",
+        "discriminator": "0000",
+        "nickname": "Phreakit",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/208688005144248321/7342ef1e28e049e3566c347704f039c0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086740519750737991",
+      "type": "Default",
+      "timestamp": "2023-03-18T19:58:50.571+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "there's a very old example: https://github.com/GenieFramework/StippleDemos/blob/master/StipplePlotly/PlotlyBaseEvents.jl",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "StippleDemos/PlotlyBaseEvents.jl at master · GenieFramework/Stipple...",
+          "url": "https://github.com/GenieFramework/StippleDemos/blob/master/StipplePlotly/PlotlyBaseEvents.jl",
+          "timestamp": null,
+          "description": "Demo apps for Stipple. Contribute to GenieFramework/StippleDemos development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/dNKrdEr-ZUlaAv6K3G_3PYehIrL7hlu18NWavFPeMO8/https/opengraph.githubassets.com/09baf69f9eb45ca77cfd062b120715d22aa802dc6a1da7bc7c3a978759f96d0d/GenieFramework/StippleDemos",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086740564403294230",
+      "type": "Default",
+      "timestamp": "2023-03-18T19:59:01.217+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I also need to check how to adapt this to new api",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086948372784619550",
+      "type": "Default",
+      "timestamp": "2023-03-19T09:44:46.596+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you, @Phreakit !  That's exactly my problem.  Changing `data_click` to a Vector got things working.  I knew it must have been something simple.  One additional detail to be aware of is that the `pointIndex` and `curveNumber` fields are 0-based rather than 1-based.",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "208688005144248321",
+          "name": "phreakit",
+          "discriminator": "0000",
+          "nickname": "Phreakit",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/208688005144248321/7342ef1e28e049e3566c347704f039c0.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1086949056955301968",
+      "type": "Default",
+      "timestamp": "2023-03-19T09:47:29.715+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for the pointer to the example, @abhimanyuaryan, but it turns out that the \"old way\" has `data_click` being a `Dict{String,Any}` rather than a `Vector{Dict{String,Any}}` so it wouldn't have helped me with the problem I was encountering.",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1087052599355789454",
+      "type": "Default",
+      "timestamp": "2023-03-19T16:38:56.147+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Just to emphasize this aspect of the example from @Phreakit: the `@mixin` macro is not needed.",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "208688005144248321",
+          "name": "phreakit",
+          "discriminator": "0000",
+          "nickname": "Phreakit",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/208688005144248321/7342ef1e28e049e3566c347704f039c0.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1087733832670785597",
+      "type": "Default",
+      "timestamp": "2023-03-21T13:45:54.826+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I will push the fix by tomorrow. I got the event thingy working",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088087646779220019",
+      "type": "Default",
+      "timestamp": "2023-03-22T13:11:50.683+00:00",
+      "timestampEdited": "2023-03-22T13:12:31.079+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "can you use this PR: https://github.com/GenieFramework/StipplePlotly.jl/pull/60\n\nand use `dev` it??? And use it with newer API like this\n\n```julia\nusing GenieFramework\n\n@genietools\n\n@vars Example begin\n    plot1::R{Plot} = Plot()\n    plot1_selected::R{Dict{String, Any}} = Dict{String, Any}()\n    plot1_hover::R{Dict{String, Any}} = Dict{String, Any}()\n\n    plot2::R{Plot} = Plot()\n    plot2_selected::R{Dict{String, Any}} = Dict{String, Any}()\n    plot2_hover::R{Dict{String, Any}} = Dict{String, Any}()\nend\n\nGenie.Router.delete!(:Example)\n\nfunction ui(model::Example)\n    page(model, class = \"container\", \n    # append = script([\n    #     watchplot(\"plot1\", model),\n    #     watchplot(\"plot2\", model)\n    # ]),\n    row(class = \"st-module\", [\n        plotly(:plot1, id = \"plot1\"),\n        plotly(:plot2, id = \"plot2\")\n    ]))\nend\n\nStipple.js_mounted(::Example) = join([\n    watchplot(:plot1),\n    watchplot(:plot2)\n])\n\nmodel = init(Example, debounce=0)\n\nroute(\"/\") do\n    model |> handlers |> ui |> html\nend\n\nfunction handlers(model)\n    on(model.isready) do isready\n        isready || return\n        push!(model)\n    end\n\n    on(model.plot1_selected) do data\n        model.plot2.data[1][:selectedpoints] = getindex.(data[\"points\"], \"pointIndex\")\n        notify(model.plot2)\n    end\n\n    on(model.plot2_selected) do data\n        model.plot1.data[1][:selectedpoints] = getindex.(data[\"points\"], \"pointIndex\")\n        notify(model.plot1)\n    end\n\n    on(model.plot1_selected) do data\n        haskey(data, \"points\") && @info \"Selection: $(getindex.(data[\"points\"], \"pointIndex\"))\"\n    end\n\n    return model\nend\n\nup(8000)\n\nfor i in 1:3\n    model.plot1[] = Plot(scatter(y = rand(5)))\n    model.plot2[] = Plot(scatter(y = rand(5)))\n    sleep(0.1)\nend\n```",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 14
+}

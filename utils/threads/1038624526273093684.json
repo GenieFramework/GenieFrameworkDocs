@@ -1,0 +1,47 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1038624526273093684",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "PlotDataMarker - colorscale",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:23:36.407041+00:00",
+  "messages": [
+    {
+      "id": "1038624526273093684",
+      "type": "Default",
+      "timestamp": "2022-11-06T01:23:03.774+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Howdy.\n\nI'm having some issues with the syntax when trying to get custom colorscale to work with the PlotDataMarker.\n\n`marker = PlotDataMarker(\n  size = [20, 30, 15, 10],\n  color = [10.0, 20.0, 40.0, 50.0],\n  cmin = 0.0,\n  cmax = 50.0,\n  colorscale = \"Greens\",\n  colorbar = ColorBar(title_text = \"Some rate\", ticksuffix = \"%\", showticksuffix = \"last\"),\n  line = PlotlyLine(color = \"black\")\n)`\n\nI can get the suggested strings to work:(Blackbody,Bluered,Blues,Cividis,Earth,Electric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,RdBu,Reds,Viridis,YlGnBu,YlOrRd)\n\nbut not the custom mapping:\n\"a mapping for the lowest (0) and highest (1) values are required. For example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`\"\n\nDoes anyone have any tips with regards to the syntax?",
+      "author": {
+        "id": "811082814267195423",
+        "name": "Met",
+        "discriminator": "0986",
+        "nickname": "Met",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 1
+}

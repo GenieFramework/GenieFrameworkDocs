@@ -1,0 +1,943 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1072070337992339486",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "how to make worldmap and show lat,lon on map.",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:18:34.048543+00:00",
+  "messages": [
+    {
+      "id": "1072070337992339486",
+      "type": "Default",
+      "timestamp": "2023-02-06T08:24:46.681+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How to plot a world map and show few locations using lat,lon parameter in genie dashboard",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1072078912093437952",
+      "type": "Default",
+      "timestamp": "2023-02-06T08:58:50.906+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you can check from map examples here: https://github.com/GenieFramework/StippleDemos/tree/master/StipplePlotly/maps",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "StippleDemos/StipplePlotly/maps at master · GenieFramework/StippleD...",
+          "url": "https://github.com/GenieFramework/StippleDemos/tree/master/StipplePlotly/maps",
+          "timestamp": null,
+          "description": "Demo apps for Stipple. Contribute to GenieFramework/StippleDemos development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/YcHvZ1mQXb_YgofDz23pb2A_xH4GM8qorLjoe8cBv08/https/opengraph.githubassets.com/516a2ded99b4918fee37f845974056ea1b0c19ef46db866cb642eb15e0f13871/GenieFramework/StippleDemos",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1072101670303055882",
+      "type": "Default",
+      "timestamp": "2023-02-06T10:29:16.886+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "this is my code",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1072101669971697714",
+          "url": "https://cdn.discordapp.com/attachments/1072070337992339486/1072101669971697714/Screenshot_from_2023-02-06_15-59-00.png?ex=653f857c&is=652d107c&hm=914068e0d9d7aed8741d07722e5a783c84f94e4dabc1f20ff7110b2019ca1b39&",
+          "fileName": "Screenshot_from_2023-02-06_15-59-00.png",
+          "fileSizeBytes": 61349
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1072101746819747840",
+      "type": "Default",
+      "timestamp": "2023-02-06T10:29:35.129+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "<plotly :data=\"sites_map\" :layout=\"layout\" :config=\"plot_config\"></plotly>",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1072101774099484672",
+      "type": "Default",
+      "timestamp": "2023-02-06T10:29:41.633+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "But I am not getting any chart'",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1072946045018980442",
+      "type": "Default",
+      "timestamp": "2023-02-08T18:24:31.506+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@abhimanyuaryan also unable to plot the heatmap. i have a dataframe with few product sells no (as column) and dates (as row) but unable to show them to heatmap",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1073107652822974485",
+      "type": "Default",
+      "timestamp": "2023-02-09T05:06:41.809+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "any help ?",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073236517092335758",
+      "type": "Default",
+      "timestamp": "2023-02-09T13:38:45.445+00:00",
+      "timestampEdited": "2023-02-09T17:26:38.465+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "first you run the demos as it is. only by changing to new API and let me know they work for you. Then we change things from their",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073236565825966110",
+      "type": "Default",
+      "timestamp": "2023-02-09T13:38:57.064+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have not run these demos with new api",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073236604178681866",
+      "type": "Default",
+      "timestamp": "2023-02-09T13:39:06.208+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "so I'll need your help with that",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073438465531854849",
+      "type": "Reply",
+      "timestamp": "2023-02-10T03:01:13.705+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Done. I will do that",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1073236517092335758",
+        "channelId": "1072070337992339486",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1073523167424937984",
+      "type": "Default",
+      "timestamp": "2023-02-10T08:37:48.21+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I get to know after replacing old versio. Of plotly.js same code is generating nice charts",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073523230809272395",
+      "type": "Default",
+      "timestamp": "2023-02-10T08:38:03.322+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The issue is with new javascript by plotly",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669212960198696",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:18:08.179+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "what do you mean by new javascript by plotly? Yes we use plotly.js like API",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669364773027953",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:18:44.374+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yup I additionally imported the plotly.js of 1.16 and that work",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669467080491038",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:19:08.766+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Currently it is automatically taking 1.18 which shows all charts as line chart",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669611565875280",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:19:43.214+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you mean imported here: https://github.com/GenieFramework/StipplePlotly.jl/blob/main/assets/js/plotly.min.js",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669647473328248",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:19:51.775+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "not sure I am following",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669811042791585",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:20:30.773+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "we use this version with stipple plotly: https://raw.githubusercontent.com/GenieFramework/StipplePlotly.jl/main/assets/js/plotly.min.js",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669854210564188",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:20:41.065+00:00",
+      "timestampEdited": "2023-02-10T18:20:47.559+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "plotly.js v1.52.1",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073669857108828170",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:20:41.756+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No bro, actually I am using my layout style.jl in which I render genie pages, in same file added a script plotly.js",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073670024901967972",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:21:21.761+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "My PC is in office, I will share you exact no and code on Monday",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073670063892201472",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:21:31.057+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "BTW I have made a complete product",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4F",
+            "code": "clap",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44f.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1073670064622030869",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:21:31.231+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ok",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073670118116167690",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:21:43.985+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you so much all for your support",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE4F",
+            "code": "pray",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1073670186273615902",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:22:00.235+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "But we need to make it more simpler",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073670242099802222",
+      "type": "Default",
+      "timestamp": "2023-02-10T18:22:13.545+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I will try to help you as much as possible",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83C\uDD97",
+            "code": "ok",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f197.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "731198409838690355",
+              "name": ".kungfupanda007",
+              "discriminator": "0000",
+              "nickname": "kungfupanda007",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            },
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC9B",
+            "code": "yellow_heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f49b.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "731198409838690355",
+              "name": ".kungfupanda007",
+              "discriminator": "0000",
+              "nickname": "kungfupanda007",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1074543768033833070",
+      "type": "Default",
+      "timestamp": "2023-02-13T04:13:18.357+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am using plotly.js v2.16.5 version",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074543879287742544",
+      "type": "Default",
+      "timestamp": "2023-02-13T04:13:44.882+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It is working fine, but plotly.js v2.18 is not rendering charts",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 29
+}

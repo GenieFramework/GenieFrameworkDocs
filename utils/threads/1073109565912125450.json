@@ -1,0 +1,84 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1073109565912125450",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "DataFrame to DB Table in a single step",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:11:35.2038924+00:00",
+  "messages": [
+    {
+      "id": "1073109565912125450",
+      "type": "Default",
+      "timestamp": "2023-02-09T05:14:17.925+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How to Insert a complete DataFrame to a table in a single shot for postgresql.",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077148706165502032",
+      "type": "Default",
+      "timestamp": "2023-02-20T08:44:24.005+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "if you want to have a dynamic table (sorting, filtering, pagination) you can use the StippleUI.DataTable",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

@@ -1,0 +1,71 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1109925527357235240",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "ArgumentError: invalid base 16 digit '%' in \"%2\"",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:09:17.2776653+00:00",
+  "messages": [
+    {
+      "id": "1109925527357235240",
+      "type": "Default",
+      "timestamp": "2023-05-21T19:27:47.141+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "When opening no code editor it does not show anything and shows this error \n\nhttps://pastecode.io/s/m8zue3y6",
+      "author": {
+        "id": "712516707213901885",
+        "name": "fulcrum9",
+        "discriminator": "0000",
+        "nickname": "fulcrum",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/712516707213901885/f550034fc71a3af50de651d90da7a49d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1110108046044168222",
+      "type": "Default",
+      "timestamp": "2023-05-22T07:33:02.987+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "nvm i had to downgrade genie builder \uD83D\uDE35‍\uD83D\uDCAB",
+      "author": {
+        "id": "712516707213901885",
+        "name": "fulcrum9",
+        "discriminator": "0000",
+        "nickname": "fulcrum",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/712516707213901885/f550034fc71a3af50de651d90da7a49d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

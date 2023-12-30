@@ -1,0 +1,210 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1090869214379786371",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Best way to build a Julia GUI",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:09:26.4185875+00:00",
+  "messages": [
+    {
+      "id": "1090869214379786371",
+      "type": "Default",
+      "timestamp": "2023-03-30T05:24:48.078+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have a bit of Julia code for manipulating and analyzing medical images. I am going to build a interface for non coders to interact with the images. \n\nAs far as I can see there are a few different approaches that I could take but I’m not really knowledgeable enough in all of them to know the benefits and downsides. So if you guys have thoughts I would love to hear what you think about the pros and cons. \n\nBasic functionality is the ability to load an image from disk along with other files like csv files. Click on a few options for graphing, etc. \n\n1) I could use something like GTK.jl to keep it extremely simple\n2) I could use genie to stick with Julia\n3) I could use Vue since it seems like Genie already has a close relationship to Vue via stipple\n4) I could use Nuxt potentially to build out this GUI in a way that scales seamlessly to a more sophisticated web app. \n\nPlease let me know if you have thoughts on any of the pros/cons of these approaches or anything I’ve missed",
+      "author": {
+        "id": "664690471796342794",
+        "name": "daleblack",
+        "discriminator": "0000",
+        "nickname": "Dale",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1090874665888657428",
+      "type": "Reply",
+      "timestamp": "2023-03-30T05:46:27.819+00:00",
+      "timestampEdited": "2023-03-30T05:59:19.843+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, with regards to 4), an idea would be to use Nuxt for a full stack, type safe app, that possibly spins up a Julia process for the underlying medical imaging manipulation and analysis code, using Genie or something along those lines to initiate the Julia process.",
+      "author": {
+        "id": "664690471796342794",
+        "name": "daleblack",
+        "discriminator": "0000",
+        "nickname": "Dale",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "1090869214379786371",
+        "channelId": "1090869214379786371",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1092340660847251528",
+      "type": "Default",
+      "timestamp": "2023-04-03T06:51:48.254+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I would not use anything GTK or native we can't make executable in Julia. So packaging Julia files and shipping executables to friends and colleagues is not possible \n\nHowever, a Genie App can be distributed via the web. Can use authentication for restricted access",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFE",
+            "code": "thumbsup_tone4",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fe.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "648706862752989206",
+              "name": "kirik_1",
+              "discriminator": "0000",
+              "nickname": "Kirik",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/648706862752989206/580940822eba865e49c0a3884172d74e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1092436047058706454",
+      "type": "Default",
+      "timestamp": "2023-04-03T13:10:50.099+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I've also thought about trying to build the front end in Nuxt and use Genie in the back end. You'd just need to have a REST API in the back with Nuxt accessing it.  There's also the possibility of using websockets, which Genie already supports (it's what the reactive UI components use)\n\nFor your use case, I'd start small with a Genie app formed by your data analysis code + an app.jl file for the UI logic + app.html for the UI. Like we do in the demos\n\nhttps://github.com/GenieFramework/GenieFrameworkDemos_NewAPI\nhttps://github.com/GenieFramework/GenieBuilderDemos\n\nIf you then need something more complex then you could repurpose the logic into an API and add a Nuxt/Vue front end",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - GenieFramework/GenieFrameworkDemos_NewAPI: Demos for new r...",
+          "url": "https://github.com/GenieFramework/GenieFrameworkDemos_NewAPI",
+          "timestamp": null,
+          "description": "Demos for new reactive API. Contribute to GenieFramework/GenieFrameworkDemos_NewAPI development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "GitHub - GenieFramework/GenieBuilderDemos",
+          "url": "https://github.com/GenieFramework/GenieBuilderDemos",
+          "timestamp": null,
+          "description": "Contribute to GenieFramework/GenieBuilderDemos development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/D1m3moS_TfrzlowPgLgGBmt-cbATJ15Ap9-Q1BmCnFg/https/opengraph.githubassets.com/9716d69b78126461892a66f72224b6c9239b761a6708e4e611e19b7e12bdbe85/GenieFramework/GenieBuilderDemos",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDD25",
+            "code": "fire",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "664690471796342794",
+              "name": "daleblack",
+              "discriminator": "0000",
+              "nickname": "Dale",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

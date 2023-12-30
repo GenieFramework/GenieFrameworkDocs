@@ -1,0 +1,170 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1156313558645231728",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Tabs",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:26:47.0648214+00:00",
+  "messages": [
+    {
+      "id": "1156313558645231728",
+      "type": "Default",
+      "timestamp": "2023-09-26T19:37:15.648+00:00",
+      "timestampEdited": "2023-09-26T19:37:32.494+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Consider the following MWE:\n```julia\nusing GenieFramework\n@genietools\n\n@app begin\n    @in slider_one = 1\n    @in slider_two = 11\n\n    @onchange slider_one println(slider_one)\n    @onchange slider_two println(slider_two)\n\n    @out tabgroup = \"one\"\n    @out tabpanelgroup = \"one\"\nend\n\nfunction ui()\n    [\n     tabgroup(:tabgroup, \n              [\n               tab(name=\"one\", label=\"Tab one\"),\n               tab(name=\"two\", label=\"Tab two\")\n              ])\n     tabpanelgroup(:tabpanelgroup, \n                   [\n                    tabpanel(\"Inside tab one\", name = \"one\", [slider(1:10, :slider_one, markers=true, labelalways=true)])\n                    tabpanel(\"Inside tab two\", name = \"two\", [slider(11:20, :slider_two, markers=true, labelalways=true)])\n                   ])\n    ]\nend\n\n@page(\"/\", ui)\n\nServer.up()\n```\nHow can we have the tab panel switch to panel `\"two\"` so that `:slider_two` can display and the user interact with it?",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1156313558808793178",
+          "url": "https://cdn.discordapp.com/attachments/1156313558645231728/1156313558808793178/screenshot_2023-09-26_213650.jpg?ex=65381ceb&is=6525a7eb&hm=11abe2b333d64839d0349a0d316f01cbadd2a295afa203599860539f83da5c75&",
+          "fileName": "screenshot_2023-09-26_213650.jpg",
+          "fileSizeBytes": 8798
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1156330249672474795",
+      "type": "Default",
+      "timestamp": "2023-09-26T20:43:35.099+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "To be clear, when I press (with the mouse) on `TAB TWO` the content of the panel below does *not* change.",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1158355594802118717",
+      "type": "Default",
+      "timestamp": "2023-10-02T10:51:35.007+00:00",
+      "timestampEdited": "2023-10-02T10:52:23.761+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you need to use the same reactive variable for both tabgroup and tabpanel. Setting both to :tabgroup works\n\nSee this example, where the v-model parameter is the reactive variable\nhttps://learn.genieframework.com/examples/reactive-ui/components/tabs",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Tabs",
+          "url": "https://learn.genieframework.com/examples/reactive-ui/components/tabs",
+          "timestamp": null,
+          "description": "Page with multiple tabs",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/NjV6IE4wKkGBXKdzR-0h43Qn84RJ9hvw5g4vorTU6CM/https/learn.genieframework.com/examples/reactive-ui/components/tabs/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "679661866166910986",
+              "name": "yakir12.",
+              "discriminator": "0000",
+              "nickname": "yakir12",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

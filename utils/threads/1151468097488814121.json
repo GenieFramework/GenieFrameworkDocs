@@ -1,0 +1,116 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1151468097488814121",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Adding a progress bar",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:08:29.1582277+00:00",
+  "messages": [
+    {
+      "id": "1151468097488814121",
+      "type": "Default",
+      "timestamp": "2023-09-13T10:43:07.684+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'd like to add a progress bar to my UI. Apparently that component isn't covered by Stipple.jl yet.\n\nI've read the documentation on adding quasar components that are not yet implemented in Stipple.jl but it's unclear how to exactly go about it.\n\nI'm using an html file to define my UI components in. How do I make sure I can use the q-progress component in my html file? I already tried calling quasar(:progress) in the app.jl file, both at the global level and in the @app macro but that doesn't seem to work.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1045283774247751770",
+          "name": "ap",
+          "discriminator": "1201",
+          "nickname": "ap",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ]
+    },
+    {
+      "id": "1153606351042383944",
+      "type": "Default",
+      "timestamp": "2023-09-19T08:19:47.058+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I assume you're trying to use the q-progress-bar component from Quasar\n\nhttps://quasar.dev/vue-components/linear-progress/\n\nIf you're implementing the UI in HTML, then you should be able to add the component as in the Quasar docs.\n\nTo use the low-code API, the call is `quasar(:q__linear__progress)`. \n\nFor instance, to generate a btn-toggle component which is not yet implemented in StippleUI you can use this \n\n`quasar(:btn__toggle, v__model=:choosen_sample_data, options=:sample_data, style=\"flex-wrap: wrap\")`\nIf you can share a MWE I'll give it a try if it doesn't work.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

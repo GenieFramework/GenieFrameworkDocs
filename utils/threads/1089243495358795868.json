@@ -1,0 +1,578 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1089243495358795868",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Plot not updating",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:22:53.0730585+00:00",
+  "messages": [
+    {
+      "id": "1089243495358795868",
+      "type": "Default",
+      "timestamp": "2023-03-25T17:44:46.459+00:00",
+      "timestampEdited": "2023-03-25T17:45:24.482+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi all, \n\nI am new to Genie and have been going through some tutorials. Unfortunately, I was unable to run some tutorials cloned from git without error. I have been trying to model my code from those examples. Since I do not have much background with JS, I have been using the GenieBuilder (which is nice by the way). For some reason, the plot does not update, but the code appears to run. Here is what I have:\n\n\napp.jl\n\n```\nmodule App\n\n  using GenieFramework\n  using Distributions\n\n  function update(mu, sigma)\n      x = range(-5, 5, length=100)\n      y = pdf.(Normal(mu, sigma), x)\n      pdf_plot = PlotData(;x, y, mode=\"lines\")\n  end\n\n\n  @genietools \n    @handlers begin\n      @in mu = 0.0\n      @in sigma = 0.0\n      @out pdf_plot = PlotData()\n\n      @onchange mu, sigma begin \n        update(mu, sigma)\n      end\n    end\n\n  @page(\"/\", \"app.jl.html\")\n  \nend\n```\n\napp.jl.html\n\n```\n<h1>Default content</h1>\n<div class=\"row\">\n    <div class=\"col col-6 col-sm\">\n        <p>mu</p>\n        <q-slider :min=\"-5\" :step=\"-.1\" v-model=\"mu\"></q-slider>\n    </div>\n    <div class=\"col col-6 col-sm\">\n        <p>sigma</p>\n        <q-slider :min=\"0\" :max=\"5\" :step=\".1\" v-model=\"sigma\"></q-slider>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col col-12 col-sm\">\n        <p>awesome plot<br /></p>\n        <plotly :data=\"pdf_plot\"></plotly>\n    </div>\n</div>\n```\n\nWhat am I doing wrong?\n\nI also have a somewhat different question. Suppose I want to run this code outside of the VSCode builder. What is the recommended way to organize the code and run a startup script?",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089302755832758412",
+      "type": "Default",
+      "timestamp": "2023-03-25T21:40:15.257+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I believe the pdf_plot variable you create inside the update function is not linked to the one that was tagged with @out, as it is created in the function scope. Try returning the PlotData from the function an then setting the variable\n\n```julia\n  function update(mu, sigma)\n      x = range(-5, 5, length=100)\n      y = pdf.(Normal(mu, sigma), x)\n      PlotData(;x, y, mode=\"lines\")\n  end\n     @onchange mu, sigma begin \n        pdf_plot = update(mu, sigma)\n      end\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089303078261510185",
+      "type": "Default",
+      "timestamp": "2023-03-25T21:41:32.13+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "as for your second question, the Genie Builder apps are located in the folder ~/.julia/geniebuilder/apps. You'd just have to put the code wherever you want and then run `julia --project app.jl` to execute the app",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089330279384092765",
+      "type": "Default",
+      "timestamp": "2023-03-25T23:29:37.383+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you for your reply. It turns out there were multiple issues. As you noted, the pdf_plot needed to be defined in the macro. Interestingly, pdf_plot was defined in a previous version because the function body was defined in the begin block. The other problem was that sigma=0, which means that there was nothing to plot. I set the default value to 1, but the problem still persisted until I clicked on one of the sliders. For some reason, the plot did not initialize immediately. \n\nI suspect the later is an html problem, but I wonder whether it would be helpful to create a default value field for sliders in GenieBuilder?",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089334248646914159",
+      "type": "Default",
+      "timestamp": "2023-03-25T23:45:23.729+00:00",
+      "timestampEdited": "2023-03-25T23:46:36.85+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If you want the reactive code to run  when the page loads, you can use the isready variable as \n\n@onchange isready, my, sigma begin\n\nThis variable is automatically created by the @handlers macro. When the page is finished loading, isready will be set to true and the update function will read the initial sigma=1",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089476361879564288",
+      "type": "Default",
+      "timestamp": "2023-03-26T09:10:06.164+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ah. That makes sense now. I was not sure what about the purpose of `isready` . Thank you for clarifying all of my questions/misconceptions. \n\nIf you don't mind, I have one other question: I watched and read some tutorials in which `@reactive` was used to define structs. Were some of these other macros defined to reduce boilerplate code?",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089488904530448445",
+      "type": "Default",
+      "timestamp": "2023-03-26T09:59:56.565+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I was wrong. I have yet another question\uD83D\uDE06 \n\nI tried to bind the slider output value to the text above the display. Unfortunately, it only displays the value instead of the variable name with the value:\n\n```mu 1.2```\n\nI tried various solutions (perhaps the builder should do this by default). Here is what it has:\n\n```        <p v-text=\"mu\">mu</p>\n        <q-slider :min=\"-5\" :step=\"-.1\" v-model=\"mu\" :max=\"5\"></q-slider>\n```\n\nCan you please recommend a way to interpolate the variable name?",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089495797508362311",
+      "type": "Default",
+      "timestamp": "2023-03-26T10:27:19.979+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, I tried running the app from the terminal, but it did not launch as expected. Here is what I did:\n\n```\n(base) dfish@dfish-MS-7850:~$ cd .julia/geniebuilder/apps/TestApp/\n(base) dfish@dfish-MS-7850:~/.julia/geniebuilder/apps/TestApp$ ls\napp.jl  app.jl.html  Manifest.toml  Project.toml  public  run.jl\n(base) dfish@dfish-MS-7850:~/.julia/geniebuilder/apps/TestApp$ julia --project app.jl\n[ Info: 2023-03-26 06:21:50 Watching [\"/home/dfish/.julia/geniebuilder/apps/TestApp\"]\n```\nNothing happened. When I checked http://0.0.0.0:56123/, it said the site could not be reached.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089513614030946354",
+      "type": "Default",
+      "timestamp": "2023-03-26T11:38:07.769+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "oh sorry, forgot to mention that you need to start the server - GB does this automatically for you. Add `Server.up()`at the end of app.jl",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089514461896908913",
+      "type": "Default",
+      "timestamp": "2023-03-26T11:41:29.916+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i you bind a variable to a <p> element with v-text, it'll replace everything in betweeen the <p></p> tags. If you want to do interpolation in your text use the {{}} syntax as\n\n`<p> mu value i\u00A0{{mu}}</p>\n\nNote that {{}} only accepts variable names or javascript expressions",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089514754000818266",
+      "type": "Default",
+      "timestamp": "2023-03-26T11:42:39.559+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "about @reactive and the ReactiveModel structs, that's the old API. It still works but it's outdated and we don't recommend its use anymore",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089524142933561344",
+      "type": "Default",
+      "timestamp": "2023-03-26T12:19:58.055+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you again for your reply. I tried the following but it did not work:\n\n```\n(base) dfish@dfish-MS-7850:~/.julia/geniebuilder/apps/TestApp$ julia --project app.jl\n┌ Info: 2023-03-26 08:08:23 \n└ Web Server starting at http://127.0.0.1:8000 \n[ Info: 2023-03-26 08:08:25 Watching [\"/home/dfish/.julia/geniebuilder/apps/TestApp\"]\n(base) dfish@dfish-MS-7850:~/.julia/geniebuilder/apps/TestApp$ \n```\nhttp://127.0.0.1:8000 could not be reached. I wonder whether the server shuts down as soon as the script runs. I vaguely recall seeing something like ```Server.isrunning() || Server.up()``` . I tried that, but it did not work.  Do I need to do something to keep the program alive?",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089526067896791130",
+      "type": "Default",
+      "timestamp": "2023-03-26T12:27:37.002+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ok. I think I found a workaround. I added the following after ```Server.up()```\n\n```  wait(Condition())```\n\nI'm not sure if this is proper form, but it seems to have worked.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089527559278051368",
+      "type": "Default",
+      "timestamp": "2023-03-26T12:33:32.575+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you again for all of your help. Genie is becoming a very nice and useful package. \n\n\nFor anyone who encounters this thread, the final code is:\n\n\napp.jl\n\n```\nmodule App\n\n  using GenieFramework\n  using Distributions\n  using DataFrames\n  using CSV\n\n  @genietools \n    @handlers begin\n      @in mu = 0.0\n      @in sigma = 1.0\n      @out pdf_plot = PlotData()\n\n      @onchange isready, mu, sigma begin \n        dist = Normal(mu, sigma)\n        q1,q99 = quantile(dist, [.001, .999])\n        x = [range(-5, q1, length=5)..., \n            range(q1, q99, length=100)..., \n            range(q99, 5, length=5)...]\n        y = pdf.(dist, x)\n        pdf_plot = PlotData(;x, y, mode=\"lines\")\n      end\n    end\n\n  @page(\"/\", \"app.jl.html\")\n  Server.up()\n  wait(Condition())\nend\n```\n\napp.jl.html\n\n```\n<h1>Default content</h1>\n<div class=\"row\">\n    <div class=\"col col-6 col-sm\">\n        <p> mu {{mu}}</p>\n        <q-slider :min=\"-5\" :step=\"-.1\" v-model=\"mu\" :max=\"5\"></q-slider>\n    </div>\n    <div class=\"col col-6 col-sm\">\n        <p> sigma {{sigma}}</p>\n        <q-slider :min=\"0\" :max=\"5\" :step=\".1\" v-model=\"sigma\"></q-slider>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col col-12 col-sm\">\n        <p>awesome plot<br /></p>\n        <plotly :data=\"pdf_plot\"></plotly>\n    </div>\n</div>\n```\n\n\nOnce you have cd'ed to the project directory, run the following from the terminal:\n\n\n```\nrun julia --project app.jl \n```",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089548842044768286",
+      "type": "Default",
+      "timestamp": "2023-03-26T13:58:06.782+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "oh sorry again @itsdfish ! I usually run from the REPL, and of course the app does not close there after running Server.up() ...thanks for posting your solution! I'll add instructions to the docs for running apps from the command line",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1089240744490975242",
+          "name": "itsdfish",
+          "discriminator": "0000",
+          "nickname": "itsdfish",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+        }
+      ]
+    },
+    {
+      "id": "1089565215416397894",
+      "type": "Default",
+      "timestamp": "2023-03-26T15:03:10.498+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No problem at all. You were very helpful in directing me to a solution.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089565763398013148",
+      "type": "Default",
+      "timestamp": "2023-03-26T15:05:21.147+00:00",
+      "timestampEdited": "2023-03-26T15:06:34.214+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I do want to make one minor note. When I ran the code above, I had to refresh the webpage in order to render the page. For some reason the info statements: \n```[ Info: 2023-03-26 09:12:41 GET / 200\n[ Info: 2023-03-26 09:12:41 GET / 200\n[ Info: 2023-03-26 09:12:42 GET /stipple.jl/master/assets/css/stipplecore.css 200\n[ Info: 2023-03-26 09:12:42 GET /stippleui.jl/master/assets/css/quasar.min.css 200\n[ Info: 2023-03-26 09:12:42 GET /genie.jl/master/assets/js/channels.js 200\n[ Info: 2023-03-26 09:12:42 GET /stipple.jl/master/assets/js/underscore-min.js 200\n[ Info: 2023-03-26 09:12:42 GET /stipple.jl/master/assets/js/vue.js 200\n[ Info: 2023-03-26 09:12:42 GET /stipple.jl/master/assets/js/stipplecore.js 200\n[ Info: 2023-03-26 09:12:42 GET /stipple.jl/master/assets/js/watchers.js 200\n[ Info: 2023-03-26 09:12:42 GET /stippleui.jl/master/assets/js/quasar.umd.min.js 200\n[ Info: 2023-03-26 09:12:42 GET /stippleplotly.jl/master/assets/js/plotly2.min.js 200\n[ Info: 2023-03-26 09:12:42 GET /stippleplotly.jl/master/assets/js/resizesensor.min.js 200\n[ Info: 2023-03-26 09:12:42 GET /stippleplotly.jl/master/assets/js/lodash.min.js 200\n[ Info: 2023-03-26 09:12:43 GET /stippleplotly.jl/master/assets/js/vueresize.min.js 200\n[ Info: 2023-03-26 09:12:43 GET /stippleplotly.jl/master/assets/js/vueplotly.min.js 200\n[ Info: 2023-03-26 09:12:43 GET /stippleplotly.jl/master/assets/js/sentinel.min.js 200\n[ Info: 2023-03-26 09:12:43 GET /stippleplotly.jl/master/assets/js/syncplot.js 200\n[ Info: 2023-03-26 09:12:43 GET /genieautoreload.jl/master/assets/js/autoreload.js 200\n[ Info: 2023-03-26 09:12:43 GET /stipple.jl/master/assets/js/vue_filters.js 200\n[ Info: 2023-03-26 09:12:43 GET /stipple.jl/master/assets/js/keepalive.js 200\n[ Info: 2023-03-26 09:12:44 GET /stipple.jl/master/assets/js/main_app_varmain_app_reactivemodel.js 200\n``` \n in the command line did not start otherwise. I'm not sure if there is a way to load the page without user intervention.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089822447852863548",
+      "type": "Default",
+      "timestamp": "2023-03-27T08:05:19.49+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "`wait(Condition())` is exactly the way you should do it if you if you want to start your project from the command line or as a service. Very good that you found out!",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1089240744490975242",
+              "name": "itsdfish",
+              "discriminator": "0000",
+              "nickname": "itsdfish",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 18
+}

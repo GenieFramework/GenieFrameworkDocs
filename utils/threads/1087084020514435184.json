@@ -1,0 +1,321 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1087084020514435184",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Are there any known memory leaks?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:09:13.1682262+00:00",
+  "messages": [
+    {
+      "id": "1087084020514435184",
+      "type": "Default",
+      "timestamp": "2023-03-19T18:43:47.535+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I left my genie-based app running for about a  week inside a Docker image. Memory usage grew from about 1 GB when just started, to about 8 GB after 8 days uptime. I haven't double checked my code for leaks yet. I wanted to know if I need to check my own code, or if there's known issues that maybe have workarounds.",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC40",
+            "code": "eyes",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1087304346150113320",
+      "type": "Default",
+      "timestamp": "2023-03-20T09:19:17.26+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "garbage collection is automatically run by the compiler, so the memory usage should be stable. Can you she some more details?\n- Genie packages version\n- Julia version\nIf you could share the whole app with the dockerfile that would be better, we'd take a look at it",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087487536592592926",
+      "type": "Default",
+      "timestamp": "2023-03-20T21:27:13.265+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Noted. I'm not up for sharing my code unfortunately.",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087487588241256479",
+      "type": "Default",
+      "timestamp": "2023-03-20T21:27:25.579+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Julia v1.8.5",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087488041226084433",
+      "type": "Default",
+      "timestamp": "2023-03-20T21:29:13.579+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Genie versions... I just updated to the latest versions this weekend. I'm not sure what versions I had previously, but it may not be releavnt at this point",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087488513504706600",
+      "type": "Default",
+      "timestamp": "2023-03-20T21:31:06.179+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm sitting at a steady 1.0 GB currently after 26 hours uptime. I'll just keep monitoring for now.",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087489273671974962",
+      "type": "Default",
+      "timestamp": "2023-03-20T21:34:07.417+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Considering everything I'm doing with databases and dataframes and external APIs, there's a good chance the data leak is elsewhere.",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087729007828668416",
+      "type": "Default",
+      "timestamp": "2023-03-21T13:26:44.494+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "We did have a memory leak which is now fixed",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087729197776117860",
+      "type": "Default",
+      "timestamp": "2023-03-21T13:27:29.781+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Not sure if there are more. Please open an issue on GitHub if you should encounter memory going up again.",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087804249473290411",
+      "type": "Default",
+      "timestamp": "2023-03-21T18:25:43.5+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "that's good enough for me, at least for the time being.",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087804275805126777",
+      "type": "Default",
+      "timestamp": "2023-03-21T18:25:49.778+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "thanks a lot",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 11
+}

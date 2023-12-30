@@ -1,0 +1,267 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1153468692085088358",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Display icons in a Stpple Table",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:12:29.8993877+00:00",
+  "messages": [
+    {
+      "id": "1153468692085088358",
+      "type": "Default",
+      "timestamp": "2023-09-18T23:12:46.605+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there a functionnality allowing the display of icons within a Stipple / Quasar tables?\n\nFor example an initial take was to write the actual html for q-icon within a DataFrame column: \n`df.icon .= \"\"\"<q-icon name=\"warning\" color=\"warning\" size=\"1rem\"/>\"\"\"`\nThe rendering however results in the raw string as shown in attached image. Is there a way to request string to be parsed as html?  Or other trick to populate  a Stipple Table cells with icons?",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [
+        {
+          "id": "1153468692332548096",
+          "url": "https://cdn.discordapp.com/attachments/1153468692085088358/1153468692332548096/image.png?ex=6540386e&is=652dc36e&hm=7b0182b7330f5fb639c4dc7faa9b7814280daa85572b6450d26fdae328d1c5bb&",
+          "fileName": "image.png",
+          "fileSizeBytes": 11797
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1154684417957175426",
+      "type": "Default",
+      "timestamp": "2023-09-22T07:43:38.24+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "We're not sure about this one, we'd need to see what's possible with pure Quasar and how it is done. Perhaps we'd need to use Quasar slots\n\nhttps://dev.to/quasar/quasar-s-qtable-the-ultimate-component-4-6-all-the-slots-40g2",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Quasar's QTable: The ULTIMATE Component (4/6) - ALL The Slots!",
+          "url": "https://dev.to/quasar/quasar-s-qtable-the-ultimate-component-4-6-all-the-slots-40g2",
+          "timestamp": null,
+          "description": "What's black, blue, and PACKED full of QTable slots?  ...  The video version of this blog...",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/Ztk_JOFbajnxc7wCuTmSdPYmRmJ73Guvk8q3F9Eawds/https/res.cloudinary.com/practicaldev/image/fetch/s--TiXbeXJ7--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_500%2Cq_auto%2Cw_1000/https%3A/dev-to-uploads.s3.amazonaws.com/uploads/articles/iyz9yy26bwd1elhz0w6n.png",
+            "width": 1000,
+            "height": 500
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC9B",
+            "code": "yellow_heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f49b.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "916922541027762266",
+              "name": "jeremiedb",
+              "discriminator": "0000",
+              "nickname": "jeremiedb",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1156037553129000992",
+      "type": "Default",
+      "timestamp": "2023-09-26T01:20:30.805+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I looked at a more manual generation with `@recur` but without luck so far. \nAssuming the following vector of icon names in the `model`: \n`icons3::R{Vector{String}} = [\"check_box\", \"warning\", \"error\"]`\n\nIs it expected that none of the 2 follwoing approches work (the page only renders \"{{ }}\")?: \n1.  `StippleUI.icon(\"{{ item }}\", @recur(:\"item in icons3\"))`\n2. `p(StippleUI.icon(\"{{ item }}\"), @recur(:\"item in icons3\"))`\n\nHowever, the 2 following work fine: \n3.  `[icon(_icon, color=\"red\") for _icon in model.icons3[]]`\n4. `[\"\"\"<q-icon name=$(icon)></q-icon>\"\"\" for icon in model.icons3[]]`\n\nIt's possible to get a workaround with 3 & 4, but wondered if 1 and 2 not rendering might be a bug?",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [
+        {
+          "id": "749047112028651530",
+          "name": "Thanks",
+          "format": "Lottie",
+          "sourceUrl": "https://cdn.discordapp.com/stickers/749047112028651530.json"
+        }
+      ],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1156244747661348926",
+      "type": "Default",
+      "timestamp": "2023-09-26T15:03:49.831+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The issue is with the use of the {{}} syntax, which doesn't work anymore\n\nThis code should work:\n```julia\nusing GenieFramework\n@app begin\n    @out icons3 = [\"check_box\", \"warning\", \"error\"]\nend\n\nui() = StippleUI.icon(:item, @recur(:\"item in icons3\"))\n@page(\"/\", ui)\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1156244747447455815",
+          "url": "https://cdn.discordapp.com/attachments/1153468692085088358/1156244747447455815/image.png?ex=65411755&is=652ea255&hm=b5432d2b122ea11da33080e769cc26e416f1e655c28eabfa65c06c92c19d6555&",
+          "fileName": "image.png",
+          "fileSizeBytes": 104866
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1156330481307099228",
+      "type": "Default",
+      "timestamp": "2023-09-26T20:44:30.325+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This works like a charm!\n\nI didn't suspected the \"{{ }}\" to be the issue as the following resulted in valid output: \n```julia\nspan(\"{{_icon}}\", @recur(:\"_icon in icons3\"))\n```\n Thank you so much for the help, very appreciated!",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC9B",
+            "code": "yellow_heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f49b.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 5
+}

@@ -1,0 +1,167 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1108972634420543598",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Hi, I cant post in this discord - no validation to steps either...",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:15:29.6717806+00:00",
+  "messages": [
+    {
+      "id": "1108972634420543598",
+      "type": "Default",
+      "timestamp": "2023-05-19T04:21:19.761+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "... any idea why ? \nthanks",
+      "author": {
+        "id": "648706862752989206",
+        "name": "kirik_1",
+        "discriminator": "0000",
+        "nickname": "Kirik",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/648706862752989206/580940822eba865e49c0a3884172d74e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1109010295780823050",
+      "type": "Default",
+      "timestamp": "2023-05-19T06:50:58.929+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Which discord? Users can only post in help forum",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFE",
+            "code": "thumbsup_tone4",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fe.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "648706862752989206",
+              "name": "kirik_1",
+              "discriminator": "0000",
+              "nickname": "Kirik",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/648706862752989206/580940822eba865e49c0a3884172d74e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1109224111957348412",
+      "type": "Reply",
+      "timestamp": "2023-05-19T21:00:36.678+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Genie, ohh, okay , fine then...",
+      "author": {
+        "id": "648706862752989206",
+        "name": "kirik_1",
+        "discriminator": "0000",
+        "nickname": "Kirik",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/648706862752989206/580940822eba865e49c0a3884172d74e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFE",
+            "code": "thumbsup_tone4",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fe.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1109010295780823050",
+        "channelId": "1108972634420543598",
+        "guildId": "774897545717219328"
+      }
+    }
+  ],
+  "messageCount": 3
+}

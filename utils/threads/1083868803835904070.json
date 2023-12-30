@@ -1,0 +1,1678 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1083868803835904070",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "The default app in GenieBuilder has the header \"{{message}}\"",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:26:51.932489+00:00",
+  "messages": [
+    {
+      "id": "1083868803835904070",
+      "type": "Default",
+      "timestamp": "2023-03-10T21:47:40.143+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Based on the code, I assume it's supposed to replace {{message}} with \"Hello world!\" This occurs when I just create a new app in GenieBuilder and do nothing else. Am I missing a step or is my set-up  misconfigured? \n\nGenieBuilder v0.2.6\n\nGenieFramework v1.9.0\njulia> versioninfo()\nJulia Version 1.8.5\nCommit 17cfb8e65ea (2023-01-08 06:45 UTC)\nPlatform Info:\n  OS: Linux (x86_64-linux-gnu)\n  CPU: 16 × AMD Ryzen 9 5900HS with Radeon Graphics\n  WORD_SIZE: 64\n  LIBM: libopenlibm\n  LLVM: libLLVM-13.0.1 (ORCJIT, znver3)\n  Threads: 1 on 16 virtual cores\nEnvironment:\n  JULIA_EDITOR = code\n  JULIA_NUM_THREADS =",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083869816718368778",
+      "type": "Default",
+      "timestamp": "2023-03-10T21:51:41.633+00:00",
+      "timestampEdited": "2023-03-10T21:53:09.313+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "```\n┌ Info: 2023-03-10 14:41:30 \n└ Web Server starting at http://0.0.0.0:55678 - press Ctrl/Cmd+C to stop the server. \n[ Info: 2023-03-10 14:41:30 Listening on: 0.0.0.0:55678, thread id: 1\n┌ Error: 2023-03-10 14:41:34 Failed to store session data\n└ @ GenieSessionFileSession ~/.julia/packages/GenieSessionFileSession/otnJC/src/GenieSessionFileSession.jl:41\n┌ Error: 2023-03-10 14:41:34 ArgumentError(\"embedded NULs are not allowed in C strings: \\\"/tmp/jl_Y4chKp/\\\\x12凭\\\\a!&c\\\\xc7Ԧ\\\\xd7\\\\x1e\\\\xd8\\\\xf8\\\\x95\\\\xa1F\\\\x147\\\\x9b=ݍ\\\\xbd~TQ\\\\n=\\\\xda.\\\\xf8˫\\\\x9er]|\\\\x9al8\\\\xb39,\\\\xc8w \\\\0\\\\xf6\\\\x98\\\\xec\\\\xe7\\\\xdb\\\\xf1\\\\x96}\\\\x0e\\\\xeb\\\\x1e\\\\xcb\\\\x1c\\\\xeb\\\\xed\\\\xa0w\\\\xb5.7\\\\x8b.u\\\\x0f-K\\\\x88)\\\\x9d\\\\x0f\\\\0\\\"\")\n└ @ GenieSessionFileSession ~/.julia/packages/GenieSessionFileSession/otnJC/src/GenieSessionFileSession.jl:42\n┌ Error: 2023-03-10 14:41:34 Resetting session\n└ @ GenieSessionFileSession ~/.julia/packages/GenieSessionFileSession/otnJC/src/GenieSessionFileSession.jl:46\n[ Info: 2023-03-10 14:41:34 GET /_devtools_/id 200\nWARNING: both HttpCommon and Genie export \"Headers\"; uses of it in module Html must be qualified\nWARNING: both Html and Base export \"div\"; uses of it in module Stipple must be qualified\nWARNING: both Router and Base export \"download\"; uses of it in module Genie must be qualified\nWARNING: both Html and Base export \"mark\"; uses of it in module Stipple must be qualified\nWARNING: both Html and Base export \"summary\"; uses of it in module Stipple must be qualified\nWARNING: both Html and Base export \"time\"; uses of it in module Stipple must be qualified\nWARNING: both Html and Base export \"view\"; uses of it in module Stipple must be qualified\n[ Info: 2023-03-10 14:41:41 GET /_devtools_/pages?CHANNEL__=ZNGNAVNUYNXODHAKDDJYZWQMINKTLPJN 200\n┌ Error: 2023-03-10 14:41:41 GET /images/icons/GenieCloud_logo.png 404\n└ @ Genie.Router ~/.julia/packages/Genie/IZLml/src/Router.jl:204\n[ Info: 2023-03-10 14:41:41 GET /_devtools_/pages?CHANNEL__=ZNGNAVNUYNXODHAKDDJYZWQMINKTLPJN 200\n.\n```",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083870319003062352",
+      "type": "Default",
+      "timestamp": "2023-03-10T21:53:41.387+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "That's followed by a dozen successful GETs mostly of js and css",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1084896636108558477",
+      "type": "Default",
+      "timestamp": "2023-03-13T17:51:54.453+00:00",
+      "timestampEdited": "2023-03-13T17:52:29.07+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "is this error with the default application? i.e. the boilerplate application that GB produces?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085665074099781762",
+      "type": "Reply",
+      "timestamp": "2023-03-15T20:45:24.347+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes. All I did was click the plus arrow (\"Genie Builder: Create new app\"), give it a name, and open the WYSIWYG or whatever you call it",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1084896636108558477",
+        "channelId": "1083868803835904070",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1085665965313896550",
+      "type": "Default",
+      "timestamp": "2023-03-15T20:48:56.829+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1085665965242585178",
+          "url": "https://cdn.discordapp.com/attachments/1083868803835904070/1085665965242585178/Screenshot_from_2023-03-15_13-48-46.png?ex=65397f38&is=65270a38&hm=d2ea93be0e1316df10a5352690a94d93a27e7b7b0a8ba5de28cafae828196905&",
+          "fileName": "Screenshot_from_2023-03-15_13-48-46.png",
+          "fileSizeBytes": 81765
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085666332869136554",
+      "type": "Default",
+      "timestamp": "2023-03-15T20:50:24.461+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I just restarted the server and the app and this time the only error in the log was",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085666340922216610",
+      "type": "Default",
+      "timestamp": "2023-03-15T20:50:26.381+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "┌ Error: 2023-03-15 13:48:07 GET /images/icons/GenieCloud_logo.png 404\n└ @ Genie.Router ~/.julia/packages/Genie/2Y9Bp/src/Router.jl:204",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085666682888015913",
+      "type": "Default",
+      "timestamp": "2023-03-15T20:51:47.912+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "plus the warnings about qualifying exports, but no weird NUL character errors like last time",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085666753952108564",
+      "type": "Default",
+      "timestamp": "2023-03-15T20:52:04.855+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "and here's the `app.jl`:",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085666786181124209",
+      "type": "Default",
+      "timestamp": "2023-03-15T20:52:12.539+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "```\nmodule App\n\nusing GenieFramework\n@genietools\n\n@handlers begin\n  @out message = \"Hello World!\"\n\n  @onchange isready begin\n    @show \"App is loaded\"\n  end\nend\n\n@page(\"/\", \"app.jl.html\")\n\nend\n```",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085666939617153044",
+      "type": "Default",
+      "timestamp": "2023-03-15T20:52:49.121+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1085666939373887548",
+          "url": "https://cdn.discordapp.com/attachments/1083868803835904070/1085666939373887548/Screenshot_from_2023-03-15_13-52-40.png?ex=65398021&is=65270b21&hm=8f88e9e49e11a6d1f3e5f00de1d02737928f150be514fabdedb087d6db293547&",
+          "fileName": "Screenshot_from_2023-03-15_13-52-40.png",
+          "fileSizeBytes": 10888
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086219850105491508",
+      "type": "Default",
+      "timestamp": "2023-03-17T09:29:53.254+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "can you remove `~/.julia/geniebuilder` directly and remove gb extension and try again?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086401695321436180",
+      "type": "Default",
+      "timestamp": "2023-03-17T21:32:28.532+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It seems extra broken now? Are there additional reinstall or uninstall steps I need to follow? I deleted ~/.julia/geniebuilder and uninstalled the Genie Builder extension in vscode. Then I restarted vscode. Then I reinstalled the Genie Builder extension. Now:\n\n1. My old testing app (just the default app) appears in Genie Builder Apps but obviously has no files and there doesn't seem to be a way to remove it. \n2. The Genie Builder Server is \"running\" but the Stop Server button doesn't do anything.\n3. Adding a new app prompts for an app name, but then does nothing",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086402109546696884",
+      "type": "Default",
+      "timestamp": "2023-03-17T21:34:07.291+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also the Genie Builder console in vscode has a bunch of errors in it, but they're truncated so I can't tell when they came from, nor can I replicate them. Re-starting vscode just adds a new shell prompt to the bottom, suggesting that the server is not, in fact, running. Here are the only non-truncated errors:",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086402270024974436",
+      "type": "Default",
+      "timestamp": "2023-03-17T21:34:45.552+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1086402269643276360",
+          "url": "https://cdn.discordapp.com/attachments/1083868803835904070/1086402269643276360/message.txt?ex=653c2cf5&is=6529b7f5&hm=d6e2ce74b9644136e1a03abf51e63c799d537d5a4814802dcaa25319ccfb9cf9&",
+          "fileName": "message.txt",
+          "fileSizeBytes": 5452
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086737377982173224",
+      "type": "Reply",
+      "timestamp": "2023-03-18T19:46:21.515+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Question. Are you using GenieBuilder or GenieBuilder Insider? \n\n1. old testing app is appearing in GenieBuilder because maybe it's added in db. Can you not right click and purge it?\n\nerror stack: I am not sure why db is read only",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "639188063201001472",
+          "name": ".grahamas",
+          "discriminator": "0000",
+          "nickname": "grahamas",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1086401695321436180",
+        "channelId": "1083868803835904070",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1086797136026411038",
+      "type": "Default",
+      "timestamp": "2023-03-18T23:43:48.943+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "GenieBuilder.\n\nRight clicking didn't give any options, but I'll double check",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087068697723666452",
+      "type": "Default",
+      "timestamp": "2023-03-19T17:42:54.297+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Something sounds off. The is the first time I am seeing this error.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087069420767158374",
+      "type": "Default",
+      "timestamp": "2023-03-19T17:45:46.684+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have not tested GenieBuilder on Linux for a long time. I'll need to fix my Linux dual boot issue to test it out. I'll response later",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087733523361837156",
+      "type": "Default",
+      "timestamp": "2023-03-21T13:44:41.081+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sorry for delay I'll test GB.jl today on my linux machine. I fixed the boot issue",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087831439980118177",
+      "type": "Default",
+      "timestamp": "2023-03-21T20:13:46.222+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Just verified works perfectly fine. I think there are some write/read issues with your `~/.julia/geniebuilder` directory",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087831651129761873",
+      "type": "Reply",
+      "timestamp": "2023-03-21T20:14:36.564+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Let me change the old code to new one",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "639188063201001472",
+          "name": ".grahamas",
+          "discriminator": "0000",
+          "nickname": "grahamas",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1085666786181124209",
+        "channelId": "1083868803835904070",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1087832872016171058",
+      "type": "Reply",
+      "timestamp": "2023-03-21T20:19:27.646+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "But that is not the problem. It should work with the old API as well",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "1087831651129761873",
+        "channelId": "1083868803835904070",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1087967723797086258",
+      "type": "Reply",
+      "timestamp": "2023-03-22T05:15:18.816+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "That could be it. Is there another user that needs permissions? Right now the owner (my user) has full permissions and everyone else has read/execute",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1087831439980118177",
+        "channelId": "1083868803835904070",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1087968358340775947",
+      "type": "Reply",
+      "timestamp": "2023-03-22T05:17:50.103+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This isn't true anymore (or I misremembered). Right clicking gives three options: Launch Repl, Package Manager, and Stop App.",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "1086797136026411038",
+        "channelId": "1083868803835904070",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1087968469930225664",
+      "type": "Default",
+      "timestamp": "2023-03-22T05:18:16.708+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Launch REPL now runs and gives a meaningful error:",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087968712662990848",
+      "type": "Default",
+      "timestamp": "2023-03-22T05:19:14.58+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This is because I deleted (and didn't recreate) my geniebuilder folder",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1087968712360992818",
+          "url": "https://cdn.discordapp.com/attachments/1083868803835904070/1087968712360992818/message.txt?ex=6538a552&is=65263052&hm=1f00360101ab66da0c7506108f94a4eea546a9b123191022d184ad41ffc93c35&",
+          "fileName": "message.txt",
+          "fileSizeBytes": 482
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087968855365783622",
+      "type": "Default",
+      "timestamp": "2023-03-22T05:19:48.603+00:00",
+      "timestampEdited": "2023-03-22T05:36:11.982+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Creating the folder and then re-running Launch REPL, I get this:",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1087968855055400960",
+          "url": "https://cdn.discordapp.com/attachments/1083868803835904070/1087968855055400960/message.txt?ex=6538a574&is=65263074&hm=5c5ee060ff41662c96d90ddc6f4c40cf46cfa97eb917a0e593eb9db9547f225d&",
+          "fileName": "message.txt",
+          "fileSizeBytes": 4311
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087968912227979314",
+      "type": "Default",
+      "timestamp": "2023-03-22T05:20:02.16+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'll try deleting the folder and reinstalling geniebuilder again",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087969713373585418",
+      "type": "Default",
+      "timestamp": "2023-03-22T05:23:13.168+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The reinstall doesn't create the geniebuilder directory",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087969966390771772",
+      "type": "Default",
+      "timestamp": "2023-03-22T05:24:13.492+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is it possible the uninstall isn't working correctly, causing the reinstall to think it doesn't need to recreate .julia/geniebuilder?",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087975264774004808",
+      "type": "Default",
+      "timestamp": "2023-03-22T05:45:16.725+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Where does it store the list of GB apps?",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088086162637332580",
+      "type": "Default",
+      "timestamp": "2023-03-22T13:05:56.836+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "the apps are stored in `~/.julia/geniebuilder/apps`",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088086878764404857",
+      "type": "Default",
+      "timestamp": "2023-03-22T13:08:47.574+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I would recommend you can also try `vscodium`: https://vscodium.com/\n\nand install vscode plugin from here: https://open-vsx.org/?search=geniebuilder&category=&sortBy=relevance&sortOrder=desc",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "VSCodium - Open Source Binaries of VSCode",
+          "url": "https://vscodium.com/",
+          "timestamp": null,
+          "description": "Free/Libre Open Source Software Binaries of VSCode",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088087022197026898",
+      "type": "Default",
+      "timestamp": "2023-03-22T13:09:21.771+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "so we will verify if there's any existing vscode extension that's blocking `geniebuilder`",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088709770774597642",
+      "type": "Default",
+      "timestamp": "2023-03-24T06:23:56.602+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I more meant: how does it list these apps when I've deleted ~/.julia/geniebuilder?",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088891815781998753",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:27:19.514+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The biggest problems (that I got from deleting ~/.julia/geniebuilder) resolved with a reinstall of vscode. (note: I'm on Arch so it's already an open-source build, like VSCodium)",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088891849659383898",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:27:27.591+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm still getting {{message}}",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088892053200572497",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:28:16.119+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I installed VSCodium separately, with the same {{message}} result",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088892102605295656",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:28:27.898+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm going to try uninstalling both and installing one of the Microsoft binaries",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088894592713244834",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:38:21.586+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Still getting {{message}} even with an official vscode binary",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088896968295723099",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:47:47.969+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I tried it on a different (Ubuntu) computer, still getting {{message}}",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088896999509733376",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:47:55.411+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I also tried disabling all other extensions",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088898912682786949",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:55:31.547+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also it won't let me stop the server",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088899117113151560",
+      "type": "Default",
+      "timestamp": "2023-03-24T18:56:20.287+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "and every time I removed the (stopped) app folder from my workspace, it added it back almost immediately",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089101901318078485",
+      "type": "Default",
+      "timestamp": "2023-03-25T08:22:07.809+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Actually it should add genie builder directly on server start so that's correct",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089102193820442645",
+      "type": "Default",
+      "timestamp": "2023-03-25T08:23:17.547+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Can you record a video and send it so I can see exactly what's happening?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089102263030648842",
+      "type": "Default",
+      "timestamp": "2023-03-25T08:23:34.048+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Screen record *",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089102445365428235",
+      "type": "Default",
+      "timestamp": "2023-03-25T08:24:17.52+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Sure, do you want it from a fresh install or just the {{message}} in the header of a new app?",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089107845544419388",
+      "type": "Default",
+      "timestamp": "2023-03-25T08:45:45.023+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1089107844911075328",
+          "url": "https://cdn.discordapp.com/attachments/1083868803835904070/1089107844911075328/genie_builder.mp4?ex=653cca38&is=652a5538&hm=0d101013de9e38deef65dddda0b3a889e300fb221adc645213cbaa2f9818df21&",
+          "fileName": "genie_builder.mp4",
+          "fileSizeBytes": 4232596
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089219664728567858",
+      "type": "Default",
+      "timestamp": "2023-03-25T16:10:04.794+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@grahamas damn it works perfectly fine",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "639188063201001472",
+          "name": ".grahamas",
+          "discriminator": "0000",
+          "nickname": "grahamas",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1089219903313149962",
+      "type": "Default",
+      "timestamp": "2023-03-25T16:11:01.677+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "that ` {{ message }}` thing where you build your UI. You right-click on that `GET/` in the left pane and you'll see the option to preview the app. That's where you see data app",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089220624439857202",
+      "type": "Default",
+      "timestamp": "2023-03-25T16:13:53.607+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "follow tutorials to understand how to build data apps with GB/GenieCloud here: https://learn.geniecloud.io/docs/guides/quickstart",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Cloud - Resource Hub",
+          "url": "https://learn.geniecloud.io/docs/guides/quickstart",
+          "timestamp": null,
+          "description": "Everything you need to learn how to build Genie apps.",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/RCNlUuNxfdfKTdahS9xgM5CSCBNgZpOon08tSqW2N4I/https/learn.geniecloud.io/meta.png",
+            "width": 1200,
+            "height": 627
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089268736223101009",
+      "type": "Default",
+      "timestamp": "2023-03-25T19:25:04.35+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ahhhhhhhh got it",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1089269957793173585",
+      "type": "Default",
+      "timestamp": "2023-03-25T19:29:55.595+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I didn't understand that from the quickstart at all--- though I see now that the last gif implies it. And the \"Designing the UI with the no-code editor\" makes it obvious",
+      "author": {
+        "id": "639188063201001472",
+        "name": ".grahamas",
+        "discriminator": "0000",
+        "nickname": "grahamas",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/639188063201001472/2e5025beb6df75781f86f72df46efd82.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 56
+}

@@ -1,0 +1,214 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1161925130230976525",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "redirecting pages using javascript",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:24:38.601264+00:00",
+  "messages": [
+    {
+      "id": "1161925130230976525",
+      "type": "Default",
+      "timestamp": "2023-10-12T07:15:38.572+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I would like to redirect pages using a button with this function in javascript:\n\nwindow.location.replace(\n  \"url\",\n);",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162276297259634708",
+      "type": "Default",
+      "timestamp": "2023-10-13T06:31:03.316+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "where do you want to put it? Are you writing your page in Julia or in HTML?  you can add scripts with `script()`",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162392475114156132",
+      "type": "Default",
+      "timestamp": "2023-10-13T14:12:42.275+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm using Stipple.jl. The idea would be that when you click on a button, you perform a certain validation and redirect to another page of the application. I tried with the redirect method, but I was successful.",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162392742522015884",
+      "type": "Default",
+      "timestamp": "2023-10-13T14:13:46.03+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I thought about the solution in this script, but I don't know if it would be the best solution.",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162392927750864959",
+      "type": "Default",
+      "timestamp": "2023-10-13T14:14:30.192+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I think about doing this redirection in the control layer.",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1163742217777717340",
+      "type": "Default",
+      "timestamp": "2023-10-17T07:36:06.003+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Right now I can think of two ways of doing this...you do it all inside a `route`, like\n```julia\nroute(\"/validate_and_redirect\") do\n    if validate()  # replace with your validation function\n        redirect(\"/success_page\")\n    else\n        redirect(\"/error_page\")\n    end\nend\n```\n\nor you define a redirect function to be triggered by a button.\n```julia\nfunction ui()\n    [\n        btn(\"Redirect\", @click(\"redirectTo('/new_path')\")),\n        h1(\"Average of random numbers\"), \n        {{msg}},\n        script(\"function redirectTo(url) { window.location.replace(url); }\")\n    ]\nend\n````\n\nAnother way would be to trigger the javascript redirect from the backend after validation, but I'm not sure how to go about  it.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

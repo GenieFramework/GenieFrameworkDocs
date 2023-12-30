@@ -1,0 +1,772 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1080539090908360724",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "how to subplot in GenieBuilder?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:19:26.9527498+00:00",
+  "messages": [
+    {
+      "id": "1080539090908360724",
+      "type": "Default",
+      "timestamp": "2023-03-01T17:16:34.718+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "hi!\n\nI am trying to create a plot with subplots and I can not find an example for it, I have tried the syntax of the StipplePlotly demos  and played a bit around but I can not make it work. \n\nCan anyone help me find it?\n\nThank you!",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC40",
+            "code": "eyes",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1081602375254560830",
+      "type": "Default",
+      "timestamp": "2023-03-04T15:41:41.461+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@itzi for subplots you have to pass custom layout as I can see from examples: \n\n```js\nvar trace1 = {\n  x: [1, 2, 3],\n  y: [4, 5, 6],\n  type: 'scatter'\n};\n\nvar trace2 = {\n  x: [20, 30, 40],\n  y: [50, 60, 70],\n  xaxis: 'x2',\n  yaxis: 'y2',\n  type: 'scatter'\n};\n\nvar data = [trace1, trace2];\n\nvar layout = {\n  grid: {rows: 1, columns: 2, pattern: 'independent'},\n};\n\nPlotly.newPlot('myDiv', data, layout);\n```\n\nhere: https://github.com/GenieFramework/StipplePlotly.jl/blob/1ed802d99e9846af242e1a6b1ad6f1b46641c604/src/Layouts.jl#L1097",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1080066446278799360",
+          "name": "itzi_.",
+          "discriminator": "0000",
+          "nickname": "itzi",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1081602543609716748",
+      "type": "Default",
+      "timestamp": "2023-03-04T15:42:21.6+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "and `grid` takes an object `PlotLayoutGrid`: https://github.com/GenieFramework/StipplePlotly.jl/blob/1ed802d99e9846af242e1a6b1ad6f1b46641c604/src/Layouts.jl#L846-L860",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082225606374211604",
+      "type": "Default",
+      "timestamp": "2023-03-06T08:58:11.339+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi! thanks for the reply, I have also seen this,, how can I translate this to GenieBuilder syntax? Thank you!",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082298312717242388",
+      "type": "Default",
+      "timestamp": "2023-03-06T13:47:05.882+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ok I need to test that. I haven't tried it. Will post solution later",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1082809985391669279",
+      "type": "Default",
+      "timestamp": "2023-03-07T23:40:18.154+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If you work with PlotlyBase, you can group plots by hvcat syntax:\n`[p1 p2]` or `[p1; p2]`",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082810245010690169",
+      "type": "Default",
+      "timestamp": "2023-03-07T23:41:20.052+00:00",
+      "timestampEdited": "2023-03-07T23:41:27.52+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You can even do `myplot = [p1 p2; p3]`  if myplot is a reactive model field.",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082979035048595507",
+      "type": "Reply",
+      "timestamp": "2023-03-08T10:52:02.733+00:00",
+      "timestampEdited": "2023-03-08T10:55:21.207+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Do you know what is the syntax in the PlotLayout if i want to make the y axis logarithmic? I can not find any examples or documentation \n\ni tried PlotLayout(showlegend = true, yaxis =:log) or yaxis=\"log\" and so but it does not work\n\nthank you!",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "960642755799941150",
+          "name": "hhaensel",
+          "discriminator": "0000",
+          "nickname": "hhaensel",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1082810245010690169",
+        "channelId": "1080539090908360724",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1083013372817186866",
+      "type": "Default",
+      "timestamp": "2023-03-08T13:08:29.495+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@itzi are you using PlotlyBase or StipplePlotly's struct base syntax?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1080066446278799360",
+          "name": "itzi_.",
+          "discriminator": "0000",
+          "nickname": "itzi",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1083364448804278312",
+      "type": "Default",
+      "timestamp": "2023-03-09T12:23:32.533+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "hi! i am using the syntax suggested in the example in Pere's article : https://genieframework.com/blog/how-to-quickly-turn-your-julia-code-into-a-web-app-with-genie-builder/\n\nAnd I am trying to use Stipple to understand the syntax (is it possible that there were plot examples and they are not there anymore?) but i am clearly not understanding how to use it.. \nhttps://github.com/GenieFramework/StipplePlotly.jl/blob/main/src/Layouts.jl",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "How to quickly turn your Julia code into a web app with Genie Builder",
+          "url": "https://genieframework.com/blog/how-to-quickly-turn-your-julia-code-into-a-web-app-with-genie-builder/",
+          "timestamp": null,
+          "description": "This tutorial will show you how to quickly turn your data analysis Julia code into a web app using Genie Builder.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/F_ez66XRwcKKGh18kpGfIWL05z9IedSGDgePClPWP-0/http/genieframework.com/blog/how-to-quickly-turn-your-julia-code-into-a-web-app-with-genie-builder/turn-julia-code-into-web-app.png",
+            "width": 1920,
+            "height": 1080
+          },
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "StipplePlotly.jl/Layouts.jl at main · GenieFramework/StipplePlotly.jl",
+          "url": "https://github.com/GenieFramework/StipplePlotly.jl/blob/main/src/Layouts.jl",
+          "timestamp": null,
+          "description": "Plotly integration for Stipple.jl. Contribute to GenieFramework/StipplePlotly.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/4ObtBD6MJvZdjhxkZMNS_kRIo8FOYzsD5smpYyBXDFY/https/opengraph.githubassets.com/e4f396b90c420ed4ce8792f964dbf986cd12fadc5ad3440d5fd3bf3a473054b5/GenieFramework/StipplePlotly.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083366523432882196",
+      "type": "Default",
+      "timestamp": "2023-03-09T12:31:47.163+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have my PlotData array that works well and if i implement the examples he gives of PlotLayout it works too, I am just struggling to add a logarithmic axis in PlotLayout https://genieframework.com/docs/stippleplotly/v0.13/API/layouts.html - i am trying to use this too but i really can not find it\n\n      (and subplots too, but until that is solved i can just rearrange the GUI)",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Documentation - Genie Framework",
+          "url": "https://genieframework.com/docs/stippleplotly/v0.13/API/layouts.html",
+          "timestamp": null,
+          "description": "Genie Framework includes all you need to quickly build production-ready web applications with Julia. Develop Julia backends, create beautiful web UIs, build data applications and dashboards, integrate with databases and set up high-performance web services and APIs.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/IHMzYUPMPs2-rWWw8zm0dkJpGHQ4Io0THX1XuZKnJaM/https/genieframework.com/assets/img/meta-image.jpg",
+            "width": 1614,
+            "height": 679
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1084279007299780720",
+      "type": "Default",
+      "timestamp": "2023-03-12T00:57:40.27+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It's `PlotLayout(yaxis = [PlotLayoutAxis(type = \"log\")])`",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1084829738209661019",
+      "type": "Reply",
+      "timestamp": "2023-03-13T13:26:04.751+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i am not sure what is happening because no matter if I type xaxis or yaxis it just makes the x axis logarithmic, and if I apply it to both still it just works on x",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "960642755799941150",
+          "name": "hhaensel",
+          "discriminator": "0000",
+          "nickname": "hhaensel",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1084279007299780720",
+        "channelId": "1080539090908360724",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1085532087840428032",
+      "type": "Default",
+      "timestamp": "2023-03-15T11:56:57.952+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you have to add a `xy = \"y\"``  in the PlotLayoutAxis,\n```\nPlotLayout(yaxis = [PlotLayoutAxis(type = \"log\", xy = \"y\")])\n```",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1085532391826796638",
+      "type": "Default",
+      "timestamp": "2023-03-15T11:58:10.428+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The interface is a bit strange here, it would work to put x and y axis in the array and assign it to one of xaxis or yaxis",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085532526623338506",
+      "type": "Default",
+      "timestamp": "2023-03-15T11:58:42.566+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "default is \"xy\" = \"x\" that's why you never changed the yaxis",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1085532621892751400",
+      "type": "Default",
+      "timestamp": "2023-03-15T11:59:05.28+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@essenciary Maybe, we have a look at it?",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "738049963250155580",
+          "name": "essenciary",
+          "discriminator": "0000",
+          "nickname": "essenciary",
+          "color": "#F1C40F",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "907230418414215179",
+              "name": "@admin",
+              "color": "#F1C40F",
+              "position": 12
+            },
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1085532791975981076",
+      "type": "Default",
+      "timestamp": "2023-03-15T11:59:45.831+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Or we rename the attribute name to axes",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085532921844215838",
+      "type": "Default",
+      "timestamp": "2023-03-15T12:00:16.794+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "then it's clear that we have to define it",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085600347680149575",
+      "type": "Reply",
+      "timestamp": "2023-03-15T16:28:12.366+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "thank you! you guys are doing a great job \uD83D\uDE0A  by the way, I still do not know how to implement this in GenieBuilder, at the moment I am just creating more plots in the GUI as a workaround",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "960642755799941150",
+          "name": "hhaensel",
+          "discriminator": "0000",
+          "nickname": "hhaensel",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1082809985391669279",
+        "channelId": "1080539090908360724",
+        "guildId": "774897545717219328"
+      }
+    }
+  ],
+  "messageCount": 20
+}

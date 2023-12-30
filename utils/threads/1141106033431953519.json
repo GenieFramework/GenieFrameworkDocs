@@ -1,0 +1,408 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1141106033431953519",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "debug not working in genie",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:12:18.5986708+00:00",
+  "messages": [
+    {
+      "id": "1141106033431953519",
+      "type": "Default",
+      "timestamp": "2023-08-15T20:27:59.095+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there a different way to run debug on genie ?",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141116990036123810",
+      "type": "ChannelNameChange",
+      "timestamp": "2023-08-15T21:11:31.353+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Changed the channel name: debug not working in genie",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141280227083960400",
+      "type": "Default",
+      "timestamp": "2023-08-16T08:00:10.098+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "what do you mean by \"run debug\"?",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141325570001608785",
+      "type": "Default",
+      "timestamp": "2023-08-16T11:00:20.692+00:00",
+      "timestampEdited": "2023-08-16T11:05:28.172+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "when I try to run genie in debug mode with this configuration file:\n\n{\n    \"version\": \"0.2.0\",\n    \"configurations\" : [ \n        { \n            \"type\": \"julia\", \n            \"request\": \"launch\",\n            \"name\": \"Run Server\", \n            \"program\": \"${workspaceFolder}/bootstrap.jl\", \n            \"stopOnEntry\": false, \n            \"cwd\": \"${workspaceFolder}\", \n            \"juliaEnv\": \"${command:activeJuliaEnvironment}\" \n        }         \n    ] \n}\n\nYou are having this error:\n\nOcorreu uma exceção: InvalidStateException\nInvalidStateException: Channel is closed.",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141327038825906206",
+      "type": "Default",
+      "timestamp": "2023-08-16T11:06:10.887+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [
+        {
+          "id": "1141327038628757584",
+          "url": "https://cdn.discordapp.com/attachments/1141106033431953519/1141327038628757584/Captura_de_tela_de_2023-08-16_07-58-24.png?ex=6538f6a2&is=652681a2&hm=a290ee3b7d81e5ec9e96126deedeea08aa7fc4f665cc35374f13deda7b2ca2ce&",
+          "fileName": "Captura_de_tela_de_2023-08-16_07-58-24.png",
+          "fileSizeBytes": 150976
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141355759154774038",
+      "type": "Default",
+      "timestamp": "2023-08-16T13:00:18.347+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm not sure how well traditional debugging, with breakpoints, etc.. would work.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141356391815184505",
+      "type": "Default",
+      "timestamp": "2023-08-16T13:02:49.185+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Genie can use the macro @show to basically print variables to the REPL",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141356810805203045",
+      "type": "Default",
+      "timestamp": "2023-08-16T13:04:29.08+00:00",
+      "timestampEdited": "2023-08-16T13:04:46.357+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm not a GUI developer.. but javascript debugging like console.log() might help too... and  inspecting elements  with a browser also \uD83E\uDD14",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141357040644665415",
+      "type": "Default",
+      "timestamp": "2023-08-16T13:05:23.878+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In version 4, I sent the request via postman and analyzed the breakpoints, but in this version I can't do it anymore",
+      "author": {
+        "id": "1000785425654370455",
+        "name": ".wernercastro",
+        "discriminator": "0000",
+        "nickname": "werner castro",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141357286976131112",
+      "type": "Default",
+      "timestamp": "2023-08-16T13:06:22.608+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83E\uDD14 interesting.  Unfortunately it's beyond my ability.. for the time being.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141857507275444325",
+      "type": "Default",
+      "timestamp": "2023-08-17T22:14:04.421+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Not sure how to look into this, as it seems the debugger in VSCodd might be causing the issue",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1149400879418589186",
+      "type": "Default",
+      "timestamp": "2023-09-07T17:48:44.489+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/GenieFramework/Genie.jl/issues/423#issuecomment-1707141462 this will help to all.",
+      "author": {
+        "id": "1128256233363738785",
+        "name": "vrkansagara",
+        "discriminator": "0000",
+        "nickname": "Vallabhdas Kansagara",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1128256233363738785/c706f806861d3ae992731d5185213e58.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Debugging in VS Code doesn't work · Issue #423 · GenieFramework/Gen...",
+          "url": "https://github.com/GenieFramework/Genie.jl/issues/423",
+          "timestamp": null,
+          "description": "Describe the bug I'd love to be able to debug it in VS Code, this doesn't seem to work. If I try to run bootstrap.jl as a Julia debug config, Genie throws an error when loading the routes. ...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/mfaiusxxEykpO38ElCeKp61K0EEsu05DiaCu063jHPA/https/opengraph.githubassets.com/dc22eb995c733a05e423d490e5e99e674ad3c1dfc38c5a77cd35d2fdacdb16ef/GenieFramework/Genie.jl/issues/423",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC9B",
+            "code": "yellow_heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f49b.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 12
+}

@@ -1,0 +1,645 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1073374389191573596",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Display plot images in Stipple",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:12:32.184772+00:00",
+  "messages": [
+    {
+      "id": "1073374389191573596",
+      "type": "Default",
+      "timestamp": "2023-02-09T22:46:36.715+00:00",
+      "timestampEdited": "2023-02-09T22:49:54.258+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there any example showing how to have an image / png content within a Stipple reactive model?\n\nThe intent is to be able to display plots as static images, similar to what Shiny does. See for example: https://shiny.rstudio.com/gallery/conditionalpanel-demo.html\n\nThat would allows interactive application leveraging a broader set of plot librairies which have support for saving figures, including Plots.jl, but also CairoMakie and GGplot2 through RCall. \n\nI want to avoid going through saving files on server, and rather directly pass the raw base64 content, again similar to how Shiny does it. \n\nFollowing the above Shiny example, I'd expect to have something like the following in the frontend: \n```html\n<img width=\"357.479553222656\" height=\"300\" alt=\"Plot object\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAb...\">\n```\n\nOn the backend, first step seems to save a plot into an IOBuffer:\n```julia\nio = IOBuffer()\np = Plots.scatter(rand(5), rand(5))\nPlots.png(p, io)\n```\n\nThen, I thought of passing that io's data as a string to the model:\n```julia\nplt_static_1::R{Any} = String(take!(io))\n```\n\nAnd  then passing this in the frontend as \n```julia\n<img alt=\"Plot object\" src={{plt_static_1}}>\n```\nBut this result in the follwing: \n\nAny hint how to get this to work? I think it would be a very convenient feature to showcase.",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [
+        {
+          "id": "1073374389489377372",
+          "url": "https://cdn.discordapp.com/attachments/1073374389191573596/1073374389489377372/image.png?ex=653aec4c&is=6528774c&hm=ff973b0fd15e0bca9af6a88f36cae823a77bb1a55a5046ef03a7c0f44e20e67e&",
+          "fileName": "image.png",
+          "fileSizeBytes": 2913
+        }
+      ],
+      "embeds": [
+        {
+          "title": "conditionalPanel demo",
+          "url": "https://shiny.rstudio.com/gallery/conditionalpanel-demo.html",
+          "timestamp": null,
+          "description": "Shiny is package that makes it easy to build interactive web apps straight from R & Python.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/ueR7kZlBsJf98ToLU6lYVV_dqH_Qs08drjE2DOI_-BI/https/shiny.rstudio.com/blog/images/conditionalpanel-demo.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074594878446641203",
+      "type": "Default",
+      "timestamp": "2023-02-13T07:36:24.029+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "For Plots.jl, the following provides a working solution. \n\nFrontend: \n```html\n<q-img :src=\"plt_static_1\" spinner-color=\"white\" style=\"height: auto; max-width: auto\"/>\n```\n\nBackend:\n```julia\nusing Base64\np = Plots.scatter(rand(5), rand(5))\nm.plt_static_1[] = \"data:image/png;base64,\" * stringmime(\"image/png\", p)\n```",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074600407399153674",
+      "type": "Default",
+      "timestamp": "2023-02-13T07:58:22.234+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also works fine with Makie: \n```julia\nfig = CairoMakie.scatter(randn(20, 2), color = 1:20)\nm.plt_static_2[] = \"data:image/png;base64,\" * stringmime(\"image/png\", fig)\n```\n\nExcept for the  string concatenation with \"data:image/png;base64,\" that is not most elegant, integration happened to be surprinsingly more straighfoward than I thought!",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074697314997899405",
+      "type": "Default",
+      "timestamp": "2023-02-13T14:23:26.806+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "there's a project that uses plots.jl with genie: https://github.com/AtelierArith/ElasticCollision.jl",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - AtelierArith/ElasticCollision.jl: Application that runs el...",
+          "url": "https://github.com/AtelierArith/ElasticCollision.jl",
+          "timestamp": null,
+          "description": "Application that runs elastic collision on Genie.jl - GitHub - AtelierArith/ElasticCollision.jl: Application that runs elastic collision on Genie.jl",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/hFflkPom-cszVtx0doPgf84hbtF_gjyS0w-i5fIovK8/https/opengraph.githubassets.com/925490ac30f4395087ae4c54d28ca250f2f0f4d24071b175601026ae9777ad27/AtelierArith/ElasticCollision.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074714617659527191",
+      "type": "Default",
+      "timestamp": "2023-02-13T15:32:12.082+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for the reference! I'll look a little further in case there's an encoding mechanism that avoids the manual concatenation of the  \"data:image...\" string, but the above snippets for Plots.jl and Makie.jl appers to do the job right in the context of Stipple, where reactivity to inputs is needed.",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074723414297825350",
+      "type": "Default",
+      "timestamp": "2023-02-13T16:07:09.364+00:00",
+      "timestampEdited": "2023-02-13T16:07:35.358+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "have you uploaded those makie and plots examples of yours anywhere on Github(/OSS)?\n\nI'll link them in resources here: https://github.com/GenieFramework/genie-awesome",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - GenieFramework/genie-awesome: \uD83C\uDF89 A list of awesome things r...",
+          "url": "https://github.com/GenieFramework/genie-awesome",
+          "timestamp": null,
+          "description": "\uD83C\uDF89 A list of awesome things related to Julia's Genie Framework - GitHub - GenieFramework/genie-awesome: \uD83C\uDF89 A list of awesome things related to Julia's Genie Framework",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/FdV09e0_2-fGhwsaCXaV6ZCzG5LjAmzw0i2ZRE0k-Kg/https/opengraph.githubassets.com/a3f91b16ee82d0bc1cba9d235f1a78a6d5819e3941cfec3fc6990fa73deda2fd/GenieFramework/genie-awesome",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074753238206791720",
+      "type": "Default",
+      "timestamp": "2023-02-13T18:05:39.938+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes it's on https://github.com/jeremiedb/GenieExperiments.jl. Must go to /plotdemo as show in attached screenshot. \nI'll just make a quick cleanup to remove the PlotlyLight tests and move test to seperate ui/controller as I'm still trying to figure out how to get PlotlyLight to work!",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [
+        {
+          "id": "1074753238278090772",
+          "url": "https://cdn.discordapp.com/attachments/1073374389191573596/1074753238278090772/image.png?ex=653ff073&is=652d7b73&hm=06b14e2618eb9af9c1af6e7a9e8b9bd1db2f87ae4b53f007edd5b645a00819c5&",
+          "fileName": "image.png",
+          "fileSizeBytes": 36434
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1074755150729724055",
+      "type": "Default",
+      "timestamp": "2023-02-13T18:13:15.919+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Done, http://localhost:8002/plotdemo should now looks reasonably clean, with all plots being updated when clicking the `RESET` button.",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074758360689295360",
+      "type": "Default",
+      "timestamp": "2023-02-13T18:26:01.233+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@essenciary I haven't managed to get PlotlyLight working, but it looks like I'm only missing a small element. \nHere's where I got:\n```julia\nimport Stipple: render\nusing PlotlyLight\n\nfunction Stipple.render(p::PlotlyLight.Plot)\n    return stringmime(\"text/html\", p)\nend\n```\nIn the model, I tried both specifying vars as PlotlyLight.Plot and raw json. \n```julia\n    plt_2::PlotlyLight.Plot = PlotlyLight.Plot(\n        x = 1:20,\n        y = cumsum(randn(20)),\n        type = \"scatter\",\n        mode = \"lines+markers\",\n    )\n    plt_3 = stringmime(\"text/html\", PlotlyLight.Plot(x = sort(rand(4)), y = randn(4)))\n```\nIn the UI:\n```html\n        <div class=\"col-sm-4\">\n            {{ plt_2 }}\n        </div>\n        <div class=\"col-sm-4\">\n            {{ plt_3 }}\n        </div>\n```\nBut the above looks to only print the html string, and not render them. I'm not suprised it does so with `plt_3` which is effectively just a string in the Model, but I thought `Stipple.render` was meant to operate the magic for Stipple to actually injects the string as html to be rendered.",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [
+        {
+          "id": "1074758360303423538",
+          "url": "https://cdn.discordapp.com/attachments/1073374389191573596/1074758360303423538/image.png?ex=653ff539&is=652d8039&hm=d89d4e98900223dfa644fe3f75e18449be87c48046321bf83a0191f8b03dc3fc&",
+          "fileName": "image.png",
+          "fileSizeBytes": 44790
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDD73",
+            "code": "partying_face",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f973.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "❤️",
+            "code": "heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2764.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "738049963250155580",
+          "name": "essenciary",
+          "discriminator": "0000",
+          "nickname": "essenciary",
+          "color": "#F1C40F",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "907230418414215179",
+              "name": "@admin",
+              "color": "#F1C40F",
+              "position": 12
+            },
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1077820935970762752",
+      "type": "Default",
+      "timestamp": "2023-02-22T05:15:36.08+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@abhimanyuaryan any idea what is missing to get the above json string to be actually rendered as plots (rather than  just printing the literal string)?",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1078465705982316554",
+      "type": "Default",
+      "timestamp": "2023-02-23T23:57:41.23+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@jeremiedb sorry no. Is their an MWE that I can run and test? Is this last code with PlotlyLight the one?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "916922541027762266",
+          "name": "jeremiedb",
+          "discriminator": "0000",
+          "nickname": "jeremiedb",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+        }
+      ]
+    },
+    {
+      "id": "1079881919577202710",
+      "type": "Default",
+      "timestamp": "2023-02-27T21:45:12.863+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@abhimanyuaryan Yes MWE is in https://github.com/jeremiedb/GenieExperiments.jl\n\nPage can be accessed at: \nhttp://127.0.0.1:8002/plotlylight\n\nController/Views are:\nhttps://github.com/jeremiedb/GenieExperiments.jl/blob/main/app/resources/UIDemo/PlotlyLightController.jl\n\nhttps://github.com/jeremiedb/GenieExperiments.jl/blob/main/app/resources/UIDemo/views/plotlylight.jl.html",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - jeremiedb/GenieExperiments.jl: Experiments with Genie",
+          "url": "https://github.com/jeremiedb/GenieExperiments.jl",
+          "timestamp": null,
+          "description": "Experiments with Genie. Contribute to jeremiedb/GenieExperiments.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/1xf1kwghovv22t6QXWtmI5krM9-ia5H1LfShdXDiqCk/https/opengraph.githubassets.com/f0d878db8c0e9d9e642a3bfecb7f38df4a85c33f04818155192b41df152c7296/jeremiedb/GenieExperiments.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "GenieExperiments.jl/PlotlyLightController.jl at main · jeremiedb/Ge...",
+          "url": "https://github.com/jeremiedb/GenieExperiments.jl/blob/main/app/resources/UIDemo/PlotlyLightController.jl",
+          "timestamp": null,
+          "description": "Experiments with Genie. Contribute to jeremiedb/GenieExperiments.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/1xf1kwghovv22t6QXWtmI5krM9-ia5H1LfShdXDiqCk/https/opengraph.githubassets.com/f0d878db8c0e9d9e642a3bfecb7f38df4a85c33f04818155192b41df152c7296/jeremiedb/GenieExperiments.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "GenieExperiments.jl/plotlylight.jl.html at main · jeremiedb/GenieEx...",
+          "url": "https://github.com/jeremiedb/GenieExperiments.jl/blob/main/app/resources/UIDemo/views/plotlylight.jl.html",
+          "timestamp": null,
+          "description": "Experiments with Genie. Contribute to jeremiedb/GenieExperiments.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/1xf1kwghovv22t6QXWtmI5krM9-ia5H1LfShdXDiqCk/https/opengraph.githubassets.com/f0d878db8c0e9d9e642a3bfecb7f38df4a85c33f04818155192b41df152c7296/jeremiedb/GenieExperiments.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1082816828788723793",
+      "type": "Default",
+      "timestamp": "2023-03-08T00:07:29.747+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "injecting html is via\n```span(v__html=\"\"\"myhtml text\"\"\")```",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082817636695539764",
+      "type": "Default",
+      "timestamp": "2023-03-08T00:10:42.367+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "`Stipple.render()` converts the variables to be rendered in a julia variable that afterwards will be encoded by JSON3 and then transmitted.\nVery often it just doesn't do anything.",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083261650095833118",
+      "type": "Default",
+      "timestamp": "2023-03-09T05:35:03.411+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks! I wasn't aware of that `v__html` feature. It works fine for simple html strings sent from the model, such as `html_2::String = \"<ul><li>item 1</li></ul>\"`  which can then be included in a view with `<span v-html=\"html_2\"></span>`.  \n\nHowever, including a more complex html such the one needed for plotly doesn't seem to work. \n`<span v-html=\"plt_3\"></span>`  results in no error but nothing is rendered, while  the \"static\" insertion with `$(model.plt_3[])` does render the plot (although with some strange display that doesn't respect the parent `col` class). I guess if the above would work smoothly, there wouldn't be the need to specify a `plotly` Vue component in https://github.com/GenieFramework/StipplePlotly.jl/blob/main/assets/js/vueplotly.js. \n\nI think for now I'll stick to using the  `plotly` Vue compoenent from StipplePlotly for situations where I want to reuse PlolyLight.jl recipes within Stipple.",
+      "author": {
+        "id": "916922541027762266",
+        "name": "jeremiedb",
+        "discriminator": "0000",
+        "nickname": "jeremiedb",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 15
+}

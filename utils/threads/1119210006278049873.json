@@ -1,0 +1,706 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1119210006278049873",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Trouble importing app into Genie Cloud.",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:26:56.3199923+00:00",
+  "messages": [
+    {
+      "id": "1119210006278049873",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:20:59.413+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have tried uploading a zip file and cloning the app from GitHub, but it only generates a default app. I'm having trouble figuring out why the app is not uploading because there isn't much information about it in the log files. Here is my GitHub code:\nhttps://github.com/ZacZipfian/Zipf-Stats/tree/main",
+      "author": {
+        "id": "274035572576747520",
+        "name": "CW",
+        "discriminator": "7821",
+        "nickname": "CW",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - ZacZipfian/Zipf-Stats: A genie framework Julia web applica...",
+          "url": "https://github.com/ZacZipfian/Zipf-Stats/tree/main",
+          "timestamp": null,
+          "description": "A genie framework Julia web application that can take a text file as input and generate interactive graphs and various statistics related to the file. - GitHub - ZacZipfian/Zipf-Stats: A genie fram...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/dupuURBjj_DRTuNJ5_AjvFg15klU3C_LLqK2xQfxeaM/https/opengraph.githubassets.com/91508ba1536d173179d0767366d2b7fdf692e9f179288459efecb2fc79879d1b/ZacZipfian/Zipf-Stats",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119211776043646987",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:28:01.358+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "what link did you put while importing the app?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119212028716925020",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:29:01.6+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/ZacZipfian/Zipf-Stats.git",
+      "author": {
+        "id": "274035572576747520",
+        "name": "CW",
+        "discriminator": "7821",
+        "nickname": "CW",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - ZacZipfian/Zipf-Stats: A genie framework Julia web applica...",
+          "url": "https://github.com/ZacZipfian/Zipf-Stats.git",
+          "timestamp": null,
+          "description": "A genie framework Julia web application that can take a text file as input and generate interactive graphs and various statistics related to the file. - GitHub - ZacZipfian/Zipf-Stats: A genie fram...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/dupuURBjj_DRTuNJ5_AjvFg15klU3C_LLqK2xQfxeaM/https/opengraph.githubassets.com/91508ba1536d173179d0767366d2b7fdf692e9f179288459efecb2fc79879d1b/ZacZipfian/Zipf-Stats",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119212158983614514",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:29:32.658+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "can you try `https://github.com/ZacZipfian/Zipf-Stats`",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119212231834468382",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:29:50.027+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Sure",
+      "author": {
+        "id": "274035572576747520",
+        "name": "CW",
+        "discriminator": "7821",
+        "nickname": "CW",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE4F",
+            "code": "pray",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1119213066169622538",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:33:08.948+00:00",
+      "timestampEdited": "2023-06-16T10:33:49.534+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "also you need to delete the app with name `Zipf-Stats`(from vscode: delete+purge) as it might collide when you import the app with same name again",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119215796929966151",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:44:00.012+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Tried both things, same issue",
+      "author": {
+        "id": "274035572576747520",
+        "name": "CW",
+        "discriminator": "7821",
+        "nickname": "CW",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119216006993293372",
+      "type": "Default",
+      "timestamp": "2023-06-16T10:44:50.095+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'll check and revert back asap",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE4F",
+            "code": "pray",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "274035572576747520",
+              "name": "CW",
+              "discriminator": "7821",
+              "nickname": "CW",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1119221926691340399",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:08:21.461+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Could you please download the project file from GitHub, name the ZIP file `zipfstats.zip`, and choose `zipfstats` as the application name? That should work. Please inform me if it functions correctly.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119222174218203236",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:09:20.476+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "app names don't allow `-` and some special characters",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119222400807088230",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:10:14.499+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1119222400467357696",
+          "url": "https://cdn.discordapp.com/attachments/1119210006278049873/1119222400467357696/zipfilestats.gif?ex=653b9a96&is=65292596&hm=5a771c742b38805e5bc93f1a20477e17cbcf481c3e3290b4578578f810498184&",
+          "fileName": "zipfilestats.gif",
+          "fileSizeBytes": 1918127
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119226822916325376",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:27:48.812+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Still no luck unfortunately",
+      "author": {
+        "id": "274035572576747520",
+        "name": "CW",
+        "discriminator": "7821",
+        "nickname": "CW",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1119226822320734268",
+          "url": "https://cdn.discordapp.com/attachments/1119210006278049873/1119226822320734268/exp1.png?ex=653b9eb4&is=652929b4&hm=6092ae771863092bcf9d56824f5000e821a90f40d7ce7c4706f825822d5474ed&",
+          "fileName": "exp1.png",
+          "fileSizeBytes": 23120
+        },
+        {
+          "id": "1119226822622711868",
+          "url": "https://cdn.discordapp.com/attachments/1119210006278049873/1119226822622711868/exp2.png?ex=653b9eb4&is=652929b4&hm=acfbfec9729af04e46da182a0023c619a0c2c2503fb4fc8c3d5810adfbca2c78&",
+          "fileName": "exp2.png",
+          "fileSizeBytes": 44088
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119227766609555566",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:31:33.806+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "have you deleted zipfstats and purged it from vscode before importing it again?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1119227766299185202",
+          "url": "https://cdn.discordapp.com/attachments/1119210006278049873/1119227766299185202/Screenshot_2023-06-16_at_5.00.45_PM.png?ex=653b9f95&is=65292a95&hm=5b0d601c8b9965f6dda22f1622653f58934ecd93cefb861919cdeef7e36ad0d6&",
+          "fileName": "Screenshot_2023-06-16_at_5.00.45_PM.png",
+          "fileSizeBytes": 95339
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119227845198229614",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:31:52.543+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "it's a 2-step process. First you delete the app and then click on `x` to purge the app",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119230270571282483",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:41:30.797+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yeah I've been deleting and purging the app",
+      "author": {
+        "id": "274035572576747520",
+        "name": "CW",
+        "discriminator": "7821",
+        "nickname": "CW",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119233819153797171",
+      "type": "Default",
+      "timestamp": "2023-06-16T11:55:36.845+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "debugging will get back to you",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE4F",
+            "code": "pray",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "274035572576747520",
+              "name": "CW",
+              "discriminator": "7821",
+              "nickname": "CW",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1119247012274131036",
+      "type": "Default",
+      "timestamp": "2023-06-16T12:48:02.33+00:00",
+      "timestampEdited": "2023-06-16T12:48:24.798+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@CW when did you create your beta account? This is an issue with older accounts. I just tried cloning your app and it worked fine.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "274035572576747520",
+          "name": "CW",
+          "discriminator": "7821",
+          "nickname": "CW",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1119247476017344594",
+      "type": "Default",
+      "timestamp": "2023-06-16T12:49:52.895+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If you created it before June 6, we'll have to reset it.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1119248130102280252",
+      "type": "Default",
+      "timestamp": "2023-06-16T12:52:28.841+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes I created it well before then, I'll try resetting it tomorrow. Thanks",
+      "author": {
+        "id": "274035572576747520",
+        "name": "CW",
+        "discriminator": "7821",
+        "nickname": "CW",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/274035572576747520/77aa9f51182649802685629c6d1b7ca9.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 19
+}

@@ -1,0 +1,192 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1109228540987183195",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "regular first time setting in VSCode / Linux Mint - Does juliaUp need some specific config setting ?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:24:40.6873224+00:00",
+  "messages": [
+    {
+      "id": "1109228540987183195",
+      "type": "Default",
+      "timestamp": "2023-05-19T21:18:12.641+00:00",
+      "timestampEdited": "2023-05-19T21:28:41.376+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "While reading about JuliaUp offering multi julia version managment, \nI decided  -good or not so GOOD idea - to go that way before activating Genie jl inside  Vscode.\n\nSo I can currently run in the Cli Julia 1.9.0 and \n     sys.BINDIR command returns : \"`/home/mint/.julia/juliaup/julia-1.9.0+0.x64.linux.gnu/bin\"`\n\nwhatever execution path I try to set is not accepted in the Vscode execpath settings.\n\nIn the file .profile it somehow contains this (other) path :\n**this is also an existing valid path in the home folders...\n`case \":$PATH:\" in\n    *:/home/mint/.juliaup/bin:*)\n        ;;\n    *)\n        export PATH=/home/mint/.juliaup/bin${PATH:+:${PATH}}\n        ;;\nesac`\n\nQuestion : \n    should I uninstall JULIAUP and go for a straight Julia 1.9.0 (or else) install in order for VSCode to execute all my jl scripts ?\nOr\n     should i try modifying the existing path in .profile to :\n`/home/mint/.julia/juliaup/julia-1.9.0+0.x64.linux.gnu/bin` \n\n   Those \"+\" and \"dots\" symbols in the path seems a bit wierd to me - could it be the reason for the VSC path problem ?\n\nthanks for any experienced help \uD83D\uDE43",
+      "author": {
+        "id": "648706862752989206",
+        "name": "kirik_1",
+        "discriminator": "0000",
+        "nickname": "Kirik",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/648706862752989206/580940822eba865e49c0a3884172d74e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115052727685353552",
+      "type": "Default",
+      "timestamp": "2023-06-04T23:01:26.958+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Juliaup is a plug-and-play solution. It configures the command in your shell and allows you to install and set any version as default.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115053003070775326",
+      "type": "Default",
+      "timestamp": "2023-06-04T23:02:32.615+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I suggest that you ask any juliaup specific question here: https://github.com/JuliaLang/juliaup/issues.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "668141144932220968",
+              "name": "generallyclueless",
+              "discriminator": "0000",
+              "nickname": "GenerallyClueless",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1122523236899496018",
+      "type": "Default",
+      "timestamp": "2023-06-25T13:46:35.15+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for posting.  I amrunning VS Code on Mint and I notice a lot of annoying issues.... particularly the terminals within VS Code keep losing changes to the PATH (even though julia path is set in VS Code)",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1122523364892889118",
+      "type": "Default",
+      "timestamp": "2023-06-25T13:47:05.666+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I will have to read about Juliaup and maybe use that moving forward.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 5
+}

@@ -1,0 +1,167 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1150749360850739230",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Marker Size in Bubble Charts",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:21:36.9514964+00:00",
+  "messages": [
+    {
+      "id": "1150749360850739230",
+      "type": "Default",
+      "timestamp": "2023-09-11T11:07:07.516+00:00",
+      "timestampEdited": "2023-09-11T11:08:31.631+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello I am trying to set the bubble size for PlotData:\n\n```\nplotdata(data, :A, :B, groupfeature=:C, plot = \"Bubble\", marker = PlotDataMarker(size=data.B))\n```\n\nBut they al l come back with the same size, where data.B is a vector of different Ints. Anything I try, all markers remain one and the same size for all. Anyone can help? Thanks.",
+      "author": {
+        "id": "750329841580113940",
+        "name": "sven8112",
+        "discriminator": "0000",
+        "nickname": "Sven",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1150822367308820530",
+      "type": "Default",
+      "timestamp": "2023-09-11T15:57:13.612+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It is better that you use Plotly objects from PlotlyBase.jl and Plotly.jl for plots. Then you can easily change the properties via attributes\n\nhttps://learn.genieframework.com/docs/reference/reactive-ui/plotting",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Plotting",
+          "url": "https://learn.genieframework.com/docs/reference/reactive-ui/plotting",
+          "timestamp": null,
+          "description": "",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/o5P7VMkB4N8r_-0p0sqbqmyiEh22d18WJWaZtOPIZnU/https/learn.genieframework.com/docs/reference/reactive-ui/plotting/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1151457253874995200",
+      "type": "Default",
+      "timestamp": "2023-09-13T10:00:02.365+00:00",
+      "timestampEdited": "2023-09-13T10:52:31.614+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello Pere, thanks for replying, I am still struggling somewhat with plotting things within the Genie Framework (I am working with the Genie Builder), although I also got some stuff working now. Concerning your reply, setting plot objects via PlotlyBase.jl is clear to me, so I follow conventions from here: https://docs.juliahub.com/PlotlyBase/RsGW9/0.8.19/autodocs/\n\n```\n@out some_plot = Plot() \n\n@onchange xyz begin\n  some_plot = Plot(trace, layout)\nend\n```\n\nthe trace and the layout though , are recommended to be set from PlotlyJS.jl at least everything in PlotlyBase.jl points to it. In your reply you suggest Plotly.jl, which also points to PlotlyJS.jl can you verify what you see as best practice please, its not entirely clear to me. \n\nFurther, the hardly documented StipplePlotly package, with `PlotData`, and `plotdata` should not be used anymore, or at least not for the no-code editor?\n\nMy general idea of setting things up would be:\n\n```\nmodule App\n# set up Genie development environment\nusing GenieFramework\nusing DataFrames\nusing PlotlyBase\nusing RDatasets: dataset\n@genietools\n\n\ndf_accidents = dataset(\"Ecdat\", \"Airq\") |> DataFrame\nfeatures = [:AirQ, :Rain, :Vala, :Coas]\n\n# add reactive code to make the UI interactive\n@app begin\n\n    @out features\n    @in plot_feature = :AirQ    \n\n    @out box_plot = Plot()\n    @out box_plot_layout = PlotlyBase.Layout(title=\"Box Plot\")\n\n    \n    @onchange isready, plot_feature begin\n \n        box_trace = box(; y = df_accidents[!, plot_feature])\n        box_plot = Plot(box_trace)\n        box_plot_layout = PlotlyBase.Layout(; title=\"Box Plot of $(plot_feature)\")\n    end\nend\n\n\n@page(\"/\", \"app.jl.html\")\nend\n```\n\nSo this should run without errors, considering you link it to a Select and Chart Object in the Genie Builder.",
+      "author": {
+        "id": "750329841580113940",
+        "name": "sven8112",
+        "discriminator": "0000",
+        "nickname": "Sven",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1151825152296898560",
+      "type": "Default",
+      "timestamp": "2023-09-14T10:21:56.184+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "To answer my own question, to control the size of the individual markers, a reasonable approach would be:\n\n```\nPlot(scatter(data, x=:A, y=:B, color=:A,\n                                                marker=attr(size=:B, \n                                                sizeref=maximum(data.B) / (20^2), \n                                                sizemode=\"area\"), mode=\"markers\" \n                                                ))\n```\n\nHere `data`is a dataframe, A is some x-axis attribute, B is a count of these attributes in my case, the individual size of the markers requires a reference point, which here is the maximum of the count `sizeref=maximum(data.B)`. The Markers are all the same color in this solution.",
+      "author": {
+        "id": "750329841580113940",
+        "name": "sven8112",
+        "discriminator": "0000",
+        "nickname": "Sven",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

@@ -1,0 +1,210 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1077940199084003400",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "<% %> in element head closes html >",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:08:16.5406815+00:00",
+  "messages": [
+    {
+      "id": "1077940199084003400",
+      "type": "Default",
+      "timestamp": "2023-02-22T13:09:30.622+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It is possible to use these <% %> in a space where all html <> are closed:\n```html\n<a href=\"$(linkto(:show_dashboard))\" class=\"nav-link\" aria-current=\"page\">\n  <i class=\"bi bi-speedometer2 me-2\" width=\"16\" height=\"16\"></i>\n  Dashboard <% if false \"true\" else \"false\" end %>\n</a>\n```\n\nBut when I try to use it in order to add a class for instance, the %> gets used to escape the html tag.\n```html\n<a href=\"$(linkto(:show_dashboard))\" class=\"nav-link <% if true \"active\" else \"text-white\" end %>\" aria-current=\"page\">\n  <i class=\"bi bi-speedometer2 me-2\" width=\"16\" height=\"16\"></i>\n  Dashboard\n</a>\n```\n\nIs there a workaround? I could get the same behaviour with js probably but still. How can we use the julia snippets in a tag?",
+      "author": {
+        "id": "210321639441694721",
+        "name": "dr.xergon",
+        "discriminator": "0000",
+        "nickname": "Xergon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1078265693448970280",
+      "type": "Default",
+      "timestamp": "2023-02-23T10:42:54.526+00:00",
+      "timestampEdited": "2023-02-23T10:44:03.578+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "<% %> is used for multi-line interpolation whereas $(...) is for single-line. I see that %> closes the tag, which I don't think should be happening; I'll open an issue about this. In the meanwhile, try with $().\n\nI tried setting the class as \n```html\n<a href=\"\" class=\"nav-link $( true ? \"active\" : \"text-white\" )\" aria-current=\"page\">\n  <i class=\"bi bi-speedometer2 me-2\" width=\"16\" height=\"16\"></i>\n  Dashboard\n</a>\n```\nbut it fails with LoadError: syntax: cannot juxtapose string literal . This works in the REPL\n```julia\njulia> \"nav-link $( true ? \"active\" : \"text-white\" )\"\n\"nav-link active\"\n```\n@abhimanyuaryan , should we open an issue about this?\n\nIn the meantime, one workaround is storing the classes in a variable in the julia code, and then interpolate in the HTML file:\n```julia\nclasselect = true\ntrueclass = \"active\"\nfalseclass = \"text-white\"\n```\n.\n```html \n<a href=\"\" class=\"nav-link $( classelect ? trueclass : falseclass )\" aria-current=\"page\">\n  <i class=\"bi bi-speedometer2 me-2\" width=\"16\" height=\"16\"></i>\n  Dashboard\n</a>\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1078396953534136520",
+      "type": "Reply",
+      "timestamp": "2023-02-23T19:24:29.369+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ah, my mistake, I am still learning more and more about Genie.",
+      "author": {
+        "id": "210321639441694721",
+        "name": "dr.xergon",
+        "discriminator": "0000",
+        "nickname": "Xergon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1078265693448970280",
+        "channelId": "1077940199084003400",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1078465323969302528",
+      "type": "Default",
+      "timestamp": "2023-02-23T23:56:10.151+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sure @Pere",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    }
+  ],
+  "messageCount": 4
+}

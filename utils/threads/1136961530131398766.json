@@ -1,0 +1,108 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1136961530131398766",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Conditional display of a UI element",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:10:42.7819412+00:00",
+  "messages": [
+    {
+      "id": "1136961530131398766",
+      "type": "Default",
+      "timestamp": "2023-08-04T09:59:12.507+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I would like to conditionally display part of a page. Actually, I would like the contents of that part to be dependant on what has been selected in a dropdown menu. Is there an easy way to do this?",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1138210742026379495",
+      "type": "Default",
+      "timestamp": "2023-08-07T20:43:07.832+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You could use the v-if parameter in the HTML tag. For instance\n\n<q-input v-model=\"textvar\" v-if=\"textenabled\">\n\nWhere textenabled is a boolean",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1138432313630396478",
+      "type": "Default",
+      "timestamp": "2023-08-08T11:23:34.619+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Great! Thanks!",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

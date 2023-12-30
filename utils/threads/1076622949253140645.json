@@ -1,0 +1,508 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1076622949253140645",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Websockets do not work for any channel but the default \"____\"",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:28:45.95402+00:00",
+  "messages": [
+    {
+      "id": "1076622949253140645",
+      "type": "Default",
+      "timestamp": "2023-02-18T21:55:13.789+00:00",
+      "timestampEdited": "2023-02-18T22:03:16.524+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If I register a channel (called test, for example) and try to connect to it then I receive “Got this payload: ERROR : 404 - Not found”. Has anyone been able to set up any but the default channel?",
+      "author": {
+        "id": "689764309383119035",
+        "name": "a_ill",
+        "discriminator": "0000",
+        "nickname": "Aleksandr",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/689764309383119035/2b2b8f1e6d581867d0a6897f70f45c55.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077143995072921671",
+      "type": "Default",
+      "timestamp": "2023-02-20T08:25:40.793+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Aleksandr can you share some code please?",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "689764309383119035",
+          "name": "a_ill",
+          "discriminator": "0000",
+          "nickname": "Aleksandr",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/689764309383119035/2b2b8f1e6d581867d0a6897f70f45c55.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1077144032595157084",
+      "type": "Default",
+      "timestamp": "2023-02-20T08:25:49.739+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "this definitely works, it's used in many places",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077172173912936459",
+      "type": "Default",
+      "timestamp": "2023-02-20T10:17:39.152+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Here is a repo with a minimal example: https://github.com/a-ill/test. Run 'Server/startup.jl' to start the server. Go to '/'. It uses the default channel and works. You can broadcast for testing. Go to '/test'. It uses a channel called '/test' and does not work.",
+      "author": {
+        "id": "689764309383119035",
+        "name": "a_ill",
+        "discriminator": "0000",
+        "nickname": "Aleksandr",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/689764309383119035/2b2b8f1e6d581867d0a6897f70f45c55.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077658827593359512",
+      "type": "Default",
+      "timestamp": "2023-02-21T18:31:26.431+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yes can you share some code. Last time I checked. I could access them at `____`",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077658861848236212",
+      "type": "Default",
+      "timestamp": "2023-02-21T18:31:34.598+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "4 * `underscore`",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077659332809863168",
+      "type": "Default",
+      "timestamp": "2023-02-21T18:33:26.884+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "use this\n\n```julia\nusing Genie, Genie.Router, Genie.Assets\n\nGenie.config.websockets_server = true # enable the websockets server\n\nroute(\"/\") do\n  Assets.channels_support()\nend\n\nup() # start the servers\n```\n\n\n```\nGenie.WebChannels.broadcast(\"____\", \"Hey!\")\n```\n\nand you'll see the message in your browser that's connected to `127.0.0.1:8000` -> or whatever the default is",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077693144293978212",
+      "type": "Reply",
+      "timestamp": "2023-02-21T20:47:48.17+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Using the default channel does work. But how can I make another channel work, like \"/test\", for example?",
+      "author": {
+        "id": "689764309383119035",
+        "name": "a_ill",
+        "discriminator": "0000",
+        "nickname": "Aleksandr",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/689764309383119035/2b2b8f1e6d581867d0a6897f70f45c55.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1077659332809863168",
+        "channelId": "1076622949253140645",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1078465174270394509",
+      "type": "Default",
+      "timestamp": "2023-02-23T23:55:34.46+00:00",
+      "timestampEdited": "2023-02-23T23:55:49.574+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "`route(\"/test\")` should work?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083770581096333482",
+      "type": "Default",
+      "timestamp": "2023-03-10T15:17:22.017+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Aleksandr were you able to figure this out? \nI can not use custom channels too.",
+      "author": {
+        "id": "150994337990180864",
+        "name": "andileni",
+        "discriminator": "0000",
+        "nickname": "AndiLeni",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "689764309383119035",
+          "name": "a_ill",
+          "discriminator": "0000",
+          "nickname": "Aleksandr",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/689764309383119035/2b2b8f1e6d581867d0a6897f70f45c55.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1084897879879073802",
+      "type": "Default",
+      "timestamp": "2023-03-13T17:56:50.991+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@AndiLeni what version of Genie?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "150994337990180864",
+          "name": "andileni",
+          "discriminator": "0000",
+          "nickname": "AndiLeni",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ]
+    },
+    {
+      "id": "1084900864520634459",
+      "type": "Default",
+      "timestamp": "2023-03-13T18:08:42.585+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@abhimanyuaryan \n\n```\nJulia Version 1.8.5\nCommit 17cfb8e65e (2023-01-08 06:45 UTC)\nPlatform Info:\n  OS: Windows (x86_64-w64-mingw32)\n  CPU: 12 × Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz\n  WORD_SIZE: 64\n  LIBM: libopenlibm\n  LLVM: libLLVM-13.0.1 (ORCJIT, skylake)\n  Threads: 1 on 12 virtual cores\n```\n  \n  package status is:\n```\n  Genie v5.15.0\n  GenieFramework v1.9.0\n```",
+      "author": {
+        "id": "150994337990180864",
+        "name": "andileni",
+        "discriminator": "0000",
+        "nickname": "AndiLeni",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1085126946872098847",
+      "type": "Default",
+      "timestamp": "2023-03-14T09:07:04.818+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I don't know why it doesn't work. Are you using `____` 4xunderscore for channel?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1085126946427519006",
+          "url": "https://cdn.discordapp.com/attachments/1076622949253140645/1085126946427519006/websocket.gif?ex=6540c3b8&is=652e4eb8&hm=e73a0b5766bced03febb5929f2b2abe3c30eab29b3739b110e6cef6d9cafbc18&",
+          "fileName": "websocket.gif",
+          "fileSizeBytes": 239115
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085132194596519936",
+      "type": "Default",
+      "timestamp": "2023-03-14T09:27:55.973+00:00",
+      "timestampEdited": "2023-03-14T09:30:36.711+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hey I can. \nBut this is not the issue. \nCustom channels do not work.\nThe channel command should create additional websocket channels as far as I have understood the documentation. \nBut they are not working",
+      "author": {
+        "id": "150994337990180864",
+        "name": "andileni",
+        "discriminator": "0000",
+        "nickname": "AndiLeni",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 14
+}

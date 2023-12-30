@@ -1,0 +1,206 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1102532329429291061",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "How to keep GenieBuilderApp from reloading for changes in only README.md?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:18:27.9306021+00:00",
+  "messages": [
+    {
+      "id": "1102532329429291061",
+      "type": "Default",
+      "timestamp": "2023-05-01T09:49:51.396+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How to GenieBuilderApp from reloading for changes in README.md?",
+      "author": {
+        "id": "918528572870762538",
+        "name": "michaelfliegner",
+        "discriminator": "0000",
+        "nickname": "michaelfliegner",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/918528572870762538/31cc04847b7e4f6c9ca461185634f9fe.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1102534900910936136",
+      "type": "ChannelNameChange",
+      "timestamp": "2023-05-01T10:00:04.485+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Changed the channel name: How to keep GenieBuilderApp from reloading for changes in README.md?",
+      "author": {
+        "id": "918528572870762538",
+        "name": "michaelfliegner",
+        "discriminator": "0000",
+        "nickname": "michaelfliegner",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/918528572870762538/31cc04847b7e4f6c9ca461185634f9fe.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1102535081882558485",
+      "type": "ChannelNameChange",
+      "timestamp": "2023-05-01T10:00:47.632+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Changed the channel name: How to keep GenieBuilderApp from reloading for changes in only README.md?",
+      "author": {
+        "id": "918528572870762538",
+        "name": "michaelfliegner",
+        "discriminator": "0000",
+        "nickname": "michaelfliegner",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/918528572870762538/31cc04847b7e4f6c9ca461185634f9fe.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1102854389049327696",
+      "type": "Default",
+      "timestamp": "2023-05-02T07:09:36.393+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Please update to the latest Genie Builder plugin version. There's a recent change to stop the app from refreshing on all file changes.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE05",
+            "code": "sweat_smile",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f605.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "918528572870762538",
+              "name": "michaelfliegner",
+              "discriminator": "0000",
+              "nickname": "michaelfliegner",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/918528572870762538/31cc04847b7e4f6c9ca461185634f9fe.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1104048422488653835",
+      "type": "Reply",
+      "timestamp": "2023-05-05T14:14:16.149+00:00",
+      "timestampEdited": "2023-05-06T06:50:37.316+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm on insider v0.14 and still keeps reloading",
+      "author": {
+        "id": "918528572870762538",
+        "name": "michaelfliegner",
+        "discriminator": "0000",
+        "nickname": "michaelfliegner",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/918528572870762538/31cc04847b7e4f6c9ca461185634f9fe.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1102854389049327696",
+        "channelId": "1102532329429291061",
+        "guildId": "774897545717219328"
+      }
+    }
+  ],
+  "messageCount": 5
+}

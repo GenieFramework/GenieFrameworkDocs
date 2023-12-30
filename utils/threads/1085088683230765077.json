@@ -1,0 +1,231 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1085088683230765077",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "How to make a linechart with dual y axis ?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:18:32.2148915+00:00",
+  "messages": [
+    {
+      "id": "1085088683230765077",
+      "type": "Default",
+      "timestamp": "2023-03-14T06:35:02.055+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am using PlotData() and stippleplotly.\n\n[PlotData(\n        y = 1:1000,\n        x = 1:1000,\n        plot = StipplePlotly.Charts.PLOT_TYPE_LINE,\n        name = \"A\",\n      ),\n      PlotData(\n        y = 1:1000,\n        x = 1:1000,\n        plot = StipplePlotly.Charts.PLOT_TYPE_LINE,\n        name = \"B\",\n      )\n      ]",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086219699383193630",
+      "type": "Default",
+      "timestamp": "2023-03-17T09:29:17.319+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "can you show an example from plotly or any other charting library so I can understand what is it you are trying to draw?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086224360790032416",
+      "type": "Default",
+      "timestamp": "2023-03-17T09:47:48.685+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I want to draw 2 line charts with dual-y axis both on left and right",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1086224360576139265",
+          "url": "https://cdn.discordapp.com/attachments/1085088683230765077/1086224360576139265/IMG_3235.png?ex=653b8744&is=65291244&hm=3a1d70bc81553eba04e1c2464e64617e18cb79bacf394bccbd075c2a0b4b0f50&",
+          "fileName": "IMG_3235.png",
+          "fileSizeBytes": 105281
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086736443914858547",
+      "type": "Default",
+      "timestamp": "2023-03-18T19:42:38.816+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "something like this? Which is made in the app? https://github.com/GenieFramework/MultiRoute",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - GenieFramework/MultiRoute",
+          "url": "https://github.com/GenieFramework/MultiRoute",
+          "timestamp": null,
+          "description": "Contribute to GenieFramework/MultiRoute development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/3D62U5iVZBCOC6wCry0sk4gv1ksYASupRmDU5yTmb64/https/opengraph.githubassets.com/c67c938527270ab646a3aafef0b38f002e50e1a929e03f3a00174875f098d1a7/GenieFramework/MultiRoute",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086737637202722876",
+      "type": "Default",
+      "timestamp": "2023-03-18T19:47:23.318+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://user-images.githubusercontent.com/8083613/155683117-2d019f42-baee-47d3-8862-cc757b4adeb2.gif",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "https://user-images.githubusercontent.com/8083613/155683117-2d019f42-baee-47d3-8862-cc757b4adeb2.gif",
+          "timestamp": null,
+          "description": "",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/sNheZDMTseBBxtsi5Ph_bL1G9LPQCEhGk8l7LsLXN6Q/https/user-images.githubusercontent.com/8083613/155683117-2d019f42-baee-47d3-8862-cc757b4adeb2.gif",
+            "width": 1060,
+            "height": 652
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087069882119630848",
+      "type": "Default",
+      "timestamp": "2023-03-19T17:47:36.679+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you are doing it right. You need to use that `data` array in `plot(:data, ....)`",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

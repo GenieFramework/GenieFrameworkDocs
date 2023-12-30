@@ -1,0 +1,173 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1163746095155916800",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Structs in ReactiveTools API",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:26:42.9916002+00:00",
+  "messages": [
+    {
+      "id": "1163746095155916800",
+      "type": "Default",
+      "timestamp": "2023-10-17T07:51:30.442+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi!\n\nI am quite new to Julia and this is my first time using Genie. So far I quite like it, but I am struggling with something at the moment. I want to use structs in my app, but I am encountering some unexpected behavior in the reactivity/communication of objects between the back-end and the UI. I included a simple example to illustrate my problem.\nI created a `testDict` and a `testStruct` containing an `x` and `y` variable. The UI has a button that increments both `x`s in the UI and a button that increments both `y`s in the back-end. Some observations:\n1) The `@onchange` for incrementing `x` is triggered on the `testDict`, but not on the `testStruct`\n2) Incrementing y is not communicated to the UI for either `testDict` or `testStruct`\n\nI didn't find any up-to-date examples on this using the ReactiveTools API, so decided to post here.\nAny ideas on how to get this to work? Is this even supported?\n\n```julia\nusing GenieFramework\n@genietools\n\nmutable struct demo\n    x::Number\n    y::Number\nend\n\n@app begin\n    @in testDict = Dict(\"x\" => 1, \"y\" => 2)\n    @in testStruct = demo(1, 2)\n    @event :printtest begin\n        @show testDict\n        @show testStruct\n    end\n    @event :incrementy begin\n        testDict[\"y\"] += 1\n        testStruct.y += 1\n    end\n    @onchange testDict begin\n        @show testDict\n    end\n    @onchange testStruct begin\n        @show testStruct\n    end\nend\n\nfunction ui()\n    [\n        row([p(\"Dict:{{testDict}}\")]),\n        row([p(\"Struct:{{testStruct}}\")]),\n        row([\n            btn(\"Increment X\", @on(\"click\", \"testDict.x++; testStruct.x++\")),\n            btn(\"Increment Y\", @on(\"click\", :incrementy)),\n            btn(\"Show in console\", @on(\"click\", :printtest)),\n        ])\n    ]\nend\n\n@page(\"/\", ui)\n\nup()\n```",
+      "author": {
+        "id": "306160306176917507",
+        "name": "bekkerman23",
+        "discriminator": "0000",
+        "nickname": "Mish_",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1163835558213197895",
+      "type": "Default",
+      "timestamp": "2023-10-17T13:47:00.097+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "When you declare a reactive variable, the entire variable is reactive. This means that handlers will only be triggered when its value is changed, not when one of its field changes. For instance, if you define a button that modifies the first entry in an array like this:\n\n```julia\n@app begin\n    @in array = [1,2,3,4]\n    @in show_array = false\n    @onchange array begin\n        @show array\n    end\n    @onbutton show_array begin\n        @show array\n    end\nend\n\nui = [btn(\"Increase count\", @click(\"array[0] += 1\")), btn(\"Show in REPL\", @click(:show_array)), \"{{array}}\"]\n@page(\"/\", ui)\n```\n\nYou'll see that when clicking \"Increase count\" the array in the page does not change, and that the handler is not triggered and therefore no message is shown in the repl. If you click the \"show in repl\" button, the  REPL will show [1,2,3,4], which indicates that no modification took value.\n\nIf you want to trigger the handler, you need to change the entire array as\n\n```julia\nui() = [btn(\"Click me\", @click(\"array = [4,5,6,7]\")), btn(\"Show in REPL\", @click(:show_array)), \"{{array}}\"]\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1163835964850966538",
+      "type": "Default",
+      "timestamp": "2023-10-17T13:48:37.047+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, another thing. The `testDict`handler was triggered in your example because you are firing the `:incrementy`event. I'm not sure it'd work if you were to just modify the Dict inside the button `@on` event handler.\n\nHope this helped!",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1163852877492662272",
+      "type": "Default",
+      "timestamp": "2023-10-17T14:55:49.335+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for your response!\n\nAh ok, I see... The array elements indeed behave the same way as the struct fields.\nInteresting that a Dict does seem to have reactive fields, because the \"increment x\" button does trigger the `testDict` handler for me (see screenshot). Also the representations in Vue devtools of `testDict` and `testStruct` look identical, so it does seem to me there is a difference in how Dicts and structs are handled. Which makes sense from an implementation point of view, but at least from the Vue side it seems to be possible to have reactive object fields/elements.\n\nBut does this mean in general  that \"recursive\" reactivity, i.e. react to fields/elements of reactive objects changing, is not supported? If so, are there any plans to support that in the future? To me that would make the framework much more powerful, allowing for more complicated interactions.",
+      "author": {
+        "id": "306160306176917507",
+        "name": "bekkerman23",
+        "discriminator": "0000",
+        "nickname": "Mish_",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [
+        {
+          "id": "1163852877291323392",
+          "url": "https://cdn.discordapp.com/attachments/1163746095155916800/1163852877291323392/image.png?ex=65411575&is=652ea075&hm=f160340c6b0b9618ca8593b366f6e1711c4ae359bdcc3f8bf66f320ee176759c&",
+          "fileName": "image.png",
+          "fileSizeBytes": 100243
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

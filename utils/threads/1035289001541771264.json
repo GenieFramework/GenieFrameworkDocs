@@ -1,0 +1,193 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1035289001541771264",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Is there a way to limit the info messages that get printed to the console?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:20:40.9724099+00:00",
+  "messages": [
+    {
+      "id": "1035289001541771264",
+      "type": "Default",
+      "timestamp": "2022-10-27T20:28:52.707+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Working in the REPL, is there an easy way to limit or suppress these?",
+      "author": {
+        "id": "538569512954626048",
+        "name": ".nateburton",
+        "discriminator": "0000",
+        "nickname": "WheredNateGo",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/538569512954626048/c68d3de7dc7d817a9d1d26718b1f3d80.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1035289001709555722",
+          "url": "https://cdn.discordapp.com/attachments/1035289001541771264/1035289001709555722/unknown.png?ex=653acc04&is=65285704&hm=d4958918db2547971b9663616c4cfdba586d9d3177389043ce68804ca0f52055&",
+          "fileName": "unknown.png",
+          "fileSizeBytes": 61823
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1035545527732949016",
+      "type": "Reply",
+      "timestamp": "2022-10-28T13:28:13.317+00:00",
+      "timestampEdited": "2022-10-28T13:28:21.683+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "`Genie.config.log_level = Logging.Error`",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "538569512954626048",
+              "name": ".nateburton",
+              "discriminator": "0000",
+              "nickname": "WheredNateGo",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/538569512954626048/c68d3de7dc7d817a9d1d26718b1f3d80.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "538569512954626048",
+          "name": ".nateburton",
+          "discriminator": "0000",
+          "nickname": "WheredNateGo",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/538569512954626048/c68d3de7dc7d817a9d1d26718b1f3d80.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1035289001541771264",
+        "channelId": "1035289001541771264",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1035650824661114900",
+      "type": "Default",
+      "timestamp": "2022-10-28T20:26:38.061+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you so much!",
+      "author": {
+        "id": "538569512954626048",
+        "name": ".nateburton",
+        "discriminator": "0000",
+        "nickname": "WheredNateGo",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/538569512954626048/c68d3de7dc7d817a9d1d26718b1f3d80.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "738049963250155580",
+              "name": "essenciary",
+              "discriminator": "0000",
+              "nickname": "essenciary",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

@@ -1,0 +1,257 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1080078821686005873",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Hi! Is it possible to run an app created with GenieBuilder in another computer?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:15:34.3038194+00:00",
+  "messages": [
+    {
+      "id": "1080078821686005873",
+      "type": "Default",
+      "timestamp": "2023-02-28T10:47:37.984+00:00",
+      "timestampEdited": "2023-02-28T16:11:27.533+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am new in GUI developement and used GenieBuilder to build one. Now I want other people to be able to use the GUI I built and I wonder what is the smartest way to do it. I tried to install Julia and visual studio on their computers and copy the app and tell them how to run it but it does not always work and I sometimes even get the weirdest errors, for example \"GenieBuilder not found in current path\" as if it was a package for Julia. \n\n\nI wonder if there is any way to upload it to a server or for other people to connect to the local server of GenieBuilder while it is activated in my computer?\n\nSorry in advance because I am probably not using the proper wording. Hope I could make my problem understandable!\n\nThank you",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1080091243016622161",
+      "type": "Default",
+      "timestamp": "2023-02-28T11:36:59.46+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi itzi, welcome to the server! We're currently developing Genie Cloud, which features one-click deployment for Genie apps and therefore it would fit your use case. If you'd like to know more, please join the waitlist on https://geniecloud.io/",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Speed up your data app development | GenieCloud",
+          "url": "https://geniecloud.io/",
+          "timestamp": null,
+          "description": "GenieCloud helps you develop, deploy & scale data science applications in Julia, Python and R.",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1080091310351982622",
+      "type": "Default",
+      "timestamp": "2023-02-28T11:37:15.514+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "As for how you can have someone else run your code on their computer, this is how you do it:",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1080092937439957012",
+      "type": "Default",
+      "timestamp": "2023-02-28T11:43:43.442+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "First, send them the app folder from `.julia/geniebuilder/apps/<yourappname>`. Don't forget to include the `Project.toml `file\n\nThen, on their computer\n1. Install Julia and open a REPL in the app directory\n2. Enter Pkg mode with `]`, and type: \n     `activate .`\n     `instantiate`\nThis will activate the project folder and install all the necessary packages\n3. Launch the Genie app with `include(\"app.jl\")`. Don't forget to start the server with `Server.up()`\n\nThat should do it. The app will be accessible on `localhost:8000`",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1080093355075194920",
+      "type": "Default",
+      "timestamp": "2023-02-28T11:45:23.014+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "thank you very much!",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1081280052899094578",
+      "type": "Default",
+      "timestamp": "2023-03-03T18:20:53.823+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "... how long is that Genie Cloud waitlist btw?",
+      "author": {
+        "id": "311874879156912128",
+        "name": "schighschagh",
+        "discriminator": "0000",
+        "nickname": "SchighSchagh",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

@@ -1,0 +1,133 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1081377698800218292",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "HTML Renderer fails to parse HTML using alpine.js",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:19:36.9539138+00:00",
+  "messages": [
+    {
+      "id": "1081377698800218292",
+      "type": "Default",
+      "timestamp": "2023-03-04T00:48:54.42+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I encountered a weird issue when parsing (valid) html code that contains alpine.js directives.\n\nTypically, when using alpine.js you end up with attributes like the following:\n\n`x-data=\"{ open: true }\" @keydown.window.escape=\"open = false\" x-init=\"$watch(&quot;open&quot;, o => !o &amp;&amp; window.setTimeout(() => (open = true), 1000))\" x-show=\"open\" class=\"relative z-10\" aria-labelledby=\"slide-over-title\" x-ref=\"dialog\" aria-modal=\"true\"`\n\nNow, the Genie HTML renderer produced this output:\n\n`Genie.Renderer.Html.div(\n                                    false = \"\",\n                                    class = \"relative z-10\",\n                                    htmlsourceindent = \"3\",\n                                    ;\n                                    NamedTuple{(\n                                        Symbol(\"x-data\"),\n                                        Symbol(\"x-show\"),\n                                        Symbol(\"x-init\"),\n                                        Symbol(\"aria-modal\"),\n                                        Symbol(\"x-ref\"),\n                                        Symbol(\"aria-labelledby\"),\n                                    )}((\n                                        \"{ open: true }\",\n                                        \"open\",\n                                        \"$watch('open', o => !o && window.setTimeout(() => (open = true), 1000))\",\n                                        \"true\",\n                                        \"dialog\",\n                                        \"slide-over-title\",\n                                    ))`\n\nAnd the reported error is `LoadError: syntax: invalid keyword argument name \"false\"`\n\nDoes anybody encounter a similar problem? If there is a known issue, I can work around this - also, I can debug further and maybe create a clear issue on GitHub so it can be adequately addressed (but at this moment, I am not entirely sure if I am doing something wrong or if there is a genuine bug).",
+      "author": {
+        "id": "657527617108312075",
+        "name": "algunion",
+        "discriminator": "0000",
+        "nickname": "algunion",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/657527617108312075/08849b70c4560bf82bba79a01cccdeb6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1081414102909472788",
+      "type": "Default",
+      "timestamp": "2023-03-04T03:13:33.836+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "After digging through the source code of the `html` methods, I found a workaround - just wrap the HTML string in `ParsedHTMLString` - this skips a dispatch step and avoids the whole layout checking, and also avoids the `$` character check.\n\nStill, I think the parser can benefit from being more robust and not be crashed by the potential presence of `$` in the literal HTML.",
+      "author": {
+        "id": "657527617108312075",
+        "name": "algunion",
+        "discriminator": "0000",
+        "nickname": "algunion",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/657527617108312075/08849b70c4560bf82bba79a01cccdeb6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1081846094432043049",
+      "type": "Default",
+      "timestamp": "2023-03-05T07:50:08.641+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "$ is reserved keyword in Julia. You'll have to escape it",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1081846344894922772",
+      "type": "Default",
+      "timestamp": "2023-03-05T07:51:08.356+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "```\\\\\\$``` ???",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

@@ -1,0 +1,47 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1079114490269929472",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Genie Builder web browser setting",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:14:26.5920323+00:00",
+  "messages": [
+    {
+      "id": "1079114490269929472",
+      "type": "Default",
+      "timestamp": "2023-02-25T18:55:43.458+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I recently discovered that Quasar on Safari (actually I think WebKit) has some behavior that differs from Quasar on other browsers.  I'd like to keep Safari as my OS default browser, but have the \"Genie Builder: Open in Internet Browser\" popup-menu item use Firefox.  I couldn't find a setting in the GB extension to specify which web browser to use.  If I'm missing it, please let me know, otherwise please consider this a feature request.  Thanks!",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 1
+}

@@ -1,0 +1,988 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1068408960861872170",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Continuous refresh?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:11:20.5063505+00:00",
+  "messages": [
+    {
+      "id": "1068408960861872170",
+      "type": "Default",
+      "timestamp": "2023-01-27T05:55:46.348+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have a stream of stock prices feeding into a DataFrame, via a function called with @async.\nIs it possible to have a StipplePlotly chart continuously refreshing with the new data  ?\n\nAlso\nIs it possible to manually alter global variables while the server is running?\ne.g.   clear the above dataframe of existing data.\nCan I execute `myDF = DataFrame()`   within VSCode/GenieBuilder    and have it refer to the myDF  used by the running app ?",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1068595736142413874",
+      "type": "Default",
+      "timestamp": "2023-01-27T18:17:57.045+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "as long as that reactive data property is updated it should update the plot",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1068623272696086578",
+      "type": "Default",
+      "timestamp": "2023-01-27T20:07:22.271+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm working on a similar case, you just have to update the PlotData and it will refresh on the webpage",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1068623315377324093",
+      "type": "Default",
+      "timestamp": "2023-01-27T20:07:32.447+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Here's my code",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1068623356234051684",
+      "type": "Default",
+      "timestamp": "2023-01-27T20:07:42.188+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "`using GenieFramework\n@genietools \n\nt = 0\nt_end=2e5\n\n@handlers begin\n    p = @task 1+1\n    schedule(p)\n    @in δ = 0.00\n    @out linplot = PlotData()\n    @onchange δ begin\n        z = []\n        if istaskdone(p) == true\n            p = @task begin\n                @show p._state\n                for t in 1:t_end\n                    sleep(0.1)\n                    linplot = PlotData(x = collect(1:t), y = z, plot=StipplePlotly.Charts.PLOT_TYPE_LINE)\n                    push!(z, t^δ)\n                end\n            end\n            schedule(p)\n        end\n    end\nend\n\nfunction ui()\n[row(slider(1:1:3, :δ ; label=true))\n        row(plot(:linplot))]\nend\n\n@page(\"/\", ui)\nServer.isrunning() || Server.up()\n`",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83C\uDFCE️",
+            "code": "race_car",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ce.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1068623440212398150",
+      "type": "Default",
+      "timestamp": "2023-01-27T20:08:02.21+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1068623439860080700",
+          "url": "https://cdn.discordapp.com/attachments/1068408960861872170/1068623439860080700/ezgif-4-870d810b62.gif?ex=653c18a2&is=6529a3a2&hm=a6b04153965c8ee0f41bd5f14d0a7dba9cd731105f52455bb8a2ac2bc531da94&",
+          "fileName": "ezgif-4-870d810b62.gif",
+          "fileSizeBytes": 243560
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDEE9️",
+            "code": "airplane_small",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e9.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1068628173354434682",
+      "type": "Default",
+      "timestamp": "2023-01-27T20:26:50.679+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Lincoln_Hannah What do you mean variables used by the running app? do you mean vars tagged with @in or @out inside the @handlers block? If so, those vars can only be modified inside the @handlers",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "1063292730060587048",
+          "name": "Lincoln_Hannah",
+          "discriminator": "4243",
+          "nickname": "Lincoln_Hannah",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+        }
+      ]
+    },
+    {
+      "id": "1069572602336661514",
+      "type": "Default",
+      "timestamp": "2023-01-30T10:59:40.095+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "With your above example. while the web-page is running you can Ctrl+Enter  execute a line (e.g. change a global variable ) and it will show on the web page.",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069573243943530536",
+      "type": "Default",
+      "timestamp": "2023-01-30T11:02:13.066+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This doesn't work if you're using the Genie Builder for the layout. while the app is running you can change the @handlers block.   But to execute any other code you have to stop and re-start the app.",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069573504506282045",
+      "type": "Default",
+      "timestamp": "2023-01-30T11:03:15.189+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": ".",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069576963917873183",
+      "type": "Default",
+      "timestamp": "2023-01-30T11:16:59.977+00:00",
+      "timestampEdited": "2023-01-30T11:17:09.273+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The GenieBuilder creates a HTML file but your example  version uses Julia to define the layout.   Is there any plan to align them?    it would be nice to take the above example and be able to edit the layout in the no-code editor",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069577262443270225",
+      "type": "Default",
+      "timestamp": "2023-01-30T11:18:11.151+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "do you do 1-1s for a fee ?",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069672235784216616",
+      "type": "Default",
+      "timestamp": "2023-01-30T17:35:34.56+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "mmm I don't know how you are sending lines to the REPL, I guess it's the VSCode Julia extension but I tried and it doesn't work for me. Otherwise the REPL should be locked with no input allowed. Other than this, any change you make to the code should be reflected in the UI after an automatic reload.\n\nIf what you're trying to do is modify reactive variables (@in or @out) from the REPL, that is not possible. These variables must be modified inside an @onchange block, otherwise changes made to them are not reflected in the UI",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069673179603284099",
+      "type": "Default",
+      "timestamp": "2023-01-30T17:39:19.584+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "As for the align betwen the low-code API and Genie Builder, they serve different purposes:\n- low-code is for those wo want to write the UI in pure Julia\n- no-code (Genie Builder ) is for those who want to build their UI visually\n\nIt would be great if we could switch from one to another but atm I don't think that's something we can do.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069673864247918595",
+      "type": "Default",
+      "timestamp": "2023-01-30T17:42:02.816+00:00",
+      "timestampEdited": "2023-01-30T22:48:44.165+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Still, both methods actually generate HTML code. You can see the HTML code for the low-code UI with `print(ui())`. You should get:\n\n`ParsedHTMLString[\"<div class=\\\"row\\\"><q-slider :min=1 v-model=\\\"δ\\\" label :max=3 :step=1 ></q-slider></div>\", \"<div class=\\\"row\\\"><plotly :data=\\\"linplot\\\" :layout=\\\"{}\\\" :displaylogo=\\\"false\\\"></plotly></div>\"]`\n\n(Edit: It should look better if you print every component in the array)\n\nwhich you could then paste into the app.jl.html file and then edit with the no-code editor in Genie Builder. Perhaps we could automate this low code -> no code conversion, I'll note it as a feature request \uD83D\uDE03",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069820047897415721",
+      "type": "Default",
+      "timestamp": "2023-01-31T03:22:55.714+00:00",
+      "timestampEdited": "2023-01-31T03:23:55.914+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "```\nusing GenieFramework\n@genietools\n\ns = [\"hi1\",\"hi2\",\"hi3\"]\n@out s_out = first(s)\n\nfunction ui()  \"{{s_out}}\"  end\n\n@page(\"/\", ui)\nServer.isrunning() || Server.up()   \n\n#pushfirst!(s,\"new\")\n```",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE2E",
+            "code": "open_mouth",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f62e.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1069820647867424818",
+      "type": "Default",
+      "timestamp": "2023-01-31T03:25:18.758+00:00",
+      "timestampEdited": "2023-01-31T03:26:08.228+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Execute the last line (Ctrl+Enter)  and refresh the webpage. The result flows through.",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069821079293538305",
+      "type": "Default",
+      "timestamp": "2023-01-31T03:27:01.618+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I think this is useful because you cant  start, stop and edit other processes while the page is running",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1069829275949224006",
+      "type": "Default",
+      "timestamp": "2023-01-31T03:59:35.853+00:00",
+      "timestampEdited": "2023-01-31T03:59:42.247+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In your example, can you set it to also run the    `@onchange δ`  block when the page first loads or is refreshed?",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070053586324684820",
+      "type": "Default",
+      "timestamp": "2023-01-31T18:50:55.614+00:00",
+      "timestampEdited": "2023-01-31T18:51:21.764+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes you can do that with the isready variable. That is, with @onchange isready begin…. This variable is created by the @handlers macro and it changes to true when the page finishes loading",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070634766791082065",
+      "type": "Default",
+      "timestamp": "2023-02-02T09:20:19.835+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDE00",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070903366110167130",
+      "type": "Default",
+      "timestamp": "2023-02-03T03:07:38.903+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Instead of having the  `@handlers`   block what about having an   `@in` block defining al in variables, `@out` block defining all out variables and  `@onchange`   blocks as per current.",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070903716686872675",
+      "type": "Default",
+      "timestamp": "2023-02-03T03:09:02.487+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I find it easier to read if things are grouped this way",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070903957792231454",
+      "type": "Default",
+      "timestamp": "2023-02-03T03:09:59.971+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "e.g. with current syntax one can write",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070903968189923338",
+      "type": "Default",
+      "timestamp": "2023-02-03T03:10:02.45+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "using GenieFramework\n@genietools\n\n\n\n@out    const S1s    = [\"1\",\"2\",\"3\"]\n@out    const S2s    = [\"1\",\"2\",\"3\"]\n@out    T1           = \"0\"\n@out    T2           = \"0\"\n\n\n\n@in S1      = \"1\"\n@in S2      = \"1\"\n\n\n\n@handlers @onchangeany  isready, S1, S2 begin\n    T1 = S1\n    T2 = S2\nend\n\n\n\nfunction ui()\n    [      \n        h3(\"{{T1}}   {{T2}}\")\n        row([   \n                cell( [h3(\"S1\");     Stipple.select(:S1;  options=:S1s)],  size = 2 )     \n                cell( [h3(\"S2\");     Stipple.select(:S2;  options=:S2s)],  size = 2 )     \n            ])\n    ]   \n    end\n    \n@page(\"/\", ui)\nServer.isrunning() || Server.up()",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070954561302441984",
+      "type": "Default",
+      "timestamp": "2023-02-03T06:31:04.788+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you can declare them in global scope",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070954656664137779",
+      "type": "Default",
+      "timestamp": "2023-02-03T06:31:27.524+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "also according to latest stipple release. We moved to `@app` macro",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070955132184956938",
+      "type": "Default",
+      "timestamp": "2023-02-03T06:33:20.897+00:00",
+      "timestampEdited": "2023-02-03T06:33:32.91+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "```julia\n@app begin\n\n@in # _____\n@out # ______\n\n@button _____ \n\n@onchange ____\nend\n```\n\nto stay consistent with vuejs style of app creation\n\n```js\nimport { createApp } from 'vue'\n\nconst app = createApp({\n  data() {\n    return {\n      count: 0\n    }\n  }\n})\n```",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1070955783958827019",
+      "type": "Default",
+      "timestamp": "2023-02-03T06:35:56.292+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "read more about it here: https://github.com/GenieFramework/Stipple.jl/pull/159#issuecomment-1407087035",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Alternative rewrite of `@handlers` by hhaensel · Pull Request #159 ...",
+          "url": "https://github.com/GenieFramework/Stipple.jl/pull/159",
+          "timestamp": null,
+          "description": "Alternative rewrite of @handlers",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/4fbn3XCAcrRyvcGcZQq_ho18zxso4oXQeAp_PjKKHtM/https/opengraph.githubassets.com/d5d809138f8930fc73cf6f1af853524db328e8b05eb8b47bce735e8a32ceeb18/GenieFramework/Stipple.jl/pull/159",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 29
+}

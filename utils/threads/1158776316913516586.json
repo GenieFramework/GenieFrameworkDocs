@@ -1,0 +1,190 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1158776316913516586",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "zip in recur...?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:29:00.883685+00:00",
+  "messages": [
+    {
+      "id": "1158776316913516586",
+      "type": "Default",
+      "timestamp": "2023-10-03T14:43:22.975+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there a way to either iterate over a `zip` of two collections, or  a collection and it's indices using `@recur`?\n\nSomething like one of the following:\n```julia\n@recur(\"(i, letter) in zip(1:26, letters)\")\n@recur(\"(i, letter) in enumerate(letters)\")\n```",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1158789395374145567",
+      "type": "Default",
+      "timestamp": "2023-10-03T15:35:21.123+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you can directly use an index without zipping\n```html\n<div v-for=\"neurons,index in layer_neurons\">\n    Layer {{index+2}} <q-slider :min=\"1\" v-model=\"layer_neurons[index]\" label=\"\" :max=\"16\" :step=\"1\"></q-slider>\n</div>\n```\n`layer_neurons = [8,5]`\n\nFrom this demo:\nhttps://github.com/BuiltWithGenie/NNtraining",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1159117509144875058",
+      "type": "Default",
+      "timestamp": "2023-10-04T13:19:09.542+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This worked! Thank you!",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1159148838129508422",
+      "type": "Default",
+      "timestamp": "2023-10-04T15:23:38.954+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Cool! FYI, anything that goes in a string in the UI function must be valid Javascript, hence why your first attempt didn't work",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1159461154087768116",
+      "type": "Default",
+      "timestamp": "2023-10-05T12:04:40.881+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yeah, I suspected as much, but it was easiest to illustrate what I needed using Julia code. Thanks!",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 5
+}

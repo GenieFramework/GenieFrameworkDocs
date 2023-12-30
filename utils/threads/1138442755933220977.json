@@ -1,0 +1,218 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1138442755933220977",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Datatable in HTML view",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:11:36.9008315+00:00",
+  "messages": [
+    {
+      "id": "1138442755933220977",
+      "type": "Default",
+      "timestamp": "2023-08-08T12:05:04.258+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I want to display a DataFrames.DataTable object in HTML with pagination view. How can I accomplish it with the quasar framework? (I'm unable to get the q-table div to work.)\nTIA",
+      "author": {
+        "id": "767327099517665340",
+        "name": ".maxwell04",
+        "discriminator": "0000",
+        "nickname": "MahnoorFatima - Pakistan",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/767327099517665340/0aa07008ad044c74db4dfca303e0610d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "☝️",
+            "code": "point_up",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/261d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "979982659293970472",
+              "name": "asbisen",
+              "discriminator": "0000",
+              "nickname": "asbisen",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1139492424494886951",
+      "type": "Default",
+      "timestamp": "2023-08-11T09:36:04.745+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "We have several examples on displaying data tables in apps with a reactive UI. For instance, the Iris Clustering demo\n\nhttps://github.com/BuiltWithGenie/IrisClustering",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - BuiltWithGenie/IrisClustering: Genie demo app - Iris Clust...",
+          "url": "https://github.com/BuiltWithGenie/IrisClustering",
+          "timestamp": null,
+          "description": "Genie demo app - Iris Clustering. Contribute to BuiltWithGenie/IrisClustering development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/JblQDAPrRMl2_jgSM_MCsF3R7eoH_lqfB25NlspxOK0/https/opengraph.githubassets.com/8caa5835e5307d0a3eca367dc74b3d3d307bc9d346c78b2d2bca2ed3e3fffc34/BuiltWithGenie/IrisClustering",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1139492558922326138",
+      "type": "Default",
+      "timestamp": "2023-08-11T09:36:36.795+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If your use case does not fit these examples, please provide a MWE and I'll help you out",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1140240602169098240",
+      "type": "Default",
+      "timestamp": "2023-08-13T11:09:04.203+00:00",
+      "timestampEdited": "2023-08-13T11:10:54.068+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks, I got the DataTable working. However, there's another issue I'm trying to work through.\n\nI’m trying to create a Genie application in which the plots and DataTable will change with the change in the dataset. I’m unable to figure out how to make the dataset generic so that it can be used by all the @out variables. A sample code snippet is as follows:\n```\n@app begin\n        @out pca_data::R{DataTables.DataTable} = dataset(\"datasets\", \"iris\") |> DataTables.DataTable\n        @out data_pagination = StippleUI.Tables.DataTablePagination(rows_per_page=15) \n\n...\n\n@onchange dataset_name begin\n            if dataset_name == \"Iris\"\n                pca_data = dataset(\"datasets\", \"iris\") |> DataTables.DataTable\n            elseif dataset_name == \"Motor Trend Car Road Tests\"\n                pca_data = dataset(\"datasets\", \"mtcars\") |> DataTables.DataTable\n            else\n                pca_data = dataset(\"datasets\", \"Titanic\") |> DataTables.DataTable\n            end\n        end\nend\n```\n\nI’d like to replace the `dataset(\"datasets\", <dataset_name>)` with a reactive element.\nIs there another way to go about it than the reactive model as done in the IrisClustering example?",
+      "author": {
+        "id": "767327099517665340",
+        "name": ".maxwell04",
+        "discriminator": "0000",
+        "nickname": "MahnoorFatima - Pakistan",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/767327099517665340/0aa07008ad044c74db4dfca303e0610d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141282336349098024",
+      "type": "Default",
+      "timestamp": "2023-08-16T08:08:32.986+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "What is exactly the problem? Is the selector dataset_name not working, or the table not updating? \n\nI think you might be using the wrong type for the table. The type of the data table is GenieFramework.DataTable, or just DataTable as it is already exported when using GenieFramework.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 5
+}

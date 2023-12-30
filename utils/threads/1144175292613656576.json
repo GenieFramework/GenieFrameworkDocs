@@ -1,0 +1,47 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1144175292613656576",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Streaming an mp4 video",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:26:41.4070171+00:00",
+  "messages": [
+    {
+      "id": "1144175292613656576",
+      "type": "Default",
+      "timestamp": "2023-08-24T07:44:07.508+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In Genie I want to stream an mp4 video file for a GET request to a route \"/video\"\n\n1. I define a route in routes.jl to handle a request\n\n```Julia\nroute(\"/video\") do\n  # How do I stream a video file from here?\n  # The response should serve:\n  # \"Content-Type\": \"video/mp4\", and \n  # \"Content-Length\":length_of_the_video\nend\n```\n\nPlease suggest.\n\nIt was easy to figure out from examples and docs, how to serve HTML, markdown etc.",
+      "author": {
+        "id": "796964196217520149",
+        "name": "rawjeev",
+        "discriminator": "0000",
+        "nickname": "rawjeev",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/796964196217520149/5fd3ef769491d89432ebcb75cdef6560.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 1
+}

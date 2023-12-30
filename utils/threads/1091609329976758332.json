@@ -1,0 +1,268 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1091609329976758332",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "[error | LibPQ]: SyntaxError with Postgres",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:08:11.7315376+00:00",
+  "messages": [
+    {
+      "id": "1091609329976758332",
+      "type": "Default",
+      "timestamp": "2023-04-01T06:25:45.387+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm learning the MVC example \"Watch Tonight\" at https://genieframework.com/docs/genie/v5.11/tutorials/Developing-MVC-Web-Apps.html, trying to create table movies, and my database is Postgres, and I got the following error:\n\n[ Info: SELECT version FROM schema_migrations ORDER BY version DESC\nWARNING: replacing module CreateTableMovies.\n[ Info: CREATE TABLE movies (id SERIAL  PRIMARY KEY  , type VARCHAR (10), title VARCHAR (100), directors VARCHAR (100), actors VARCHAR (250), country VARCHAR (100), year INTEGER (4), rating VARCHAR (10), categories VARCHAR (100), description VARCHAR (1000))\n[error | LibPQ]: SyntaxError:   error near \"(\" \nLINE 1: ...ARCHAR (250), country VARCHAR (100), year INTEGER (4), ratin...\n                                                                                                                             ^",
+      "author": {
+        "id": "478817551485239298",
+        "name": "jessezwd",
+        "discriminator": "0000",
+        "nickname": "Jesse",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/478817551485239298/e1cd5c30d0846a4ec9fb32b16583fc23.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092723791353888859",
+      "type": "Default",
+      "timestamp": "2023-04-04T08:14:13.685+00:00",
+      "timestampEdited": "2023-04-04T08:15:27.128+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I haven't tried with Postgres, but I believe this error happens because Postgres doesn't  accept length parameters for integers. It should be `year INTEGER` without the (4).\n\nThis is something that needs to be fixed in the SearchLight code, will open an issue about it.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092724414711345152",
+      "type": "Default",
+      "timestamp": "2023-04-04T08:16:42.305+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I don't have a Postgres setup so I cannot test this, is there any way you could run the query without the (4) argument and see if it works?",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092749550030159873",
+      "type": "Default",
+      "timestamp": "2023-04-04T09:56:35.032+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for your reply. I will try.",
+      "author": {
+        "id": "478817551485239298",
+        "name": "jessezwd",
+        "discriminator": "0000",
+        "nickname": "Jesse",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/478817551485239298/e1cd5c30d0846a4ec9fb32b16583fc23.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1094196064086663228",
+      "type": "Default",
+      "timestamp": "2023-04-08T09:44:30.858+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "the sql works \"year INTEGER without the (4)\".",
+      "author": {
+        "id": "478817551485239298",
+        "name": "jessezwd",
+        "discriminator": "0000",
+        "nickname": "Jesse",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/478817551485239298/e1cd5c30d0846a4ec9fb32b16583fc23.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1094196920391581796",
+      "type": "Default",
+      "timestamp": "2023-04-08T09:47:55.017+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "BTW, in the  same tutorial, using WatchTonight, missing reference WatchTonight. Why is that?",
+      "author": {
+        "id": "478817551485239298",
+        "name": "jessezwd",
+        "discriminator": "0000",
+        "nickname": "Jesse",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/478817551485239298/e1cd5c30d0846a4ec9fb32b16583fc23.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1095264486434279476",
+      "type": "Default",
+      "timestamp": "2023-04-11T08:30:02.596+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I think that removing the `limit = 4` keyword argument in the _create_table_movies.jl migration file will fix the issue with Postgres.\n\nAs for the missing reference error, you need to load the Movies module after creating it. you can do try with `include`or with `genie.loadapp()`\n\nhttps://genieframework.com/docs/genie/v5.11/API/genie.html#Genie.loadapp",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Documentation - Genie Framework",
+          "url": "https://genieframework.com/docs/genie/v5.11/API/genie.html",
+          "timestamp": null,
+          "description": "Genie Framework includes all you need to quickly build production-ready web applications with Julia. Develop Julia backends, create beautiful web UIs, build data applications and dashboards, integrate with databases and set up high-performance web services and APIs.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/IHMzYUPMPs2-rWWw8zm0dkJpGHQ4Io0THX1XuZKnJaM/https/genieframework.com/assets/img/meta-image.jpg",
+            "width": 1614,
+            "height": 679
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1095289340436938773",
+      "type": "Default",
+      "timestamp": "2023-04-11T10:08:48.252+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks! \uD83C\uDF39",
+      "author": {
+        "id": "478817551485239298",
+        "name": "jessezwd",
+        "discriminator": "0000",
+        "nickname": "Jesse",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/478817551485239298/e1cd5c30d0846a4ec9fb32b16583fc23.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 8
+}

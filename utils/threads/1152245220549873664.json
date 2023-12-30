@@ -1,0 +1,235 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1152245220549873664",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Dynamically change background color of card",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:13:22.1274575+00:00",
+  "messages": [
+    {
+      "id": "1152245220549873664",
+      "type": "Default",
+      "timestamp": "2023-09-15T14:11:08.26+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there a way to change the background color of a card as a function of one of the model's variables?\n\nMy use-case is to better indicate to the user if they are recording now or not (the card contains the record toggle and the video image).",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153604314594557962",
+      "type": "Default",
+      "timestamp": "2023-09-19T08:11:41.531+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "how are you setting the card background? In the quasar docs it is done with an `img`tag\n\nhttps://quasar.dev/vue-components/card/#media-content\n\nYou could try replacing it with a `q-img, which allows for dynamic image updates\n\nhttps://learn.genieframework.com/examples/reactive-ui/update-image\n\nhttps://quasar.dev/vue-components/img/",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153613034560954379",
+      "type": "Default",
+      "timestamp": "2023-09-19T08:46:20.533+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I only want to change the color of the card, with `card(class=\"st-col col-12 bg-success\", ...)` or `card(class=\"st-col col-12 bg-warning\", ...)`.  But have that change linked to a variable in the model.",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1154157536216363239",
+      "type": "Default",
+      "timestamp": "2023-09-20T20:49:59.844+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you can bind the style to a reactive variable, and change the `background-color`property in it\n```julia\nusing GenieFramework\n\n@app begin\n    @in recording = false\n    @out card_color = \"white\"\n    @onchange recording begin\n        card_color = join([\"background-color: \", recording ? \"red\" : \"white\"])\n        @show recording\n    end\nend\n\nui() = [card(\"text goes here\", var\":style\"=\"card_color\"), btn(\"Record\", @click(\"recording =! recording\"))]\n@page(\"/\", ui)\nup()\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1154167622032707665",
+      "type": "Default",
+      "timestamp": "2023-09-20T21:30:04.49+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ah, the `var\":style\"` was new to me. Awesome, I'll try this tomorrow. Thanks!",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1154368811869421608",
+      "type": "Default",
+      "timestamp": "2023-09-21T10:49:31.885+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Worked as expected, but I thought it looked a bit ugly so I'm going to refrain...",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE02",
+            "code": "joy",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f602.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

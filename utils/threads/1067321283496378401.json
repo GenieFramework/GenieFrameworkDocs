@@ -1,0 +1,108 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1067321283496378401",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Is it possible to set the options list for a Button_dropdown within the @handlers block ?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:20:35.7284583+00:00",
+  "messages": [
+    {
+      "id": "1067321283496378401",
+      "type": "Default",
+      "timestamp": "2023-01-24T05:53:43.856+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "and is there an example @handlers block with  @in, @out and @onchange lines for many different Forms  (e.g.  dropdown, range, button etc.)",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1067533553820250212",
+      "type": "Default",
+      "timestamp": "2023-01-24T19:57:13.045+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "We've done that in a few demos. The Iris Clustering UI for instance has two selectors\n\nhttps://github.com/GenieFramework/GenieFrameworkDemos_NewAPI/blob/main/IrisClusteringNewAPI\n\nCheck out the tutorial here\nhttps://genieframework.com/blog/how-to-build-data-apps-with-new-genieframework-api.html",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1068424373792407642",
+      "type": "Default",
+      "timestamp": "2023-01-27T06:57:01.077+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDC4D",
+      "author": {
+        "id": "1063292730060587048",
+        "name": "Lincoln_Hannah",
+        "discriminator": "4243",
+        "nickname": "Lincoln_Hannah",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

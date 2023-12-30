@@ -1,0 +1,78 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1151197445812916245",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "no-code editor does not start?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:22:31.3968933+00:00",
+  "messages": [
+    {
+      "id": "1151197445812916245",
+      "type": "Default",
+      "timestamp": "2023-09-12T16:47:39.296+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi,\nworking with the GenieBuilder extension, I added a new app in vscode. It starts and opens what looks like the no-code editor, but there are no elements in the view, see attached image. How can I use the no-code editor?",
+      "author": {
+        "id": "731121383509327954",
+        "name": "rkube",
+        "discriminator": "0000",
+        "nickname": "rkube",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/731121383509327954/dc83e532f6ff6aabca3f21483c88ccb5.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1151197446572089426",
+          "url": "https://cdn.discordapp.com/attachments/1151197445812916245/1151197446572089426/image.png?ex=65412fab&is=652ebaab&hm=aab04d2e96bcd8b3727f79759f40fb42ad8dd1f476e5dc57524bbd64292a411f&",
+          "fileName": "image.png",
+          "fileSizeBytes": 121797
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1151197846742241310",
+      "type": "Default",
+      "timestamp": "2023-09-12T16:49:14.885+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is the issue maybe that vscode is connected to a remote machine?",
+      "author": {
+        "id": "731121383509327954",
+        "name": "rkube",
+        "discriminator": "0000",
+        "nickname": "rkube",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/731121383509327954/dc83e532f6ff6aabca3f21483c88ccb5.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

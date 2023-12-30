@@ -1,0 +1,78 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1094070293691125791",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Mongoc and MongoDB in Genie",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:21:43.868832+00:00",
+  "messages": [
+    {
+      "id": "1094070293691125791",
+      "type": "Default",
+      "timestamp": "2023-04-08T01:24:44.859+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "For some reason I don't seem to be able to connect to my MongoDB cluster in Genie. I get errors like this: \n\n┌ Error: BSONError: domain=2, code=6, message=Could not establish stream for node ac-vxaajnb-lb.tfaa4sm.mongodb.net:27017: [TLS handshake failed: error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed calling hello on 'ac-vxaajnb-lb.tfaa4sm.mongodb.net:27017']\n\nI have tried using a cert file and add it to my connection string, that didn't work. I made sure my Network IP was whitelisted, my connection string was correct, as I could use it for MongoDB Compass. Really not sure how to get past this. Does anyone have any tips?",
+      "author": {
+        "id": "96206676314591232",
+        "name": "dpshade22",
+        "discriminator": "0000",
+        "nickname": "dpshade22",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/96206676314591232/186d4648881c2c59c43db7ce4f116b4b.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1094301091992191066",
+      "type": "Default",
+      "timestamp": "2023-04-08T16:41:51.462+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "can you post your code?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

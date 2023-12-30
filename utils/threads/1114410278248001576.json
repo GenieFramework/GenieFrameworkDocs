@@ -1,0 +1,440 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1114410278248001576",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Socket can't connect",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:25:48.0263188+00:00",
+  "messages": [
+    {
+      "id": "1114410278248001576",
+      "type": "Default",
+      "timestamp": "2023-06-03T04:28:35.076+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Brand new project, no modifications. I tried both Firefox and Chrome. What could be happening? I'm on Linux, up-to-date",
+      "author": {
+        "id": "741759053075710053",
+        "name": "_gonzalomunoz",
+        "discriminator": "0000",
+        "nickname": "Gonzalo Muñoz",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/741759053075710053/9debe8d33fc39a8ca4ed01520cd8aa7d.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1114410278436749344",
+          "url": "https://cdn.discordapp.com/attachments/1114410278248001576/1114410278436749344/image.png?ex=653c8df3&is=652a18f3&hm=8b50f5e767485d1694c3e6a5a120d82043d4c0743465c70359b9de61810c915a&",
+          "fileName": "image.png",
+          "fileSizeBytes": 90477
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1114509478931468351",
+      "type": "Default",
+      "timestamp": "2023-06-03T11:02:46.362+00:00",
+      "timestampEdited": "2023-06-04T23:16:49.844+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Can you please attempt to start again? I believe there is an issue with the port. Please close everything and restart.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115042099453231196",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:19:12.99+00:00",
+      "timestampEdited": "2023-06-04T22:21:39.067+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I tried restarting, yes. I closed everything but VS Code, my files browser and the web browser. Still the same problem. Can´t connect to socket",
+      "author": {
+        "id": "741759053075710053",
+        "name": "_gonzalomunoz",
+        "discriminator": "0000",
+        "nickname": "Gonzalo Muñoz",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/741759053075710053/9debe8d33fc39a8ca4ed01520cd8aa7d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115050039425912922",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:50:46.027+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "May I inquire about the version of GenieBuilder and Julia version you are currently using?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115050104848662560",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:51:01.625+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes you may",
+      "author": {
+        "id": "741759053075710053",
+        "name": "_gonzalomunoz",
+        "discriminator": "0000",
+        "nickname": "Gonzalo Muñoz",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/741759053075710053/9debe8d33fc39a8ca4ed01520cd8aa7d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115050214659719229",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:51:27.806+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm using latest of everything bc I just installed them. I'll give you the specifics in a few",
+      "author": {
+        "id": "741759053075710053",
+        "name": "_gonzalomunoz",
+        "discriminator": "0000",
+        "nickname": "Gonzalo Muñoz",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/741759053075710053/9debe8d33fc39a8ca4ed01520cd8aa7d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115050388769476729",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:52:09.317+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Are you referring to Julia 1.9 when you say \"latest\"?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115050844900036678",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:53:58.067+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Julia 1.9, Genie Builder 0.14",
+      "author": {
+        "id": "741759053075710053",
+        "name": "_gonzalomunoz",
+        "discriminator": "0000",
+        "nickname": "Gonzalo Muñoz",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/741759053075710053/9debe8d33fc39a8ca4ed01520cd8aa7d.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1115050844983918632",
+          "url": "https://cdn.discordapp.com/attachments/1114410278248001576/1115050844983918632/image.png?ex=653ee286&is=652c6d86&hm=9841d8c6acde16e261e1e89271d70234afcea451a367e7399fca5d357fdcf188&",
+          "fileName": "image.png",
+          "fileSizeBytes": 22984
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115051180238843914",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:55:18.018+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Could you please execute the following steps and check if it resolves your issues? Step 1 is to remove the plugin from vscode.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115051429158195291",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:56:17.365+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Step 2 Please remove the directory ~/.julia/geniebuilder.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115051560326676490",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:56:48.638+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Finally, reinstall the plugin.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115051655839371275",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:57:11.41+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have a meeting in 4 minutes but I'll do that after. Thanks!. I will let you know how it went",
+      "author": {
+        "id": "741759053075710053",
+        "name": "_gonzalomunoz",
+        "discriminator": "0000",
+        "nickname": "Gonzalo Muñoz",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/741759053075710053/9debe8d33fc39a8ca4ed01520cd8aa7d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115051880830218411",
+      "type": "Default",
+      "timestamp": "2023-06-04T22:58:05.052+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you for your response. I am looking forward to seeing how it goes. Please keep me informed.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1115090734161334292",
+      "type": "Default",
+      "timestamp": "2023-06-05T01:32:28.408+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi @abhimanyuaryan Thanks again for your help. I decided to give Genie a rest for now, since I'll be occupied with projects in other technologies. I plan to try again in the future, maybe when it's a little more mature.",
+      "author": {
+        "id": "741759053075710053",
+        "name": "_gonzalomunoz",
+        "discriminator": "0000",
+        "nickname": "Gonzalo Muñoz",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/741759053075710053/9debe8d33fc39a8ca4ed01520cd8aa7d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    }
+  ],
+  "messageCount": 14
+}

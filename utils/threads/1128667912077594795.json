@@ -1,0 +1,268 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1128667912077594795",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Binding variable in UI builder binds text in ALL paragraphs, but only in UI.",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:09:29.0989463+00:00",
+  "messages": [
+    {
+      "id": "1128667912077594795",
+      "type": "Default",
+      "timestamp": "2023-07-12T12:43:19.875+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am following this GenieBuilder tutorial on YouTube (https://www.youtube.com/watch?v=RdeWPcd12ew) and am building a simple UI with a date picker and some paragraphs that I want to link to output data. I already wantd to fill in the names of the fields the data is linked to, like is done in the tutorial.  When I bind the date picker to a data field, the paragraph text binding shows the same name, even when I did not set it.\nWhen looking at the html code, everything is just fine though so this must be a display bug I guess.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1128667912526368789",
+          "url": "https://cdn.discordapp.com/attachments/1128667912077594795/1128667912526368789/Screenshot_2023-07-12_at_14.38.24.png?ex=65390d67&is=65269867&hm=4652ead3856617151ca0dd96ff91017e4b3624839c05ac79f945974bfd0561ce&",
+          "fileName": "Screenshot_2023-07-12_at_14.38.24.png",
+          "fileSizeBytes": 208125
+        },
+        {
+          "id": "1128667912870309929",
+          "url": "https://cdn.discordapp.com/attachments/1128667912077594795/1128667912870309929/Screenshot_2023-07-12_at_14.38.34.png?ex=65390d68&is=65269868&hm=33d9cfb97c5bc3bb5d0344641d02e76d7baeb3d19e34c67008acaf103b122417&",
+          "fileName": "Screenshot_2023-07-12_at_14.38.34.png",
+          "fileSizeBytes": 203118
+        },
+        {
+          "id": "1128667913323286559",
+          "url": "https://cdn.discordapp.com/attachments/1128667912077594795/1128667913323286559/Screenshot_2023-07-12_at_14.39.20.png?ex=65390d68&is=65269868&hm=13f2f1c06df81efeed2bd7bfaa438fa8526fd0208de1dcdfe0146e494ca186b3&",
+          "fileName": "Screenshot_2023-07-12_at_14.39.20.png",
+          "fileSizeBytes": 103655
+        }
+      ],
+      "embeds": [
+        {
+          "title": "Create a web app with Genie Builder GUI - Julia Tutorial",
+          "url": "https://www.youtube.com/watch?v=RdeWPcd12ew",
+          "timestamp": null,
+          "description": "Genie is a web framework released for Julia that started its development in 2015. It's a full-stack framework, where you can develop your front-end with all that you need to deliver inputs and outputs to the end user of your application. We will explore in this tutorial the most recent tool the no-code front-end editor called Genie Builder, that...",
+          "color": "#FF0000",
+          "author": {
+            "name": "Daniel Malafaia",
+            "url": "https://www.youtube.com/channel/UCcOF722pYjQflhIiORKzWDw"
+          },
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/ExSwPjTp-33cCDsxa3uuAXsaigAwSTyaVytJCZroVPM/https/i.ytimg.com/vi/RdeWPcd12ew/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1128690210352410696",
+      "type": "Default",
+      "timestamp": "2023-07-12T14:11:56.198+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm not sure I understand the issue. The default text you have in the <p> component will be overriden by the text in the `consumed_on` and `consuming`variables when the page is rendered in the browser.  The nocode editor does not render the page, so it will not show the actual contents of the variables.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1128692668516552725",
+      "type": "Default",
+      "timestamp": "2023-07-12T14:21:42.27+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It's the way the fields are represented in the nocode editor. When I alter the data binding in the date picker and then click on the first text field, it is as if the data binding for that field has been set to the same value. In this case \"consumption_date\". To see the real values the data bindings are set to, I need to open the html file. It's confusing to work with in the nocode editor.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1128695521712816159",
+      "type": "Default",
+      "timestamp": "2023-07-12T14:33:02.525+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for the explanation. I've been able to reproduce the issue and there's definitely something wrong",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1128695520764895325",
+          "url": "https://cdn.discordapp.com/attachments/1128667912077594795/1128695520764895325/Screen_Recording_2023-07-12_at_16.30.13.mov?ex=6539271e&is=6526b21e&hm=15cf53ea6d0b6ba7e3cfbf313ff29f67617db29e421b2251eeddf88da22e8be8&",
+          "fileName": "Screen_Recording_2023-07-12_at_16.30.13.mov",
+          "fileSizeBytes": 4781522
+        },
+        {
+          "id": "1128695521469530112",
+          "url": "https://cdn.discordapp.com/attachments/1128667912077594795/1128695521469530112/image.png?ex=6539271e&is=6526b21e&hm=e74689f43bf59d87cfaf86bd512f735189f5e221055fcb0fa14240ecb36a5b2d&",
+          "fileName": "image.png",
+          "fileSizeBytes": 76892
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1128695686909665301",
+      "type": "Default",
+      "timestamp": "2023-07-12T14:33:41.911+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I've forwarded this to the dev team, will get back to you once this is fixed. Thanks for reporting these issues @Mordegai , this is very useful to us.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "700687616693239829",
+          "name": "mordegai.",
+          "discriminator": "0000",
+          "nickname": "Mordegai",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1128695844934258689",
+      "type": "Default",
+      "timestamp": "2023-07-12T14:34:19.587+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You are very welcome.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

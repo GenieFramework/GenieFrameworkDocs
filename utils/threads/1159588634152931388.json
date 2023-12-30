@@ -1,0 +1,520 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1159588634152931388",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "stipple",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:25:58.0753831+00:00",
+  "messages": [
+    {
+      "id": "1159588634152931388",
+      "type": "Default",
+      "timestamp": "2023-10-05T20:31:14.497+00:00",
+      "timestampEdited": "2023-10-05T20:31:34.145+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am trying to create the mainscreen using genie and stippleUI. Even though I have gone through the documentation a bit, I am getting an error named : ***\"MethodError: no method matching page(::ParsedHTMLString)\"***. This error could result in a blank web screen whenever I launch it\n\nThe code is shown below:\n\n`using GenieFramework, Genie.Router, Genie.Renderer.Html\nusing .Stipple, .StippleUI\n\n#Handler Code\n@appname GradeMaster\n\n#UI\nfunction ui()\n    row(cell(class = \"st-module\", [\n        btn(class=\"q-my-md\", \"Attendance Register\", color = \"primary\")\n        btn(class=\"q-my-md\", \"Student Entry\", color = \"primary\")\n        btn(class=\"q-my-md\", \"Grade Input\", color = \"primary\")\n    ]))\nend\n\nroute(\"/\") do\n    html(ui()) \nend\n\nGenie.isrunning(:webserver) || up()`\n\nI've tried certain methods to fix this issue and this error still impedes... How to rectify such problems like this?",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1159977295713423411",
+      "type": "Default",
+      "timestamp": "2023-10-06T22:15:38.634+00:00",
+      "timestampEdited": "2023-10-06T22:15:43.904+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You should use the @page macro here, like this:\n\n`@page(\"/\", ui)`\n\nYou're also missing reactive variables for the buttons in the UI. I recommend you check out the first dashboard guide to see how reactie apps work\n\nhttps://learn.genieframework.com/docs/guides/first-dashboard",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Your first dashboard",
+          "url": "https://learn.genieframework.com/docs/guides/first-dashboard",
+          "timestamp": null,
+          "description": "Quick guide on building your first reactive dashboard with Genie Framework.",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/0xkkCUWOR35KWIZSbN0DizxzGUFilRxiMGWQeaqBoqc/https/learn.genieframework.com/docs/guides/first-dashboard/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1161730761511153705",
+      "type": "Default",
+      "timestamp": "2023-10-11T18:23:17.458+00:00",
+      "timestampEdited": "2023-10-11T18:24:34.246+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "if possible, can you show one example of how to code reactive variables for buttons, even though I've gone through the tutorial on the first dashboard to see how reactive apps work?",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1161733713223237674",
+      "type": "Default",
+      "timestamp": "2023-10-11T18:35:01.201+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You need to use the @click macro inside btn to toggle a boolean reactive variable. then, attach a reactive handler to this boolean.\n\n`btn(\"Record\", @click(\"recording =! recording\")`\n\nhttps://learn.genieframework.com/examples/reactive-ui/live-style-changes",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Keypress detection",
+          "url": "https://learn.genieframework.com/examples/reactive-ui/live-style-changes",
+          "timestamp": null,
+          "description": "Change the style of an element on the fly.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/Ay3OOwGDN77ZxjlGsj4Cdps4-Wm6TwmkyOGJyyBov7U/https/learn.genieframework.com/examples/reactive-ui/live-style-changes/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1161733763768795226",
+      "type": "Default",
+      "timestamp": "2023-10-11T18:35:13.252+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "(dont mind the page title it's wrong I need to fix it)",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1161734198198022275",
+      "type": "Default",
+      "timestamp": "2023-10-11T18:36:56.828+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Or a simpler example\n```julia\nusing GenieFramework\n\n@app begin\n    @in clicked = false\n    @onchange clicked begin\n        println(\"button clicked\")\n    end\nend\n\nui() = [ btn(\"Click me\", @click(\"clicked =! clicked\"))]\n@page(\"/\", ui)\nup()\n````",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1161778780088582154",
+      "type": "Default",
+      "timestamp": "2023-10-11T21:34:05.979+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "also do quasar html elements go in hand with stippleUI?",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1161781083319312467",
+      "type": "Default",
+      "timestamp": "2023-10-11T21:43:15.112+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Even though I am able to get the code up and running, I am getting an error shown below:",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1161781100352380949",
+      "type": "Default",
+      "timestamp": "2023-10-11T21:43:19.173+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1161781100172034118",
+          "url": "https://cdn.discordapp.com/attachments/1159588634152931388/1161781100172034118/image.png?ex=65398bf7&is=652716f7&hm=30719f23b185b3ace0440bbd04c1ff421b5603dbef32ca478382575e8a61a044&",
+          "fileName": "image.png",
+          "fileSizeBytes": 43888
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162027983343734825",
+      "type": "Default",
+      "timestamp": "2023-10-12T14:04:20.665+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162029761816707176",
+      "type": "Default",
+      "timestamp": "2023-10-12T14:11:24.686+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "how do I position GUI widgets in codes like this:\n\n[ btn(\"Click me\", @click(\"clicked =! clicked\"))]\n\nFor example I want to position the buttons at the center",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162275474383315004",
+      "type": "Default",
+      "timestamp": "2023-10-13T06:27:47.127+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you can use inline css styling for that\nhttps://learn.genieframework.com/docs/reference/reactive-ui/styling",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Styling",
+          "url": "https://learn.genieframework.com/docs/reference/reactive-ui/styling",
+          "timestamp": null,
+          "description": "How to style your Genie apps with predefined classes and using your own CSS.",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/AMMSrjPTDBD6yQ3wr2ZpgJM-oDFU96QkTMOdePMMTKw/https/learn.genieframework.com/docs/reference/reactive-ui/styling/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1162275811584376902",
+      "type": "Default",
+      "timestamp": "2023-10-13T06:29:07.522+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Regarding Genie and Quasar, Genie uses Quasar v1. Most components are available but if any is missing you can use the `quasar(:component, ...)` call. Regarding that error, do not worry about it. It's something we need to fix",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1162275846367748216",
+      "type": "Default",
+      "timestamp": "2023-10-13T06:29:15.815+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, please open new threads for unrelated questions",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 14
+}

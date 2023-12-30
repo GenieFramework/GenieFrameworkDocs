@@ -1,0 +1,359 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1092579806647959552",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "autoreload stops working after error in code",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:09:18.7196938+00:00",
+  "messages": [
+    {
+      "id": "1092579806647959552",
+      "type": "Default",
+      "timestamp": "2023-04-03T22:42:05.056+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi all,\n\nAutoreload works great when updating my code, except if I make a change that results in an error. When that happens, autoreload uses a previous version of my code. It does not recognize corrections/changes made thereafter. This is really frustrating because I need to restart Julia in order fix autoreload. \n\nIs there a way around this or a place where I can file an issue?",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1092722482445819924",
+      "type": "Default",
+      "timestamp": "2023-04-04T08:09:01.617+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Can you share the output in the REPL when you encounter this? Sometimes this happen\u00A0because Revise.jl (the package that reloads file changes) is unable to apply the changes. In that case, Revise will show a debug message",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092794065596207114",
+      "type": "Default",
+      "timestamp": "2023-04-04T12:53:28.37+00:00",
+      "timestampEdited": "2023-04-04T12:54:32.91+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@itsdfish for some reason I assumed you were using Genie Builder. If you are working with just a Julia REPL and want want changes to automatically reload, use Revise and includet instead of include:\n\nusing Revise\nincludet(\"app.jl\")",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1089240744490975242",
+          "name": "itsdfish",
+          "discriminator": "0000",
+          "nickname": "itsdfish",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+        }
+      ]
+    },
+    {
+      "id": "1092850028734849114",
+      "type": "Default",
+      "timestamp": "2023-04-04T16:35:51.022+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Pere, thanks for your reply.  I have experienced the issue with the Builder and at the REPL. For some reason, I am unable to get your solution to work. It doesn't recognize any changes, even after refreshing the page. \n\nFor some reason, I cannot reproduce the problem. I feel like Genie is gaslighting me \uD83D\uDE06 , but I suppose it could be user error. I will report back if I can reproduce the problem. It might be that certain only types of errors lead to the problem.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1092856221620506715",
+      "type": "Default",
+      "timestamp": "2023-04-04T17:00:27.521+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ok. Here is the problem: I cannot consistently produce the same results. Sometimes it works, sometimes nothing updates, other times it works until I introduce a bug... still other times, the page completely crashes and becomes unresponsive to changes in the code.  Each time I try with a fresh Jullia session.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092856560226676756",
+      "type": "Default",
+      "timestamp": "2023-04-04T17:01:48.251+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I attached the error message from the catastrophic error.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [
+        {
+          "id": "1092856559899525220",
+          "url": "https://cdn.discordapp.com/attachments/1092579806647959552/1092856559899525220/message.txt?ex=654132fc&is=652ebdfc&hm=d97932aebcaf0ec26943eeb5eb3a0700850adfe3a23a6409e194e8f48cb0e44a&",
+          "fileName": "message.txt",
+          "fileSizeBytes": 3587
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092856869665640448",
+      "type": "Default",
+      "timestamp": "2023-04-04T17:03:02.027+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I guess the way to reproduce the behavior is to break the code with bugs (such as removing commas) and fixing the bugs until it stops working as expected.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092856923302408232",
+      "type": "Default",
+      "timestamp": "2023-04-04T17:03:14.815+00:00",
+      "timestampEdited": "2023-04-04T19:44:59.456+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Here is the code I was using \n\n\n\napp.jl\n\n```\n  using GenieFramework\n  using Distributions\n\n  @genietools \n    @handlers begin\n      @in mu = 0.0\n      @in sigma = 1.0\n      @out pdf_plot = PlotData()\n      @out layout = PlotLayout(\n                      xaxis = [PlotLayoutAxis(xy= \"x\", title = \"x\")],\n                      yaxis = [PlotLayoutAxis(xy = \"y\", title = \"density\")])\n\n      @onchange isready, mu, sigma begin \n        println(\"hi\")\n        dist = Normal(mu, sigma)\n        q1,q99 = quantile(dist, [.001, .999])\n        x = [range(-5, q1, length=5)..., \n            range(q1, q99, length=100)..., \n            range(q99, 5, length=5)...]\n        y = pdf.(dist, x)\n        pdf_plot = PlotData(; x, y, mode=\"lines\")\n      end\n    end\n\n  @page(\"/\", \"app.jl.html\")\n  Server.isrunning() || Server.up()\n```\n\napp.jl.html\n\n```\n<h1>Default content</h1>\n<div class=\"row\">\n    <div class=\"col col-6 col-sm\">\n        <p> mu {{mu}}</p>\n        <q-slider :min=\"-5\" :step=\"-.1\" v-model=\"mu\" :max=\"5\"></q-slider>\n    </div>\n    <div class=\"col col-6 col-sm\">\n        <p> sigma {{sigma}}</p>\n        <q-slider :min=\"0\" :max=\"5\" :step=\".1\" v-model=\"sigma\"></q-slider>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col col-12 col-sm\">\n        <p>awesome plot<br /></p>\n        <plotly :data=\"pdf_plot\" :layout=\"layout\"></plotly>\n    </div>\n</div>\n```",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1092857088998391829",
+      "type": "Default",
+      "timestamp": "2023-04-04T17:03:54.32+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Sorry I cannot provide a reproducible result, but that seems to be the nature of the problem.",
+      "author": {
+        "id": "1089240744490975242",
+        "name": "itsdfish",
+        "discriminator": "0000",
+        "nickname": "itsdfish",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1093792158072455188",
+      "type": "Default",
+      "timestamp": "2023-04-07T06:59:32.16+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is this when you update julia code or `.jl.html` code that reload/revise stops working?",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 10
+}

@@ -1,0 +1,224 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1158285720935469094",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Help: How can I plot a city",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:15:26.9714505+00:00",
+  "messages": [
+    {
+      "id": "1158285720935469094",
+      "type": "Default",
+      "timestamp": "2023-10-02T06:13:55.779+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am trying to use Genie as a way to plot number of Julia Packages per city. I would like to have a way to draw a map and have a circle based on number of packages in a city (number of packages that were initially developed in a city). With Plotly I believe I have to search for lat/long for each city... this is not so convinient. Is there any other way?",
+      "author": {
+        "id": "1099612243928305705",
+        "name": "gareth_thomas",
+        "discriminator": "0000",
+        "nickname": "Gareth",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1099612243928305705/c856eaf9e44f8b002b6fbd6d8e638d81.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1158391356801155113",
+      "type": "Default",
+      "timestamp": "2023-10-02T13:13:41.332+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You could use the OpenStreetMaps API to get the coordinates for a city. Here's an example \n\n```julia\nusing HTTP\nusing JSON\n\n# Replace with a specific city or address\nlocation = \"Amsterdam, Netherlands\"\n\n# Make a GET request to the Nominatim API\nurl = \"https://nominatim.openstreetmap.org/search?format=json&q=$(escape(location))\"\nheaders = [\"User-Agent\" => \"YourAppName (your@email.com)\"]\nresponse = HTTP.get(url, headers)\n\n# Parse the JSON response\ndata = JSON.parse(String(response.body))\n\n# Extract latitude and longitude\nif length(data) > 0\n    lat = data[1][\"lat\"]\n    lon = data[1][\"lon\"]\n    println(\"Latitude: $lat, Longitude: $lon\")\nelse\n    println(\"Location not found\")\nend\n````",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1158391718404685914",
+      "type": "Default",
+      "timestamp": "2023-10-02T13:15:07.545+00:00",
+      "timestampEdited": "2023-10-02T13:15:19.193+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, I played around with the maps so here's an example to help get you started. You'll need to set up a mapbox account and get the token\n```julia\nmodule App\nusing PlotlyBase\nusing GenieFramework\n@genietools\ncities_coordinates = Dict(\n    \"Amsterdam\" => [52.3676, 4.9041],\n    \"Rotterdam\" => [51.9225, 4.47917],\n    \"The Hague\" => [52.0787, 4.2888],\n    \"Utrecht\" => [52.0843, 5.0128],\n    \"Eindhoven\" => [51.4416, 5.4697]\n)\nN = length(cities_coordinates)\nnames = keys(cities_coordinates)\nlats = [v[1] for v in values(cities_coordinates)]\nlongs = [v[2] for v in values(cities_coordinates)]\n\n@app begin\n    @out trace = [\n        scattermapbox(\n            lon=longs,\n            lat=lats,\n            text=names,\n            mode=\"markers+text\",\n            marker=attr(size=abs.(randn(N)) * 10 .+ 4, color=\"blue\"),\n            textposition=\"bottom right\"\n        )\n    ]\n    @out layout = PlotlyBase.Layout(\n        title=\"World Map\",\n        showlegend=false,\n        width=800,\n        height=800,\n        mapbox=attr(\n            accesstoken=\"\",\n            style=\"light\",\n            center=attr(lat=52.0, lon=5.0),  # Center the map to the Netherlands\n            zoom=6.5  # Adjust the zoom level as needed\n        )\n    )\n\n    # this is for detecting click events\n    @in data_click = Dict{String,Any}()  # data from map click event\n    @in data_cursor = Dict{String,Any}()\n\n    @onchange data_click begin\n        @show data_click\n        @show data_cursor\n    end\nend\n\n# activate detection of click events\n@mounted watchplots()\n\nui() = plot(:trace, layout=:layout, class=\"sync_data\")\n@page(\"/\", ui)\nend\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1158392091513196586",
+      "type": "Default",
+      "timestamp": "2023-10-02T13:16:36.501+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In case you dont want to use mapbox you can use plotly's geo, but the map is uglier\n\n```julia\n    @out trace = [\n        scattergeo(\n            locationmode=\"ISO-3\",\n            lon=longs,\n            lat=lats,\n            text=names,\n            textposition=\"bottom right\",\n            textfont=attr(family=\"Arial Black\", size=18, color=\"blue\"),\n            mode=\"markers+text\",\n            marker=attr(size=abs.(randn(N) * 20), color=\"blue\"),\n            name=\"Cities\"),\n    ]\n    @out layout = PlotlyBase.Layout(\n        title=\"World Map\",\n        showlegend=false,\n        width=800,\n        height=800,\n        geo=attr(\n            resolution=50,\n            showframe=false,\n            #= scope=\"europe\", =#\n            showcountries=true,\n            showsubunits=true,\n            showlakes=true,\n            projection=attr(type=\"natural earth\"),\n            lonaxis=attr(range=[3.4, 7.2]),\n            lataxis=attr(range=[50.5, 54])\n        )\n    )\n````",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1163509850198769735",
+      "type": "Default",
+      "timestamp": "2023-10-16T16:12:45.255+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Awesome!!! Going to try it this weekend:)",
+      "author": {
+        "id": "1099612243928305705",
+        "name": "gareth_thomas",
+        "discriminator": "0000",
+        "nickname": "Gareth",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1099612243928305705/c856eaf9e44f8b002b6fbd6d8e638d81.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "♥️",
+            "code": "hearts",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2665.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 5
+}

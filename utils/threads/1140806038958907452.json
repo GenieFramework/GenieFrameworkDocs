@@ -1,0 +1,119 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1140806038958907452",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Pairplots in Genie",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:22:47.2809908+00:00",
+  "messages": [
+    {
+      "id": "1140806038958907452",
+      "type": "Default",
+      "timestamp": "2023-08-15T00:35:54.839+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there a way to create pairplots in Genie? I tried it using PlotlyJS but it's causing a lot of conflicts with other packages.",
+      "author": {
+        "id": "767327099517665340",
+        "name": ".maxwell04",
+        "discriminator": "0000",
+        "nickname": "MahnoorFatima - Pakistan",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/767327099517665340/0aa07008ad044c74db4dfca303e0610d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDD14",
+            "code": "thinking",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f914.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "668141144932220968",
+              "name": "generallyclueless",
+              "discriminator": "0000",
+              "nickname": "GenerallyClueless",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1140931132783865906",
+      "type": "Default",
+      "timestamp": "2023-08-15T08:52:59.531+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Genie uses Plotly for plots, so that's the only way to do it at the moment. Alternatively, you could use other packages and save the plot as an image.\n\nWhat conflicts are you getting? I guess that must be a Plotly issue and not Genie\n\nhttps://learn.genieframework.com/docs/reference/reactive-ui/plotting",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Plotting",
+          "url": "https://learn.genieframework.com/docs/reference/reactive-ui/plotting",
+          "timestamp": null,
+          "description": "",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/o5P7VMkB4N8r_-0p0sqbqmyiEh22d18WJWaZtOPIZnU/https/learn.genieframework.com/docs/reference/reactive-ui/plotting/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

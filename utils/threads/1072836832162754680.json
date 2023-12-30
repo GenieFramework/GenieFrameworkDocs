@@ -1,0 +1,377 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1072836832162754680",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Use Genie Builder together with Genie authentication",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:27:50.4719849+00:00",
+  "messages": [
+    {
+      "id": "1072836832162754680",
+      "type": "Default",
+      "timestamp": "2023-02-08T11:10:33.132+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello, how can I use Genie Builder together with Genie authentication? Which steps are required to setup the database connection?",
+      "author": {
+        "id": "714383271357579394",
+        "name": "Juliane Müller-Sielaff",
+        "discriminator": "6406",
+        "nickname": "Juliane Müller-Sielaff",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073107764907356220",
+      "type": "Default",
+      "timestamp": "2023-02-09T05:07:08.532+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "install SearchLight.jl Package",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073109214714667018",
+      "type": "Default",
+      "timestamp": "2023-02-09T05:12:54.193+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "follow these steps, you will see a new folder db which has a file configuration.yml",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1073109214525915167",
+          "url": "https://cdn.discordapp.com/attachments/1072836832162754680/1073109214525915167/Screenshot_from_2023-02-09_10-42-20.png?ex=6539f556&is=65278056&hm=af78802992627e4bfadcb67084e9ce2f19e44d1e6c8d30a0627017970dba850b&",
+          "fileName": "Screenshot_from_2023-02-09_10-42-20.png",
+          "fileSizeBytes": 15895
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073111911429840927",
+      "type": "Default",
+      "timestamp": "2023-02-09T05:23:37.14+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "first add db",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073112049137221652",
+      "type": "Default",
+      "timestamp": "2023-02-09T05:24:09.972+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "then use genieauthentication as per guidelines on website",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1073151252101345330",
+      "type": "Default",
+      "timestamp": "2023-02-09T07:59:56.687+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello, thanks for the quick reply! Unfortunately, I get an error running SearchLight.Generator.newconfig(). \nI did the following: I generated a new app using Genie builder called auth_test. \nThen, I used SearchLight.Generator.newconfig() as stated by you. What can I do to make it running?",
+      "author": {
+        "id": "714383271357579394",
+        "name": "Juliane Müller-Sielaff",
+        "discriminator": "6406",
+        "nickname": "Juliane Müller-Sielaff",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1073151251937775626",
+          "url": "https://cdn.discordapp.com/attachments/1072836832162754680/1073151251937775626/Bildschirmfoto_2023-02-09_um_08.59.25.png?ex=653a1c7c&is=6527a77c&hm=e6afa41b7a855ca110251c6c9c0961d3fd4a73376e19aee9917c9dc1f53a6b29&",
+          "fileName": "Bildschirmfoto_2023-02-09_um_08.59.25.png",
+          "fileSizeBytes": 60568
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074691926713966712",
+      "type": "Default",
+      "timestamp": "2023-02-13T14:02:02.139+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Juliane Müller-Sielaff I'm not familiar with the authentication module yet, but I can try to explain how to use the DB. I'll soon do a tutorial about this; if you need any more help please ask\n\nin this repo [1] we have a demo of an app working with a database. You first have to create a connection.yml file in the db/ folder, and then connect to the db with `SearchLight.Configuration.load() |> SearchLight.connect`\n\nIn createdb.jl you'll find the steps to work with a db as:\n\n1. connect to a sqlite db\n2. generate the migration and module files for a new resource\n3.  edit the migration file with the table schema for the resource\n4. define in the resource module in app/resources/ the resource struct matching the table schema\n5. execute the migration to create the table\n6.  seed the table with some initial data\n\n\n[1]https://github.com/GenieFramework/GenieFrameworkDemos_NewAPI/tree/main/Database",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GenieFrameworkDemos_NewAPI/Database at main · GenieFramework/GenieF...",
+          "url": "https://github.com/GenieFramework/GenieFrameworkDemos_NewAPI/tree/main/Database",
+          "timestamp": null,
+          "description": "Demos for new reactive API. Contribute to GenieFramework/GenieFrameworkDemos_NewAPI development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/4awwFKxPnZYnjvGbbX_RK1Nrdj_ChlkNVIGEzpGeJhw/https/opengraph.githubassets.com/c29ffd4c3ce869fe00da84d7c8492aa4dc353d2037bc01d3adcfd653f1228bfb/GenieFramework/GenieFrameworkDemos_NewAPI",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "714383271357579394",
+          "name": "Juliane Müller-Sielaff",
+          "discriminator": "6406",
+          "nickname": "Juliane Müller-Sielaff",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1074699071488544911",
+      "type": "Default",
+      "timestamp": "2023-02-13T14:30:25.586+00:00",
+      "timestampEdited": "2023-02-13T14:30:31.595+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am currently working on GenieAuthentication. I'll be able to help you on this day after tomorrow\n\nshort answer is currently it's not straight forward to use GAuth with GenieBuilder",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1074949797708050442",
+      "type": "Default",
+      "timestamp": "2023-02-14T07:06:43.375+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello, I found a solution by myself \uD83D\uDE42 \n\n1. create the Genie Builder App\n2. Create database similar to: https://docs.juliahub.com/Genie/8eazC/1.3.0/docs/guides/Working_With_Genie_Apps.html#Accessing-databases-with-SearchLight-models\n3. follow the GenieAuthentication instructions: https://github.com/GenieFramework/GenieAuthentication.jl\n4. Remove lines with „output_flash“ from html files in app/resources/authentication/views and AuthenticationController.jl\n5. Add following to app.jl :\n    1. @page(\"/login\", \"app/resources/authentication/views/login.jl.html\")\n    2. @page(\"/register\", \"app/resources/authentication/views/register.jl.html\")\n    3. @page(\"/success\", \"app/resources/authentication/views/success.jl.html\")\n\nThen, it works \uD83D\uDE42",
+      "author": {
+        "id": "714383271357579394",
+        "name": "Juliane Müller-Sielaff",
+        "discriminator": "6406",
+        "nickname": "Juliane Müller-Sielaff",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - GenieFramework/GenieAuthentication.jl: Authentication plug...",
+          "url": "https://github.com/GenieFramework/GenieAuthentication.jl",
+          "timestamp": null,
+          "description": "Authentication plugin for Genie framework. Contribute to GenieFramework/GenieAuthentication.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/6Rym_AkJmNahE7eLFyXue3yGvqI2zJtVVMlIv13VR7g/https/opengraph.githubassets.com/49e9e0bf2d4e314c5f9a1f873ff56b27f43ed7a9e3576c02796e105a6b219b38/GenieFramework/GenieAuthentication.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4C",
+            "code": "ok_hand",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44c.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1075512047309176912",
+      "type": "Default",
+      "timestamp": "2023-02-15T20:20:54.126+00:00",
+      "timestampEdited": "2023-02-15T20:21:40.134+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Juliane Müller-Sielaff question. How are you `authenticating` a route? You didn't post that logic\n\n```julia\nroute(\"/protected_route\", MyController.index)\n```\n\n```julia\nmodule MyController\n\nfunction index\nauthenticated!()\nrender_html\nend\n```",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "714383271357579394",
+          "name": "Juliane Müller-Sielaff",
+          "discriminator": "6406",
+          "nickname": "Juliane Müller-Sielaff",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+        }
+      ]
+    }
+  ],
+  "messageCount": 10
+}

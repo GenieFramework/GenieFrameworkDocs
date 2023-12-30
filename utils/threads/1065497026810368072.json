@@ -1,0 +1,1024 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1065497026810368072",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "file selector widget ?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:13:37.8405421+00:00",
+  "messages": [
+    {
+      "id": "1065497026810368072",
+      "type": "Default",
+      "timestamp": "2023-01-19T05:04:47.169+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there a widget or control in Stipple for selecting a file from a pop up window? I looked in the Genie builder list of widgets and did not see anything like that, but I might not be looking in the right place. I wanted the user to be able to choose a cab file to put into a data table .",
+      "author": {
+        "id": "522165121183645696",
+        "name": "krishnab.",
+        "discriminator": "0000",
+        "nickname": "krishnab",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/522165121183645696/23b5e902d27b97c16e1ea881a8a30977.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065500590190379089",
+      "type": "Reply",
+      "timestamp": "2023-01-19T05:18:56.745+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Uploader function",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "522165121183645696",
+          "name": "krishnab.",
+          "discriminator": "0000",
+          "nickname": "krishnab",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/522165121183645696/23b5e902d27b97c16e1ea881a8a30977.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1065497026810368072",
+        "channelId": "1065497026810368072",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1065504286995386428",
+      "type": "Default",
+      "timestamp": "2023-01-19T05:33:38.132+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@kungfupanda007 Is Uploader function a widget or something that I can put on an app? I just looked at all of the Genie Builder blocks, but did not see an \"uploader\" widget. But is there a way to include this in the app anyway?",
+      "author": {
+        "id": "522165121183645696",
+        "name": "krishnab.",
+        "discriminator": "0000",
+        "nickname": "krishnab",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/522165121183645696/23b5e902d27b97c16e1ea881a8a30977.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "731198409838690355",
+          "name": ".kungfupanda007",
+          "discriminator": "0000",
+          "nickname": "kungfupanda007",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ]
+    },
+    {
+      "id": "1065504740940730368",
+      "type": "Default",
+      "timestamp": "2023-01-19T05:35:26.361+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Search QUploader",
+      "author": {
+        "id": "731198409838690355",
+        "name": ".kungfupanda007",
+        "discriminator": "0000",
+        "nickname": "kungfupanda007",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065505817006194698",
+      "type": "Default",
+      "timestamp": "2023-01-19T05:39:42.915+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ahh got you. Okay will do. Thanks for the tip.",
+      "author": {
+        "id": "522165121183645696",
+        "name": "krishnab.",
+        "discriminator": "0000",
+        "nickname": "krishnab",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/522165121183645696/23b5e902d27b97c16e1ea881a8a30977.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065543485920391251",
+      "type": "Default",
+      "timestamp": "2023-01-19T08:09:23.884+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "We have an uploader component, see the CSV uploader tutorial to learn how to use it\n\nhttps://genieframework.com/blog/how-to-build-a-data-app-with-a-CSV-file-uploader/",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "How to build a data app with a CSV file uploader",
+          "url": "https://genieframework.com/blog/how-to-build-a-data-app-with-a-CSV-file-uploader/",
+          "timestamp": null,
+          "description": "In this tutorial, we build a simple data app that lets us upload CSV files and visualize the data distribution for exploratory analysis.",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/Z2dyIt6Hd7RQFrn8GvffVZLigrZSS9D0DdF8q-xL0WQ/https/genieframework.com/assets/img/meta-images/how-to-build-a-data-app-with-a-csv-file-uploader-meta-image.jpg",
+            "width": 1243,
+            "height": 900
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065678313475027104",
+      "type": "Default",
+      "timestamp": "2023-01-19T17:05:09.278+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Pere thanks for the link, I was just reading over it. Sorry, I am not much of a web page developer, so I have some basic questions. So if I want to adapt the code in the tutorial to work with a Genie Builder app, seems like I can put that code into the `app.jl` file--while the tutorial references the `ui.jl` file. So for Genie Builder I use the no-code tool to create the controls and place them on the UI. This tool then generates the HTML and I can refer to those components through the `app.jl` file. In the tutorial, seems like the components are placed through the ui.jl file, and not in the HTML. For example this code:\n```\n[\n    heading(\"{{title}}\")\n    row([\n        cell(class=\"col-md-12\", [\n            uploader(label=\"Upload Dataset\", accpt=\".csv\", multiple=true, method=\"POST\", url=\"http://localhost:8000/\", field__name=\"csv_file\")\n        ])\n    ])\n] |> string\n```\nSo is it more appropriate to actually create a \"title and content\" widget or a \"selector\" widget--which will place the control in the HTML, and then update the inline properties as in the code above? I just was not sure which widget/control to use.",
+      "author": {
+        "id": "522165121183645696",
+        "name": "krishnab.",
+        "discriminator": "0000",
+        "nickname": "krishnab",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/522165121183645696/23b5e902d27b97c16e1ea881a8a30977.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1065730708145983588",
+      "type": "Default",
+      "timestamp": "2023-01-19T20:33:21.141+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In the tutorial we are using the low-code API. In this case we use app.jl for the app logic, and ui.jl to define the UI",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065731047804903524",
+      "type": "Default",
+      "timestamp": "2023-01-19T20:34:42.122+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If you use Genie Builder, then we can have app.jl for the logic and app.jl.html for the UI.  The no-code editor writes HTML code to app.jl.html every time a new component is added to the canvas",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065731195486339113",
+      "type": "Default",
+      "timestamp": "2023-01-19T20:35:17.332+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In the no-code editor we are restricted to the available components, which unfortunately does not include the CSV uploader",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065732144363749377",
+      "type": "Default",
+      "timestamp": "2023-01-19T20:39:03.562+00:00",
+      "timestampEdited": "2023-01-19T20:39:43.625+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Still, you can embed Julia code in html files with <% code %>, which will be executed and its return value rendered. For instance, to include an uploader you can add this to app.jl.html : \n`<%    uploader(label=\"Upload Dataset\", accept=\".csv\", multiple=true, method=\"POST\", url=\"http://localhost:8000/\", field__name=\"csv_file\") %>`",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1065732674871885954",
+      "type": "Default",
+      "timestamp": "2023-01-19T20:41:10.045+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Pere that is wonderful. Okay, I can give that a try and see what happens :).",
+      "author": {
+        "id": "522165121183645696",
+        "name": "krishnab.",
+        "discriminator": "0000",
+        "nickname": "krishnab",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/522165121183645696/23b5e902d27b97c16e1ea881a8a30977.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4C",
+            "code": "ok_hand",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44c.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1065733016581845022",
+      "type": "Default",
+      "timestamp": "2023-01-19T20:42:31.515+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "we do the same in this tutorial to add a table\n\nhttps://youtu.be/FQFD2YYqtpA?t=641",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Builder v0.2 Tutorial",
+          "url": "https://www.youtube.com/watch?v=FQFD2YYqtpA&start=641",
+          "timestamp": null,
+          "description": "In this quick tutorial, we build a data app using Julia language and the new Genie Builder v.0.2.\n\nGenie Builder v0.2 - what's new?\n- We've integrated a new, more productive API to build apps with 50% less backend code.\n- The no-code UI editor is more powerful and polished, with automatic loading of binding variables and other improvements.\n- Th...",
+          "color": "#FF0000",
+          "author": {
+            "name": "Genie",
+            "url": "https://www.youtube.com/channel/UC9uNotBXDukCqnNbbei_kVw"
+          },
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/lCbWYGcv52PZJPqgeNYb7fBxkWEaceJt4kHEXdRDYuo/https/i.ytimg.com/vi/FQFD2YYqtpA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143526744041722032",
+      "type": "Default",
+      "timestamp": "2023-08-22T12:47:01.479+00:00",
+      "timestampEdited": "2023-08-22T12:48:13.308+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "hello @Pere I was taking a look at this post because i also want to analyse data from CSV files that are uploaded into the GUI. When i add the julia lines to app.html and then edit again in app.jl.html and save the changes it overwrites all changes and the julia code i added disappears, what should i do? Have you found any other more efficient way to analyse data from different CSV files? Thank you. If you remember it happened to me when i wanted to add a table too.",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1143638473534885988",
+      "type": "Default",
+      "timestamp": "2023-08-22T20:10:59.866+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "That's strange @itzi , the Julia code should stay there. I have tried pasting the uploader code above into an existing page and it worked",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1143638473258053682",
+          "url": "https://cdn.discordapp.com/attachments/1065497026810368072/1143638473258053682/image.png?ex=653824d3&is=6525afd3&hm=4c89af7234978737829a970b1482ccabb78b86ca6dd0b6b1c7d84d7076039cf5&",
+          "fileName": "image.png",
+          "fileSizeBytes": 458146
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "1080066446278799360",
+          "name": "itzi_.",
+          "discriminator": "0000",
+          "nickname": "itzi",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1143638771804426331",
+      "type": "Default",
+      "timestamp": "2023-08-22T20:12:10.979+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "See that the Julia code appears in the nocode editor, but it is rendered on the page. Did you click on the reload button after editing the HTML? Otherwise, if you edit the file and go back to the nocode without reloading, saving new changes will overwrite your edits to the HTML file",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143800236377129061",
+      "type": "Default",
+      "timestamp": "2023-08-23T06:53:47.133+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you very much, I will try again! but the uploader does not work I am unable to load files because when i do there is a ⚠️ sign, is there a size limit? or is it because it does not work in the preview mode?",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143816096202371083",
+      "type": "Reply",
+      "timestamp": "2023-08-23T07:56:48.41+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "it really does not work, when i re save it the code just appears without rendering, and even to do that i had to save it stop the server and restart it  then it worked for a bit and the moment i made a change and saved it it was gone again",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1143638771804426331",
+        "channelId": "1065497026810368072",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1143816107539562537",
+      "type": "Default",
+      "timestamp": "2023-08-23T07:56:51.113+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1143816107346645082",
+          "url": "https://cdn.discordapp.com/attachments/1065497026810368072/1143816107346645082/image.png?ex=6538ca43&is=65265543&hm=0e67d92a30403bccf01d3d62ae86a1a9a7da652e8694b966de46b296ed40bb46&",
+          "fileName": "image.png",
+          "fileSizeBytes": 12038
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143816590220075048",
+      "type": "Default",
+      "timestamp": "2023-08-23T07:58:46.193+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "my only solution is that the user copies the paths to folders manually \uD83D\uDE05  but if you have any other ideas",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143818019437547621",
+      "type": "Default",
+      "timestamp": "2023-08-23T08:04:26.945+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1143818019206869042",
+          "url": "https://cdn.discordapp.com/attachments/1065497026810368072/1143818019206869042/image.png?ex=6538cc0a&is=6526570a&hm=179b46007bac1054c0bfd9b543670104045d7c8db1a8a20750d46e12b0424e48&",
+          "fileName": "image.png",
+          "fileSizeBytes": 28722
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143818165571309589",
+      "type": "Default",
+      "timestamp": "2023-08-23T08:05:01.786+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1143818165453852772",
+          "url": "https://cdn.discordapp.com/attachments/1065497026810368072/1143818165453852772/image.png?ex=6538cc2d&is=6526572d&hm=83876ead90384dec69eee60eb4598afd683efa6459d9a4af839a7e9db188d11c&",
+          "fileName": "image.png",
+          "fileSizeBytes": 34113
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143818404831182899",
+      "type": "Default",
+      "timestamp": "2023-08-23T08:05:58.83+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "because when i save the html code changes",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1143818404629843968",
+          "url": "https://cdn.discordapp.com/attachments/1065497026810368072/1143818404629843968/image.png?ex=6538cc66&is=65265766&hm=9f028ecb31df82876368da0260b523d9fe9e36b56e54ca395ca6504aea96af56&",
+          "fileName": "image.png",
+          "fileSizeBytes": 38977
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1143932443024433243",
+      "type": "Default",
+      "timestamp": "2023-08-23T15:39:07.654+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Itzi could the issue issue be that in your HTML the <% %> delimiters are being replaced by &lt, and same for other characters like \". When the renderer loads the HTML it does not recognize the delimiters and hence it simply displays the text in the page. could it be because of some extension in your VSCode install?",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1072762028483158029",
+          "name": "Itzi",
+          "discriminator": "1441",
+          "nickname": "Itzi",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ]
+    },
+    {
+      "id": "1146076011868463105",
+      "type": "Default",
+      "timestamp": "2023-08-29T13:36:54.292+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "hi @Pere this substitution happens when I save changes on top of the insert so i associate it with the saving of the no code editor because everything else works alright. Are you able to add components to the UI and save it or you have to add these inserts at the end?",
+      "author": {
+        "id": "1080066446278799360",
+        "name": "itzi_.",
+        "discriminator": "0000",
+        "nickname": "itzi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    }
+  ],
+  "messageCount": 25
+}

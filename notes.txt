@@ -1,0 +1,13 @@
+they have a microservices architecture with separation between front and back end. Sometimes they use R, python. 
+
+they are trying jsserve. they didnt like the no-code direction of genie
+
+he asked about mongodb and nosql
+
+    what they do is mostly no webapps at all. they have a backend running pulling data continuously and producing results. Normally they work with geospatial data. Representing something over a map with leaflet or mapbox. Displaying a table with summary of something. Essentially layers of maps
+
+    they need support with ci/cd, deploying on their own servers. the devops part is what they need most help with
+
+    they have their own datacenters.
+
+    they are going to build an app with teams from brazil in the first day of introduction to julia.

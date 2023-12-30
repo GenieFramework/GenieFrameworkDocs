@@ -1,0 +1,299 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1093381399395962991",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "How can I make a live data app from a data stream?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:16:24.6612804+00:00",
+  "messages": [
+    {
+      "id": "1093381399395962991",
+      "type": "Default",
+      "timestamp": "2023-04-06T03:47:19.66+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I've set up a demo app here, which creates a threaded model which has a counter updating constantly. What I'd like to do is see the contents of this model update in real time in the web app, but no matter what I do, it doesn't seem to want to work. What am I doing wrong here in terms of initializing my handlers and so forth?\nhttps://github.com/Boxylmer/Genie-GUI-test",
+      "author": {
+        "id": "233047992263770112",
+        "name": "carboxyl",
+        "discriminator": "0000",
+        "nickname": "Will",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/233047992263770112/98c6aeefb2ea6d8d8a908588b46e8f0d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - Boxylmer/Genie-GUI-test",
+          "url": "https://github.com/Boxylmer/Genie-GUI-test",
+          "timestamp": null,
+          "description": "Contribute to Boxylmer/Genie-GUI-test development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/fX6lbnKCRvHCEm9agxVvAIITQQXqYmerNWmacDL11q0/https/opengraph.githubassets.com/d970e8d3bf2bdb0c68e44c7d6a733571a7ef8fc11a74a13492edef4bc8736398/Boxylmer/Genie-GUI-test",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1093554224094269470",
+      "type": "Default",
+      "timestamp": "2023-04-06T15:14:04.279+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This is essentially to say, can a server side event trigger a client side update? All examples I've seen this far have client side events triggering server side updates",
+      "author": {
+        "id": "233047992263770112",
+        "name": "carboxyl",
+        "discriminator": "0000",
+        "nickname": "Will",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/233047992263770112/98c6aeefb2ea6d8d8a908588b46e8f0d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1093784602646171710",
+      "type": "Default",
+      "timestamp": "2023-04-07T06:29:30.806+00:00",
+      "timestampEdited": "2023-04-07T06:32:45.076+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "the connection is two between reactive properties to UI and UI to reactive properties.",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1093791734099623936",
+      "type": "Default",
+      "timestamp": "2023-04-07T06:57:51.077+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "just saw your code. Good question. I haven't tried passing `julia objects` to reactive types",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1093791787887370331",
+      "type": "Default",
+      "timestamp": "2023-04-07T06:58:03.901+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'll try and get back to you",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1093906707287134219",
+      "type": "Default",
+      "timestamp": "2023-04-07T14:34:42.821+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@abhimanyuaryan  Thanks so much! So far I've seen only one resource that has come close to this use case and the actual implementation looked ***very clunky*** here https://discourse.julialang.org/t/update-genie-webpage-in-a-asynchrounous-loop/55780",
+      "author": {
+        "id": "233047992263770112",
+        "name": "carboxyl",
+        "discriminator": "0000",
+        "nickname": "Will",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/233047992263770112/98c6aeefb2ea6d8d8a908588b46e8f0d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1093906849973141515",
+      "type": "Reply",
+      "timestamp": "2023-04-07T14:35:16.84+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If this is true, what I'm trying to do absolutely should be possible! I just am not familiar enough (yet!) to achieve it",
+      "author": {
+        "id": "233047992263770112",
+        "name": "carboxyl",
+        "discriminator": "0000",
+        "nickname": "Will",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/233047992263770112/98c6aeefb2ea6d8d8a908588b46e8f0d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "751373833872605184",
+          "name": "abhimanyuaryan",
+          "discriminator": "0000",
+          "nickname": "abhimanyuaryan",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1093784602646171710",
+        "channelId": "1093381399395962991",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1097538892388892793",
+      "type": "Default",
+      "timestamp": "2023-04-17T15:07:43.232+00:00",
+      "timestampEdited": "2023-04-17T15:07:52.685+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sorry for the late reply. I'll try it now. I completely forgot about it/lost track",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 8
+}

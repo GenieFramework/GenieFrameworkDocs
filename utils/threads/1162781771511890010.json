@@ -1,0 +1,122 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1162781771511890010",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Taking input from Widgets",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:26:49.5892319+00:00",
+  "messages": [
+    {
+      "id": "1162781771511890010",
+      "type": "Default",
+      "timestamp": "2023-10-14T15:59:37.769+00:00",
+      "timestampEdited": "2023-10-14T16:00:09.674+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am trying to figure out on how to make a widget take an input (For an instance, I want the text fields to take input  for the backend code) Code is shown below:\n```julia\n#Handler Code\n@appname StudLogin\n\n@app begin\n    @in granted = false\n    @onchange granted begin\n        user_in=readline()\n        pass_in=readline()\n        users = CSV.File(\"Admin_Keys.txt\")\n        found = false\n        for i in users\n            if user_in = i.user\n                found = true\n                if pass_in = i.pass\n                    println(\"Logged in\")\n                else\n                    println(\"Invalid or Expired Credentials\")\n                end\n            end\n        end\n        if found == false\n            println(\"Invalid or Expired Credentials\")  \n        end\n    end \nend\n\n#GUI widgets\nfunction loginUI()\n    row(cell(class = \"st-module\", [\n        textfield(class = \"q-my-md\", \"Username\", :input, @on(\"keyup.enter\", \"process = true\"))\n        textfield(class = \"q-my-md\", \"Password\", :input, hint = \"Your DP Credentials\", @on(\"keyup.enter\", \"process = true\"))\n        btn(class=\"q-my-md\", \"Proceed\", color = \"primary\", @click(\"granted =! granted\"))\n    ]))   \nend\n\n@page(\"/\", loginUI()) \n\nup()\n```",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1163219952090751048",
+      "type": "Default",
+      "timestamp": "2023-10-15T21:00:48.16+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you need to define the appropriate reactive variables for each component. That is\n```julia\n@in input = \"\"\n@in process = false\n@in granted = false\n```\n\nhttps://learn.genieframework.com/docs/reference/reactive-ui/reactivity#reactivity",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Reactivity",
+          "url": "https://learn.genieframework.com/docs/reference/reactive-ui/reactivity",
+          "timestamp": null,
+          "description": "How to define reactive properties to manage your UI components.",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/dhMj5osQ7AEy4QvsKFOAeTi0ZW6isyh8CWa0jJxDsVo/https/learn.genieframework.com/docs/reference/reactive-ui/reactivity/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1163520429974102156",
+      "type": "Default",
+      "timestamp": "2023-10-16T16:54:47.67+00:00",
+      "timestampEdited": "2023-10-16T16:55:32.593+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Can you show one example of how you use this @in process = false?\n\nUpdated code is shown below:\n\n```julia\n@app begin\n    @in userinput = \"\"\n    @in passinput = \"\"\n    @in process = false\n    @in granted = false\n    @onchange granted begin\n        user_in=userinput\n        pass_in=passinput\n        users = CSV.File(\"C:\\\\Users\\\\aayus\\\\Desktop\\\\GenieBuild\\\\GradeMasterGenie\\\\GradeMasterGenie\\\\Data\\\\Admin_Keys.csv\")\n        found = false\n        for i in users  #Beginning of linear search for username and password\n            if user_in == i.user #if username is in the text file then initiate another conditional check (Found = True)\n                found = true\n                if pass_in == i.pass #if password is found in the text file then redirect to admin student data entry \n                    @in notifyme = false \n                    @onchange notifyme begin \n                        notify(model, msg)\n                    println(\"Login Success\")\n                    end\n                else\n                    @in notifypass = false\n                    @onchange notifypass begin\n                        notify(model, incpassmess)\n                    end\n                    println(\"Invalid or Expired Credentials\") #Show message that credentials are either Invalid or Expired\n                end\n            end\n        end\n        if found == false\n            @in notifywruser = false\n            @onchange notifywruser begin\n                notify(model, incusermess)\n            end\n            println(\"Invalid or Expired Credentials\")  \n        end\n    end \nend\n#part 1 of code ```",
+      "author": {
+        "id": "334615981471039490",
+        "name": "aayush_rsr",
+        "discriminator": "0000",
+        "nickname": "whiskers",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/334615981471039490/a9ea5428995006278549a4967e4de999.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

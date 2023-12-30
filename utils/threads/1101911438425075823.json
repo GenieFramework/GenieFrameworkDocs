@@ -1,0 +1,107 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1101911438425075823",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Trying to create julia package from a GB-project runs into cryptic error message",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:26:59.4646183+00:00",
+  "messages": [
+    {
+      "id": "1101911438425075823",
+      "type": "Default",
+      "timestamp": "2023-04-29T16:42:39.445+00:00",
+      "timestampEdited": "2023-04-30T06:43:07.953+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/GenieFramework/Stipple.jl/issues/194",
+      "author": {
+        "id": "918528572870762538",
+        "name": "michaelfliegner",
+        "discriminator": "0000",
+        "nickname": "michaelfliegner",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/918528572870762538/31cc04847b7e4f6c9ca461185634f9fe.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "precompile of GB-project fails: \"some other module mutating `Stippl...",
+          "url": "https://github.com/GenieFramework/Stipple.jl/issues/194",
+          "timestamp": null,
+          "description": "I want to deploy my Genie Builder Project to julia hub. Precompile fails with error below. Source is https://github.com/Actuarial-Sciences-for-Africa-ASA/GenieBuiltLifeProto You can run the in gitp...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/eX5orbfZ-gZjrLNGzJByCa2Zzr2aiT90qtpLukew6Ic/https/opengraph.githubassets.com/d3681d9cc98841d0f00addf31421b2d090303cc05e44f33e61ad9677a74b3beb/GenieFramework/Stipple.jl/issues/194",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1102110999290576896",
+      "type": "ChannelNameChange",
+      "timestamp": "2023-04-30T05:55:38.463+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Changed the channel name: Trying to create julia package from a GB-project runs into cryptic error message",
+      "author": {
+        "id": "918528572870762538",
+        "name": "michaelfliegner",
+        "discriminator": "0000",
+        "nickname": "michaelfliegner",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/918528572870762538/31cc04847b7e4f6c9ca461185634f9fe.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

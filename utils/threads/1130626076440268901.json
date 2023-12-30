@@ -1,0 +1,368 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1130626076440268901",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Components Default when reloaded on global model",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:10:40.1934501+00:00",
+  "messages": [
+    {
+      "id": "1130626076440268901",
+      "type": "Default",
+      "timestamp": "2023-07-17T22:24:22.64+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I have a global model page where i want multiple users to access the same page, but when the page reloads or a new user views the page all components (toggle, checkbox) go into their default state. The model for each components is still in the correct state and when i cycle through the component it changes the model, but it does not seem to recognize the model state once the page is reloaded.\n\nThis is how I have the global model...\n```\nmodel = Model |> init |> handlers\nglobal model\nroute(\"/\") do\n  html(ui(model), context = @__MODULE__)\nend\n```",
+      "author": {
+        "id": "218920064466944000",
+        "name": "anarchistwolf",
+        "discriminator": "0000",
+        "nickname": "Anarchist Wolf",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/218920064466944000/e27a3c3abc0e915036803032c2b47ed0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1130810525509492746",
+      "type": "Default",
+      "timestamp": "2023-07-18T10:37:18.725+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "So, you want to keep the UI in sync across various users? And when someone new accesses the UI or reloads, it should show its previous state instead of the default one. \n\nI believe the way you're defining the model is correct, and you're using the global model in the route so it should keep the same state instead of resetting it. I'll try to come up with an example for this\n\nMeanwhile, we have an example for global models that uses the new API with @init. It's similar to what you're trying to do, except that the state is modified inside the `route`instead of from the UI\n\nhttps://learn.geniecloud.io/examples/reactive-ui/mutating-reactive-variables/",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Mutating reactive variables in various contexts",
+          "url": "https://learn.geniecloud.io/examples/reactive-ui/mutating-reactive-variables/",
+          "timestamp": null,
+          "description": "Change the value of a reactive variable tagged with `@in` or `@out` from outside of an `@onchange` block.",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/VA7cU8OAfc_ginS7QaX09Be_PbvdFxPoB3vcbXYdTPs/https/learn.geniecloud.io/examples/reactive-ui/mutating-reactive-variables/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1130837058890498108",
+      "type": "Default",
+      "timestamp": "2023-07-18T12:22:44.776+00:00",
+      "timestampEdited": "2023-07-18T12:23:56.086+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "> So, you want to keep the UI in sync across various users? And when someone new accesses the UI or reloads, it should show its previous state instead of the default one.",
+      "author": {
+        "id": "218920064466944000",
+        "name": "anarchistwolf",
+        "discriminator": "0000",
+        "nickname": "Anarchist Wolf",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/218920064466944000/e27a3c3abc0e915036803032c2b47ed0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1130837158295502959",
+      "type": "Default",
+      "timestamp": "2023-07-18T12:23:08.476+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes exactly",
+      "author": {
+        "id": "218920064466944000",
+        "name": "anarchistwolf",
+        "discriminator": "0000",
+        "nickname": "Anarchist Wolf",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/218920064466944000/e27a3c3abc0e915036803032c2b47ed0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1130872050152644719",
+      "type": "Default",
+      "timestamp": "2023-07-18T14:41:47.343+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "So I think i figured out one of the problems i was facing. When i was changing the models to the updated API It got me wondering. When a variable was set as a \"Vector{String}\" for a toggle or a checkbox it always defaulted after a reload. When it was changed to just a \"String\" or nothing it synced correctly. I only have two states so i dont think its a problem for me but on the array toggle docs on Quasar it has multiple states for the model.",
+      "author": {
+        "id": "218920064466944000",
+        "name": "anarchistwolf",
+        "discriminator": "0000",
+        "nickname": "Anarchist Wolf",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/218920064466944000/e27a3c3abc0e915036803032c2b47ed0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1130935405487865947",
+      "type": "Default",
+      "timestamp": "2023-07-18T18:53:32.432+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I was able to adapt this example\nhttps://learn.geniecloud.io/examples/reactive-ui/multiple-toggles\n\nand have the multiple toggles synced across browser tabs. Notice that the toggle_states variable is read-write, as it is tagged with `@in`\n\n```julia\nmodule App\nusing GenieFramework\n@genietools\n\n@app begin\n    @out toggle_list = [\"red\", \"green\", \"yellow\"]\n    @in indiv = false\n    @in toggle_states = []\nend\n\n@page(\"/\", ui)\n\nroute(\"/init\") do\n    global model = @init\n    \"Global model created\"\nend\n\nroute(\"/shared\") do\n    page(model,read(\"toggles.jl.html\", String))\nend\n\nend\n```\n```html\n<div v-for=\"toggle in toggle_list\">\n    <q-toggle v-model=\"toggle_states\" :label=\"toggle\" :val=\"toggle\" />\n</div>\n<q-toggle v-model=\"indiv\" />\n{{toggle_states}}\n{{indiv}}\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1130935405567541299",
+          "url": "https://cdn.discordapp.com/attachments/1130626076440268901/1130935405567541299/image.png?ex=65414d2c&is=652ed82c&hm=8322863b37e8ddb3f2eb3251e150076394c0ed2811ff6ed54e767e2de6be3819&",
+          "fileName": "image.png",
+          "fileSizeBytes": 242669
+        }
+      ],
+      "embeds": [
+        {
+          "title": "Multiple toggles",
+          "url": "https://learn.geniecloud.io/examples/reactive-ui/multiple-toggles",
+          "timestamp": null,
+          "description": "Adding multiple toggles, each with its own state variable",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/LpSjHIZLHjJaYpSJWGP9ZwrhZ2JtqfjAyKKbgzRXfts/https/learn.geniecloud.io/examples/reactive-ui/multiple-toggles/__og_image__/og.png",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1130935673789087784",
+      "type": "Default",
+      "timestamp": "2023-07-18T18:54:36.4+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm not sure where the problem could be with your code. Does the example I shared do what you need?",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1130940464464400527",
+      "type": "Default",
+      "timestamp": "2023-07-18T19:13:38.586+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Here's an updated example using @page:\n```julia\nmodule App\nusing GenieFramework\n@genietools\n\n@app begin\n    @out toggle_list = [\"red\", \"green\", \"yellow\"]\n    @in indiv = false\n    @in toggle_states = []\nend\n\nmodel = @init\n\n@page(\"/\", \"toggles.jl.html\")\n@page(\"/shared\", \"toggles.jl.html\", Stipple.ReactiveTools.DEFAULT_LAYOUT(), model)\n\nend\n```\n\nI'm getting an error when running it because of the call to @init, but it works. I'll open an issue about it.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1130954916538634320",
+      "type": "Default",
+      "timestamp": "2023-07-18T20:11:04.229+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you very much @pere, i will be sure to play around with this.",
+      "author": {
+        "id": "218920064466944000",
+        "name": "anarchistwolf",
+        "discriminator": "0000",
+        "nickname": "Anarchist Wolf",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/218920064466944000/e27a3c3abc0e915036803032c2b47ed0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 9
+}

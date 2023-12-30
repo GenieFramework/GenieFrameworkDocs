@@ -1,0 +1,198 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1082041719450771641",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "How to indicate \"loading\" in GenieBuilder app?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:17:41.5764183+00:00",
+  "messages": [
+    {
+      "id": "1082041719450771641",
+      "type": "Default",
+      "timestamp": "2023-03-05T20:47:29.28+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I've written an interactive dashboard using GenieBuilder.  When the user makes a selection from a \"select\" element, the other elements on the page update in response.  For some elements the update can take a few seconds.  Is there a way to get these \"slow\" elements to indicate that an update is pending so that the user has a visual cue to know that updates are on the way?",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1082800261363404831",
+      "type": "Reply",
+      "timestamp": "2023-03-07T23:01:39.765+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You could disable them by setting a model field `:processing`to true during calculation and set the disabled attribute of the element to `:processing`, e.g. `btn(\"Just do it!\", @click(:mybutton), loading = :processing, disabled = :processing)`",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "1076218879749148735",
+          "name": "davemacmahon",
+          "discriminator": "0000",
+          "nickname": "DaveMacMahon",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+        }
+      ],
+      "reference": {
+        "messageId": "1082041719450771641",
+        "channelId": "1082041719450771641",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1082912471171481700",
+      "type": "Default",
+      "timestamp": "2023-03-08T06:27:32.668+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In my GenieBuilder app's `app.jl.html` file I added these attributes to a plotly tag, but they didn't seem to have any effect.  Here is how I added them:\n```\n<plotly :data=\"data\" :layout=\"layout\" :loading=\"isprocessing\", :disabled=\"isprocessing\", class=\"sync_data\"></plotly>\n```\nIn my `app.jl` file I simulate slow updates by doing:\n```julia\n    isprocessing = true\n    sleep(3)\n    data = [ PlotData(x=1:50, y=rand(50), plot=\"scatter\") ]\n    isprocessing = false\n```\nbut the appearnce of the plot doesn't chnage for the duration of the three seconds spent sleeping.  Am I doing something wrong?",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083147233375047801",
+      "type": "Default",
+      "timestamp": "2023-03-08T22:00:24.339+00:00",
+      "timestampEdited": "2023-03-08T22:01:02.084+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Just to follow up, I realized that the `<plotly>` tag doesn't support `loading` and `disabled` attributes, but it does support the `v-if` attribute, so I can at least hide plots until they get new data.  For plots, I could also simply assign `PlotData[]`  (or `[PlotData()]`) to the `@out` variable to \"erase\" the existing traces.",
+      "author": {
+        "id": "1076218879749148735",
+        "name": "davemacmahon",
+        "discriminator": "0000",
+        "nickname": "DaveMacMahon",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1080066446278799360",
+              "name": "itzi_.",
+              "discriminator": "0000",
+              "nickname": "itzi",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1080066446278799360/0af00b0cda5a5d94e0074c80a1daee78.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

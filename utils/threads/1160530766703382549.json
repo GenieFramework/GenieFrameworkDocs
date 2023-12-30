@@ -1,0 +1,168 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1160530766703382549",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Cannot setup any db backend other than sqlite",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:10:29.9459738+00:00",
+  "messages": [
+    {
+      "id": "1160530766703382549",
+      "type": "Default",
+      "timestamp": "2023-10-08T10:54:56.401+00:00",
+      "timestampEdited": "2023-10-08T10:55:58.436+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Genie.Generator.newapp_mvc(<...>)  throws \n```\nERROR: LoadError: InitError: could not load library \"~/.julia/artifacts/bfe66c4df465af0bde5e6d003cd71d40c8ae63e9/lib/mariadb/libmariadb.3.dylib\"\n...\n```\nAnd then it fails to precompile MySQL or Postgres\n```\nJulia Version 1.9.3\nCommit bed2cd540a1 (2023-08-24 14:43 UTC)\nBuild Info:\n  Official https://julialang.org/ release\nPlatform Info:\n  OS: macOS (arm64-apple-darwin22.4.0)\n  CPU: 12 × Apple M1\n  WORD_SIZE: 64\n  LIBM: libopenlibm\n  LLVM: libLLVM-14.0.6 (ORCJIT, apple-m1)\n  Threads: 1 on 8 virtual cores\n```\nI've tried deleting the file to no avail",
+      "author": {
+        "id": "839529644863520768",
+        "name": "ctl1668",
+        "discriminator": "0000",
+        "nickname": "ctl",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/839529644863520768/148ac081970ddcbfa3df9f6e5a1beb01.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1160862444986564699",
+      "type": "Default",
+      "timestamp": "2023-10-09T08:52:54.666+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I haven't tried using DBs other than SQLite, so I don't know what could be causing this issue. Can you open an issue on the SearchLight repository with the following info? \n\n- Full error traces\n- Code and DB configuration \n- Package versions\n- System specs\n\nI'll look into it and try to reproduce the error.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1160875373362421770",
+      "type": "Default",
+      "timestamp": "2023-10-09T09:44:17.031+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Will do",
+      "author": {
+        "id": "839529644863520768",
+        "name": "ctl1668",
+        "discriminator": "0000",
+        "nickname": "ctl",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/839529644863520768/148ac081970ddcbfa3df9f6e5a1beb01.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1161004744207249519",
+      "type": "Default",
+      "timestamp": "2023-10-09T18:18:21.444+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/GenieFramework/SearchLight.jl/issues/75",
+      "author": {
+        "id": "839529644863520768",
+        "name": "ctl1668",
+        "discriminator": "0000",
+        "nickname": "ctl",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/839529644863520768/148ac081970ddcbfa3df9f6e5a1beb01.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Cannot setup any db backend other than sqllite · Issue #75 · GenieF...",
+          "url": "https://github.com/GenieFramework/SearchLight.jl/issues/75",
+          "timestamp": null,
+          "description": "Describe the bug In brand new project with only Genie added Genie.Generator.newapp_mvc(<...>) fails to precompile any backend other than SQLite Error stacktrace [ Info: Precompiling SearchLig...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/p4TO8R_6dNDuk0O0wkYTjfd8zUGBzBX3NMHmmv6hg4A/https/opengraph.githubassets.com/adce8d0fee5c2fe030aa44bbabb543d4e66b6df8957b1f2e42870f433bc9bcd9/GenieFramework/SearchLight.jl/issues/75",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

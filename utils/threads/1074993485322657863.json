@@ -1,0 +1,242 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1074993485322657863",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Create visual elements (divs) programmatically",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:11:23.6753432+00:00",
+  "messages": [
+    {
+      "id": "1074993485322657863",
+      "type": "Default",
+      "timestamp": "2023-02-14T10:00:19.314+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello, when clicking on a button, a new visual element shall be added to the html file as well as the html structure is dependent on the structure of a julia object (the html file shall visually represent the object structure and allow for modification). \n\nIs there a way to add visual elements programatically?",
+      "author": {
+        "id": "714383271357579394",
+        "name": "Juliane Müller-Sielaff",
+        "discriminator": "6406",
+        "nickname": "Juliane Müller-Sielaff",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1075133369186267248",
+      "type": "Default",
+      "timestamp": "2023-02-14T19:16:10.226+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "if you're ok with just hiding the element until you want to display it, you could use some inline css\n\n<div style=\"display:<% displayvar %>\">\n\nwhere in the julia code you have @out displayvar = \"none\"",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1075133783528984698",
+      "type": "Default",
+      "timestamp": "2023-02-14T19:17:49.013+00:00",
+      "timestampEdited": "2023-02-14T19:19:07.414+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, in Genie Builder you can use the \"condition\" binding to set an element's visibility",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1075133783289888838",
+          "url": "https://cdn.discordapp.com/attachments/1074993485322657863/1075133783289888838/Screenshot_2023-02-14_at_20.17.06.png?ex=6538185c&is=6525a35c&hm=c4dec6a3fa9794024f8fe62f9fd3dc3d886e9d2138a452b27548372c7848461d&",
+          "fileName": "Screenshot_2023-02-14_at_20.17.06.png",
+          "fileSizeBytes": 57235
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1075328591082037248",
+      "type": "Default",
+      "timestamp": "2023-02-15T08:11:54.753+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello Pere, thanks for the quick reply! \uD83D\uDE42 \n\nUnfortunately, this doesn't fulfill my wishes. I have a julia object with a predefined structure, e.g., \n\nstruct OverviewCard\n    header::Header\n    body::Body\n    CTA::Maybe{Vector{AbstractButton}}\n    id::String\n    footer::Footer\nend\n\nI want to represent this structure in the html. So for this example, for each element (header, body, footer, CTA), a div element shall be generated in the html. Furthermore, the CTA div includes again as many divs as the vector of AbstractButtons include. Is this possible with Genie Builder? How can I implement this?",
+      "author": {
+        "id": "714383271357579394",
+        "name": "Juliane Müller-Sielaff",
+        "discriminator": "6406",
+        "nickname": "Juliane Müller-Sielaff",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1077145157046120548",
+      "type": "Default",
+      "timestamp": "2023-02-20T08:30:17.829+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "best approach would be to generate the HTML content dynamically - do you have an example of an OverviewCard with data?",
+      "author": {
+        "id": "738049963250155580",
+        "name": "essenciary",
+        "discriminator": "0000",
+        "nickname": "essenciary",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "907230418414215179",
+            "name": "@admin",
+            "color": "#F1C40F",
+            "position": 12
+          },
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/738049963250155580/13375362e7047976b44a466ef441a20f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082814687487463465",
+      "type": "Default",
+      "timestamp": "2023-03-07T23:58:59.221+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You should use `@recur` for a series of elements and define a template.\nYou could get some inspiration in the editable tree demo https://github.com/GenieFramework/StippleDemos/blob/master/ReactiveTools%20API/EditableTree.jl or in the chatmessage demo of the chatmessage PR https://github.com/GenieFramework/StippleUI.jl/pull/87#issuecomment-1415519757",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "StippleDemos/EditableTree.jl at master · GenieFramework/StippleDemos",
+          "url": "https://github.com/GenieFramework/StippleDemos/blob/master/ReactiveTools%20API/EditableTree.jl",
+          "timestamp": null,
+          "description": "Demo apps for Stipple. Contribute to GenieFramework/StippleDemos development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/dNKrdEr-ZUlaAv6K3G_3PYehIrL7hlu18NWavFPeMO8/https/opengraph.githubassets.com/09baf69f9eb45ca77cfd062b120715d22aa802dc6a1da7bc7c3a978759f96d0d/GenieFramework/StippleDemos",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "chat component by AbhimanyuAryan · Pull Request #87 · GenieFramewor...",
+          "url": "https://github.com/GenieFramework/StippleUI.jl/pull/87",
+          "timestamp": null,
+          "description": "[❌] - don't merge\nBug: don't render text message",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/p_h3SnEFHZ__K8xKzwoOdrFJg7Pbl13EjYxMs0P_XEQ/https/opengraph.githubassets.com/a1a3a7eb4d81619e7aaa27989c5fa744d214d8654376551e60ddf47704e1fe1a/GenieFramework/StippleUI.jl/pull/87",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

@@ -1,0 +1,166 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1136199947214127126",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Impossible to get <div> elements to have the same display width",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:19:40.9220555+00:00",
+  "messages": [
+    {
+      "id": "1136199947214127126",
+      "type": "Default",
+      "timestamp": "2023-08-02T07:32:56.99+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I added some text to the top of the web app I'm creating and for some reason it's impossible for the first content block to be displayed at the same width as the following ones. It's driving me nuts!\n\nI'm using the number in class=\"st-col col-10 col-sm st-module\" as the way to set the width. The first element has one column, the next one 2 and all the ones after that have one column. So I use 10 for the 1 column elements and 5 for each of the columns in the 2 column elements. I would expect all elements to display at the same width but as you can see, that's not the case. It's especially the first element under the menu that drives me crazy.\n\nDoes anyone have any idea what I'm doing wrong?\n\nThe full html code can be found here: https://github.com/HapponomyOrg/HapponomyCockpit.jl/blob/main/app/overshoot/app.jl.html",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1136199947818115143",
+          "url": "https://cdn.discordapp.com/attachments/1136199947214127126/1136199947818115143/Screenshot_2023-08-02_at_09.26.15.png?ex=6538c4a9&is=65264fa9&hm=156c6a16a1dc1eb90eae2897a04096f809bdb4e094f674f46cca9d8cf1efdc02&",
+          "fileName": "Screenshot_2023-08-02_at_09.26.15.png",
+          "fileSizeBytes": 680940
+        }
+      ],
+      "embeds": [
+        {
+          "title": "HapponomyCockpit.jl/app/overshoot/app.jl.html at main · HapponomyOr...",
+          "url": "https://github.com/HapponomyOrg/HapponomyCockpit.jl/blob/main/app/overshoot/app.jl.html",
+          "timestamp": null,
+          "description": "Contribute to HapponomyOrg/HapponomyCockpit.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/Au2lgwj7WDNfDLsLZVxQrLTgGjtl0URDK2JezyrRLxY/https/opengraph.githubassets.com/ea9b667864d9357fcac49fd154cdb9b6224c51864f16e341c2709dbc12cf749b/HapponomyOrg/HapponomyCockpit.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1139550375574257675",
+      "type": "Default",
+      "timestamp": "2023-08-11T13:26:21.359+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The maximum width is 12, can you try with col-12 and col-6? We do that in the demo and it works with 2 columns\n\nhttps://github.com/BuiltWithGenie/MultiPageApp/blob/main/app/ML/app.jl.html",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "MultiPageApp/app/ML/app.jl.html at main · BuiltWithGenie/MultiPageApp",
+          "url": "https://github.com/BuiltWithGenie/MultiPageApp/blob/main/app/ML/app.jl.html",
+          "timestamp": null,
+          "description": "Multi page app demo. Contribute to BuiltWithGenie/MultiPageApp development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/r4rHmHD3eafZeb1MN2WrXnNXUTeAAq17XV5LTFM41uU/https/opengraph.githubassets.com/84e3602d3d426bce4235231a5b1941519847ea88d9dba0caf75b03a300a8a30f/BuiltWithGenie/MultiPageApp",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1140927879723614289",
+      "type": "Default",
+      "timestamp": "2023-08-15T08:40:03.941+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm going to test this either later this week or beginning next week and I'll get back to you on it. Working on a couple of other things first.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

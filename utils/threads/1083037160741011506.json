@@ -1,0 +1,474 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1083037160741011506",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Setting up a Genie Web Service project docs",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:25:41.7720884+00:00",
+  "messages": [
+    {
+      "id": "1083037160741011506",
+      "type": "Default",
+      "timestamp": "2023-03-08T14:43:00.978+00:00",
+      "timestampEdited": "2023-03-08T15:03:01.945+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi, \nI was going through the documentation on how to create a new app. I tried the code snippet I found. But I keep on getting an error \"ERROR: UndefVarError: newapp_webservice not defined\".\n\nAfter searching for a solution, I came across a Reddit post addressing the same issue and solution - https://www.reddit.com/r/Julia/comments/zed4gv/when_i_try_to_crate_a_newapp_webservice_i_get_the/\n\nCould the documentation be updated to reflect the necessary changes (if any), please. Thank you for all you do!",
+      "author": {
+        "id": "645053219768107019",
+        "name": "ifihan",
+        "discriminator": "0000",
+        "nickname": "Sparky",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/645053219768107019/4b4aba848afcc9906d54a926d79769ab.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1083037161118515310",
+          "url": "https://cdn.discordapp.com/attachments/1083037160741011506/1083037161118515310/image.png?ex=65392975&is=6526b475&hm=a0d7ebc84ee4612b7b23cd3964d16028f297d8827854d8404950ff6d914789cb&",
+          "fileName": "image.png",
+          "fileSizeBytes": 39982
+        },
+        {
+          "id": "1083037161416298506",
+          "url": "https://cdn.discordapp.com/attachments/1083037160741011506/1083037161416298506/image.png?ex=65392975&is=6526b475&hm=d7c066db14200abfce7c03f95d626025beac09476013c903d4a835e05ac12440&",
+          "fileName": "image.png",
+          "fileSizeBytes": 24810
+        }
+      ],
+      "embeds": [
+        {
+          "title": "r/Julia - When I try to crate a newapp_webservice, I get the error ...",
+          "url": "https://www.reddit.com/r/Julia/comments/zed4gv/when_i_try_to_crate_a_newapp_webservice_i_get_the/",
+          "timestamp": null,
+          "description": "8 votes and 3 comments so far on Reddit",
+          "color": "#FFFFFF",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/mcwzuhyk-peyYO_4fdTmHlZ6nsDpOLZkSjLCF5VrOiU/%3Fauto%3Dwebp%26v%3Denabled%26s%3Dab39e3368389d9af322e74a611810a638b01c74e/https/preview.redd.it/l0x66bonfb4a1.png",
+            "width": 335,
+            "height": 122
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083104047889924306",
+      "type": "Default",
+      "timestamp": "2023-03-08T19:08:48.117+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Sparky you are browsing old documentation: https://www.genieframework.com/docs/genie/v5.11/tutorials/Developing-Web-Services.html",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Documentation - Genie Framework",
+          "url": "https://www.genieframework.com/docs/genie/v5.11/tutorials/Developing-Web-Services.html",
+          "timestamp": null,
+          "description": "Genie Framework includes all you need to quickly build production-ready web applications with Julia. Develop Julia backends, create beautiful web UIs, build data applications and dashboards, integrate with databases and set up high-performance web services and APIs.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/IHMzYUPMPs2-rWWw8zm0dkJpGHQ4Io0THX1XuZKnJaM/https/genieframework.com/assets/img/meta-image.jpg",
+            "width": 1614,
+            "height": 679
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "645053219768107019",
+          "name": "ifihan",
+          "discriminator": "0000",
+          "nickname": "Sparky",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/645053219768107019/4b4aba848afcc9906d54a926d79769ab.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1083104186331299940",
+      "type": "Default",
+      "timestamp": "2023-03-08T19:09:21.124+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "`newapp_webservice` is in `Generator` module",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1083158378076971119",
+      "type": "Default",
+      "timestamp": "2023-03-08T22:44:41.443+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks.  The mixup came from the link I was being directed to (https://genieframework.com/docs/genie/tutorials/Developing-MVC-Web-Apps.html)\nThanks for the clarification \uD83D\uDE03",
+      "author": {
+        "id": "645053219768107019",
+        "name": "ifihan",
+        "discriminator": "0000",
+        "nickname": "Sparky",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/645053219768107019/4b4aba848afcc9906d54a926d79769ab.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Framework - Highly Productive Web Development with Julia",
+          "url": "https://genieframework.com/docs/genie/tutorials/Developing-MVC-Web-Apps.html",
+          "timestamp": null,
+          "description": "Documentation for Genie Framework, the highly productive web development framework for Julia. It includes all you need to quickly build production ready web applications with Julia Lang.",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1086737981328605195",
+      "type": "Default",
+      "timestamp": "2023-03-18T19:48:45.364+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "also @Sparky mvc_app and web services are two different things",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "645053219768107019",
+          "name": "ifihan",
+          "discriminator": "0000",
+          "nickname": "Sparky",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/645053219768107019/4b4aba848afcc9906d54a926d79769ab.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1086738751511863426",
+      "type": "Default",
+      "timestamp": "2023-03-18T19:51:48.99+00:00",
+      "timestampEdited": "2023-03-18T19:52:06.3+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "to create a website and not `fullstack` app you need to do: \n\n```julia\nGenie.Generator.newapp_webservice(\"ServiceName\")\n```",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087151828971573418",
+      "type": "Default",
+      "timestamp": "2023-03-19T23:13:14.331+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "My bad. I mixed it up. Thank you",
+      "author": {
+        "id": "645053219768107019",
+        "name": "ifihan",
+        "discriminator": "0000",
+        "nickname": "Sparky",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/645053219768107019/4b4aba848afcc9906d54a926d79769ab.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087279946755477606",
+      "type": "Default",
+      "timestamp": "2023-03-20T07:42:19.991+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "no problem and then there is more: https://blog.dreamfactory.com/microservices-vs-web-services/",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Microservices vs Web Services | DreamFactory Software- Blog",
+          "url": "https://blog.dreamfactory.com/microservices-vs-web-services/",
+          "timestamp": null,
+          "description": "This article will cover the differences, advantages, and disadvantages of microservices and web services listed one by one!",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/05xYeeuTeI_NuW5tSboHaBliseAZUx8Hdw_u5UPwEDw/https/blog.dreamfactory.com/wp-content/uploads/2022/10/Blog-thumbnail-12-1.png",
+            "width": 750,
+            "height": 400
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087280365237973042",
+      "type": "Default",
+      "timestamp": "2023-03-20T07:43:59.765+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "MVC is a design pattern. A web service can also use this design pattern",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1087280975744094218",
+      "type": "Default",
+      "timestamp": "2023-03-20T07:46:25.321+00:00",
+      "timestampEdited": "2023-03-20T07:46:28.883+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "there are other design patterns besides MVC. One I know is MVP(mostly famous in Microsoft asp world):\n\nhttps://www.developerfusion.com/article/8307/aspnet-patterns-every-developer-should-know/",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "ASP.NET Patterns every developer should know - ASP.NET tutorial - d...",
+          "url": "https://www.developerfusion.com/article/8307/aspnet-patterns-every-developer-should-know/",
+          "timestamp": null,
+          "description": "In the first of three parts, Alex looks at some of the basic patterns in ASP.NET, and how you can apply these to your ASP.NET applications in a few simple steps.",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1088571486140379156",
+      "type": "Default",
+      "timestamp": "2023-03-23T21:14:26.976+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you!",
+      "author": {
+        "id": "645053219768107019",
+        "name": "ifihan",
+        "discriminator": "0000",
+        "nickname": "Sparky",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/645053219768107019/4b4aba848afcc9906d54a926d79769ab.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE4F",
+            "code": "pray",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 11
+}

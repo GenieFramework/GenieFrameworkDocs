@@ -1,0 +1,140 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1145514008498143272",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Retrieving headers from API route",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:24:51.4814644+00:00",
+  "messages": [
+    {
+      "id": "1145514008498143272",
+      "type": "Default",
+      "timestamp": "2023-08-28T00:23:42.247+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How do I grab the headers from a message? I'm building a GET/POST API.",
+      "author": {
+        "id": "657626741854044220",
+        "name": "cameron_pfiffer",
+        "discriminator": "0000",
+        "nickname": "Cameron Pfiffer",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/657626741854044220/b04e4142e7c8360f53e90120d1691c8f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1145660486327750708",
+      "type": "Default",
+      "timestamp": "2023-08-28T10:05:45.283+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You can use the `postpayload`function for POST\n\nhttps://github.com/BuiltWithGenie/WebServiceTemplate/blob/70247b6c790b1b5d9a443333241c1db79271d809/controllers/AnalysisController.jl#L12\n\nAnd `params(:paramname)` for GET\n\nhttps://github.com/BuiltWithGenie/MultiPageApp/blob/81ec836c394bcc085c88a0f2e1cfbcaac1abfe8b/app/API/app.jl#L11",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "859070303241371689",
+            "name": "juliaspeeder",
+            "code": "juliaspeeder",
+            "isAnimated": true,
+            "imageUrl": "https://cdn.discordapp.com/emojis/859070303241371689.gif"
+          },
+          "count": 1,
+          "users": []
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1145718895357992996",
+      "type": "Default",
+      "timestamp": "2023-08-28T13:57:51.081+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ah perfect - thanks!",
+      "author": {
+        "id": "657626741854044220",
+        "name": "cameron_pfiffer",
+        "discriminator": "0000",
+        "nickname": "Cameron Pfiffer",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/657626741854044220/b04e4142e7c8360f53e90120d1691c8f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

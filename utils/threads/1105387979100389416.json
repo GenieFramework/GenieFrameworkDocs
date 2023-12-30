@@ -1,0 +1,279 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1105387979100389416",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "q-select with text filter",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:23:50.6395055+00:00",
+  "messages": [
+    {
+      "id": "1105387979100389416",
+      "type": "Default",
+      "timestamp": "2023-05-09T06:57:11.333+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm trying to make a q-select component where I could have text filter. I can't workaround how to replicate `filterFn` function. Is there a MWE available?",
+      "author": {
+        "id": "566655860286160926",
+        "name": "dearrude",
+        "discriminator": "0000",
+        "nickname": "DearRude",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/566655860286160926/89fe4df3ff8940b3f79618607373b190.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1105839133705916478",
+      "type": "Default",
+      "timestamp": "2023-05-10T12:49:54.973+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "What does this \"filterFn\" do? Are you trying to replicate this?\nhttps://codepen.io/rachitpant/pen/mdbpvda\n\n(I'm still not sure what it does)",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Select: Filtering options - Quasar Playground",
+          "url": "https://codepen.io/rachitpant/pen/mdbpvda",
+          "timestamp": null,
+          "description": "...",
+          "author": {
+            "name": "Rachit",
+            "url": "https://codepen.io/rachitpant"
+          },
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/K9nYkuqOwqpTQT5pmqXxae4dOdDF1NTIig2oQibB-us/%3Fversion%3D1567787597/https/shots.codepen.io/username/pen/mdbpvda-800.jpg",
+            "width": 800,
+            "height": 450
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1105944265940533298",
+      "type": "Default",
+      "timestamp": "2023-05-10T19:47:40.451+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yes @DearRude https://github.com/GenieFramework/PkgVizBoard/commit/ecb361a65ccfa323a895f28330094e2e770a8f10",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "WIP another approach for server side filtering · GenieFramework/Pkg...",
+          "url": "https://github.com/GenieFramework/PkgVizBoard/commit/ecb361a65ccfa323a895f28330094e2e770a8f10",
+          "timestamp": null,
+          "description": "",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/OtEFYn2XnjmH5uve97p29s_Wa4xS8RRuM88m1UPynkc/https/opengraph.githubassets.com/7668e8cc2ee4dd83b091787a1a7d113ef1aa193f21ae6ca6e4ea8505058ab889/GenieFramework/PkgVizBoard/commit/ecb361a65ccfa323a895f28330094e2e770a8f10",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "566655860286160926",
+          "name": "dearrude",
+          "discriminator": "0000",
+          "nickname": "DearRude",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/566655860286160926/89fe4df3ff8940b3f79618607373b190.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1105944391119548558",
+      "type": "Default",
+      "timestamp": "2023-05-10T19:48:10.296+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "but this is a very old example. You'll need to migrate to new API",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1106666496450629632",
+      "type": "Reply",
+      "timestamp": "2023-05-12T19:37:33.623+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes. All it does is to add the ability to search through the selection list by typing. I think the `filterFn` is to get the matched items and called each time the input box is changed.",
+      "author": {
+        "id": "566655860286160926",
+        "name": "dearrude",
+        "discriminator": "0000",
+        "nickname": "DearRude",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/566655860286160926/89fe4df3ff8940b3f79618607373b190.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1105839133705916478",
+        "channelId": "1105387979100389416",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1112092751622848696",
+      "type": "Default",
+      "timestamp": "2023-05-27T18:59:33.671+00:00",
+      "timestampEdited": "2023-05-27T19:44:02.643+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "quasar(:select, # your fields goes here #, var\"v-on:filter\" = \"filterFn\")\ndefine filterFn in Stipple.js_methods and you're good\nif you want to call filterFn everytime input box is changed you can use methods like js_computed or v-model",
+      "author": {
+        "id": "532488242327453698",
+        "name": "batman96_",
+        "discriminator": "0000",
+        "nickname": "Batman96",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/532488242327453698/9eb3275996fe01bb8732dddd0c740098.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE4F",
+            "code": "pray",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+          },
+          "count": 1,
+          "users": []
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

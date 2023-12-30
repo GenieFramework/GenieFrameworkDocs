@@ -1,0 +1,1094 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1124053802648080536",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Trying to start Genie Builder, VS Code on a Win 10 System.  Error Msg attached",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:27:41.4977534+00:00",
+  "messages": [
+    {
+      "id": "1124053802648080536",
+      "type": "Default",
+      "timestamp": "2023-06-29T19:08:30.461+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [
+        {
+          "id": "1124053802761343018",
+          "url": "https://cdn.discordapp.com/attachments/1124053802648080536/1124053802761343018/Genie_Builder_Start_Error.txt?ex=653ab92e&is=6528442e&hm=5430cf407e2552ce0a94f1bf5ac0515259a4cdc6bd299349d02726c503099938&",
+          "fileName": "Genie_Builder_Start_Error.txt",
+          "fileSizeBytes": 6351
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124069704307314859",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:11:41.712+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Rabbit38 I have run into many errors until I was able to get my Julia / Genie Builder environment working properly.  I was actually able to write my first web app only today.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1123327751592624229",
+          "name": "rabbit8944",
+          "discriminator": "0000",
+          "nickname": "Rabbit38",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1124069823110971473",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:12:10.037+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "So, I am going to give you some of the best advice that I had gotten and hopefully save you some time",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124070129437769818",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:13:23.071+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "So, VS Code terminal and your system terminal may be relying on different paths.  In my case, my path changes in VS Code would be reset each time the application started.  It was annoying.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124070641994317834",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:15:25.274+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Try running \"where julia\" (I use Linux, so I had to run \"which julia\") in both the windows command prompt and the VS Code command prompt.  Make sure that they match.\uD83D\uDC4D",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124072128472424478",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:21:19.678+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "They should display the location of the julia executable.  Then, verify that the executable is actually there.  \nThis is important, because I used juliaup install julia (originally I downloaded and manually installed).  I had to remove the old path and since VS Code kept ignoring my path changes, I just used static links to where juliaup installed the executable.\n\nI did notice that somewhere I had found instructions to add a specific path to my $PATH envioronmental variable as part of the installation process, but it ended up NOT CORRECT instructions as juliaup installed the executable in a different folder.  So, as part of due diligence, trust but verify the path to the julia executable. ✅",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124072344076427416",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:22:11.082+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "And again, I used static links to the executable, and added them to a folder which was consistenly part of the VS Code path.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124077560079323237",
+      "type": "Reply",
+      "timestamp": "2023-06-29T20:42:54.674+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm not having any luck with your suggestions.  \"where julia\" doesn't work in the REPL nor at the PS command line.",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "668141144932220968",
+          "name": "generallyclueless",
+          "discriminator": "0000",
+          "nickname": "GenerallyClueless",
+          "color": "#E74C3C",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1133579308774993920",
+              "name": "Generally Awesome",
+              "color": "#E74C3C",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1124072344076427416",
+        "channelId": "1124053802648080536",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1124078219830763713",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:45:31.971+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "You would need the regular command line.  Maybe search for julia.exe using windows explorer... as a last resort",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124078421107032125",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:46:19.959+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It was a real headache for me because VS Code kept obliterating my PATH changes... so linking is definitely the way to go",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124078821021339658",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:47:55.306+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, I could still do a lot of work in Genie Builder... and I thought running a REPL and installing packages would work... but it was actually the WRONG move for working in Genie Builder.  Stick to the Genie Builder Package Manager and save yourself a headache (because I thought it was working in a different environment)",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124079082167074958",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:48:57.568+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1124079082246774864",
+          "url": "https://cdn.discordapp.com/attachments/1124053802648080536/1124079082246774864/image.png?ex=653ad0b9&is=65285bb9&hm=c75bae59fdb966b568736412d2922ed4d79cf73b0d3f83fcacb740dec43a7e17&",
+          "fileName": "image.png",
+          "fileSizeBytes": 15690
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1124079636159135835",
+      "type": "Default",
+      "timestamp": "2023-06-29T20:51:09.65+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "When my path was not correct, Package Manager would run... but it would freeze up.  When I Launched a REPL, I could actually get further and complete an installation.  All for not.  It did not help, felt like wrong environment, and I pulled out my hair trying to fix it...... and it was a path problem afterall.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1125350999125655552",
+      "type": "Default",
+      "timestamp": "2023-07-03T09:03:06.202+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi @Rabbit38 . As @GenerallyClueless pointed out, there seems to be an issue with your PATH. Are you able to run Julia from a terminal?",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "668141144932220968",
+          "name": "generallyclueless",
+          "discriminator": "0000",
+          "nickname": "GenerallyClueless",
+          "color": "#E74C3C",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1133579308774993920",
+              "name": "Generally Awesome",
+              "color": "#E74C3C",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+        },
+        {
+          "id": "1123327751592624229",
+          "name": "rabbit8944",
+          "discriminator": "0000",
+          "nickname": "Rabbit38",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1125870770619416640",
+      "type": "Default",
+      "timestamp": "2023-07-04T19:28:29.383+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Yes.  I launched the Command Prompt, typed Julia and it started up the REPL. Thanks for your reply, I was offline yesterday.",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1126186421514944513",
+      "type": "Default",
+      "timestamp": "2023-07-05T16:22:46.421+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Good first step @Rabbit38.  Have you also done this within VS Code itself?  I have to make mention again that VS Code may not share the same environmental variables as the command prompt.  This gave me a headache because each time I restarted VS Code I would lose my PATH changes.  So, I made a link to the julia executable and placed it within a folder that VS Code and Command Prompt both shared, rather than appending to PATH. \uD83E\uDEE3",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1123327751592624229",
+          "name": "rabbit8944",
+          "discriminator": "0000",
+          "nickname": "Rabbit38",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1126227388976599071",
+      "type": "Default",
+      "timestamp": "2023-07-05T19:05:33.825+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@GenerallyClueless , I have not been able to figure out how to do what you suggest.  How do I test launching Julia in VS Code other that what I do now.  I launch VS Code and Julia is also started.  How do you see what VS Code is using?  I also see the Start Server icon, which when clicked tries to start the Genie Server causing the error as shown in the error message.  How do I accomplish your link suggestion?",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "668141144932220968",
+          "name": "generallyclueless",
+          "discriminator": "0000",
+          "nickname": "GenerallyClueless",
+          "color": "#E74C3C",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1133579308774993920",
+              "name": "Generally Awesome",
+              "color": "#E74C3C",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1126227901939978411",
+      "type": "Default",
+      "timestamp": "2023-07-05T19:07:36.125+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks @Pere.  Yes.  I launched the Command Prompt, typed Julia and it started up the REPL.",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1126230577398427649",
+      "type": "Default",
+      "timestamp": "2023-07-05T19:18:14.004+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Rabbit38 I have no doubt that you are running the terminal correctly.  I am just trying to emphasize that VS Code terminal loads different environmental variables than a terminal like command prompt.  It caused me to have a headache because I would add the julia executable to my $PATH ... but the path would always revert to a previous state.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1126230577536847992",
+          "url": "https://cdn.discordapp.com/attachments/1124053802648080536/1126230577536847992/image.png?ex=653969f6&is=6526f4f6&hm=3577c3237066a99fa6ca2afa10ac878273695efb7174ed3461ba371e21985072&",
+          "fileName": "image.png",
+          "fileSizeBytes": 27897
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1123327751592624229",
+          "name": "rabbit8944",
+          "discriminator": "0000",
+          "nickname": "Rabbit38",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1126231554281193562",
+      "type": "Default",
+      "timestamp": "2023-07-05T19:22:06.911+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, I could still perform some actions with julia, like start the genie builder server, install dependencies etc... using Pkg which made it feel like it was working correctly, but unfortunately my tools were not set up correctly.",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1126232705311457363",
+      "type": "Default",
+      "timestamp": "2023-07-05T19:26:41.338+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "⭐\n@Rabbit38 My advice, is to:\n1) Echo the PATH and make sure that VS Code terminal has the same path as your command prompt (there may be some differences)\n2) Find the actual installation directory of julia executable, and\n3) create a link to the julia executable and put it in a folder common to the PATH in VS Code terminal and command prompt\n⭐",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1123327751592624229",
+          "name": "rabbit8944",
+          "discriminator": "0000",
+          "nickname": "Rabbit38",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1126265897246523544",
+      "type": "Default",
+      "timestamp": "2023-07-05T21:38:34.912+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@GenerallyClueless I appologize for being so dense.  (1): In VS Code, if I open a new terminal and type \"echo PATH\" without the \"s, it returns \"PATH\" again without the parens.  Typing the same thing in the REPL returns a syntax error. (2): julia.exe is at: C:\\Users\\Harvey\\AppData\\Local\\Programs\\Julia-1.7.1\\bin.  (3): I'm pretty computer literate but totally clueless how to do this step.  a) how to create a link?, b) how to find the common folder?.  I'm wondering if we are in totally different computer worlds.  My VS Code About: Version: 1.79.2 (user setup)\nCommit: 695af097c7bd098fbf017ce3ac85e09bbc5dda06\nDate: 2023-06-14T08:57:04.379Z\nElectron: 22.5.7\nChromium: 108.0.5359.215\nNode.js: 16.17.1\nV8: 10.8.168.25-electron.0\nOS: Windows_NT x64 10.0.22621",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "668141144932220968",
+          "name": "generallyclueless",
+          "discriminator": "0000",
+          "nickname": "GenerallyClueless",
+          "color": "#E74C3C",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1133579308774993920",
+              "name": "Generally Awesome",
+              "color": "#E74C3C",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1126266081670074421",
+      "type": "Default",
+      "timestamp": "2023-07-05T21:39:18.882+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@GenerallyClueless on a Win 10 PC",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "668141144932220968",
+          "name": "generallyclueless",
+          "discriminator": "0000",
+          "nickname": "GenerallyClueless",
+          "color": "#E74C3C",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1133579308774993920",
+              "name": "Generally Awesome",
+              "color": "#E74C3C",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1126269557691138141",
+      "type": "Default",
+      "timestamp": "2023-07-05T21:53:07.63+00:00",
+      "timestampEdited": "2023-07-05T22:03:53.04+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Okay @Rabbit38 I think you need to type:\n    echo %Path%\nforgive me... I hardly do anything technical in Windows, so I had to look this up \uD83D\uDE33",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1123327751592624229",
+          "name": "rabbit8944",
+          "discriminator": "0000",
+          "nickname": "Rabbit38",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    },
+    {
+      "id": "1126272083752665209",
+      "type": "Default",
+      "timestamp": "2023-07-05T22:03:09.89+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I think the easiest way to create the link is to open Windows Explorer.... navigate to C:\\Users\\Harvey\\AppData\\Local\\Programs\\Julia-1.7.1\\bin\\   ... then right click on julia.exe and \"create shortcut\"..... then cut/paste the shortcut to some sensible folder in your %Path",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1127350413503504384",
+      "type": "Default",
+      "timestamp": "2023-07-08T21:28:03.737+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Problem Solved:  I noted that I was not using the lasted stable version of Julia.  I just upgraded to 1.9.2 and now I can start Genie Builder.  Thusly, I can move on to exploring and using this tool.  @GenerallyClueless and @Pere, big thanks for your help.  BTW:  I found a method that works for getting the VS Code PATH on my system:  In VSCode, Preferences, Settings, type in the Search Box: julia.executablePath.",
+      "author": {
+        "id": "1123327751592624229",
+        "name": "rabbit8944",
+        "discriminator": "0000",
+        "nickname": "Rabbit38",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDCAA",
+            "code": "muscle",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4aa.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "668141144932220968",
+              "name": "generallyclueless",
+              "discriminator": "0000",
+              "nickname": "GenerallyClueless",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "668141144932220968",
+          "name": "generallyclueless",
+          "discriminator": "0000",
+          "nickname": "GenerallyClueless",
+          "color": "#E74C3C",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1133579308774993920",
+              "name": "Generally Awesome",
+              "color": "#E74C3C",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+        },
+        {
+          "id": "743412727464067154",
+          "name": "pere_g",
+          "discriminator": "0000",
+          "nickname": "Pere",
+          "color": "#71DAFF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1007312585995071698",
+              "name": "GENIE TEAM",
+              "color": "#71DAFF",
+              "position": 8
+            },
+            {
+              "id": "1032698093654777886",
+              "name": "Data Science Advocate",
+              "color": "#E91E63",
+              "position": 5
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+        }
+      ]
+    },
+    {
+      "id": "1127367769470533703",
+      "type": "Default",
+      "timestamp": "2023-07-08T22:37:01.722+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Good to hear @Rabbit38 thanks for the notice",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1123327751592624229",
+          "name": "rabbit8944",
+          "discriminator": "0000",
+          "nickname": "Rabbit38",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+        }
+      ]
+    }
+  ],
+  "messageCount": 27
+}

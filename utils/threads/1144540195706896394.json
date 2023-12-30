@@ -1,0 +1,370 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1144540195706896394",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Connect app variable to an observable",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:11:15.5706347+00:00",
+  "messages": [
+    {
+      "id": "1144540195706896394",
+      "type": "Default",
+      "timestamp": "2023-08-25T07:54:07.185+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Is there a way to `Observable.connect!` a variable from an `@app` body to an `Observable`?\n\nSomething like this:\n```\nusing Observables, MyModule\n\n@app begin\n    @in variable = 0\nend\n\nconnect!(MyModule.some_observable, variable)\n```",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1144550406198935683",
+      "type": "Default",
+      "timestamp": "2023-08-25T08:34:41.556+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This is interesting, have you tried doing this inside a handler? Something like\n\n@onchange isready begin\nconnect!(observable, variable)\nend",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1144551624967208982",
+      "type": "Default",
+      "timestamp": "2023-08-25T08:39:32.133+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Just to give some insight, we use Observable's `on`to attach callbacks to a variable. The @app macro generates a `handlers`function that attaches the callbacks. \n\n```julia\njulia> @macroexpand @app Model begin @out i = 10; @onchange i begin; print(i); end end\nquote\n    #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:585 =#\n    begin\n        #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:659 =#\n        Stipple.ReactiveTools.delete_events(Model)\n        #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:661 =#\n        function handlers(__model__)\n            #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:661 =#\n            #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:662 =#\n            #= REPL[57]:1 =#\n            begin\n                #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:842 =#\n                on(__model__.i) do i\n                    #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:843 =#\n                    #= REPL[57]:1 =#\n                    print(i)\n                end\n            end\n            #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:664 =#\n            __model__\n        end\n        #= /Users/pere/.julia/packages/Stipple/a9IBQ/src/ReactiveTools.jl:666 =#\n        (Model, handlers)\n    end\nend\n\n```\n\nThis `handlers`function is called at a later stage when the page's __model__ is instantiated",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1045283774247751770",
+          "name": "ap",
+          "discriminator": "1201",
+          "nickname": "ap",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ]
+    },
+    {
+      "id": "1144552575983702036",
+      "type": "Default",
+      "timestamp": "2023-08-25T08:43:18.873+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "but would `isready` be updated only once? Because the `connect!`ion needs to happen only once..",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1144552908780736563",
+      "type": "Default",
+      "timestamp": "2023-08-25T08:44:38.218+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yes, isready comes by default and changes to true when the page is finished loading. It'll be updated on page reload only",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1144553739437490287",
+      "type": "Default",
+      "timestamp": "2023-08-25T08:47:56.262+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ok!!! awesome. trying it",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1144556375054237736",
+      "type": "Default",
+      "timestamp": "2023-08-25T08:58:24.642+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "nah, the observable `variable` is stripped off inside the scope of `@onchange`. So in my case it's no longer `Observable{Bool}` it's just `Bool` (e.g. `false`). Then the `connect!` fails because it connects two observables.",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1144558420683391076",
+      "type": "Default",
+      "timestamp": "2023-08-25T09:06:32.358+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I see, that is right. I guess then we'd have to add the connect! call to the list of functions ( like `on`) executed when instantiating the model with `handlers`...I don't know how to do that yet, but I'm currently studying the Stipple source so I might be able to help soon",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "679661866166910986",
+              "name": "yakir12.",
+              "discriminator": "0000",
+              "nickname": "yakir12",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1144558581824372797",
+      "type": "Default",
+      "timestamp": "2023-08-25T09:07:10.777+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If this is something you need, please open an issue on the Stipple.jl repo with a MWE and we'll look into it",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1145688224107343943",
+      "type": "Default",
+      "timestamp": "2023-08-28T11:55:58.485+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "done: https://github.com/GenieFramework/Stipple.jl/issues/218",
+      "author": {
+        "id": "679661866166910986",
+        "name": "yakir12.",
+        "discriminator": "0000",
+        "nickname": "yakir12",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/679661866166910986/f3ed85f7a3e27b92039307687c03613a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Allow to connect! app variable to an observable · Issue #218 · Geni...",
+          "url": "https://github.com/GenieFramework/Stipple.jl/issues/218",
+          "timestamp": null,
+          "description": "[this is from a discussion on Discord] Is there a way to Observable.connect! a variable from an @app body to an Observable? Something like this: using Observables, MyModule @app begin @in variable ...",
+          "color": "#1E2327",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 10
+}

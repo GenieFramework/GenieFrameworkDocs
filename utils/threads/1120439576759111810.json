@@ -1,0 +1,265 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1120439576759111810",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Nested loops don't work??????",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:21:45.6801916+00:00",
+  "messages": [
+    {
+      "id": "1120439576759111810",
+      "type": "Default",
+      "timestamp": "2023-06-19T19:46:51.86+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Experimental changes to TodosMVC sample app.\nAdded this to a template HTML view file:\n\n<% for_each(hierarchy) do (ont_text, surveys) %>\n  <p>Onit: $(ont_text) </p>      \n  <% for_each(surveys) do (survey_text, questions) %>\n    <p>Survey: $(survey_text)</p>\n  <% end %>\n<% end %>\n\nMany experiments. Inner most loop always works even 4 levels deep, but only ONCE, which seems to indicate the outer loops don't.\nPlease note, using \"for_each\" here. Nested \"for\" loops don't work AT ALL.\n\nI searched for 'nested loops' here, but got no results.\nSeems it's just me. What am I missing?\n\nOh, and this code in Julia, works perfectly with for_each or for:\n\nfor_each(hierarchy) do (ont_text, surveys)\n  println(\"Onit:\", ont_text)     \n      for_each(surveys) do (survey_text, questions)\n      println(\"Survey: \", survey_text)\n        for_each(questions) do (question_text, answers)\n        println(\"Question: \", question_text)\n          for_each(answers) do (answer)\n            println(answer)\n          end\n        end\n      end  \n  end",
+      "author": {
+        "id": "574109887471157250",
+        "name": "iamcomcy",
+        "discriminator": "0000",
+        "nickname": "iamcomcy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/574109887471157250/7f8a992da1c55d167f6bf2d6d98da396.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC40",
+            "code": "eyes",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1120717371657691186",
+      "type": "Default",
+      "timestamp": "2023-06-20T14:10:43.325+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks for bringing this up. I've shared this with our devs and they would like to follow up on this. Could you open an issue on GitHub with a minimum working example to highlight the issue?\n\nhttps://github.com/GenieFramework/Genie.jl/issues",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Issues · GenieFramework/Genie.jl",
+          "url": "https://github.com/GenieFramework/Genie.jl/issues",
+          "timestamp": null,
+          "description": "\uD83E\uDDDEThe highly productive Julia web framework. Contribute to GenieFramework/Genie.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/Z6eYhVYTMioEBYSzHHHFJ3q8-uJsCgW3WJFnEvRbBUg/https/repository-images.githubusercontent.com/52076467/b322ed80-bc5a-11e9-807a-9b53749c40ef",
+            "width": 794,
+            "height": 399
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1120969655444578375",
+      "type": "Default",
+      "timestamp": "2023-06-21T06:53:12.467+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Sure, give me a link and I will certainly do that",
+      "author": {
+        "id": "574109887471157250",
+        "name": "iamcomcy",
+        "discriminator": "0000",
+        "nickname": "iamcomcy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/574109887471157250/7f8a992da1c55d167f6bf2d6d98da396.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1121001449279721472",
+      "type": "Default",
+      "timestamp": "2023-06-21T08:59:32.708+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "please check the link in my post above",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1121011807566450759",
+      "type": "Default",
+      "timestamp": "2023-06-21T09:40:42.316+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Sorry, missed that",
+      "author": {
+        "id": "574109887471157250",
+        "name": "iamcomcy",
+        "discriminator": "0000",
+        "nickname": "iamcomcy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/574109887471157250/7f8a992da1c55d167f6bf2d6d98da396.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1121015802154451004",
+      "type": "Default",
+      "timestamp": "2023-06-21T09:56:34.7+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/GenieFramework/Genie.jl/issues/654",
+      "author": {
+        "id": "574109887471157250",
+        "name": "iamcomcy",
+        "discriminator": "0000",
+        "nickname": "iamcomcy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/574109887471157250/7f8a992da1c55d167f6bf2d6d98da396.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Nested loops don't work???? · Issue #654 · GenieFramework/Genie.jl",
+          "url": "https://github.com/GenieFramework/Genie.jl/issues/654",
+          "timestamp": null,
+          "description": "Describe the bug I am not sure this would be called a bug, but perhaps a critical feature oversite??? Anyway, it shouldn't be this way. A clear and concise description of what the bug is: Exper...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/oMBppjaObS8dX0HkneFDZOqggrgehJUWpCjgzKRbxsk/https/opengraph.githubassets.com/98b837552490c04709cd87796ea0d0c6ea402993c5af92b124d47cb278f71937/GenieFramework/Genie.jl/issues/654",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC9B",
+            "code": "yellow_heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f49b.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

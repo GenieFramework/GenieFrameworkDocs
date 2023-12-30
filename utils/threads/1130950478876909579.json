@@ -1,0 +1,92 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1130950478876909579",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Upload .json file and use as dictionary in code",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:27:48.7045902+00:00",
+  "messages": [
+    {
+      "id": "1130950478876909579",
+      "type": "Default",
+      "timestamp": "2023-07-18T19:53:26.208+00:00",
+      "timestampEdited": "2023-07-19T16:17:06.565+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I am developing a Genie MVC app, and I'm trying to upload a .json file with a form and convert the file to a dictionary for use in a controller method.\n\nThe following is my HTML form to upload the file with the name \"input\":\n\n```\n <form method=\"POST\" action=\"/runs\" enctype=\"multipart/form-data\">\n   <div class=\"input-group mb-3\">\n     <input type=\"file\" id=\"files\" class=\"form-control\" accept=\".json\" name=\"input\"/><br/>\n     <input type=\"submit\" class=\"btn btn-primary\" value=\"Run REopt\"/>\n   </div>\n </form>\n```\n\nThis routes to the /runs route:\n```route(\"/runs\", RunsController.create, method = POST)```\n\nWhich calls the RunsController create() method:\n```\nfunction create()\n    input = filespayload(\"input\")\n    input_dict = JSON.parse(input)\n    run_inst = Run(input)\n    if save(run_inst)\n      redirect(\"/?success=Valid .json file successfully uploaded\")\n    else\n      redirect(\"/?error=Could not save input&input=$(filespayload(\"input\"))\")\n    end\nend\n```\n\nThe filespayload(\"input\") is a Genie.Input.HttpFile, and I don't know how to parse this into a json or dictionary (the code above errors on input_dict = JSON.parse(input) because JSON cannot parse the HttpFile. Can you point me in the right direction? Thanks!",
+      "author": {
+        "id": "1112580743995064361",
+        "name": "energybill",
+        "discriminator": "0000",
+        "nickname": "energybill",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1132057263775940798",
+      "type": "Default",
+      "timestamp": "2023-07-21T21:11:24.291+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I figured it out: dict = JSON.parse(IOBuffer(filespayload(\"input\").data))",
+      "author": {
+        "id": "1112580743995064361",
+        "name": "energybill",
+        "discriminator": "0000",
+        "nickname": "energybill",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

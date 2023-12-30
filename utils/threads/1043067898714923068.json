@@ -1,0 +1,106 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1043067898714923068",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "How do i create a query for PostgreSQL?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:16:26.5097951+00:00",
+  "messages": [
+    {
+      "id": "1043067898714923068",
+      "type": "Default",
+      "timestamp": "2022-11-18T07:39:26.318+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I tried looking at the documentation, but apparently its incompleted. So,i really need to make queries.",
+      "author": {
+        "id": "340614394302169098",
+        "name": "itsrakanott",
+        "discriminator": "0000",
+        "nickname": "rakanott",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/340614394302169098/6cd1d4597124f232e695536b0a8d4bc8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1046123013927616604",
+      "type": "Default",
+      "timestamp": "2022-11-26T17:59:22.546+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sorry you'll have to go though API docs atm. SearchLight documentation is not the top priority. Too many things in the queue and keep getting delayed. You can look at some of the example projects \n\nFor example this: \nhttps://github.com/GenieFramework/PkgVizBoard/blob/master/app/resources/stats/Stats.jl\n\nand few others\n\nThere's also a Genie Book which talks about building a Todo list app(which uses Genie and SL): https://www.amazon.com/Development-Julia-Genie-hands-high-performance/dp/180181113X/\n\nSorry for limited docs. This will be definitely fixed in future but due to lack of resources now we can't",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "PkgVizBoard/Stats.jl at master · GenieFramework/PkgVizBoard",
+          "url": "https://github.com/GenieFramework/PkgVizBoard/blob/master/app/resources/stats/Stats.jl",
+          "timestamp": null,
+          "description": "\uD83D\uDCE6 Package download stats visualisation app based on [Stipple Ecosystem] Genie.jl, Stipple.jl, StippleUI.jl, StipplePlotly.jl etc  - PkgVizBoard/Stats.jl at master · GenieFramework/PkgVizBoard",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/PvtNkvIrrUiOq0rSwVezZC8HD2O3LEblriXgPrQBk2U/https/opengraph.githubassets.com/b7676eb5565013ba865e033512d61dea662cf43b500e2e85c88e4b67f77f7617/GenieFramework/PkgVizBoard",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "Web Development with Julia and Genie: A hands-on guide to high-perf...",
+          "url": "https://www.amazon.com/Development-Julia-Genie-hands-high-performance/dp/180181113X/",
+          "timestamp": null,
+          "description": "Web Development with Julia and Genie: A hands-on guide to high-performance server-side web development with the Julia programming language",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/cK_2U2uy26_zVKnFXYooVpSBRoBlWNpLX0Eo-7SEEWw/https/m.media-amazon.com/images/I/4122z0Bs3eL._SR600%252c315_PIWhiteStrip%252cBottomLeft%252c0%252c35_SCLZZZZZZZ_FMpng_BG255%252c255%252c255.jpg",
+            "width": 600,
+            "height": 350
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 2
+}

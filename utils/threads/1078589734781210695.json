@@ -1,0 +1,153 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1078589734781210695",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Event Handler in Genie",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:13:31.3102219+00:00",
+  "messages": [
+    {
+      "id": "1078589734781210695",
+      "type": "Default",
+      "timestamp": "2023-02-24T08:10:32+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello, I'm currently implementing a webpage using Genie. I have a button on my webpage and as soon as it gets pressed a julia function shall be executed. \n\nThe code and html looks similar to this: \n\n`values = Dict([(\"A\", 1), (\"B\", 2)])\n\n\"<button class=\\\"add_button\\\" onclick=$(interactively_add_view_element(values))> + </button>\")\n\nfunction interactively_add_view_element(values::Dict())\n   println(values[\"A\"])\nend`\n\nHowever, the function is called when loading the page and not on the click event.",
+      "author": {
+        "id": "714383271357579394",
+        "name": "Juliane Müller-Sielaff",
+        "discriminator": "6406",
+        "nickname": "Juliane Müller-Sielaff",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/714383271357579394/30cc409ae458b6d9514914cc8fe87fbb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1079128443511394335",
+      "type": "Default",
+      "timestamp": "2023-02-25T19:51:10.17+00:00",
+      "timestampEdited": "2023-02-25T19:51:44.987+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The reason why the code is executed when the page loads is because code interpolations with $(...) and <% ... %> are executed on load.\n\nOne way to trigger a function when a button is pressed is by binding it to a variable and executing code when the variable changes. Like this:\n\n```julia\nusing GenieFramework\n@genietools\n\nvdict = Dict([(\"A\", 1), (\"B\", 2)])\n\nfunction interactively_add_view_element(vd)\n    println(vd[\"A\"])\nend\n\n@handlers begin\n    @in btn = false\n    @onchange btn begin\n        interactively_add_view_element(vdict)\n    end\n\nend\n```\n\n```html\n<button class=\"add_button\" v-on:click='btn = !btn'> +</button>\n```",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1082810765255377026",
+      "type": "Default",
+      "timestamp": "2023-03-07T23:43:24.088+00:00",
+      "timestampEdited": "2023-03-07T23:43:57.028+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "the syntax is `btn(\"Label\", icon = \"mail\", @click(:btn))`",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1082811277161795614",
+      "type": "Default",
+      "timestamp": "2023-03-07T23:45:26.136+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It might be a problem that `btn` is a fieldname and a function name, but I think that this case is already covered. If it is not working try renaming the button field to `:mybutton`",
+      "author": {
+        "id": "960642755799941150",
+        "name": "hhaensel",
+        "discriminator": "0000",
+        "nickname": "hhaensel",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/960642755799941150/8454099b3f43462890d75bc9c4cd572d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

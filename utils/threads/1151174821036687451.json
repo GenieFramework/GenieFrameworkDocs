@@ -1,0 +1,181 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1151174821036687451",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "GenieBuilder crashes when starting a server?",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:14:31.8049998+00:00",
+  "messages": [
+    {
+      "id": "1151174821036687451",
+      "type": "Default",
+      "timestamp": "2023-09-12T15:17:45.129+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi, I'm trying to build a web interface with GenieBuilder and am following this tutorial: https://www.youtube.com/watch?v=FQFD2YYqtpA\n\nAfter installing the vscode plugin I see the Genie Builder tabs in vscode and clicked on `Start Server`. A terminal opens in the bottom tab and the attached error comes up.\n\nAny suggestions how to start genie builder?",
+      "author": {
+        "id": "731121383509327954",
+        "name": "rkube",
+        "discriminator": "0000",
+        "nickname": "rkube",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/731121383509327954/dc83e532f6ff6aabca3f21483c88ccb5.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1151174821342875762",
+          "url": "https://cdn.discordapp.com/attachments/1151174821036687451/1151174821342875762/message.txt?ex=65411a99&is=652ea599&hm=840a3d04a598caa09a05c6ada58d270fe2390cebe9f59f1f321b20200c3f76dc&",
+          "fileName": "message.txt",
+          "fileSizeBytes": 6427
+        }
+      ],
+      "embeds": [
+        {
+          "title": "Genie Builder v0.2 Tutorial",
+          "url": "https://www.youtube.com/watch?v=FQFD2YYqtpA",
+          "timestamp": null,
+          "description": "In this quick tutorial, we build a data app using Julia language and the new Genie Builder v.0.2.\n\nGenie Builder v0.2 - what's new?\n- We've integrated a new, more productive API to build apps with 50% less backend code.\n- The no-code UI editor is more powerful and polished, with automatic loading of binding variables and other improvements.\n- Th...",
+          "color": "#FF0000",
+          "author": {
+            "name": "Genie",
+            "url": "https://www.youtube.com/channel/UC9uNotBXDukCqnNbbei_kVw"
+          },
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/lCbWYGcv52PZJPqgeNYb7fBxkWEaceJt4kHEXdRDYuo/https/i.ytimg.com/vi/FQFD2YYqtpA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1151178190249791538",
+      "type": "Default",
+      "timestamp": "2023-09-12T15:31:08.412+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "This error has been reported by another user on Windows and we're trying to reproduce it. Can you follow the steps in this issue and post a new message with the requested info?\n\nhttps://github.com/GenieFramework/GenieBuilder_GenieCloud_Issues/issues/15#issuecomment-1705614893",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Genie Builder crashes on startup on Windows · Issue #15 · GenieFram...",
+          "url": "https://github.com/GenieFramework/GenieBuilder_GenieCloud_Issues/issues/15",
+          "timestamp": null,
+          "description": "A user reported that he's not able to start GB as it crashes when running rungb() Error log: PS C:\\Users\\w600048\\.vscode\\extensions\\geniebuilder.geniebuilder-0.4.11\\scripts> echo \"GB Ve...",
+          "color": "#1E2327",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1151179978684256368",
+      "type": "Default",
+      "timestamp": "2023-09-12T15:38:14.808+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks, I didn't find this issue when googling the error. I had `julia` set as an alias in my .bashrc, but it was not in the path. After updating `$PATH` to include the directory with the julia binary, it looks like it worked.",
+      "author": {
+        "id": "731121383509327954",
+        "name": "rkube",
+        "discriminator": "0000",
+        "nickname": "rkube",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/731121383509327954/dc83e532f6ff6aabca3f21483c88ccb5.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1151180573000347692",
+      "type": "Default",
+      "timestamp": "2023-09-12T15:40:36.504+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Perfect, thanks for reporting!",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}

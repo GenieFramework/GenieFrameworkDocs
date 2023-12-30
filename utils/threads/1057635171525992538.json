@@ -1,0 +1,152 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1057635171525992538",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Using Snoop(Pre)Compile with Genie",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:27:59.2731639+00:00",
+  "messages": [
+    {
+      "id": "1057635171525992538",
+      "type": "Default",
+      "timestamp": "2022-12-28T12:24:34.803+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Are there any examples or guidelines available for using SnoopPrecompile or precompile-files created by SnoopCompile together with Genie?  I am trying to speed up the startup process of my app, which could benefit from some more precompiled methods. However, the way that Genie apps are loaded (via `Genie.loadapp` etc) hides away internal modules defined in the `lib` folder, or things going on in the `routes.jl` file. This in turn prevents the precompilation mechanism to find the `UserApp` module or function definitions.",
+      "author": {
+        "id": "929845342080495647",
+        "name": "sdobber",
+        "discriminator": "0000",
+        "nickname": "sdobber",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1058034430792446022",
+      "type": "Default",
+      "timestamp": "2022-12-29T14:51:05.63+00:00",
+      "timestampEdited": "2022-12-29T14:51:26.626+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No don't have a demo with SnoopCompile\n\nWe have one with package compiler\n\nGenie,Stipple,Searchlight app:- https://github.com/GenieFramework/PkgVizBoard\n\nGenieBuilder app:-\nhttps://github.com/GenieFramework/DockerizedGBApp/tree/packagecompiler",
+      "author": {
+        "id": "751373833872605184",
+        "name": "abhimanyuaryan",
+        "discriminator": "0000",
+        "nickname": "abhimanyuaryan",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - GenieFramework/PkgVizBoard: \uD83D\uDCE6 Package download stats visua...",
+          "url": "https://github.com/GenieFramework/PkgVizBoard",
+          "timestamp": null,
+          "description": "\uD83D\uDCE6 Package download stats visualisation app based on [Stipple Ecosystem] Genie.jl, Stipple.jl, StippleUI.jl, StipplePlotly.jl etc  - GitHub - GenieFramework/PkgVizBoard: \uD83D\uDCE6 Package download stats vi...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/PvtNkvIrrUiOq0rSwVezZC8HD2O3LEblriXgPrQBk2U/https/opengraph.githubassets.com/b7676eb5565013ba865e033512d61dea662cf43b500e2e85c88e4b67f77f7617/GenieFramework/PkgVizBoard",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "GitHub - GenieFramework/DockerizedGBApp at packagecompiler",
+          "url": "https://github.com/GenieFramework/DockerizedGBApp/tree/packagecompiler",
+          "timestamp": null,
+          "description": "Genie \uD83E\uDDDE‍♂️ on Docker \uD83D\uDC33. Contribute to GenieFramework/DockerizedGBApp development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/xBsQye-yAq_uQMz_RUpakjMpl4nM13-N9IVd3ZZ1Pi8/https/opengraph.githubassets.com/1e5278b742ef96e4fd413d8a75bffdab4a86a59d0fa59f0d2ce9b44c36b153e3/GenieFramework/DockerizedGBApp",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1058072565261807726",
+      "type": "Default",
+      "timestamp": "2022-12-29T17:22:37.596+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks! The setup in the second example looks very close to what I might need \uD83D\uDC4D",
+      "author": {
+        "id": "929845342080495647",
+        "name": "sdobber",
+        "discriminator": "0000",
+        "nickname": "sdobber",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "751373833872605184",
+              "name": "abhimanyuaryan",
+              "discriminator": "0000",
+              "nickname": "abhimanyuaryan",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/751373833872605184/5d7fb725313bd6c5d844cb9f2a578f6e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 3
+}

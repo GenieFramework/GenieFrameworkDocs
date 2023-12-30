@@ -1,0 +1,47 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1159982109524504636",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Basic hosting question",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:09:20.7715292+00:00",
+  "messages": [
+    {
+      "id": "1159982109524504636",
+      "type": "Default",
+      "timestamp": "2023-10-06T22:34:46.336+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "New user here. This is probably more basic than Genie knowledge, but here goes:\n\nI'm trying to create a route that sends an HTTP request, and I want that route to run on my new domain, but I keep getting \n`ERROR: cannot bind to port; may already be in use or access denied`\n\nHere's what I tried:\n```\nroute(\"/syms\",method = GET) do\n  syms = HTTP.request(my request with my api key)\nend\nip = \"23.32...\"\nup(8000,ip,async = false)\n```\n\nI also don't know where to put the server hostname or which port to use.",
+      "author": {
+        "id": "1100881253194027080",
+        "name": "ethanrleonard_00311",
+        "discriminator": "0000",
+        "nickname": "EthanRLeonard",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 1
+}

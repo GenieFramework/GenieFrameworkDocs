@@ -1,0 +1,524 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1153184557068193803",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Using Plots.jl to show a graph",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:27:57.0826242+00:00",
+  "messages": [
+    {
+      "id": "1153184557068193803",
+      "type": "Default",
+      "timestamp": "2023-09-18T04:23:43.538+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi,\nI'm still learning the GenieFramework, and I want to plot the behavior of the function `sine(x,A,k,ϕ) = A*sin(k*x + ϕ)` as`A`, `k` or `ϕ` changes, as an example. I want to use Plots.jl because I'm more familiar with this package.\n\nFor app.jl \n```\nmodule App\n# set up Genie development environment\nusing GenieFramework\n@genietools\n\ninclude(\"app/Sine.jl\")\nusing .Sine\n\nimport PlotlyBase, PlotlyJS, Plots\nPlots.plotlyjs()\n\n# Define the range of x values\nxs = range(-8π,8π,length=1000)\n\n# Define a function to update the plot\nfunction update_plot(A,k,ϕ)\n    result = Sine.sine.(xs,A,k,ϕ)\n    plot(xs,result,show=false)\n\n    # Return the plot for display\n    return PlotlyJS.plotly(p)\nend\n\n# Define default values for reactive variables\nA_default = 0.0\nk_default = 0.0\nϕ_default = 0.0\n\n# add reactive code to make the UI interactive\n@app begin\n    # reactive variables are tagged with @in and @out\n    @in A = 0.0\n    @in k = 0.0\n    @in ϕ = 0.0\n    @out traces = update_plot(A,k,ϕ)\n    \n    @onchange A, k, ϕ begin\n        traces = update_plot(A,k,ϕ)\n    end\nend\n\n# register a new route and the page that will be\n# loaded on access\n@page(\"/\", \"app.jl.html\")\nend\n```\n\nand finally for app.jl.html\n\n```\n<h4>\n</h4>\n<h1> Sine function</h1>\n<div class=\"row\">\n    <div class=\"st-col col-12 col-sm st-module\">\n        <p>\n        </p>\n        <h2>A</h2>\n        <p></p>\n        <q-slider v-model=\"A\" :min=\"0.0\" :max=\"10.0\"></q-slider>\n    </div>\n    <div class=\"st-col col-12 col-sm st-module\">\n        <p>\n        </p>\n        <h2>k</h2>\n        <p></p>\n        <q-slider v-model=\"k\"></q-slider>\n    </div>\n    <div class=\"st-col col-12 col-sm st-module\">\n        <p>\n        </p>\n        <h2>Φ</h2>\n        <p></p>\n        <q-slider v-model=\"ϕ\" :min=\"-3\" :max=\"3\"></q-slider>\n    </div>\n</div>\n<plotly :data=\"traces\"></plotly>\n```\n\nBut now I got a 404 error and this error: `ERROR: UndefVarError: `A` not defined`. \nWhat I'm doing wrong?",
+      "author": {
+        "id": "814195486973362328",
+        "name": ".ceboc",
+        "discriminator": "0000",
+        "nickname": "Ceboc54",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153315032600420462",
+      "type": "Default",
+      "timestamp": "2023-09-18T13:02:11.329+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Welcome @Ceboc54 \uD83D\uDC4F",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "814195486973362328",
+          "name": ".ceboc",
+          "discriminator": "0000",
+          "nickname": "Ceboc54",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+        }
+      ]
+    },
+    {
+      "id": "1153317508703604777",
+      "type": "Default",
+      "timestamp": "2023-09-18T13:12:01.678+00:00",
+      "timestampEdited": "2023-09-18T13:38:03.293+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Are you using GenieBuilder plugin for VS Code?  If not, then I suggest you try it.  It's a nice GUI designer.  Once you get it up and running, it's a very nice and organized way of building projects.  Very easy to use.  You can right click on the project and run package manager for the project rather than using includes.  \n\n\nIn your Julia app... it looks like you defining the handlers without an @handlers begin.... end block.\n\nusing \n\n\n@genietools\n@handlers begin # initialize reactive variables here\n     @in A = A_default # reactive variable used in slider\n     @in B = B_default # reactive variable used in another slider\n     @out plot_data = 0 # reactive variable holding plot data to be sent from jl to js plot.\n     .....\n      @onchange A, k, phi begin  # event handler block\n            traces = update_plot(A,k,phi)\n        end # end onchange block\n\n      @onchange AnotherVar begin\n           Do=\"more stuff\"\n        end # end onchange block.. like a RESET button, for example\n\n end # end handlers block\n\n\n@page(\"/\", \"app.jl.html\")\nend\n  \n  Next..... your plot.....\nYou want to pass the plot data to the plot object.\n\nI do this using something along the lines of using a variable \"plot_data\" .  Reactive variables must be defined and initialized within the @handlers block using @out macro in the case of plot_data or @in slider_var for sliders.  \n\n\n\n\nIn the HTML code, you have to add the reactive variable in the HTML for the elements where they are used.  For example:\n<q-slider id=\"OA20x\" v-model=\"A\" :min=\"-5\" :max=\"5\" :label=\"true\" :step=\"0.01\"></q-slider>\n\n        <div class=\"st-col col-12 col-sm st-module\" style=\"max-width: 80%;\">\n            <h2>Plot of {{mySinEqn}}</h2>\n            <plotly :data=\"plot_data\"></plotly>\n        </div>\n\nNote: Pay attention to how reactive variables are used in HTML\nv-model=A.... not v-model:=\"A\"\nplotly :data=\"plot_data\"  \n\n (using :=\"A\" would make this interpreted as a quasar variable, not a reactive variable.... if I remember correctly)",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153325171382419456",
+      "type": "Default",
+      "timestamp": "2023-09-18T13:42:28.603+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Basically all of the work that I have done in Genie has been using GenieBuilder so my code probably shows that tendency.  I do not know enough about HTML/CSS/JS/ other front end stuff and was never really interested to learn it.  For me, GenieBuilder is really EXCELLENT because it takes care of all of this stuff that I don't like \uD83D\uDE0D .\n\nThank you GENIE & GENIE BUILDER DEVS!!!",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153547720456413245",
+      "type": "Reply",
+      "timestamp": "2023-09-19T04:26:48.437+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you!",
+      "author": {
+        "id": "814195486973362328",
+        "name": ".ceboc",
+        "discriminator": "0000",
+        "nickname": "Ceboc54",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "668141144932220968",
+          "name": "generallyclueless",
+          "discriminator": "0000",
+          "nickname": "GenerallyClueless",
+          "color": "#E74C3C",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1133579308774993920",
+              "name": "Generally Awesome",
+              "color": "#E74C3C",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1153325171382419456",
+        "channelId": "1153184557068193803",
+        "guildId": "774897545717219328"
+      }
+    },
+    {
+      "id": "1153555777232056361",
+      "type": "Default",
+      "timestamp": "2023-09-19T04:58:49.322+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "It helps me understand what's going on in my code. And I discover something, I don't know how to extract the traces from a plot if it was made with Plots.jl. \n\nNow, for the next code, if I comment the parts that involve the update_plot function, my code works. But when I tried to use the ideas from the Genie reference, I got an error. So I think the error comes from getting the traces. \n\nNow, I realized how to plot such function, but using HTML in a very manual way. My idea is to later be able to plot more compex things, but to do so I need to plot using Plots.jl. In that way, I need a manner to translate a plot to something that Plotly understands. \n\nThe next version of the code works, but not as I intended.",
+      "author": {
+        "id": "814195486973362328",
+        "name": ".ceboc",
+        "discriminator": "0000",
+        "nickname": "Ceboc54",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153555813420519545",
+      "type": "Default",
+      "timestamp": "2023-09-19T04:58:57.95+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "app.jl\n```\nmodule App\n# set up Genie development environment\nusing GenieFramework\n@genietools\n\ninclude(\"app/Sine.jl\")\nusing .Sine\n\nimport PlotlyBase, PlotlyJS, Plots\nPlots.plotlyjs()\n\n# Define the range of x values\nxs = range(-8π,8π,length=1000)\n\n\nfunction plotly_traces(plt::Plots.Plot)\n    traces = PlotlyBase.GenericTrace[]\n    for series_dict in Plots.plotly_series(plt)\n        plotly_type = pop!(series_dict, :type)\n        push!(traces, PlotlyBase.GenericTrace(plotly_type; series_dict...))\n    end\n    return traces\nend\n\n# Define a function to update the plot\nfunction update_plot(A,k,ϕ)\n    return Sine.sine.(xs,A,k,ϕ)\n    #p = Plots.plot(xs,result,show=false)\n\n    # Return the plot for display\n    #return plotly_traces(p)\nend\n\n# Define default values for reactive variables\nA_default = 0.0\nk_default = 0.0\nϕ_default = 0.0\n\n# add reactive code to make the UI interactive\n@app begin\n    # reactive variables are tagged with @in and @out\n    @in A = A_default\n    @in k = k_default\n    @in ϕ = ϕ_default\n    @out ys = update_plot(0.0,0.0,0.0)\n    @out xs = xs\n    \n    @onchange A, k, ϕ begin\n        ys = update_plot(A,k,ϕ)\n        @show A\n    end\nend\n\n# register a new route and the page that will be\n# loaded on access\n@page(\"/\", \"app.jl.html\")\nend\n```",
+      "author": {
+        "id": "814195486973362328",
+        "name": ".ceboc",
+        "discriminator": "0000",
+        "nickname": "Ceboc54",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153555824736735242",
+      "type": "Default",
+      "timestamp": "2023-09-19T04:59:00.648+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "app.jl.html\n```\n<h4>\n</h4>\n<h1> Sine function</h1>\n<div class=\"row\">\n    <div class=\"st-col col-12 col-sm st-module\">\n        <p>\n        </p>\n        <h2>A = {{A}}</h2>\n        <p></p>\n        <q-slider v-model=\"A\" :min=\"0.0\" :max=\"10.0\" :label=\"true\" :step=\"0.1\" :label-always=\"true\"></q-slider>\n    </div>\n    <div class=\"st-col col-12 col-sm st-module\">\n        <p>\n        </p>\n        <h2>k = {{k}}</h2>\n        <p></p>\n        <q-slider v-model=\"k\" :label=\"true\" :min=\"0\" :max=\"10\" :step=\"0.1\" :label-always=\"true\"></q-slider>\n    </div>\n    <div class=\"st-col col-12 col-sm st-module\">\n        <p>\n        </p>\n        <h2>ϕ = {{ϕ}}</h2>\n        <p></p>\n        <q-slider v-model=\"ϕ\" :min=\"-3\" :max=\"3\" :label=\"true\" :step=\"0.1\" :label-always=\"true\"></q-slider>\n    </div>\n</div>\n<plotly :data=\"[{x: xs,\n    y: ys,\n    mode: 'lines',\n    type: 'lines',\n    marker: { color: 'rgb(201, 90, 218)', size: 12 },\n    line: { color: 'rgba(61, 185, 100, 0.8)', width: 1.5 }\n}]\"></plotly>\n```",
+      "author": {
+        "id": "814195486973362328",
+        "name": ".ceboc",
+        "discriminator": "0000",
+        "nickname": "Ceboc54",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153555947516600341",
+      "type": "Default",
+      "timestamp": "2023-09-19T04:59:29.921+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sine.jl \n```\nmodule Sine\nexport sine\n\nsine(x,A,k,ϕ) = A*sin(k*x + ϕ)\n\nend\n```",
+      "author": {
+        "id": "814195486973362328",
+        "name": ".ceboc",
+        "discriminator": "0000",
+        "nickname": "Ceboc54",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153556120015745024",
+      "type": "Default",
+      "timestamp": "2023-09-19T05:00:11.048+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Look that I'm not using at all the function plotly_traces",
+      "author": {
+        "id": "814195486973362328",
+        "name": ".ceboc",
+        "discriminator": "0000",
+        "nickname": "Ceboc54",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153660167641104485",
+      "type": "Default",
+      "timestamp": "2023-09-19T11:53:37.935+00:00",
+      "timestampEdited": "2023-09-19T11:55:53.836+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I think the challenge that you have now is rather than using Plots.jl you should be using a plotting library that supports reactivity.  I have used StipplePlotly with great success.\n\nIf you are using Genie Builder Extension, then start the server, then the app, and right click on the app to add the package using the built-in package manager:",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153660751551135798",
+      "type": "Default",
+      "timestamp": "2023-09-19T11:55:57.15+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1153660751299493968",
+          "url": "https://cdn.discordapp.com/attachments/1153184557068193803/1153660751299493968/image.png?ex=6540eb4d&is=652e764d&hm=aba503edc578bceb52786ab59cd259f40fbe1948e784e02eda71db8a24066877&",
+          "fileName": "image.png",
+          "fileSizeBytes": 10909
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1153665252446195803",
+      "type": "Default",
+      "timestamp": "2023-09-19T12:13:50.247+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also, check out StipplePlotly here: https://github.com/GenieFramework/StipplePlotly.jl\n\nIn code, it's as easy as:\nmodule App\nusing GenieFramework\nusing StipplePlotly\n@genietools\n@handlers begin...  assume we use the same code that I put in my previous reply\n\n     @onchange A,k,phi begin\n          # StipplePlotly in HTML will take the reactive variable plot_data and update the plot accordingly\n          # I'm not sure you need a separate function update_plot() at all.  I have plotted various functions and just used the broadcast operator \".\" on the x-axis data... like this...\n          plot_data = PlotData(plot=StipplePlotly.Charts.PLOT_TYPE_LINE, x=xs, y=sine.(xs,A,k,phi)  )\n\nend #handlers end\n@page(\"/\", \"app.jl.html\")\nend #module end\n\n\n ---------------------------------------- Now HTML ----------------\nMy HTML was generated by GenieBuilder and all that I had to do was make certain that plot_data was passed as an argument to my StipplePlotly plot.\n\n<div data-gjs-highlightable=\"true\" id=\"icw3n\" data-gjs-type=\"default\" draggable=\"true\" class=\"st-col col-12 col-sm st-module\">\n  <h2 data-gjs-highlightable=\"true\" id=\"im4uw\" data-gjs-type=\"h2\" draggable=\"true\" class=\"\">Plot of {{Reactive plot title here}}\n  </h2>\n  <plotly data-gjs-highlightable=\"true\" id=\"i34gh\" data-gjs-type=\"plotly\" draggable=\"true\" :data=\"plot_data\" class=\"\">\n    <img src=\"images/icons/components/ui_components/chart.png\">\n  </plotly>\n</div>\n\nThe bit {{Reactive plot title here}} makes a nice HTML <h2>  title </h2> for the plot .",
+      "author": {
+        "id": "668141144932220968",
+        "name": "generallyclueless",
+        "discriminator": "0000",
+        "nickname": "GenerallyClueless",
+        "color": "#E74C3C",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1133579308774993920",
+            "name": "Generally Awesome",
+            "color": "#E74C3C",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1154042098283204749",
+      "type": "Default",
+      "timestamp": "2023-09-20T13:11:17.296+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Ceboc54 we have documentation on how to plot with Plots.jl. Essentially you extract the traces and create a Plotly plot\n\nhttps://learn.genieframework.com/docs/reference/reactive-ui/plotting",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "814195486973362328",
+          "name": ".ceboc",
+          "discriminator": "0000",
+          "nickname": "Ceboc54",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+        }
+      ]
+    },
+    {
+      "id": "1154042608138600548",
+      "type": "Default",
+      "timestamp": "2023-09-20T13:13:18.855+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Although from your previous messages, it seems you'v already tried that but got an error? Which error?",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 15
+}

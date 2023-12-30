@@ -1,0 +1,296 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1138048376970162176",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "Problem with q-select component",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:23:44.0225537+00:00",
+  "messages": [
+    {
+      "id": "1138048376970162176",
+      "type": "Default",
+      "timestamp": "2023-08-07T09:57:56.986+00:00",
+      "timestampEdited": "2023-08-09T08:49:38.756+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm trying to get a q-select component working but am running into a problem when I define the options.\n\nAs it is now, I either have the option of having a disfunctional q-select element with the following line:\n\n        <q-select v-model=\"sim_model\" options = \":sim_model_options\"></q-select>\n\nOr having nothing being displayed at all if I change the above line into:\n\n        <q-select v-model=\"sim_model\" :options = \":sim_model_options\"></q-select>\n\nWhat am I doing wrong????\n\nThe full source code can be found here: https://github.com/HapponomyOrg/HapponomyCockpit.jl/tree/main/app/inequality\n\nI'm not using the ui.jl file\n\nEverything worked fine until I added the lines containing \"sim_model_options\" in both the Julia and HTML code.\nI get no errors in the server output console, nor can I find any in the log file but I also get nothing to see in the web browser, except for the menu bar (screenshot attached).\n\nI'm using Chrome on MacOS as a browser.\n\nAny idea what is going on?",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1138048377527996577",
+          "url": "https://cdn.discordapp.com/attachments/1138048376970162176/1138048377527996577/Screenshot_2023-08-07_at_11.57.13.png?ex=653f7e25&is=652d0925&hm=d4f9b0cc2fa171b0d22fefdeeec4494bcf4f297a3b68c929cbebd34653c9e756&",
+          "fileName": "Screenshot_2023-08-07_at_11.57.13.png",
+          "fileSizeBytes": 146889
+        }
+      ],
+      "embeds": [
+        {
+          "title": "HapponomyCockpit.jl/app/inequality at main · HapponomyOrg/Happonomy...",
+          "url": "https://github.com/HapponomyOrg/HapponomyCockpit.jl/tree/main/app/inequality",
+          "timestamp": null,
+          "description": "Contribute to HapponomyOrg/HapponomyCockpit.jl development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/IzbGwWKJ79U85_pvjrnq93LiED3Rs0bQh7F5O9uQOoc/https/opengraph.githubassets.com/3992aa666e2532a554b754560aa77df039e1ffafbda7500b58dde71de3ffe85e/HapponomyOrg/HapponomyCockpit.jl",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1139497431772438548",
+      "type": "Default",
+      "timestamp": "2023-08-11T09:55:58.573+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you need to expose the sim_model_options vector with @out.  Also, the options must be a list of symbols. Check out the iris demo for an example\nhttps://github.com/BuiltWithGenie/IrisClustering/blob/main/app.jl\n\nNote that, if you want to still initialize the sim_model variable to sim_model_options[1], you'll have to define first the options vector and then expose it with @out like in the example above.  @out will create a copy of sim_model_options and send it to the UI.",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "IrisClustering/app.jl at main · BuiltWithGenie/IrisClustering",
+          "url": "https://github.com/BuiltWithGenie/IrisClustering/blob/main/app.jl",
+          "timestamp": null,
+          "description": "Genie demo app - Iris Clustering. Contribute to BuiltWithGenie/IrisClustering development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-2.discordapp.net/external/JblQDAPrRMl2_jgSM_MCsF3R7eoH_lqfB25NlspxOK0/https/opengraph.githubassets.com/8caa5835e5307d0a3eca367dc74b3d3d307bc9d346c78b2d2bca2ed3e3fffc34/BuiltWithGenie/IrisClustering",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDCAA",
+            "code": "muscle",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4aa.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "668141144932220968",
+              "name": "generallyclueless",
+              "discriminator": "0000",
+              "nickname": "GenerallyClueless",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/668141144932220968/0bfdb60e48b01614ee353a9f54bcfc2f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1139908480216612924",
+      "type": "Default",
+      "timestamp": "2023-08-12T13:09:20.159+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "That works! Thanks!",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1140933359388852319",
+      "type": "Default",
+      "timestamp": "2023-08-15T09:01:50.395+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I tried the following: <q-card class=\"full-width\" v-if=\"sim_model=={{sim_model_options}}[2]\"> but that doesn't seem to work. I'm guessing I'm doing something wrong with the syntax? I'm not getting an error either, just a blank screen.",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1140936629272457266",
+      "type": "Default",
+      "timestamp": "2023-08-15T09:14:49.996+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Anything passed to `v-if`is assumed to be a Javascript expression. Thus, you don't need {{}} to interpolate variable values",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "743412727464067154",
+              "name": "pere_g",
+              "discriminator": "0000",
+              "nickname": "Pere",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1141043351362211840",
+      "type": "Default",
+      "timestamp": "2023-08-15T16:18:54.525+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "That works! Pity Javascript starts their arrays at index 0 while Julia starts at index 1 \uD83D\uDE09",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1141043443410419734",
+      "type": "Default",
+      "timestamp": "2023-08-15T16:19:16.471+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "But not a huge problem of course",
+      "author": {
+        "id": "700687616693239829",
+        "name": "mordegai.",
+        "discriminator": "0000",
+        "nickname": "Mordegai",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/700687616693239829/c2c03dda559a96ccba763f37f9b8eae0.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 7
+}

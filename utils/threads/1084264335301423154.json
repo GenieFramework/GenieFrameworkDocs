@@ -1,0 +1,301 @@
+{
+  "guild": {
+    "id": "774897545717219328",
+    "name": "Genie Community",
+    "iconUrl": "https://cdn.discordapp.com/icons/774897545717219328/37e348a8a0b2b83ce9241942f0b9a8b5.png?size=512"
+  },
+  "channel": {
+    "id": "1084264335301423154",
+    "type": "GuildPublicThread",
+    "categoryId": "1032309299512344626",
+    "category": "help-forum",
+    "name": "GenieFramework API docs.",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2023-10-17T19:15:20.3051227+00:00",
+  "messages": [
+    {
+      "id": "1084264335301423154",
+      "type": "Default",
+      "timestamp": "2023-03-11T23:59:22.193+00:00",
+      "timestampEdited": "2023-03-12T00:16:27.329+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Where are the docs at for GenieFramework (as in 'using GenieFramework' not just 'using Genie')?  I'm doing these tutorials: https://github.com/GenieFramework/GenieFrameworkDemos_NewAPI.  But when I  go here(https://genieframework.com/docs/genie/v5.11/tutorials/Getting-Started.html) and try to search for GenieFramework, @page, @genietools - I don't come up with anything.  So where do I find docs on @page or @genietools?",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Documentation - Genie Framework",
+          "url": "https://genieframework.com/docs/genie/v5.11/tutorials/Getting-Started.html",
+          "timestamp": null,
+          "description": "Genie Framework includes all you need to quickly build production-ready web applications with Julia. Develop Julia backends, create beautiful web UIs, build data applications and dashboards, integrate with databases and set up high-performance web services and APIs.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/IHMzYUPMPs2-rWWw8zm0dkJpGHQ4Io0THX1XuZKnJaM/https/genieframework.com/assets/img/meta-image.jpg",
+            "width": 1614,
+            "height": 679
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "☝️",
+            "code": "point_up",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/261d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "311874879156912128",
+              "name": "schighschagh",
+              "discriminator": "0000",
+              "nickname": "SchighSchagh",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/311874879156912128/87bb9ef3046bcd79d6322b289edebd0f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1084849282693201940",
+      "type": "Default",
+      "timestamp": "2023-03-13T14:43:44.519+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "These are new additions to the API and are not documented yet, we're working on it. For now, the best way to understand how things work is to go through the tutorials and demo code, which you already got\n\n\nhttps://genieframework.com/blog/index.html",
+      "author": {
+        "id": "743412727464067154",
+        "name": "pere_g",
+        "discriminator": "0000",
+        "nickname": "Pere",
+        "color": "#71DAFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1007312585995071698",
+            "name": "GENIE TEAM",
+            "color": "#71DAFF",
+            "position": 8
+          },
+          {
+            "id": "1032698093654777886",
+            "name": "Data Science Advocate",
+            "color": "#E91E63",
+            "position": 5
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/743412727464067154/bc30abeb49653e9978c0f7c90f4486a8.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Blog - Genie Framework",
+          "url": "https://genieframework.com/blog/index.html",
+          "timestamp": null,
+          "description": "Genie Framework includes all you need to quickly build production-ready web applications with Julia. Develop Julia backends, create beautiful web UIs, build data applications and dashboards, integrate with databases and set up high-performance web services and APIs.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/IHMzYUPMPs2-rWWw8zm0dkJpGHQ4Io0THX1XuZKnJaM/https/genieframework.com/assets/img/meta-image.jpg",
+            "width": 1614,
+            "height": 679
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085716003117350992",
+      "type": "Default",
+      "timestamp": "2023-03-16T00:07:46.771+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thanks,",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085716097287847966",
+      "type": "Default",
+      "timestamp": "2023-03-16T00:08:09.223+00:00",
+      "timestampEdited": "2023-03-16T00:08:27.888+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I found rolling up my sleeves and reading all the genie code was helpful (this is easy to do because it's julia after all)",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085716126169825332",
+      "type": "Default",
+      "timestamp": "2023-03-16T00:08:16.109+00:00",
+      "timestampEdited": "2023-03-16T00:11:40.326+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm moving to stipple next.  So I'm learning about HTML, JS, CSS, DOM, etc.",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085716262681853962",
+      "type": "Default",
+      "timestamp": "2023-03-16T00:08:48.656+00:00",
+      "timestampEdited": "2023-03-16T00:09:30.323+00:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "If you're willing to grok the source code and get a gist of how genie works, web stuff has come a long way since the 90's.  Really nice.",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1085716582724010004",
+      "type": "Default",
+      "timestamp": "2023-03-16T00:10:04.96+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'm almost tempted to abandon GTK.jl and just write web based UI's for my algos.",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086096333317877831",
+      "type": "Default",
+      "timestamp": "2023-03-17T01:19:04.557+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "looks like @in @out even if not in a @handler does the same thing.",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1086096339470909541",
+      "type": "Default",
+      "timestamp": "2023-03-17T01:19:06.024+00:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "cool.",
+      "author": {
+        "id": "328003049723527168",
+        "name": "montyhall.",
+        "discriminator": "0000",
+        "nickname": "Monty Hall",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 9
+}
