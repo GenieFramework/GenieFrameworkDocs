@@ -66,48 +66,6 @@ end
 end
 ````
 
-**HTML UI code**
-
-```html[app.jl.html]
-<q-layout view="hHh Lpr lff">
-   <q-header style="background:darkblue">
-      <q-toolbar>
-         <q-btn flat round label icon="menu" v-on:click="left_drawer_open = !left_drawer_open" dense></q-btn>
-         <q-toolbar-title>Genie
-            Component Gallery
-         </q-toolbar-title>
-      </q-toolbar>
-   </q-header>
-   <q-drawer side="left" bordered @mouseout="ministate = true" :mini="ministate" v-model="left_drawer_open" breakpoint=200 @mouseover="ministate =
-      false" mini-to-overlay width="170">
-      <q-list bordered separator>
-         <q-item clickable v-on:click="selected_component = 'badge'" v-ripple>
-            <q-item-section avatar>
-               <q-icon name="badge"></q-icon>
-            </q-item-section
-               >
-            <q-item-section>Badge</q-item-section>
-         </q-item>
-         <q-item clickable v-on:click="selected_component = 'bignumber'" v-ripple>
-            <q-item-section avatar>
-               <q-icon name="filter_7"></q-icon>
-            </q-item-section>
-            <q-item-section>Big number</q-item-section>
-         </q-item>
-      </q-list>
-   </q-drawer>
-   <q-page-container>
-      <div class v-if="selected_component == 'badge'">
-         <h1>Badge</h1>
-         <q-badge color="primary" label="1.0.0+"></q-badge>
-      </div>
-      <div class v-if="selected_component == 'bignumber'">
-         <h1>Big number</h1>
-         <st-big-number title number="7"></st-big-number>
-      </div>
-   </q-page-container>
-</q-layout>
-```
 
 
 [source](https://github.com/GenieFramework/CodeExamples/blob/main/src/2.reactive-ui/drawer-layout.jl)
