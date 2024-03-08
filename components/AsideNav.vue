@@ -37,6 +37,11 @@ const links = [
         icon: 'ph:puzzle-piece',
         to: '/docs/api/server/assets',
     },
+    {
+        label: 'Genie Builder',
+        icon: 'ph:hammer',
+        to: '/docs/genie-builder/quick-start',
+    },
 ];
 
 const route = useRoute();
