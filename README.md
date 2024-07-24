@@ -1,41 +1,125 @@
-# genieframework.com documentation
+![nuxt-ui-docs-social-card](https://github.com/nuxt-ui-pro/docs/assets/739984/f64e13d9-9ae0-4e03-bf7f-6be4c36cd9ba)
 
-This repository merges the docs from genieframework.com and learn.geniecloud.io into a single site. It is a Nuxt site built with the [Docus](docus.dev) template.
+# Nuxt UI Pro - Docs template
 
-To preview the site with all the work in progress, see the [Staging site](https://github.com/GenieFramework/GenieFrameworkDocs/pull/31) pull request.
+[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
+[![Nuxt Studio](https://img.shields.io/badge/Open%20in%20Nuxt%20Studio-18181B?&logo=nuxt.js&logoColor=3BB5EC)](https://nuxt.studio/themes/docs)
 
-# Running locally
+- [Live demo](https://docs-template.nuxt.dev/)
+- [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/docs)
+- [Documentation](https://ui.nuxt.com/pro/getting-started)
+- [Clone on Nuxt Studio](https://nuxt.studio/themes/docs)
 
-To run the site locally, execute
+## Quick Start
 
-```bash
-npm install
-npm run dev
+```bash [Terminal]
+npx nuxi init -t github:nuxt-ui-pro/docs
 ```
 
-# Deploying to production
+## Setup
 
-On each commit to `main`, the site will be automatically deployed to learn.genieframework.com. When a pull request is created, a new preview site will be automatically linked in the comments.
+Make sure to install the dependencies:
 
-# Adding content
+```bash
+# npm
+npm install
 
-To add a new page, write its content into the `content/` folder in the relevant path.
+# pnpm
+pnpm install
 
-# API docs
+# yarn
+yarn install
 
-The API docs in the Reference page are built in [this repo](https://github.com/GenieFramework/APIDocs)
+# bun
+bun install
+```
 
-# Code examples
+## Development Server
 
-The content in the Code Examples page is built in [this repo](https://github.com/BuiltWithGenie/CodeExamples).
+Start the development server on `http://localhost:3000`:
 
-# Contributing
+```bash
+# npm
+npm run dev
 
-If you would like to contribute with a new article or fix mistakes, please open an issue with your suggested changes or open a new pull request. The team will review the text and make or request any necessary changes to make it fit better with the rest of the documentation. 
+# pnpm
+pnpm run dev
 
-It is recommended that you ask first, either in an issue or on Discord, before contributing new materials to make sure they are a good fit. Here are some writing guidelines:
+# yarn
+yarn dev
 
-- Be clear and concise: avoid jargon and complex sentences. Assume the reader is new to the topic.
-- Consistent terminology: use consistent terms for the same concept throughout the documentation.
-- Active voice: use the active voice as much as possible, e.g., "You can configure settings" rather than "Settings can be configured."
-- Linking: provide links to relevant articles, guides, or documentation pages for further reading.
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Nuxt Studio integration
+
+Add `@nuxthq/studio` dependency to your package.json:
+
+```bash
+# npm
+npm install --save-dev @nuxthq/studio
+
+# pnpm
+pnpm add -D @nuxthq/studio
+
+# yarn
+yarn add -D @nuxthq/studio
+
+# bun
+bun add -d @nuxthq/studio
+```
+
+Add this module to your `nuxt.config.ts`:
+
+```ts
+export default defineNuxtConfig({
+  ...
+  modules: [
+    ...
+    '@nuxthq/studio'
+  ]
+})
+```
+
+Read more on [Nuxt Studio docs](https://nuxt.studio/docs/get-started/setup).
+
+## Renovate integration
+
+Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
