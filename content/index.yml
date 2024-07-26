@@ -26,43 +26,188 @@ hero:
     npx nuxi init -t github:nuxt-ui-pro/docs
     ```
 features:
-  title: "All-in-one docs template"
-  links:
-    - label: "Explore Nuxt UI Pro"
-      icon: "i-simple-icons-nuxtdotjs"
-      trailingIcon: "i-heroicons-arrow-right-20-solid"
-      color: "gray"
-      to: "https://ui.nuxt.com/pro"
-      target: "_blank"
-      size: lg
-  items:
-    - title: "Nuxt 3"
-      description: "Powered by Nuxt 3 for optimal performances and SEO."
-      icon: "i-simple-icons-nuxtdotjs"
-      to: "https://nuxt.com"
-      target: "_blank"
-    - title: "Markdown"
-      description: "Write your pages with MDC thanks to Nuxt Content."
-      icon: "i-simple-icons-markdown"
-      to: "https://content.nuxt.com"
-      target: "_blank"
-    - title: "Nuxt UI"
-      description: "Offers a very large set of full customizable components."
-      icon: "i-heroicons-sparkles-20-solid"
-      to: "https://ui.nuxt.com"
-      target: "_blank"
-    - title: "TypeScript"
-      description: "A fully typed development experience."
-      icon: "i-simple-icons-typescript"
-      to: "https://www.typescriptlang.org"
-      target: "_blank"
-    - title: "Nuxt Studio"
-      description: "Supported by Nuxt Studio for fast updates and previews."
-      icon: "i-simple-icons-nuxtdotjs"
-      to: "https://nuxt.studio"
-      target: "_blank"
-    - title: "Search"
-      description: "A full-text search modal empowered by Fuse.js."
-      icon: "i-heroicons-magnifying-glass-20-solid"
-      to: "https://ui.nuxt.com/pro/components/docs/docs-search"
-      target: "_blank"
+  title: Everything you expect from a
+  cards:
+    - title: Color Palette
+      description: "Choose a primary and a gray color from your Tailwind CSS color palette. Components will be styled accordingly."
+      icon: i-heroicons-swatch
+      to: /getting-started/theming#colors
+      class: "col-span-7 row-span-3"
+    - title: Fully Customizable
+      description: "Change the style of any component in your App Config or customize them specifically through the ui prop."
+      icon: i-heroicons-wrench-screwdriver
+      to: /getting-started/theming#components
+      class: "col-span-5 row-span-5 lg:mb-10"
+    - title: Icons
+      description: "Choose any of the 100k+ icons from the most popular icon libraries with the Icon component or the icon prop."
+      icon: i-heroicons-face-smile
+      to: /getting-started/theming#icons
+      class: "col-span-7 row-span-3"
+    - title: Light & Dark
+      description: "Every component is designed with dark mode in mind. Works out of the box with @nuxtjs/color-mode."
+      to: /getting-started/theming#dark-mode
+      icon: i-heroicons-moon
+      class: "col-span-5 row-span-5 lg:-mt-10 lg:mb-20"
+    - title: Keyboard Shortcuts
+      description: "Nuxt UI comes with a set of Vue composables to easily handle keyboard shortcuts in your app."
+      icon: i-heroicons-computer-desktop
+      to: /getting-started/shortcuts
+      class: "col-span-7 row-span-3"
+
+sections:
+  - headline: "Low/No-Code Data App Development Platform"
+    title: Genie Builder 1.0
+    description: VS Code extension to build Julia data apps 10x faster with a drag & drop UI builder, theme editor, and AI assistant.
+    id: GB
+    align: left
+    features:
+      - name: Drag & drop, no-code UI builder
+        description: Build rich UIs in minutes choosing from 70+ web UI components & plots.
+        icon: i-heroicons-clock
+      - name: Backend app logic in low-code Julia
+        description: Import your Julia code and define your app logic with simple macros.
+        icon: i-heroicons-cog
+      - name: Theme editor, AI assistant, chart configurator
+        description: Make your app look professional easily.
+        icon: i-heroicons-rocket-launch
+      - name: Desktop and cloud versions available
+        description: Install Genie Builder in VS Code or create an account on JuliaHub to access a cloud version with one-click publishing.
+        icon: i-heroicons-cloud
+    links:
+      - label: Get started in VS Code (free)
+        to: https://marketplace.visualstudio.com/items?itemName=GenieBuilder.geniebuilder
+        target: _blank
+        color: primary
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-6
+      - label: Pricing
+        to: "/pricing"
+        target: _blank
+        color: black
+        icon: i-heroicons-credit-card
+        trailing: true
+        size: md
+        class: ml-6
+  - headline: "Genie.jl"
+    title: Full-Stack Web Development
+    description: Build full-stack web apps and backends in Julia.
+    id: features
+    align: left
+    features:
+      - name: High-performance web server
+        icon: i-heroicons-bolt
+      - name: Powerful router
+        icon: i-heroicons-power
+      - name: Flexible template engine (Julia, HTML, Markdown, JSON, JavaScript)
+        icon: i-heroicons-code-bracket-square
+      - name: Encrypted cookies & sessions
+        icon: i-heroicons-wrench-screwdriver
+      - name: WebSockets & SSE support
+        icon: i-heroicons-server-stack
+    links:
+      - label: Read the docs
+        to: "https://learn.genieframework.com/docs/reference/server/introduction"
+        target: _blank
+        color: primary
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-6
+  - headline: "Stipple.jl"
+    title: Low-Code Web App Development
+    description: Build reactive, data-centric web apps and GUIs in low-code Julia.
+    id: features
+    align: right
+    features:
+      - name: Easy to learn
+        description: Build web apps with few lines of Julia code (no HTML, CSS or JS required)
+        icon: i-heroicons-rocket-launch
+      - name: Build rich GUIs
+        description: Use 30+ web UI components
+        icon: i-heroicons-cog
+      - name: Visualize any data
+        description: Choose from over 40 Plotly charts
+        icon: i-heroicons-chart-bar
+    links:
+      - label: Read the docs
+        to: "https://learn.genieframework.com/docs/reference/reactive-ui/introduction"
+        target: _blank
+        color: primary
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-6
+  - headline: "SearchLight.jl"
+    title: Databases
+    description: ORM solution for Julia making it easy to work with relational databases.
+    id: features
+    align: right
+    features:
+      - name: Postgres
+        description:
+        icon: i-heroicons-check
+      - name: MySQL
+        description:
+        icon: i-heroicons-check
+      - name: SQLite
+        description:
+        icon: i-heroicons-check
+    links:
+      - label: Read the docs
+        to: "https://learn.genieframework.com/docs/reference/database/introduction"
+        target: _blank
+        color: primary
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-6
+
+  - headline: "Production capabilities"
+    title: First Party Plugins
+    description: Genie Framework provides a plugin system that allows you to extend the functionality of your apps.
+    id: features
+    align: left
+    features:
+      - name: Authentication
+        description:
+        icon: i-heroicons-check
+      - name: SwagUI for building APIs
+        description:
+        icon: i-heroicons-check
+      - name: Autoreload
+        description:
+        icon: i-heroicons-check
+      - name: Authorization
+        description:
+        icon: i-heroicons-check
+    links:
+      - label: Read the docs
+        to: "https://learn.genieframework.com/docs/reference/server/plugins"
+        target: _blank
+        color: primary
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-6
+    code: |
+      ```julia
+        using SwagUI, SwaggerMarkdown
+
+        @swagger """
+        /api/predict/{id}:
+          get:
+            description: Predict the MEDV of a house.
+            parameters:
+              - in: path
+                name: N
+                required: true
+                description: Length of the random number vector.
+                schema:
+                  type: integer
+            responses:
+              '200':
+                description: OK
+        """
+        route("/numbers/:N::Int", AnalysisController.api_numbers, method=GET)

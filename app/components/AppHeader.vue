@@ -59,9 +59,7 @@ const { header } = useAppConfig()
 <template>
   <UHeader :links="links">
     <template #logo>
-      <template v-if="header?.logo?.dark || header?.logo?.light">
-        <UColorModeImage v-bind="{ class: 'h-6 w-auto', ...header?.logo }" />
-      </template>
+      <Logo class="w-auto prefers-color-scheme" />
     </template>
 
     <template
