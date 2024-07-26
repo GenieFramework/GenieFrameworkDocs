@@ -1,3 +1,0 @@
----
-redirect: /docs/geniebuilder/docs
----

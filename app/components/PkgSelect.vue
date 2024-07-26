@@ -14,7 +14,7 @@ const getPackageNameFromRoute = () => {
     '/framework/searchlight.jl': 'SearchLight.jl',
   };
 
-  return routeMap[basePath] || 'Genie.jl'; // Default to 'Genie.jl' if no match is found
+  return routeMap[basePath] || ''; // Default to 'Genie.jl' if no match is found
 };
 
 selected_pkg.value = getPackageNameFromRoute();
@@ -64,7 +64,7 @@ const item = computed(() => items[0].find(i => i.label === selected_pkg.value))
 </script>
 
 <template>
-  <div class="mb-3 lg:mb-6">
+  <div class="mb-3 lg:mb-6" v-if="item">
     <UDropdown
       class="w-full"
       :items="items"

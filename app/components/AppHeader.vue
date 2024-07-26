@@ -12,11 +12,11 @@ const links = [
 {
   label: 'Genie Framework',
   icon: 'i-heroicons-square-3-stack-3d',
-  to: '',
+  to: '/framework/',
   children: [
   {
     label: 'Guides',
-    to: '/framework/guides',
+    to: '/framework/guides/',
     icon: 'i-heroicons-book-open-20-solid',
     description: '',
   },

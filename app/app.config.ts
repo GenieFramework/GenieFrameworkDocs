@@ -45,22 +45,22 @@ export default defineAppConfig({
             'icon': 'i-simple-icons-nuxtdotjs',
             'to': 'https://genieframework.com',
             'target': '_blank',
-            'aria-label': 'Nuxt Website'
+            'aria-label': 'Genie'
         }, {
             'icon': 'i-simple-icons-discord',
-            'to': 'https://discord.com/invite/ps2h6QT',
+            'to': 'https://discord.com/invite/9zyZbD6J7H',
             'target': '_blank',
-            'aria-label': 'Nuxt UI on Discord'
+            'aria-label': 'Genie on Discord'
         }, {
             'icon': 'i-simple-icons-x',
-            'to': 'https://x.com/nuxt_js',
+            'to': 'https://twitter.com/GenieMVC',
             'target': '_blank',
-            'aria-label': 'Nuxt on X'
+            'aria-label': 'Genie on X'
         }, {
             'icon': 'i-simple-icons-github',
-            'to': 'https://github.com/nuxt/ui',
+            'to': 'https://github.com/GenieFramework/Genie.jl',
             'target': '_blank',
-            'aria-label': 'Nuxt UI on GitHub'
+            'aria-label': 'Genie on GitHub'
         }]
     },
     toc: {
@@ -72,7 +72,7 @@ export default defineAppConfig({
                 {
                     icon: 'i-heroicons-chat-bubble-bottom-center',
                     label: 'Discord',
-                    to: 'https://ui.nuxt.com/pro/guide',
+                    to: 'https://discord.com/invite/9zyZbD6J7H',
                     target: '_blank'
                 },
                 {
