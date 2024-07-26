@@ -11,23 +11,23 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-  <ULandingSection :title="page.features.title">
+  <div class="w-2/3 mx-auto">
+    <h1 class="text-4xl font-bold text-center mt-10 mb-10">{{ page.features.title }}</h1>
     <ULandingGrid>
     <ULandingSection 
-      class="col-span-12 sm:py-10"
+    class="col-span-6 sm:py-10 bg-gray-800"
       v-for="(section, index) in page.sections"
       :key="index"
       :headline="section.headline"
       :title="section.title"
       :description="section.description"
-      align="left"
+      align="center"
       :features="section.features"
       :links="section.links"
       :id="section.id"
+      :ui="{ container:'gap-4 sm:gap-y-4', features:{wrapper: {grid:''}}}"
     >
     </ULandingSection>
     </ULandingGrid>
-  </ULandingSection>
   </div>
 </template>

@@ -28,7 +28,7 @@ const items = [
    [
    {
     label: 'Guides',
-    icon: 'i-heroicons-pencil-square-20-solid',
+    icon: 'i-heroicons-book-open-20-solid',
     shortcuts: ['U'],
     click: () => {
         router.push('/framework/guides')
@@ -36,7 +36,7 @@ const items = [
   },
    {
     label: 'Genie.jl',
-    icon: 'i-heroicons-pencil-square-20-solid',
+    icon: 'i-heroicons-server-stack-20-solid',
     shortcuts: ['G'],
     click: () => {
         router.push('/framework/genie.jl')
@@ -44,7 +44,7 @@ const items = [
   },
    {
     label: 'Stipple.jl',
-    icon: 'i-heroicons-pencil-square-20-solid',
+    icon: 'i-heroicons-window-20-solid',
     shortcuts: ['S'],
     click: () => {
         router.push('/framework/stipple.jl')
@@ -52,7 +52,7 @@ const items = [
   },
    {
     label: 'SearchLight.jl',
-    icon: 'i-heroicons-pencil-square-20-solid',
+    icon: 'i-heroicons-circle-stack-20-solid',
     shortcuts: ['L'],
     click: () => {
         router.push('/framework/searchlight.jl')

@@ -17,25 +17,25 @@ const links = [
   {
     label: 'Guides',
     to: '/framework/guides',
-    icon: 'i-heroicons-book-open',
+    icon: 'i-heroicons-book-open-20-solid',
     description: '',
   },
   {
     label: 'Genie.jl',
     to: '/framework/genie.jl',
-    icon: 'i-heroicons-book-open',
+    icon: 'i-heroicons-server-stack-20-solid',
     description: '',
   },
   {
     label: 'Stipple.jl',
     to: '/framework/stipple.jl',
-    icon: 'i-heroicons-book-open',
+    icon: 'i-heroicons-window-20-solid',
     description: '',
   },
   {
     label: 'SearchLight.jl',
     to: '/framework/searchlight.jl',
-    icon: 'i-heroicons-book-open',
+    icon: 'i-heroicons-circle-stack-20-solid',
     description: '',
   }
   ] },

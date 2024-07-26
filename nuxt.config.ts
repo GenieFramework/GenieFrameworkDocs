@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    "nuxt-link-checker"
   ],
 
   content: {
