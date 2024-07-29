@@ -84,8 +84,10 @@ export default defineNuxtConfig({
         '/docs/reference/database/introduction': { redirect: '/framework/searchlight.jl/docs/' },
         '/docs/reference/database/**': { redirect: '/framework/searchlight.jl/docs/**' },
         '/docs/reference/database': { redirect: '/framework/searchlight.jl/docs/' },
-        '/docs/genie-builder/introduction': { redirect: '/geniebuilder/' },
-        '/docs/genie-builder': { redirect: '/geniebuilder' },
-        '/docs/genie-builder/**': { redirect: '/geniebuilder/docs/**' }
+        '/docs/genie-builder/introduction': { redirect: '/geniebuilder/docs' },
+        '/docs/genie-builder': { redirect: '/geniebuilder/docs' },
+        '/docs/genie-builder/**': { redirect: '/geniebuilder/docs/**' },
+        '/docs/guides': { redirect: '/framework/guides' },
+        '/docs/guides/**': { redirect: '/framework/guides/**' }
     }
 })

@@ -8,7 +8,7 @@ const contentQuery = await queryContent('app-gallery/').sort(
 <template>
   <div class="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6 mt-5" >
     <div class="mb-20 space-y-2 text-center">
-      <h2 class="text-3xl font-bold text-gray-800 md:text-7xl dark:text-white">
+      <h2 class="text-5xl font-bold text-gray-800 md:text-5xl dark:text-white">
         Genie app gallery
       </h2>
     <p class="lg:mx-auto lg:w-7/12 text-gray-600 dark:text-gray-300 text-2xl">

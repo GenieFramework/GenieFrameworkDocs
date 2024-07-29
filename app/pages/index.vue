@@ -11,7 +11,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="w-2/3 mx-auto">
+  <div class="w-4/5 mx-auto">
     <h1 class="text-4xl font-bold text-center mt-10 mb-10">{{ page.features.title }}</h1>
     <ULandingGrid>
     <ULandingSection 
