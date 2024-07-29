@@ -1,149 +1,88 @@
-
-
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    extends: [
-        '@d0rich/nuxt-content-mermaid',
-        '@nuxt-themes/docus'
-    ],
-    modules: [
-        '@nuxtjs/plausible',
-        '@nuxt/devtools',
-        "@nuxtjs/tailwindcss", "nuxt-og-image", '@zadigetvoltaire/nuxt-gtm'
-    ],
-    buildModules: ["@nuxtjs/google-analytics"],
-    axios: {
-    // Axios module configuration
-    baseURL: 'https://apps.peregimenez.com/', // Can be used as base URL for all axios requests
-  },
-    ssr: true,
-    ogImage: {
-        defaults: {
-            component: 'OgImage',
-        },
-        host: 'https://learn.genieframework.com/',
+    extends: ['@nuxt/ui-pro'],
 
-    },
-    nitro: {
-        prerender: {
-            crawlLinks: true, // recommended
-            routes: [
-                '/',
-                // list all routes that use og:image if you're not using crawlLinks
-                '/examples',
-                '/docs',
-            ],
-            failOnError: false,
+    modules: [
+        '@nuxt/content',
+        '@nuxt/eslint',
+        '@nuxt/fonts',
+        '@nuxt/image',
+        '@nuxt/ui',
+        '@nuxthq/studio',
+        'nuxt-og-image',
+        "nuxt-link-checker"
+    ],
+    ssr: true,
+    build: { transpile: ["shiki"] },
+
+    content: {
+        documentDriven: true,
+        highlight: {
+            langs: ['html', 'julia'],
+            theme: {
+                default: 'github-light',
+                dark: 'github-dark',
+            }
         }
     },
-    app: {
-        head: {
-            link: [
-                { rel: 'icon', type: 'image/x-icon', href: '/assets/icon.svg' },
-            ],
-            meta:[
-                { hid: 'og-image',  content: '/assets/meta.png' },
-            ],
-            script: [
-                { src:"https://www.googletagmanager.com/gtag/js?id=G-906HKC9QM5"},
-                { children: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-906HKC9QM5'); "},
-            ],
 
-        },
+    hooks: {
+        // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
+        'components:extend': (components) => {
+            const globals = components.filter(c => ['UButton', 'UIcon'].includes(c.pascalName))
+
+            globals.forEach(c => c.global = true)
+        }
     },
-    css: ['highlight.js/styles/github.css'],
-    content: {
-    highlight: false,
+
+    ui: {
+        icons: ['heroicons', 'simple-icons']
     },
-    github: {
-        owner: "GenieFramework",
-        repo: "genieframeworkdocs",
-        branch: "main",
-        edit: true,
-    },
+
     colorMode: {
-        preference: "light",
-        classSuffix: ""
+        disableTransition: true
     },
-  gtm: {
-    id: 'GTM-MJLRHNL7', 
-    devtools: true, // (optional)
-  }
-})
 
-// import { resolve } from "pathe";
-// import consola from "consola";
-//
-// const alias = {};
-//
-// export default defineNuxtConfig({
-//     modules: ["@nuxtjs/tailwindcss","@nuxtjs/color-mode", "nuxt-og-image"],
-//     extends: ["@nuxt-themes/docus"],
-//     alias,
-//     ogImage: {
-//         defaults: {
-//             component: 'OgImage',
-//         },
-//         host: 'https://learn.geniecloud.io',
-//
-//     },
-//   nitro: {
-//     prerender: {
-//       crawlLinks: true, // recommended  
-//       routes: [
-//         '/',
-//         // list all routes that use og:image if you're not using crawlLinks
-//         '/examples',
-//         '/docs',
-//       ]
-//     }
-//   },
-//     runtimeConfig: {
-//         public: {
-//             algolia: {
-//                 apiKey: '5faaac3ee8aae6e9a4c309d9f2338199',
-//                 applicationId: 'MTJLVUZUYK',
-//                 docSearch: {
-//                     indexName: 'learn-geniecloud'
-//                 }
-//             },
-//         }
-//     },
-//     app: {
-//         head: {
-//             script: [
-//                 {
-//                     defer: true,
-//                     "data-domain": "content.nuxtjs.org",
-//                     src: "https://plausible.io/js/script.js",
-//                 },
-//                 { src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3"},
-//                 {children: " docsearch({ appId: 'MTJLVUZUYK', apiKey: '5faaac3ee8aae6e9a4c309d9f2338199', indexName: 'learn-geniecloud', container: '#docsearch', debug: true }); ", body: true}
-//             ],
-//
-//             link: [
-//                 { rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
-//                 { rel: 'stylesheet', type:'text/css', href: 'https://cdn.jsdelivr.net/npm/@docsearch/css@3' }
-//             ],
-//         },
-//     },
-//     content: {
-//         highlight: {
-//             theme: {
-//                 dark: "github-dark",
-//                 default: "github-light",
-//             },
-//             preload: ["julia"],
-//         },
-//     },
-//     github: {
-//         owner: "PGimenez",
-//         repo: "geniedocssite",
-//         branch: "main",
-//         edit: true,
-//     },
-//     colorMode: {
-//         preference: "light",
-//         classSuffix: ""
-//     },
-//     buildModules: ["@nuxtjs/google-analytics"],
-// });
+
+    devtools: {
+        enabled: true
+    },
+
+    typescript: {
+        strict: false
+    },
+
+    future: {
+        compatibilityVersion: 4
+    },
+
+    eslint: {
+        config: {
+            stylistic: {
+                commaDangle: 'never',
+                braceStyle: '1tbs'
+            }
+        }
+    },
+
+    compatibilityDate: '2024-07-11',
+
+    routeRules: {
+        '/': { prerender: true },
+        '/api/search.json': { prerender: true },
+        // Redirects legacy urls
+        '/docs/reference/reactive-ui/**': { redirect: '/framework/stipple.jl/docs/**' },
+        '/docs/reference/reactive-ui/introduction': { redirect: '/framework/stipple.jl/docs/' },
+        '/docs/reference/reactive-ui': { redirect: '/framework/stipple.jl/docs/' },
+        '/docs/examples': { redirect: '/framework/stipple.jl/recipes/' },
+        '/docs/reference/server/introduction': { redirect: '/framework/genie.jl/docs/' },
+        '/docs/reference/server/**': { redirect: '/framework/genie.jl/docs/**' },
+        '/docs/reference/server': { redirect: '/framework/genie.jl/docs/' },
+        '/docs/reference/database/introduction': { redirect: '/framework/searchlight.jl/docs/' },
+        '/docs/reference/database/**': { redirect: '/framework/searchlight.jl/docs/**' },
+        '/docs/reference/database': { redirect: '/framework/searchlight.jl/docs/' },
+        '/docs/genie-builder/introduction': { redirect: '/geniebuilder/' },
+        '/docs/genie-builder': { redirect: '/geniebuilder' },
+        '/docs/genie-builder/**': { redirect: '/geniebuilder/docs/**' }
+    }
+})

@@ -11,3 +11,4 @@ sw.*
 .env
 .output
 static
+package-lock.json

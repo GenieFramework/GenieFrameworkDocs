@@ -1,0 +1,54 @@
+title: "Nuxt UI Pro - Docs template"
+description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+navigation: false
+
+features:
+  title: Genie documentation site
+sections:
+  - headline: "Low/no-code data app development platform"
+    title: Genie Builder
+    description: Build dashboards visually with a drag and drop editor, and write the backend logic in low-code Julia.
+    align: left
+    features:
+      - name: Drag & drop, no-code UI builder
+        description: Build rich UIs in minutes choosing from 70+ web UI components & plots.
+        icon: i-heroicons-clock
+      - name: Backend app logic in low-code Julia
+        description: Import your Julia code and define your app logic with simple macros.
+        icon: i-heroicons-cog
+      - name: Theme editor, AI assistant, chart configurator
+        description: Make your app look professional easily.
+        icon: i-heroicons-rocket-launch
+    links:
+      - label: Read the docs
+        to: "https://learn.genieframework.com/docs/geniebuilder/docs"
+        target: _blank
+        color: primary
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-6
+  - headline: "Full-Stack web development"
+    title: Genie Framework 
+    description: Build full-stack web apps and backends with the most productive and complete web framework in Julia.
+    id: features
+    align: left
+    features:
+      - name: Genie.jl
+        description: Write performant server-side code.
+        icon: i-heroicons-bolt
+      - name: Stipple.jl
+        description: Create reactive, data-centric web apps and GUIs in low-code Julia.
+        icon: i-heroicons-power
+      - name: SearchLight.jl
+        description: Work with relational databases such as SQLite, MySQL, and Postgres without writing SQL queries.
+        icon: i-heroicons-code-bracket-square
+    links:
+      - label: Read the docs
+        to: "https://learn.genieframework.com/framework/genie.jl/docs/introduction"
+        target: _blank
+        color: primary
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-6
