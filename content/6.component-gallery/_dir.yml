@@ -2,4 +2,4 @@ title: "Component gallery"
 icon: ph:slideshow
 layout: default
 navigation: true
-redirect: /docs/reference/reactive-ui/component-gallery
+redirect: /framework/stipple.jl/docs/component-gallery

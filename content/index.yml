@@ -45,7 +45,7 @@ sections:
         icon: i-heroicons-code-bracket-square
     links:
       - label: Read the docs
-        to: "https://learn.genieframework.com/docs/reference/server/introduction"
+        to: "https://learn.genieframework.com/framework/genie.jl/docs/introduction"
         target: _blank
         color: primary
         icon: i-heroicons-arrow-right-20-solid

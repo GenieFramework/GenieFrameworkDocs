@@ -69,5 +69,22 @@ export default defineNuxtConfig({
         }
     },
 
-    compatibilityDate: '2024-07-11'
+    compatibilityDate: '2024-07-11',
+
+    routeRules: {
+        // Redirects legacy urls
+        '/docs/reference/reactive-ui/**': { redirect: '/framework/stipple.jl/docs/**' },
+        '/docs/reference/reactive-ui/introduction': { redirect: '/framework/stipple.jl/docs/' },
+        '/docs/reference/reactive-ui': { redirect: '/framework/stipple.jl/docs/' },
+        '/docs/examples': { redirect: '/framework/stipple.jl/recipes/' },
+        '/docs/reference/server/introduction': { redirect: '/framework/genie.jl/docs/' },
+        '/docs/reference/server/**': { redirect: '/framework/genie.jl/docs/**' },
+        '/docs/reference/server': { redirect: '/framework/genie.jl/docs/' },
+        '/docs/reference/database/introduction': { redirect: '/framework/searchlight.jl/docs/' },
+        '/docs/reference/database/**': { redirect: '/framework/searchlight.jl/docs/**' },
+        '/docs/reference/database': { redirect: '/framework/searchlight.jl/docs/' },
+        '/docs/genie-builder/introduction': { redirect: '/geniebuilder/' },
+        '/docs/genie-builder': { redirect: '/geniebuilder' },
+        '/docs/genie-builder/**': { redirect: '/geniebuilder/docs/**' }
+    }
 })
