@@ -14,7 +14,7 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/public/assets/icon.svg' }
   ],
   htmlAttrs: {
     lang: 'en'
@@ -24,8 +24,8 @@ useHead({
 useSeoMeta({
   titleTemplate: `%s - ${seo?.siteName}`,
   ogSiteName: seo?.siteName,
-  ogImage: 'https://docs-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://docs-template.nuxt.dev/social-card.png',
+  ogImage: 'https://learn.genieframework.com/assets/meta.png',
+  twitterImage: 'https://learn.genieframework.com/assets/meta.png',
   twitterCard: 'summary_large_image'
 })
 
