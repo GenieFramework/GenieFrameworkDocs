@@ -21,7 +21,7 @@ sections:
         icon: i-heroicons-rocket-launch
     links:
       - label: Read the docs
-        to: "https://learn.genieframework.com/docs/geniebuilder/docs"
+        to: "/geniebuilder/"
         target: _blank
         color: primary
         icon: i-heroicons-arrow-right-20-solid
@@ -45,7 +45,7 @@ sections:
         icon: i-heroicons-code-bracket-square
     links:
       - label: Read the docs
-        to: "https://learn.genieframework.com/framework/genie.jl/docs/introduction"
+        to: "/framework/"
         target: _blank
         color: primary
         icon: i-heroicons-arrow-right-20-solid
