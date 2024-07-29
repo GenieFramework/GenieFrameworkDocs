@@ -7,7 +7,7 @@ features:
 sections:
   - headline: "Low/no-code data app development platform"
     title: Genie Builder
-    description: Build dashboards visually with a drag and drop editor, and write the backend logic in low-code Julia.
+    description: Build dashboard apps visually with a drag and drop editor, and write the backend logic in low-code Julia.
     align: left
     features:
       - name: Drag & drop, no-code UI builder

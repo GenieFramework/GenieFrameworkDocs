@@ -24,11 +24,7 @@ end
 function ui()
     [
         table(:data, edit=["name", "email", "age"], cell_type=["text", "text", "number"], pagination=:data_pagination),
-````
-
-set edit=true to enable editing for all columns
-
-````julia
+        ## set edit=true to enable editing for all columns
         #table(:data, edit=true),
         btn("show data", @click(:show))
        ]
