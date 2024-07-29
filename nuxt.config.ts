@@ -14,13 +14,15 @@ export default defineNuxtConfig({
     ],
     ssr: true,
     build: { transpile: ["shiki"] },
-
+    site: {
+        url: 'https://learn.genieframework.com',
+    },
     content: {
         documentDriven: true,
         highlight: {
             langs: ['html', 'julia'],
             theme: {
-                default: 'github-light',
+                default: 'github-dark',
                 dark: 'github-dark',
             }
         }
@@ -40,6 +42,7 @@ export default defineNuxtConfig({
     },
 
     colorMode: {
+        preference: 'dark',
         disableTransition: true
     },
 

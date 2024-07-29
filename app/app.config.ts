@@ -39,14 +39,9 @@ export default defineAppConfig({
         }]
     },
     footer: {
-        credits: 'Copyright © 2023',
+        credits: 'Genie',
         colorMode: false,
         links: [{
-            'icon': 'i-simple-icons-nuxtdotjs',
-            'to': 'https://genieframework.com',
-            'target': '_blank',
-            'aria-label': 'Genie'
-        }, {
             'icon': 'i-simple-icons-discord',
             'to': 'https://discord.com/invite/9zyZbD6J7H',
             'target': '_blank',

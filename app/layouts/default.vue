@@ -5,7 +5,6 @@ const route = useRoute()
 const root = route.path.split('/').filter(Boolean)[0];
 const nav = inject<Ref<NavItem[]>>('navigation')
 let navigation = nav;
-console.log(root)
 if (root == 'framework') {
   const pkg = route.path.split('/').filter(Boolean)[1];
   navigation = computed(() => nav!.value[1].children.find(item => item._path.startsWith('/framework/'+pkg))?.children || [])
@@ -15,7 +14,6 @@ if (root == 'framework') {
   navigation = computed(() => nav!.value[0].children.find(item => item._path.startsWith('/geniebuilder/'))?.children || [])
 }
 
-console.log(navigation.value)
 
 
 import { withoutTrailingSlash } from 'ufo'
