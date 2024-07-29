@@ -22,7 +22,7 @@ sections:
     links:
       - label: Read the docs
         to: "/geniebuilder/"
-        target: _blank
+        target: _self
         color: primary
         icon: i-heroicons-arrow-right-20-solid
         trailing: true
@@ -46,7 +46,7 @@ sections:
     links:
       - label: Read the docs
         to: "/framework/"
-        target: _blank
+        target: _self
         color: primary
         icon: i-heroicons-arrow-right-20-solid
         trailing: true
