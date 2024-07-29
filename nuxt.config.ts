@@ -43,11 +43,6 @@ export default defineNuxtConfig({
         disableTransition: true
     },
 
-    routeRules: {
-        // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-        '/': { prerender: true },
-        '/api/search.json': { prerender: true }
-    },
 
     devtools: {
         enabled: true
@@ -73,6 +68,8 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-07-11',
 
     routeRules: {
+        '/': { prerender: true },
+        '/api/search.json': { prerender: true },
         // Redirects legacy urls
         '/docs/reference/reactive-ui/**': { redirect: '/framework/stipple.jl/docs/**' },
         '/docs/reference/reactive-ui/introduction': { redirect: '/framework/stipple.jl/docs/' },
