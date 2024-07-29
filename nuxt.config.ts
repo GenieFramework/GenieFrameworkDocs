@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         'nuxt-og-image',
         "nuxt-link-checker"
     ],
+    ssr: true,
     build: { transpile: ["shiki"] },
 
     content: {
