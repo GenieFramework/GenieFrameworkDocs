@@ -1,3 +1,3 @@
 ---
-redirect: /framework/genie.jl/guides
+redirect: /framework/genie.jl/docs
 ---
