@@ -1,3 +1,21 @@
+# General wildcards and specific redirects
 /docs/reference/reactive-ui/* /framework/stipple.jl/:splat
+/docs/reference/reactive-ui/introduction /framework/stipple.jl/docs/
+/docs/reference/reactive-ui /framework/stipple.jl/docs/
+
+/docs/examples /framework/stipple.jl/recipes/
+
 /docs/reference/server/* /framework/genie.jl/:splat
+/docs/reference/server/introduction /framework/genie.jl/docs/
+/docs/reference/server /framework/genie.jl/docs/
+
 /docs/reference/database/* /framework/searchlight.jl/:splat
+/docs/reference/database/introduction /framework/searchlight.jl/docs/
+/docs/reference/database /framework/searchlight.jl/docs/
+
+/docs/genie-builder/* /geniebuilder/docs/:splat
+/docs/genie-builder/introduction /geniebuilder/docs
+/docs/genie-builder /geniebuilder/docs
+
+/docs/guides/* /framework/guides/:splat
+/docs/guides /framework/guides
