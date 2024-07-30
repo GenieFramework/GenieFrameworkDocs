@@ -17,5 +17,9 @@
 /docs/genie-builder/introduction /geniebuilder/docs
 /docs/genie-builder /geniebuilder/docs
 
-/docs/guides/* /framework/guides/:splat
 /docs/guides /framework/guides
+/docs/guides/creating-web-pages /framework/genie.jl/guides/creating-web-pages
+/docs/guides/creating-an-api /framework/genie.jl/guides/creating-an-api
+/docs/guides/first-dashboard /framework/stipple.jl/guides/first-dashboard
+/docs/guides/multipage-apps /framework/stipple.jl/guides/multipage-apps
+/docs/guides/deploying-genie-apps /framework/deployments/guides/deploying-genie-apps
