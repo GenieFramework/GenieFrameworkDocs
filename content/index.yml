@@ -5,9 +5,9 @@ navigation: false
 features:
   title: Genie documentation site
 sections:
-  - headline: "Low/no-code data app development platform"
+  - headline: "Build data apps quickly with drag and drop"
     title: Genie Builder
-    description: Build dashboard apps visually with a drag and drop editor, and write the backend logic in low-code Julia.
+    description: Build dashboard apps visually with a drag and drop UI editor, and write the backend logic in low-code Julia.
     align: left
     features:
       - name: Drag & drop, no-code UI builder
@@ -18,6 +18,9 @@ sections:
         icon: i-heroicons-cog
       - name: Theme editor, AI assistant, chart configurator
         description: Make your app look professional easily.
+        icon: i-heroicons-paint-brush
+      - name: Powered by Genie Framework
+        description: Scale your Genie Builder app to a production system with Genie Framework.
         icon: i-heroicons-rocket-launch
     links:
       - label: Read the docs
@@ -28,21 +31,21 @@ sections:
         trailing: true
         size: md
         class: ml-6
-  - headline: "Full-Stack web development"
-    title: Genie Framework 
-    description: Build full-stack web apps and backends with the most productive and complete web framework in Julia.
+  - headline: "Build production-grade web apps in pure Julia"
+    title: Genie Framework
+    description: Build full-stack web apps and backends with the most complete web framework in Julia.
     id: features
     align: left
     features:
       - name: Genie.jl
         description: Write performant server-side code.
-        icon: i-heroicons-bolt
+        icon: i-heroicons-book-open
       - name: Stipple.jl
         description: Create reactive, data-centric web apps and GUIs in low-code Julia.
-        icon: i-heroicons-power
+        icon: i-heroicons-window
       - name: SearchLight.jl
         description: Work with relational databases such as SQLite, MySQL, and Postgres without writing SQL queries.
-        icon: i-heroicons-code-bracket-square
+        icon: i-heroicons-circle-stack
     links:
       - label: Read the docs
         to: "/framework/"
