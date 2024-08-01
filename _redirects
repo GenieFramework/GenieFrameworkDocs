@@ -4,6 +4,7 @@
 /docs/reference/reactive-ui /framework/stipple.jl/docs/
 
 /docs/examples /framework/stipple.jl/recipes/
+/docs/examples/* /framework/stipple.jl/recipes/
 
 /docs/reference/server/* /framework/genie.jl/:splat
 /docs/reference/server/introduction /framework/genie.jl/docs/
@@ -23,3 +24,4 @@
 /docs/guides/first-dashboard /framework/stipple.jl/guides/first-dashboard
 /docs/guides/multipage-apps /framework/stipple.jl/guides/multipage-apps
 /docs/guides/deploying-genie-apps /framework/deployments/guides/deploying-genie-apps
+
