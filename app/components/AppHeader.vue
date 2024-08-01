@@ -50,6 +50,12 @@ const links = [
     to: '/app-gallery',
     icon: 'i-heroicons-book-open',
     description: '',
+  },
+  {
+    label: 'Component gallery',
+    to: '/framework/stipple.jl/docs/component-gallery',
+    icon: 'i-heroicons-book-open',
+    description: '',
   }
 
   ]
