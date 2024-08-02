@@ -10,7 +10,8 @@ export default defineNuxtConfig({
         '@nuxt/ui',
         '@nuxthq/studio',
         'nuxt-og-image',
-        "nuxt-link-checker"
+        "nuxt-link-checker",
+        "@zadigetvoltaire/nuxt-gtm"
     ],
     ssr: true,
     build: { transpile: ["shiki"] },
@@ -89,5 +90,10 @@ export default defineNuxtConfig({
         '/docs/genie-builder/**': { redirect: '/geniebuilder/docs/**' },
         '/docs/guides': { redirect: '/framework/guides' },
         '/docs/guides/**': { redirect: '/framework/guides/**' }
+    },
+
+    gtm: {
+        id: 'GTM-MJLRHNL7',
+        devtools: true, // (optional)
     }
 })
