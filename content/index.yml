@@ -38,7 +38,7 @@ sections:
     align: left
     features:
       - name: Genie.jl
-        description: Write performant server-side code.
+        description: Write performant server-side code for your apps and APIs.
         icon: i-heroicons-book-open
       - name: Stipple.jl
         description: Create reactive, data-centric web apps and GUIs in low-code Julia.
@@ -46,6 +46,9 @@ sections:
       - name: SearchLight.jl
         description: Work with relational databases such as SQLite, MySQL, and Postgres without writing SQL queries.
         icon: i-heroicons-circle-stack
+      - name: First party plugins
+        description: Enhance your app with first party plugins for authentication, authorization, and more.
+        icon: i-heroicons-rocket-launch
     links:
       - label: Read the docs
         to: "/framework/"
