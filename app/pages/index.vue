@@ -11,11 +11,11 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="w-5/6 mx-auto">
+  <div class=" mx-auto" style="max-width:1200px">
     <h1 class="text-4xl font-bold text-center mt-10 mb-10">{{ page.features.title }}</h1>
     <ULandingGrid>
     <ULandingSection 
-    class="col-span-6 sm:py-10 mx-auto"
+    class="col-span-6 sm:py-10 mx-auto" style="width:550px"
       v-for="(section, index) in page.sections"
       :key="index"
       :headline="section.headline"
