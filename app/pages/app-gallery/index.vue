@@ -21,7 +21,7 @@ const contentQuery = await queryContent('app-gallery/').sort(
     <UCard v-for="post in contentQuery" style="width:450px;padding:0px" :ui="{ ring:' ring-2', header: {padding: ''}, body: {padding:'px-1 py-1 sm:p-4'}}" >
 
     <template #header>
-            <NuxtLink :to="post.url">
+            <NuxtLink :to="post.url" target="_blank">
       <img class="rounded-t-lg" :src="post.preview" alt="" style="height:253px;width:450px" />
             </NuxtLink>
     </template>
@@ -31,23 +31,23 @@ const contentQuery = await queryContent('app-gallery/').sort(
     <br>
 
                 <div class="space-x-4 mb-2">
-                    <NuxtLink :to="post.url" v-if="post.url" class="pr-3 text-l  text-gray-900 dark:text-white">
+                    <NuxtLink :to="post.url" v-if="post.url"  target="_blank" class="pr-3 text-l  text-gray-900 dark:text-white">
                         App
                         <Icon name="ph:arrow-square-out" />
                     </NuxtLink>
-                    <NuxtLink :href="post.repo" v-if="post.repo"
+                    <NuxtLink :href="post.repo" v-if="post.repo" target="_blank"
                         class="pr-3 text-l tracking-tight text-gray-900 dark:text-white">
                         Code
                         <Icon name="ph:arrow-square-out" />
                     </NuxtLink>
-                    <NuxtLink :to="post.tutorial" v-if="post.tutorial"
+                    <NuxtLink :to="post.tutorial" v-if="post.tutorial" target="_blank"
                         class="pr-3 text-l tracking-tight text-gray-900 dark:text-white">
                         Tutorial
                         <Icon name="ph:arrow-square-out" />
                     </NuxtLink>
                     <a :href="post.video" v-if="post.video"
                         class="pr-3 text-l tracking-tight text-gray-900 dark:text-white">
-                        Video
+                        Tutorial
                         <Icon name="ph:arrow-square-out" />
                     </a>
                 </div>
