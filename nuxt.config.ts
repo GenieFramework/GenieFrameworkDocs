@@ -90,6 +90,13 @@ export default defineNuxtConfig({
         '/docs/genie-builder/**': { redirect: '/geniebuilder/docs/**' },
         '/docs/guides': { redirect: '/framework/guides' },
         '/docs/guides/**': { redirect: '/framework/guides/**' }
+        '/docs/reference/workflow/': { redirect: '/framework/guides' },
+        '/docs/reference/workflow/**': { redirect: '/framework/guides' }
+        '/docs/reference/workflow/nginx-reverse-proxy': { redirect: '/framework/guides/deployments/nginx-reverse-proxy' }
+        '/docs/reference/workflow/importing-code': { redirect: '/framework/guides/workflows/importing-code' }
+        '/docs/reference/workflow/controlling-load-order': { redirect: '/framework/guides/workflows/controlling-load-order' }
+        '/docs/reference/workflow/nginx-reverse-proxy': { redirect: '/framework/guides/deployments/nginx-reverse-proxy' }
+        '/docs/guides/deploying-genie-apps': { redirect: '/framework/guides/deployments/deploying-genie-apps' }
     },
 
     gtm: {
