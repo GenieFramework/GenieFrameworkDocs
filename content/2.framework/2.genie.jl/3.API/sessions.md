@@ -1,9 +1,11 @@
 
 
 
+
 ::alert{type="info"}
 Missing docstring for `Session`. 
 ::
+
 
 
 
@@ -13,9 +15,11 @@ Missing docstring for `id`.
 
 
 
+
 ::alert{type="info"}
 Missing docstring for `start`. 
 ::
+
 
 
 
@@ -58,7 +62,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -122,7 +126,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -157,7 +161,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -192,7 +196,7 @@ julia> get(d, "c", 3)
 get(f::Function, collection, key)
 ```
 
-Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`]() to also store the default value in the dictionary.
+Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use [`get!`](@ref) to also store the default value in the dictionary.
 
 This is intended to be called using `do` block syntax
 
@@ -205,9 +209,11 @@ end
 
 ::
 
+
 ::alert{type="info"}
 Missing docstring for `unset!`. 
 ::
+
 
 
 
@@ -217,9 +223,11 @@ Missing docstring for `isset`.
 
 
 
+
 ::alert{type="info"}
 Missing docstring for `persist`. 
 ::
+
 
 
 
@@ -229,9 +237,11 @@ Missing docstring for `load`.
 
 
 
+
 ::alert{type="info"}
 Missing docstring for `session`. 
 ::
+
 
 
 

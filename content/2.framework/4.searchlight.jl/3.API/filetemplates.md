@@ -23,7 +23,10 @@ Default content for a new SearchLight migration.
 
 ::
 
-::alert{type="info"}Missing docstring for `newmigration`. ::
+
+::alert{type="info"}
+Missing docstring for `newmigration`. 
+::
 
 
 ::ApiCard{object="SearchLight.Generator.FileTemplates.newmodel" category="Function"}
@@ -49,11 +52,17 @@ Default content for a new SearchLight validator.
 
 ::
 
-::alert{type="info"}Missing docstring for `adapter_default_config`. ::
+
+::alert{type="info"}
+Missing docstring for `adapter_default_config`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `newconfig`. ::
+
+::alert{type="info"}
+Missing docstring for `newconfig`. 
+::
 
 
 ::ApiCard{object="SearchLight.Generator.FileTemplates.newtest" category="Function"}

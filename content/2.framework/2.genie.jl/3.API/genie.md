@@ -90,7 +90,10 @@ julia> Genie.loadapp(".")
 
 ::
 
-::alert{type="info"}Missing docstring for `isrunning`. ::
+
+::alert{type="info"}
+Missing docstring for `isrunning`. 
+::
 
 
 ::ApiCard{object="Genie.loadapp" category="Function"}

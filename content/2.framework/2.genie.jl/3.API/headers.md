@@ -23,11 +23,17 @@ Makes request headers case insensitive.
 
 ::
 
-::alert{type="info"}Missing docstring for `set_access_control_allow_headers!`. ::
+
+::alert{type="info"}
+Missing docstring for `set_access_control_allow_headers!`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `set_access_control_allow_origin!`. ::
+
+::alert{type="info"}
+Missing docstring for `set_access_control_allow_origin!`. 
+::
 
 
 ::ApiCard{object="Genie.Headers.set_headers!" category="Function"}

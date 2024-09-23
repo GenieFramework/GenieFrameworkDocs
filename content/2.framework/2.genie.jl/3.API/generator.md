@@ -1,7 +1,10 @@
 
 
 
-::alert{type="info"}Missing docstring for `autoconfdb`. ::
+
+::alert{type="info"}
+Missing docstring for `autoconfdb`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.autostart_app" category="Function"}
@@ -16,7 +19,10 @@ If `autostart` is `true`, the newly generated Genie app will be automatically st
 
 ::
 
-::alert{type="info"}Missing docstring for `binfolderpath`. ::
+
+::alert{type="info"}
+Missing docstring for `binfolderpath`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.controller_file_name" category="Function"}
@@ -31,7 +37,10 @@ Computes the controller file name based on the resource name.
 
 ::
 
-::alert{type="info"}Missing docstring for `db_intializer`. ::
+
+::alert{type="info"}
+Missing docstring for `db_intializer`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.db_support" category="Function"}
@@ -79,11 +88,17 @@ Installs the application's dependencies using Julia's Pkg
 
 ::
 
-::alert{type="info"}Missing docstring for `install_db_dependencies`. ::
+
+::alert{type="info"}
+Missing docstring for `install_db_dependencies`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `install_searchlight_dependencies`. ::
+
+::alert{type="info"}
+Missing docstring for `install_searchlight_dependencies`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.microstack_app" category="Function"}
@@ -274,15 +289,24 @@ Creates a new Genie `Task` file.
 
 ::
 
-::alert{type="info"}Missing docstring for `pkggenfile`. ::
+
+::alert{type="info"}
+Missing docstring for `pkggenfile`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `pkgproject`. ::
+
+::alert{type="info"}
+Missing docstring for `pkgproject`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `post_create`. ::
+
+::alert{type="info"}
+Missing docstring for `post_create`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.remove_searchlight_initializer" category="Function"}
@@ -319,7 +343,10 @@ Writes the file necessary to scaffold a minimal Genie app.
 
 ::
 
-::alert{type="info"}Missing docstring for `set_files_mod`. ::
+
+::alert{type="info"}
+Missing docstring for `set_files_mod`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.setup_resource_path" category="Function"}
@@ -356,7 +383,10 @@ Creates the bin/server and bin/repl binaries for Windows
 
 ::
 
-::alert{type="info"}Missing docstring for `validname`. ::
+
+::alert{type="info"}
+Missing docstring for `validname`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.write_app_custom_files" category="Function"}
@@ -371,7 +401,10 @@ Writes the Genie app main module file.
 
 ::
 
-::alert{type="info"}Missing docstring for `write_db_config`. ::
+
+::alert{type="info"}
+Missing docstring for `write_db_config`. 
+::
 
 
 ::ApiCard{object="Genie.Generator.write_resource_file" category="Function"}

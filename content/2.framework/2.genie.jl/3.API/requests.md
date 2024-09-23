@@ -67,9 +67,9 @@ write(io::IO, x)
 write(filename::AbstractString, x)
 ```
 
-Write the canonical binary representation of a value to the given I/O stream or file. Return the number of bytes written into the stream. See also [`print`]() to write a text representation (with an encoding that may depend upon `io`).
+Write the canonical binary representation of a value to the given I/O stream or file. Return the number of bytes written into the stream. See also [`print`](@ref) to write a text representation (with an encoding that may depend upon `io`).
 
-The endianness of the written value depends on the endianness of the host system. Convert to/from a fixed endianness when writing/reading (e.g. using  [`htol`]() and [`ltoh`]()) to get results that are consistent across platforms.
+The endianness of the written value depends on the endianness of the host system. Convert to/from a fixed endianness when writing/reading (e.g. using  [`htol`](@ref) and [`ltoh`](@ref)) to get results that are consistent across platforms.
 
 You can write multiple values with the same `write` call. i.e. the following are equivalent:
 
@@ -145,13 +145,13 @@ read(io::IO, T)
 
 Read a single value of type `T` from `io`, in canonical binary representation.
 
-Note that Julia does not convert the endianness for you. Use [`ntoh`]() or [`ltoh`]() for this purpose.
+Note that Julia does not convert the endianness for you. Use [`ntoh`](@ref) or [`ltoh`](@ref) for this purpose.
 
 ```
 read(io::IO, String)
 ```
 
-Read the entirety of `io`, as a `String` (see also [`readchomp`]()).
+Read the entirety of `io`, as a `String` (see also [`readchomp`](@ref)).
 
 **Examples**
 

@@ -1,15 +1,24 @@
 
 
 
-::alert{type="info"}Missing docstring for `ValidationAbstractType`. ::
+
+::alert{type="info"}
+Missing docstring for `ValidationAbstractType`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `ValidationResult`. ::
+
+::alert{type="info"}
+Missing docstring for `ValidationResult`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `ValidationError`. ::
+
+::alert{type="info"}
+Missing docstring for `ValidationError`. 
+::
 
 
 ::ApiCard{object="SearchLight.Validation.ValidationRule" category="Type"}
@@ -57,7 +66,10 @@ The object that defines the rules and stores the validation errors associated wi
 
 ::
 
-::alert{type="info"}Missing docstring for `validator`. ::
+
+::alert{type="info"}
+Missing docstring for `validator`. 
+::
 
 
 ::ApiCard{object="SearchLight.Validation.validate" category="Function"}
@@ -72,22 +84,37 @@ Validates `m`'s data. A `bool` is return and existing errors are pushed to the v
 
 ::
 
-::alert{type="info"}Missing docstring for `haserrors`. ::
+
+::alert{type="info"}
+Missing docstring for `haserrors`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `haserrorsfor`. ::
+
+::alert{type="info"}
+Missing docstring for `haserrorsfor`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `errorsfor`. ::
+
+::alert{type="info"}
+Missing docstring for `errorsfor`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `errorsmessagesfor`. ::
+
+::alert{type="info"}
+Missing docstring for `errorsmessagesfor`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `errors_to_string`. ::
+
+::alert{type="info"}
+Missing docstring for `errors_to_string`. 
+::
 
 

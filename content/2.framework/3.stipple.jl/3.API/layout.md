@@ -20,7 +20,7 @@ julia> layout([
         span("Hello", @text(:greeting))
         ])
 "<!DOCTYPE html>
-<html><head><title></title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" /></head><body class style><link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" /><link href="/css/stipple/stipplecore.css" rel="stylesheet" /><link href="/css/stipple/quasar.min.css" rel="stylesheet" /><span v-text='greeting'>Hello</span><script src="/js/channels.js?v=1.17.1"></script><script src="/js/underscore-min.js"></script><script src="/js/vue.js"></script><script src="/js/quasar.umd.min.js"></script>
+<html><head><title></title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" /></head><body class style><link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" /><link href="/css/stipple/stipplecore.css" rel="stylesheet" /><link href="/css/stipple/quasar.min.css" rel="stylesheet" /><span v-text='greeting'>Hello</span><script src="/js/channels.js?v=1.17.1"></script><script src="/js/underscore-min.js"></script><script src="/js/vue.global.prod.js"></script><script src="/js/quasar.umd.prod.js"></script>
 <script src="/js/apexcharts.min.js"></script><script src="/js/vue-apexcharts.min.js"></script><script src="/js/stipplecore.js" defer></script><script src="/js/vue_filters.js" defer></script></body></html>"
 ```
 
@@ -28,7 +28,7 @@ julia> layout([
 julia> layout([
         span("Hello", @text(:greeting))
         ], partial = true)
-"<link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" /><link href="/css/stipple/stipplecore.css" rel="stylesheet" /><link href="/css/stipple/quasar.min.css" rel="stylesheet" /><span v-text='greeting'>Hello</span><script src="/js/channels.js?v=1.17.1"></script><script src="/js/underscore-min.js"></script><script src="/js/vue.js"></script><script src="/js/quasar.umd.min.js"></script>
+"<link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" /><link href="/css/stipple/stipplecore.css" rel="stylesheet" /><link href="/css/stipple/quasar.min.css" rel="stylesheet" /><span v-text='greeting'>Hello</span><script src="/js/channels.js?v=1.17.1"></script><script src="/js/underscore-min.js"></script><script src="/js/vue.global.prod.js"></script><script src="/js/quasar.umd.prod.js"></script>
 <script src="/js/apexcharts.min.js"></script><script src="/js/vue-apexcharts.min.js"></script><script src="/js/stipplecore.js" defer></script><script src="/js/vue_filters.js" defer></script>"
 ```
 
@@ -51,7 +51,7 @@ julia> page(:elemid, [
         span("Hello", @text(:greeting))
         ])
 "<!DOCTYPE html>
-<html><head><title></title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" /></head><body class style><link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" /><link href="/css/stipple/stipplecore.css" rel="stylesheet" /><link href="/css/stipple/quasar.min.css" rel="stylesheet" /><div id=elemid><span v-text='greeting'>Hello</span></div><script src="/js/channels.js?v=1.17.1"></script><script src="/js/underscore-min.js"></script><script src="/js/vue.js"></script><script src="/js/quasar.umd.min.js"></script>
+<html><head><title></title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" /></head><body class style><link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" /><link href="/css/stipple/stipplecore.css" rel="stylesheet" /><link href="/css/stipple/quasar.min.css" rel="stylesheet" /><div id=elemid><span v-text='greeting'>Hello</span></div><script src="/js/channels.js?v=1.17.1"></script><script src="/js/underscore-min.js"></script><script src="/js/vue.global.prod.js"></script><script src="/js/quasar.umd.prod.js"></script>
 <script src="/js/apexcharts.min.js"></script><script src="/js/vue-apexcharts.min.js"></script><script src="/js/stipplecore.js" defer></script><script src="/js/vue_filters.js" defer></script></body></html>"
 ```
 
@@ -61,16 +61,38 @@ julia> page(:elemid, [
 
 
 ```julia
-function row(args...; kwargs...)
+function row(args...; size=-1, xs=-1, sm=-1, md=-1, lg=-1, xl=-1, kwargs...)
 ```
 
-Creates a `div` HTML element with a CSS class named `row`. This works with Stipple's core layout and with [Quasar's Flex Grid](https://quasar.dev/layout/grid/introduction-to-flexbox) to create the responsive CSS grid of the web page. The `row()` function creates rows which should include [`cell`](layout.md#Stipple.Layout.cell)s.
+Creates a `div` HTML element with Quasar's Flexgrid CSS class `row`. Such rows typically contain elements created with [`cell`](layout.md#Stipple.Layout.cell), `row`, [`column`](layout.md#Stipple.Layout.column) or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
+
+The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](layout.md#Stipple.Layout.cell).
 
 **Example**
 
 ```julia
 julia> row(span("Hello"))
 "<div class="row"><span>Hello</span></div>"
+```
+
+::
+::ApiCard{object="Stipple.Layout.column" category="Function"}
+#docstring
+
+
+```julia
+function column(args...; size=-1, xs=-1, sm=-1, md=-1, lg=-1, xl=-1, kwargs...)
+```
+
+Creates a `div` HTML element with Quasar's Flexgrid CSS class `column`. Such columns typically contain elements created with [`cell`](layout.md#Stipple.Layout.cell), [`row`](layout.md#Stipple.Layout.row), `column`, or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
+
+The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](layout.md#Stipple.Layout.cell).
+
+**Example**
+
+```julia
+julia> column(span("Hello"))
+"<div class="column"><span>Hello</span></div>"
 ```
 
 ::
@@ -82,14 +104,20 @@ julia> row(span("Hello"))
 function cell(args...; size::Int=0, xs::Int=0, sm::Int=0, md::Int=0, lg::Int=0, xl::Int=0, kwargs...)
 ```
 
-Creates a `div` HTML element with Quasar flex grid CSS class named `col`. If size is specified, the class `col-$size` is added instead. [Quasar's Flex Grid](https://quasar.dev/layout/grid/introduction-to-flexbox) supports the following values for size arguments:
+Creates a `div` HTML element with Quasar's flex grid CSS class `col`. Moreover, cells are of the class `st-col`, which is controlled by the Stipple theme.
 
-  * Integer values between `0` and `12`; `0` means no specification
-  * AbStractString values `"1"` - `"12"`, `""` or `"auto"`; `""` means no specification, `"auto"` means height/width from content
+If size is specified, the class `col-$size` is added instead.
 
-If tag classes (`xs`, `sm`, `md`, `lg`, `xl`) are specified, the respective classes `col-$tag-$md` are added, e.g. `col-sm-6`. The cells should be included within [`row`](layout.md#Stipple.Layout.row)s or [`column`]()s.
+If tag classes (`xs`, `sm`, `md`, `lg`, `xl`) are specified, the respective classes `col-$tag-$md` are added, e.g. `col-sm-6`.
 
-Moreover, cells are of the class `st-col`, which is controlled by the Stipple theme.
+Parameters:
+
+  * `""` / `0`: shared remaining space (e.g. `"col"`, `"col-sm"`)
+  * `1` - `12` / `"1"` - `"12"`: column width (e.g. `"col-5"`, `"col-sm-5"`)
+  * `"auto"`/`:auto`: height/width from content (`"col-auto"`, `"col-sm-auto"`)
+  * `-1` / `nothing`: no specification
+
+The cells are typically included within [`row`](layout.md#Stipple.Layout.row)s or [`column`](layout.md#Stipple.Layout.column)s. See [Quasar's Flex Grid](https://quasar.dev/layout/grid/introduction-to-flexbox) for more information.
 
 **Example**
 
@@ -107,7 +135,7 @@ julia> row(cell(size = 2, md = 6, sm = 12, span("Hello")))
 function theme() :: String
 ```
 
-Provides theming support for Stipple apps and pages. It includes Stipple's default CSS files and additional elements,   in the form of HTML tags, can be injected by pushing to the `Stipple.Layout.THEMES` collection.
+Provides theming support for Stipple apps and pages. It includes Stipple's default CSS files and additional elements,   in the form of HTML tags, can be injected by pushing to the `Stipple.Layout.THEMES[][]` collection.
 
 **Example**
 
@@ -118,7 +146,7 @@ julia> theme()
 julia> StippleUI.theme()
 "<link href="/css/stipple/quasar.min.css" rel="stylesheet" />"
 
-julia> push!(Stipple.Layout.THEMES, StippleUI.theme)
+julia> push!(Stipple.Layout.THEMES[], StippleUI.theme)
 ```
 
 ::

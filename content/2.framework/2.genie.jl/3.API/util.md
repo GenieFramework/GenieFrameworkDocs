@@ -1,7 +1,10 @@
 
 
 
-::alert{type="info"}Missing docstring for `expand_nullable`. ::
+
+::alert{type="info"}
+Missing docstring for `expand_nullable`. 
+::
 
 
 ::ApiCard{object="Genie.Util.file_name_without_extension" category="Function"}
@@ -27,6 +30,9 @@ Recursively walks dir and `produce`s non directories. If `only_files`, directori
 
 ::
 
-::alert{type="info"}Missing docstring for `time_to_unixtimestamp`. ::
+
+::alert{type="info"}
+Missing docstring for `time_to_unixtimestamp`. 
+::
 
 

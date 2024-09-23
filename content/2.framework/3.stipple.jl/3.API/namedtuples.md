@@ -8,15 +8,15 @@
 NamedTuple
 ```
 
-`NamedTuple`s are, as their name suggests, named [`Tuple`]()s. That is, they're a tuple-like collection of values, where each entry has a unique name, represented as a [`Symbol`](). Like `Tuple`s, `NamedTuple`s are immutable; neither the names nor the values can be modified in place after construction.
+`NamedTuple`s are, as their name suggests, named [`Tuple`](@ref)s. That is, they're a tuple-like collection of values, where each entry has a unique name, represented as a [`Symbol`](@ref). Like `Tuple`s, `NamedTuple`s are immutable; neither the names nor the values can be modified in place after construction.
 
-Accessing the value associated with a name in a named tuple can be done using field access syntax, e.g. `x.a`, or using [`getindex`](), e.g. `x[:a]` or `x[(:a, :b)]`. A tuple of the names can be obtained using [`keys`](), and a tuple of the values can be obtained using [`values`]().
+Accessing the value associated with a name in a named tuple can be done using field access syntax, e.g. `x.a`, or using [`getindex`](@ref), e.g. `x[:a]` or `x[(:a, :b)]`. A tuple of the names can be obtained using [`keys`](@ref), and a tuple of the values can be obtained using [`values`](@ref).
 
 !!! note
-    Iteration over `NamedTuple`s produces the *values* without the names. (See example below.) To iterate over the name-value pairs, use the [`pairs`]() function.
+    Iteration over `NamedTuple`s produces the *values* without the names. (See example below.) To iterate over the name-value pairs, use the [`pairs`](@ref) function.
 
 
-The [`@NamedTuple`]() macro can be used for conveniently declaring `NamedTuple` types.
+The [`@NamedTuple`](@ref) macro can be used for conveniently declaring `NamedTuple` types.
 
 **Examples**
 

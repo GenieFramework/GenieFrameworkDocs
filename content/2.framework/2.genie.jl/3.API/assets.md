@@ -62,7 +62,10 @@ Updates the assets configuration for the current package.
 
 ::
 
-::alert{type="info"}Missing docstring for `assets_endpoint`. ::
+
+::alert{type="info"}
+Missing docstring for `assets_endpoint`. 
+::
 
 
 ::ApiCard{object="Genie.Assets.asset_file" category="Function"}
@@ -121,7 +124,10 @@ Outputs the `channels.js` file included with the Genie package.
 
 ::
 
-::alert{type="info"}Missing docstring for `channels_route`. ::
+
+::alert{type="info"}
+Missing docstring for `channels_route`. 
+::
 
 
 ::ApiCard{object="Genie.Assets.channels_script" category="Function"}
@@ -136,7 +142,10 @@ Outputs the channels JavaScript content within `<script>...</script>` tags, for 
 
 ::
 
-::alert{type="info"}Missing docstring for `channels_script_tag`. ::
+
+::alert{type="info"}
+Missing docstring for `channels_script_tag`. 
+::
 
 
 ::ApiCard{object="Genie.Assets.channels_subscribe" category="Function"}
@@ -241,7 +250,10 @@ Path to a js asset. `file_name` should not include the extension.
 
 ::
 
-::alert{type="info"}Missing docstring for `jsliteral`. ::
+
+::alert{type="info"}
+Missing docstring for `jsliteral`. 
+::
 
 
 ::ApiCard{object="Genie.Assets.js_settings" category="Function"}
@@ -267,7 +279,10 @@ Outputs the webthreads.js file included with the Genie package
 
 ::
 
-::alert{type="info"}Missing docstring for `webthreads_endpoint`. ::
+
+::alert{type="info"}
+Missing docstring for `webthreads_endpoint`. 
+::
 
 
 ::ApiCard{object="Genie.Assets.webthreads_push_pull" category="Function"}
@@ -282,7 +297,10 @@ Registers push and pull routes for `channel`.
 
 ::
 
-::alert{type="info"}Missing docstring for `webthreads_route`. ::
+
+::alert{type="info"}
+Missing docstring for `webthreads_route`. 
+::
 
 
 ::ApiCard{object="Genie.Assets.webthreads_script" category="Function"}
@@ -297,7 +315,10 @@ Outputs the channels JavaScript content within `<script>...</script>` tags, for 
 
 ::
 
-::alert{type="info"}Missing docstring for `webthreads_script_tag`. ::
+
+::alert{type="info"}
+Missing docstring for `webthreads_script_tag`. 
+::
 
 
 ::ApiCard{object="Genie.Assets.webthreads_subscribe" category="Function"}
