@@ -1,11 +1,24 @@
 
 
+::ApiCard{object="Stipple.Reactive" category="Type"}
+#docstring
 
-::alert{type="info"}
-Missing docstring for `Reactive`. 
+
+```julia
+    mutable struct Reactive{T} <: Observables.AbstractObservable{T}
+```
+
+`Reactive` is a the base type for variables that are handled by a model. It is an `AbstractObservable` of which the content is  obtained by appending `[]` after the `Reactive` variable's name. For convenience, `Reactive` can be abbreviated by `R`.
+
+There are several methods of creating a Reactive variable:
+
+  * `r = Reactive(8)`
+  * `r = Reactive{Float64}(8)`
+  * `r = Reactive{Float64}(8, READONLY)`
+  * `r = Reactive{String}("Hello", PRIVATE)`
+  * `r = Reactive(jsfunction"console.log('Hi')", JSFUNCTION)`
+
 ::
-
-
 ::ApiCard{object="Stipple.ReactiveModel" category="Type"}
 #docstring
 
@@ -29,32 +42,16 @@ end
 
 ::
 
+
 ::alert{type="info"}
-Missing docstring for `@reactors`. 
+Missing docstring for `Settings # missing docstring`. 
 ::
 
 
 
-::alert{type="info"}
-Missing docstring for `@reactive`. 
-::
-
-
 
 ::alert{type="info"}
-Missing docstring for `@reactive!`. 
-::
-
-
-
-::alert{type="info"}
-Missing docstring for `Settings`. 
-::
-
-
-
-::alert{type="info"}
-Missing docstring for `MissingPropertyException`. 
+Missing docstring for `MissingPropertyException # missing docstring`. 
 ::
 
 
@@ -380,14 +377,16 @@ Change the field of a ReactiveModel without triggering the listeners. If keys ar
 
 ::
 
+
 ::alert{type="info"}
-Missing docstring for `convertvalue`. 
+Missing docstring for `convertvalue # missing docstring`. 
 ::
 
 
 
+
 ::alert{type="info"}
-Missing docstring for `stipple_parse`. 
+Missing docstring for `stipple_parse # missing docstring`. 
 ::
 
 
@@ -415,8 +414,9 @@ hs_model = Stipple.init(HelloPie)
 
 ::
 
+
 ::alert{type="info"}
-Missing docstring for `stipple_deps`. 
+Missing docstring for `stipple_deps # missing docstring`. 
 ::
 
 
@@ -437,7 +437,7 @@ Configures the reactive handlers for the reactive properties of the model. Calle
 
 ```julia
 Base.push!(app::M, vals::Pair{Symbol,T}; channel::String,
-            except::Union{Genie.WebChannels.HTTP.WebSockets.WebSocket,Nothing,UInt}) where {T,M<:ReactiveModel}
+            except::Union{Nothing,UInt,Vector{UInt}}) where {T,M<:ReactiveModel}
 ```
 
 Pushes data payloads over to the frontend by broadcasting the `vals` through the `channel`.
@@ -495,8 +495,9 @@ Replaces all JSONText values on a copy of the input, see [`replace_jsfunction!`]
 
 ::
 
+
 ::alert{type="info"}
-Missing docstring for `deps_routes`. 
+Missing docstring for `deps_routes # missing docstring`. 
 ::
 
 
@@ -511,12 +512,27 @@ function deps(channel::String = Genie.config.webchannels_default_route)
 Outputs the HTML code necessary for injecting the dependencies in the page (the <script> tags).
 
 ::
+::ApiCard{object="Stipple.@R_str" category="Macro"}
+#docstring
 
-::alert{type="info"}
-Missing docstring for `@R_str`. 
+
+Create a js expression that is bound to a field of a vue component. Internally this is nothing than conversion to a Symbol, but it's a short version for creating symbols with spaces.
+
+**Example**
+
+```
+julia> btn("", @click("toggleFullscreen"), icon = R"is_fullscreen ? 'fullscreen_exit' : 'fullscreen'")
+"<q-btn label v-on:click="toggleFullscreen" :icon="is_fullscreen ? 'fullscreen_exit' : 'fullscreen'"></q-btn>"
+```
+
+Note: For expressions that contain only variable names, we recommend the Symbol notation
+
+```
+julia> btn("", @click("toggleFullscreen"), icon = :fullscreen_icon)
+"<q-btn label v-on:click="toggleFullscreen" :icon="fullscreen_icon"></q-btn>"
+```
+
 ::
-
-
 ::ApiCard{object="Observables.on" category="Function"}
 #docstring
 
@@ -527,7 +543,7 @@ on(f, observable::AbstractObservable; weak = false, priority=0, update=false)::O
 
 Adds function `f` as listener to `observable`. Whenever `observable`'s value is set via `observable[] = val`, `f` is called with `val`.
 
-Returns an [`ObserverFunction`]() that wraps `f` and `observable` and allows to disconnect easily by calling `off(observerfunction)` instead of `off(f, observable)`. If instead you want to compute a new `Observable` from an old one, use [`map(f, ::Observable)`]().
+Returns an `ObserverFunction` that wraps `f` and `observable` and allows to disconnect easily by calling `off(observerfunction)` instead of `off(f, observable)`. If instead you want to compute a new `Observable` from an old one, use `map(f, ::Observable)`.
 
 If `weak = true` is set, the new connection will be removed as soon as the returned `ObserverFunction` is not referenced anywhere and is garbage collected. This is useful if some parent object makes connections to outside observables and stores the resulting `ObserverFunction` instances. Then, once that parent object is garbage collected, the weak observable connections are removed automatically.
 

@@ -79,11 +79,17 @@ Generates a void HTML element in the form <...>
 
 ::
 
-::alert{type="info"}Missing docstring for `skip_element`. ::
+
+::alert{type="info"}
+Missing docstring for `skip_element`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `include_markdown`. ::
+
+::alert{type="info"}
+Missing docstring for `include_markdown`. 
+::
 
 
 ::ApiCard{object="Genie.Renderer.Html.get_template" category="Function"}
@@ -234,7 +240,10 @@ Replaces illegal Julia characters from HTML attributes with safe ones, to be use
 
 ::
 
-::alert{type="info"}Missing docstring for `parsehtml`. ::
+
+::alert{type="info"}
+Missing docstring for `parsehtml`. 
+::
 
 
 ::ApiCard{object="Genie.Renderer.Html.html_to_julia" category="Function"}
@@ -326,11 +335,17 @@ Parses a HTML string into Julia code.
 
 ::
 
-::alert{type="info"}Missing docstring for `parse`. ::
+
+::alert{type="info"}
+Missing docstring for `parse`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `parsetags`. ::
+
+::alert{type="info"}
+Missing docstring for `parsetags`. 
+::
 
 
 ::ApiCard{object="Genie.Renderer.Html.register_elements" category="Function"}
@@ -378,7 +393,10 @@ Generates a Julia function representing a "void" HTML element: that is an elemen
 
 ::
 
-::alert{type="info"}Missing docstring for `attr`. ::
+
+::alert{type="info"}
+Missing docstring for `attr`. 
+::
 
 
 ::ApiCard{object="Genie.Renderer.Html.for_each" category="Function"}
@@ -437,6 +455,9 @@ Outputs the rendering of the view within the template.
 
 ::
 
-::alert{type="info"}Missing docstring for `el`. ::
+
+::alert{type="info"}
+Missing docstring for `el`. 
+::
 
 

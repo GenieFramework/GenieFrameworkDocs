@@ -67,15 +67,24 @@ Http server handler function - invoked when the server gets a request.
 
 ::
 
-::alert{type="info"}Missing docstring for `isrunning`. ::
+
+::alert{type="info"}
+Missing docstring for `isrunning`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `openbrowser`. ::
+
+::alert{type="info"}
+Missing docstring for `openbrowser`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `print_server_status`. ::
+
+::alert{type="info"}
+Missing docstring for `print_server_status`. 
+::
 
 
 ::ApiCard{object="Genie.Server.serve" category="Function"}
@@ -106,7 +115,10 @@ julia> Genie.serve("public", 8888, async = false, verbose = true)
 
 ::
 
-::alert{type="info"}Missing docstring for `server_status`. ::
+
+::alert{type="info"}
+Missing docstring for `server_status`. 
+::
 
 
 ::ApiCard{object="Genie.Server.setup_http_listener" category="Function"}
@@ -121,7 +133,10 @@ Configures the handler for the HTTP Request and handles errors.
 
 ::
 
-::alert{type="info"}Missing docstring for `setup_http_streamer`. ::
+
+::alert{type="info"}
+Missing docstring for `setup_http_streamer`. 
+::
 
 
 ::ApiCard{object="Genie.Server.setup_ws_handler" category="Function"}

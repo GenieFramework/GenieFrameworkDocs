@@ -1,15 +1,24 @@
 
 
 
-::alert{type="info"}Missing docstring for `DbId`. ::
+
+::alert{type="info"}
+Missing docstring for `DbId`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `SQLType`. ::
+
+::alert{type="info"}
+Missing docstring for `SQLType`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `AbstractModel`. ::
+
+::alert{type="info"}
+Missing docstring for `AbstractModel`. 
+::
 
 
 ::ApiCard{object="SearchLight.SQLInput" category="Type"}
@@ -27,7 +36,10 @@ Represents a SQL column when building SQL queries.
 
 ::
 
-::alert{type="info"}Missing docstring for `SQLColumns`. ::
+
+::alert{type="info"}
+Missing docstring for `SQLColumns`. 
+::
 
 
 ::ApiCard{object="SearchLight.SQLLogicOperator" category="Type"}
@@ -100,7 +112,10 @@ SearchLight.SQLWhereExpression
 
 ::
 
-::alert{type="info"}Missing docstring for `SQLWhereEntity`. ::
+
+::alert{type="info"}
+Missing docstring for `SQLWhereEntity`. 
+::
 
 
 ::ApiCard{object="SearchLight.SQLLimit" category="Type"}
@@ -194,10 +209,16 @@ Wrapper around the various types of SQL `join` (`left`, `right`, `inner`, etc).
 
 ::
 
-::alert{type="info"}Missing docstring for `SQLHaving`. ::
+
+::alert{type="info"}
+Missing docstring for `SQLHaving`. 
+::
 
 
 
-::alert{type="info"}Missing docstring for `@sql_str`. ::
+
+::alert{type="info"}
+Missing docstring for `@sql_str`. 
+::
 
 

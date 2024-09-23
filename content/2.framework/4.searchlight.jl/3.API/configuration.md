@@ -43,7 +43,10 @@ Dict{Any,Any} with 6 entries:
 
 ::
 
-::alert{type="info"}Missing docstring for `load`. ::
+
+::alert{type="info"}
+Missing docstring for `load`. 
+::
 
 
 ::ApiCard{object="SearchLight.Configuration.Settings" category="Type"}

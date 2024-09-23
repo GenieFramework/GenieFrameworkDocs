@@ -44,12 +44,12 @@ function vue_integration(model::M; vue_app_name::String, endpoint::String, debou
 Generates the JS/Vue.js code which handles the 2-way data sync between Julia and JavaScript/Vue.js. It is called internally by `Stipple.init` which allows for the configuration of all the parameters.
 
 ::
-::ApiCard{object="Stipple.Elements.@iif" category="Macro"}
+::ApiCard{object="Stipple.Elements.@if" category="Macro"}
 #docstring
 
 
 ```julia
-@iif(expr)
+@if(expr)
 ```
 
 Generates `v-if` Vue.js code using `expr` as the condition. [https://vuejs.org/v2/api/#v-if](https://vuejs.org/v2/api/#v-if)
@@ -57,21 +57,35 @@ Generates `v-if` Vue.js code using `expr` as the condition. [https://vuejs.org/v
 **Example**
 
 ```julia
-julia> span("Bad stuff's about to happen", class="warning", @iif(:warning))
+julia> span("Bad stuff's about to happen", class="warning", @if(:warning))
 "<span class="warning" v-if='warning'>Bad stuff's about to happen</span>"
 ```
 
 ::
-
-::alert{type="info"}Missing docstring for `@elsiff`. ::
-
-
-::ApiCard{object="Stipple.Elements.@els" category="Macro"}
+::ApiCard{object="Stipple.Elements.@elseif" category="Macro"}
 #docstring
 
 
 ```julia
-@els(expr)
+@elseif(expr)
+```
+
+Generates `v-else-if` Vue.js code using `expr` as the condition. [https://vuejs.org/v2/api/#v-else-if](https://vuejs.org/v2/api/#v-else-if)
+
+**Example**
+
+```julia
+julia> span("An error has occurred", class="error", @elseif(:error))
+"<span class="error" v-else-if='error'>An error has occurred</span>"
+```
+
+::
+::ApiCard{object="Stipple.Elements.@else" category="Macro"}
+#docstring
+
+
+```julia
+@else(expr)
 ```
 
 Generates `v-else` Vue.js code using `expr` as the condition. [https://vuejs.org/v2/api/#v-else](https://vuejs.org/v2/api/#v-else)
@@ -79,26 +93,47 @@ Generates `v-else` Vue.js code using `expr` as the condition. [https://vuejs.org
 **Example**
 
 ```julia
-julia> span("Might want to keep an eye on this", class="notice", @els(:notice))
+julia> span("Might want to keep an eye on this", class="notice", @else(:notice))
 "<span class="notice" v-else='notice'>Might want to keep an eye on this</span>"
 ```
 
 ::
-::ApiCard{object="Stipple.Elements.@recur" category="Macro"}
+::ApiCard{object="Stipple.Elements.@for" category="Macro"}
 #docstring
 
 
 Generates `v-for` directive to render a list of items based on an array. [https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for)
 
+`@for` supports both js expressions as String or a Julia expression with Vectors or Dicts
+
 **Example**
 
+**Javascript**
+
 ```julia
-julia> p(" {{todo}} ", class="warning", @recur(:"todo in todos"))
-"<p v-for='todo in todos'>
- {{todo}} 
+julia> p(" {{todo}} ", class="warning", @for("todo in todos"))
+"""
+<p v-for='todo in todos'>
+    {{todo}}
 </p>
-"
+"""
 ```
+
+**Julia expression**
+
+```julia
+julia> dict = Dict(:a => "b", :c => 4);
+julia> ul(li("k: {{ k }}, v: {{ v }}, i: {{ i }}", @for((v, k, i) in dict)))
+"""
+<ul>
+    <li v-for="(v, k, i) in {'a':'b','c':4}">
+        k: {{ k }}, v: {{ v }}, i: {{ i }}
+    </li>
+</ul>
+"""
+```
+
+Note the inverted order of value, key and index compared to Stipple destructuring. It is also possible to loop over `(v, k)` or `v`; index will always be zero-based
 
 ::
 ::ApiCard{object="Stipple.Elements.@text" category="Macro"}

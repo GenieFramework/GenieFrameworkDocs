@@ -234,7 +234,7 @@ convert(T, x)
 
 Convert `x` to a value of type `T`.
 
-If `T` is an [`Integer`](@ref) type, an [`InexactError`](@ref) will be raised if `x` is not representable by `T`, for example if `x` is not integer-valued, or is outside the range supported by `T`.
+If `T` is an `Integer` type, an `InexactError` will be raised if `x` is not representable by `T`, for example if `x` is not integer-valued, or is outside the range supported by `T`.
 
 **Examples**
 
@@ -248,7 +248,7 @@ Stacktrace:
 [...]
 ```
 
-If `T` is a [`AbstractFloat`](@ref) type, then it will return the closest value to `x` representable by `T`.
+If `T` is a `AbstractFloat` type, then it will return the closest value to `x` representable by `T`.
 
 ```julia-repl
 julia> x = 1/3
@@ -272,7 +272,7 @@ julia> y === x
 true
 ```
 
-See also: [`round`](@ref), [`trunc`](@ref), [`oftype`](@ref), [`reinterpret`](@ref).
+See also: `round`, `trunc`, `oftype`, `reinterpret`.
 
 
 <a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/essentials.jl#L237-L283' class='documenter-source'>source</a><br>

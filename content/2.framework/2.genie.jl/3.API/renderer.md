@@ -12,7 +12,10 @@ Represents an object that can be rendered on the web as a HTTP Response
 
 ::
 
-::alert{type="info"}Missing docstring for `render`. ::
+
+::alert{type="info"}
+Missing docstring for `render`. 
+::
 
 
 ::ApiCard{object="Genie.Renderer.redirect" category="Function"}
@@ -58,7 +61,10 @@ Loads the rendering vars into the task's scope
 
 ::
 
-::alert{type="info"}Missing docstring for `injectvars`. ::
+
+::alert{type="info"}
+Missing docstring for `injectvars`. 
+::
 
 
 ::ApiCard{object="Genie.Renderer.view_file_info" category="Function"}
