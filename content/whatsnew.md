@@ -6,7 +6,17 @@ description: See what's new with Genie Builder and Genie Framework
 
 # Genie change log
 
-## [1.0.32] - 2024-09-17
+## Genie Builder 1.0.33 - 2024-09-23
+
+### Added
+- New command to sign-out from Genie Builder
+
+### Fixed
+- Better handling of errors in no-code editor's canvas
+- Better support for Badge and Popup-Proxy components
+- Display "Use Binding" button in Chart Properties panel when app doesn't bindings with suitable data types
+
+## Genie Builder 1.0.32 - 2024-09-17
 ### Added
 - Improved handling and user notification of issues with Julia path
 - Extended support for data types in bindings (including matrices and dictionaries)
@@ -23,7 +33,7 @@ description: See what's new with Genie Builder and Genie Framework
 - Fixed binding connector curves to prevent exceeding no-code canvas area
 - Resolved error when switching Chart's boolean properties to binding mode
 
-## [1.0.31] - 2024-08-29
+## Genie Builder 1.0.31 - 2024-08-29
 ### Added
 - Introduced new control-flow attributes (if, else, for loop)
 - Extended support for more vector-based data types
