@@ -12,3 +12,4 @@ sw.*
 .output
 static
 package-lock.json
+yarn-lock.json
