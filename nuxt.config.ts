@@ -117,6 +117,7 @@ export default defineNuxtConfig({
         '/docs/reference/workflow/nginx-reverse-proxy': { redirect: '/framework/guides/deployments/nginx-reverse-proxy' },
         '/docs/guides/deploying-genie-apps': { redirect: '/framework/guides/deployments/deploying-genie-apps' },
         '/framework/stipple/api/,{': { redirect: '/framework/stipple/api/' },
+        '/guides/adding-reactive-pages': { redirect: '/framework/stipple.jl/guides/multipage-apps' },
     },
 
     gtm: {
