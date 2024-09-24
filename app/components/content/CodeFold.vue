@@ -15,8 +15,8 @@ export default {
 
 <!-- components/CodeFold.vue -->
 <template>
-    <div class="bg-gray-100 border border-gray-300 rounded overflow-hidden dark:bg-red-200">
-        <div class="bg-gray-200 p-4 h-10 flex items-center cursor-pointer" @click="toggleFold">
+    <div class="bg-white-100 border border-gray-300 rounded overflow-hidden dark:bg-slate-800">
+        <div class="bg-gray-200 p-4 h-10 flex items-center cursor-pointer dark:bg-slate-800" @click="toggleFold">
             <ContentSlot :use="$slots.header" />
             <span class="text-lg font-bold mr-2 right-0 absolute">{{ isFolded ? '+&nbsp;&nbsp;' : '&#8211;&nbsp;&nbsp;'
             }}</span>
