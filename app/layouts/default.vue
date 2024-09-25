@@ -65,7 +65,7 @@ const links = computed(() => [toc?.bottom?.edit && {
 
       <template #left v-if="root!='tutorials'">
         <UAside >
-        <PkgSelect v-if="root== 'framework'"/> 
+        <!--<PkgSelect v-if="root== 'framework'"/> -->
           <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="true" default-open style="min-height:600px" :defaultOpen="1"/>
         </UAside>
       </template>
