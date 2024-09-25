@@ -12,14 +12,8 @@ const links = [
 {
   label: 'Genie Framework',
   icon: 'i-heroicons-square-3-stack-3d',
-  to: '/framework/',
+  to: '/framework',
   children: [
-  {
-    label: 'Guides',
-    to: '/framework/guides/',
-    icon: 'i-heroicons-book-open-20-solid',
-    description: '',
-  },
   {
     label: 'Genie.jl',
     to: '/framework/genie.jl',
@@ -36,6 +30,12 @@ const links = [
     label: 'SearchLight.jl',
     to: '/framework/searchlight.jl',
     icon: 'i-heroicons-circle-stack-20-solid',
+    description: '',
+  },
+  {
+    label: 'Guides',
+    to: '/framework/guides/',
+    icon: 'i-heroicons-book-open-20-solid',
     description: '',
   }
   ] },
