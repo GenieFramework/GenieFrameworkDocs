@@ -7,7 +7,8 @@ const nav = inject<Ref<NavItem[]>>('navigation')
 let navigation = nav;
 if (root == 'framework') {
   const pkg = route.path.split('/').filter(Boolean)[1];
-  navigation = computed(() => nav!.value[1].children.find(item => item._path.startsWith('/framework/'+pkg))?.children || [])
+//  navigation = computed(() => nav!.value[1].children.find(item => item._path.startsWith('/framework/'+pkg))?.children || [])
+  navigation = computed(() => nav!.value[1].children || [])
 } else if (root == 'tutorials') {
   navigation = computed(() => nav.value.filter(item => item._path.startsWith('/tutorials')))
 } else if (root == 'geniebuilder') {
@@ -64,8 +65,8 @@ const links = computed(() => [toc?.bottom?.edit && {
 
       <template #left v-if="root!='tutorials'">
         <UAside >
-        <PkgSelect v-if="root== 'framework'"/>
-          <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="false" default-open style="min-height:600px"/>
+        <PkgSelect v-if="root== 'framework'"/> 
+          <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="true" default-open style="min-height:600px" :defaultOpen="1"/>
         </UAside>
       </template>
 
