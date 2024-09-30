@@ -15,6 +15,12 @@ const links = [
   to: '/framework',
   children: [
   {
+    label: 'Introduction',
+    to: '/framework',
+    icon: 'i-heroicons-star-20-solid',
+    description: '',
+  },
+  {
     label: 'Genie.jl',
     to: '/framework/genie.jl',
     icon: 'i-heroicons-server-stack-20-solid',
