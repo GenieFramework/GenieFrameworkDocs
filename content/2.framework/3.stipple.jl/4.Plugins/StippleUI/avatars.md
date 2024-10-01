@@ -1,9 +1,8 @@
 
 
 
+::: warning Missing docstring.
 
-::alert{type="info"}
-Missing docstring for `avatar`. 
-::
+Missing docstring for `avatar`. Check Documenter&#39;s build log for details.
 
-
+:::

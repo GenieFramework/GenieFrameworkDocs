@@ -1,9 +1,8 @@
 
 
 
+::: warning Missing docstring.
 
-::alert{type="info"}
-Missing docstring for `innerloader`. 
-::
+Missing docstring for `innerloader`. Check Documenter&#39;s build log for details.
 
-
+:::

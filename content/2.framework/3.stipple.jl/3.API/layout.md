@@ -1,7 +1,8 @@
 
 
-::ApiCard{object="Stipple.Layout.layout" category="Function"}
+::ApiCard{object='Stipple.Layout.layout' category='Function'}
 #docstring
+
 
 
 ```julia
@@ -9,7 +10,8 @@ function layout(output::Union{String,Vector}; partial::Bool = false, title::Stri
                   head_content::String = "", channel::String = Genie.config.webchannels_default_route) :: String
 ```
 
-Utility for creating a basic web page structure, including doctype as well as <HTML>, <HEAD>, <TITLE>, <META viewport>,   and <BODY> tags, together with the output content.
+
+Utility for creating a basic web page structure, including doctype as well as &lt;HTML&gt;, &lt;HEAD&gt;, &lt;TITLE&gt;, &lt;META viewport&gt;,   and &lt;BODY&gt; tags, together with the output content.
 
 If `partial` is `true`, the page layout HTML elements are not returned.
 
@@ -24,6 +26,7 @@ julia> layout([
 <script src="/js/apexcharts.min.js"></script><script src="/js/vue-apexcharts.min.js"></script><script src="/js/stipplecore.js" defer></script><script src="/js/vue_filters.js" defer></script></body></html>"
 ```
 
+
 ```julia
 julia> layout([
         span("Hello", @text(:greeting))
@@ -32,15 +35,21 @@ julia> layout([
 <script src="/js/apexcharts.min.js"></script><script src="/js/vue-apexcharts.min.js"></script><script src="/js/stipplecore.js" defer></script><script src="/js/vue_filters.js" defer></script>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Layout.jl#L18-L45)
+
 ::
-::ApiCard{object="Stipple.Layout.page" category="Function"}
+::ApiCard{object='Stipple.Layout.page' category='Function'}
 #docstring
+
 
 
 ```julia
 function page(elemid, args...; partial::Bool = false, title::String = "", class::String = "", style::String = "",
                 channel::String = Genie.config.webchannels_default_route , head_content::String = "", kwargs...)
 ```
+
 
 Generates the HTML code corresponding to an SPA (a single page application), defining the root element of the Vue app.
 
@@ -55,18 +64,24 @@ julia> page(:elemid, [
 <script src="/js/apexcharts.min.js"></script><script src="/js/vue-apexcharts.min.js"></script><script src="/js/stipplecore.js" defer></script><script src="/js/vue_filters.js" defer></script></body></html>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Layout.jl#L71-L87)
+
 ::
-::ApiCard{object="Stipple.Layout.row" category="Function"}
+::ApiCard{object='Stipple.Layout.row' category='Function'}
 #docstring
+
 
 
 ```julia
 function row(args...; size=-1, xs=-1, sm=-1, md=-1, lg=-1, xl=-1, kwargs...)
 ```
 
-Creates a `div` HTML element with Quasar's Flexgrid CSS class `row`. Such rows typically contain elements created with [`cell`](layout.md#Stipple.Layout.cell), `row`, [`column`](layout.md#Stipple.Layout.column) or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
 
-The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](layout.md#Stipple.Layout.cell).
+Creates a `div` HTML element with Quasar&#39;s Flexgrid CSS class `row`. Such rows typically contain elements created with [`cell`](/API/layout#Stipple.Layout.cell), `row`, [`column`](/API/layout#Stipple.Layout.column) or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
+
+The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](/API/layout#Stipple.Layout.cell).
 
 **Example**
 
@@ -75,18 +90,24 @@ julia> row(span("Hello"))
 "<div class="row"><span>Hello</span></div>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Layout.jl#L390-L403)
+
 ::
-::ApiCard{object="Stipple.Layout.column" category="Function"}
+::ApiCard{object='Stipple.Layout.column' category='Function'}
 #docstring
+
 
 
 ```julia
 function column(args...; size=-1, xs=-1, sm=-1, md=-1, lg=-1, xl=-1, kwargs...)
 ```
 
-Creates a `div` HTML element with Quasar's Flexgrid CSS class `column`. Such columns typically contain elements created with [`cell`](layout.md#Stipple.Layout.cell), [`row`](layout.md#Stipple.Layout.row), `column`, or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
 
-The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](layout.md#Stipple.Layout.cell).
+Creates a `div` HTML element with Quasar&#39;s Flexgrid CSS class `column`. Such columns typically contain elements created with [`cell`](/API/layout#Stipple.Layout.cell), [`row`](/API/layout#Stipple.Layout.row), `column`, or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
+
+The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](/API/layout#Stipple.Layout.cell).
 
 **Example**
 
@@ -95,29 +116,38 @@ julia> column(span("Hello"))
 "<div class="column"><span>Hello</span></div>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Layout.jl#L421-L435)
+
 ::
-::ApiCard{object="Stipple.Layout.cell" category="Function"}
+::ApiCard{object='Stipple.Layout.cell' category='Function'}
 #docstring
+
 
 
 ```julia
 function cell(args...; size::Int=0, xs::Int=0, sm::Int=0, md::Int=0, lg::Int=0, xl::Int=0, kwargs...)
 ```
 
-Creates a `div` HTML element with Quasar's flex grid CSS class `col`. Moreover, cells are of the class `st-col`, which is controlled by the Stipple theme.
+
+Creates a `div` HTML element with Quasar&#39;s flex grid CSS class `col`. Moreover, cells are of the class `st-col`, which is controlled by the Stipple theme.
 
 If size is specified, the class `col-$size` is added instead.
 
 If tag classes (`xs`, `sm`, `md`, `lg`, `xl`) are specified, the respective classes `col-$tag-$md` are added, e.g. `col-sm-6`.
 
 Parameters:
+- `""` / `0`: shared remaining space (e.g. `"col"`, `"col-sm"`)
+  
+- `1` - `12` / `"1"` - `"12"`: column width (e.g. `"col-5"`, `"col-sm-5"`)
+  
+- `"auto"`/`:auto`: height/width from content (`"col-auto"`, `"col-sm-auto"`)
+  
+- `-1` / `nothing`: no specification
+  
 
-  * `""` / `0`: shared remaining space (e.g. `"col"`, `"col-sm"`)
-  * `1` - `12` / `"1"` - `"12"`: column width (e.g. `"col-5"`, `"col-sm-5"`)
-  * `"auto"`/`:auto`: height/width from content (`"col-auto"`, `"col-sm-auto"`)
-  * `-1` / `nothing`: no specification
-
-The cells are typically included within [`row`](layout.md#Stipple.Layout.row)s or [`column`](layout.md#Stipple.Layout.column)s. See [Quasar's Flex Grid](https://quasar.dev/layout/grid/introduction-to-flexbox) for more information.
+The cells are typically included within [`row`](/API/layout#Stipple.Layout.row)s or [`column`](/API/layout#Stipple.Layout.column)s. See [Quasar&#39;s Flex Grid](https://quasar.dev/layout/grid/introduction-to-flexbox) for more information.
 
 **Example**
 
@@ -126,16 +156,22 @@ julia> row(cell(size = 2, md = 6, sm = 12, span("Hello")))
 "<div class="row"><div class="st-col col-2 col-sm-12 col-md-6"><span>Hello</span></div></div>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Layout.jl#L450-L477)
+
 ::
-::ApiCard{object="Stipple.Layout.theme" category="Function"}
+::ApiCard{object='Stipple.Layout.theme' category='Function'}
 #docstring
+
 
 
 ```julia
 function theme() :: String
 ```
 
-Provides theming support for Stipple apps and pages. It includes Stipple's default CSS files and additional elements,   in the form of HTML tags, can be injected by pushing to the `Stipple.Layout.THEMES[][]` collection.
+
+Provides theming support for Stipple apps and pages. It includes Stipple&#39;s default CSS files and additional elements,   in the form of HTML tags, can be injected by pushing to the `Stipple.Layout.THEMES[][]` collection.
 
 **Example**
 
@@ -148,5 +184,9 @@ julia> StippleUI.theme()
 
 julia> push!(Stipple.Layout.THEMES[], StippleUI.theme)
 ```
+
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Layout.jl#L510-L527)
 
 ::

@@ -1,56 +1,78 @@
 
 
-::ApiCard{object="Stipple.Elements.root" category="Function"}
+::ApiCard{object='Stipple.Elements.root' category='Function'}
 #docstring
+
 
 
 ```julia
 function root(app::M)::String where {M<:ReactiveModel}
 ```
 
+
 Generates a valid JavaScript object name to be used as the name of the Vue app – and its respective HTML container.
 
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L97-L101)
+
 ::
-::ApiCard{object="Stipple.Elements.elem" category="Function"}
+::ApiCard{object='Stipple.Elements.elem' category='Function'}
 #docstring
+
 
 
 ```julia
 function elem(app::M)::String where {M<:ReactiveModel}
 ```
 
+
 Generates a JS id `#` reference to the DOM element containing the Vue app template.
 
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L108-L112)
+
 ::
-::ApiCard{object="Stipple.Elements.vm" category="Function"}
+::ApiCard{object='Stipple.Elements.vm' category='Function'}
 #docstring
+
 
 
 ```julia
 function root(app::M)::String where {M<:ReactiveModel}
 ```
 
+
 Generates a valid JavaScript object name to be used as the name of the Vue app – and its respective HTML container.
 
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L97-L101)
+
 ::
-::ApiCard{object="Stipple.Elements.vue_integration" category="Function"}
+::ApiCard{object='Stipple.Elements.vue_integration' category='Function'}
 #docstring
+
 
 
 ```julia
 function vue_integration(model::M; vue_app_name::String, endpoint::String, debounce::Int)::String where {M<:ReactiveModel}
 ```
 
+
 Generates the JS/Vue.js code which handles the 2-way data sync between Julia and JavaScript/Vue.js. It is called internally by `Stipple.init` which allows for the configuration of all the parameters.
 
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L121-L126)
+
 ::
-::ApiCard{object="Stipple.Elements.@if" category="Macro"}
+::ApiCard{object='Stipple.Elements.@if' category='Macro'}
 #docstring
+
 
 
 ```julia
 @if(expr)
 ```
+
 
 Generates `v-if` Vue.js code using `expr` as the condition. [https://vuejs.org/v2/api/#v-if](https://vuejs.org/v2/api/#v-if)
 
@@ -61,14 +83,20 @@ julia> span("Bad stuff's about to happen", class="warning", @if(:warning))
 "<span class="warning" v-if='warning'>Bad stuff's about to happen</span>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L268-L280)
+
 ::
-::ApiCard{object="Stipple.Elements.@elseif" category="Macro"}
+::ApiCard{object='Stipple.Elements.@elseif' category='Macro'}
 #docstring
+
 
 
 ```julia
 @elseif(expr)
 ```
+
 
 Generates `v-else-if` Vue.js code using `expr` as the condition. [https://vuejs.org/v2/api/#v-else-if](https://vuejs.org/v2/api/#v-else-if)
 
@@ -79,14 +107,20 @@ julia> span("An error has occurred", class="error", @elseif(:error))
 "<span class="error" v-else-if='error'>An error has occurred</span>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L286-L298)
+
 ::
-::ApiCard{object="Stipple.Elements.@else" category="Macro"}
+::ApiCard{object='Stipple.Elements.@else' category='Macro'}
 #docstring
+
 
 
 ```julia
 @else(expr)
 ```
+
 
 Generates `v-else` Vue.js code using `expr` as the condition. [https://vuejs.org/v2/api/#v-else](https://vuejs.org/v2/api/#v-else)
 
@@ -97,9 +131,14 @@ julia> span("Might want to keep an eye on this", class="notice", @else(:notice))
 "<span class="notice" v-else='notice'>Might want to keep an eye on this</span>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L304-L316)
+
 ::
-::ApiCard{object="Stipple.Elements.@for" category="Macro"}
+::ApiCard{object='Stipple.Elements.@for' category='Macro'}
 #docstring
+
 
 
 Generates `v-for` directive to render a list of items based on an array. [https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for)
@@ -119,6 +158,7 @@ julia> p(" {{todo}} ", class="warning", @for("todo in todos"))
 """
 ```
 
+
 **Julia expression**
 
 ```julia
@@ -133,18 +173,24 @@ julia> ul(li("k: {{ k }}, v: {{ v }}, i: {{ i }}", @for((v, k, i) in dict)))
 """
 ```
 
+
 Note the inverted order of value, key and index compared to Stipple destructuring. It is also possible to loop over `(v, k)` or `v`; index will always be zero-based
 
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L322-L354)
+
 ::
-::ApiCard{object="Stipple.Elements.@text" category="Macro"}
+::ApiCard{object='Stipple.Elements.@text' category='Macro'}
 #docstring
+
 
 
 ```julia
 @text(expr)
 ```
 
-Creates a `v-text` or a `text-content.prop` Vue biding to the element's `textContent` property. [https://vuejs.org/v2/api/#v-text](https://vuejs.org/v2/api/#v-text)
+
+Creates a `v-text` or a `text-content.prop` Vue biding to the element&#39;s `textContent` property. [https://vuejs.org/v2/api/#v-text](https://vuejs.org/v2/api/#v-text)
 
 **Example**
 
@@ -156,14 +202,20 @@ julia> span("", @text("abc"))
 "<span v-text='abc'></span>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L363-L378)
+
 ::
-::ApiCard{object="Stipple.Elements.@bind" category="Macro"}
+::ApiCard{object='Stipple.Elements.@bind' category='Macro'}
 #docstring
+
 
 
 ```julia
 @bind(expr, [type])
 ```
+
 
 Binds a model parameter to a Vue component, generating a `v-model` property, optionally defining the parameter type. [https://vuejs.org/v2/api/#v-model](https://vuejs.org/v2/api/#v-model)
 
@@ -177,14 +229,20 @@ julia> input("", placeholder="Type your name", @bind(:name, :identity))
 "<input placeholder="Type your name"  v-model.identity='name' />"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L385-L400)
+
 ::
-::ApiCard{object="Stipple.Elements.@data" category="Macro"}
+::ApiCard{object='Stipple.Elements.@data' category='Macro'}
 #docstring
+
 
 
 ```julia
 @data(expr)
 ```
+
 
 Creates a Vue.js data binding for the elements that expect it.
 
@@ -195,14 +253,20 @@ julia> plot(@data(:piechart), options! = "plot_options")
 "<template><apexchart :options="plot_options" :series="piechart"></apexchart></template>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L410-L421)
+
 ::
-::ApiCard{object="Stipple.Elements.@on" category="Macro"}
+::ApiCard{object='Stipple.Elements.@on' category='Macro'}
 #docstring
+
 
 
 ```julia
 on(action, expr)
 ```
+
 
 Defines a js routine that is called by the given `action` of the Vue component, e.g. `:click`, `:input`
 
@@ -213,6 +277,7 @@ julia> input("", @bind(:input), @on("keyup.enter", "process = true"))
 "<input  v-model='input' v-on:keyup.enter='process = true' />"
 ```
 
+
 If `expr` is a symbol, there must exist `Stipple.notify` override, i.e. an event handler function for a corresponding event with the name `expr`.
 
 **Example**
@@ -221,11 +286,13 @@ If `expr` is a symbol, there must exist `Stipple.notify` override, i.e. an event
 julia> Stipple.notify(model, ::Val{:my_click}) = println("clicked")
 ```
 
+
 or if event information is needed
 
 ```julia
 Stipple.notify(model, ::Val{:my_click}, event_info) = println(event_info)
 ```
+
 
 Note that in the handler `model` refers to the receiving model and event is a Dict of event information. The handler is linked in the ui-element
 
@@ -233,20 +300,27 @@ Note that in the handler `model` refers to the receiving model and event is a Di
 btn("Event test", @on("click", :my_click))
 ```
 
+
 Sometimes preprocessing of the events is necessary, e.g. to add or skip information
 
 ```julia
 @on(:uploaded, :uploaded, "for (f in event.files) { event.files[f].fname = event.files[f].name }")
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L436-L469)
+
 ::
-::ApiCard{object="Stipple.Elements.@showif" category="Macro"}
+::ApiCard{object='Stipple.Elements.@showif' category='Macro'}
 #docstring
+
 
 
 ```julia
 @showif(expr, [type])
 ```
+
 
 v-show will always be rendered and remain in the DOM; v-show only toggles the display CSS property of the element. [https://vuejs.org/v2/guide/conditional.html#v-show](https://vuejs.org/v2/guide/conditional.html#v-show)
 
@@ -261,14 +335,20 @@ julia> h1("Hello!", @showif(:ok))
 "<h1 v-show="ok">Hello!</h1>"
 ```
 
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L520-L536)
+
 ::
-::ApiCard{object="Stipple.Elements.stylesheet" category="Function"}
+::ApiCard{object='Stipple.Elements.stylesheet' category='Function'}
 #docstring
+
 
 
 ```julia
 function stylesheet(href::String; args...) :: String
 ```
+
 
 Generates the corresponding HTML `link` tag to reference the CSS stylesheet at `href`.
 
@@ -278,5 +358,9 @@ Generates the corresponding HTML `link` tag to reference the CSS stylesheet at `
 julia> stylesheet("https://fonts.googleapis.com/css?family=Material+Icons")
 "<link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" />"
 ```
+
+
+
+[source](https://github.com/GenieFramework/Stipple.jl/blob/v0.30.7/src/Elements.jl#L602-L613)
 
 ::

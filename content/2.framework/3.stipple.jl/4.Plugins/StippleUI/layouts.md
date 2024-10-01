@@ -1,23 +1,20 @@
 
 
 
+::: warning Missing docstring.
 
-::alert{type="info"}
-Missing docstring for `layout`. 
-::
+Missing docstring for `layout`. Check Documenter&#39;s build log for details.
 
+:::
 
+::: warning Missing docstring.
 
+Missing docstring for `page_container`. Check Documenter&#39;s build log for details.
 
-::alert{type="info"}
-Missing docstring for `page_container`. 
-::
+:::
 
+::: warning Missing docstring.
 
+Missing docstring for `page`. Check Documenter&#39;s build log for details.
 
-
-::alert{type="info"}
-Missing docstring for `page`. 
-::
-
-
+:::

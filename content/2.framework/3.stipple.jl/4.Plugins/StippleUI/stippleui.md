@@ -1,23 +1,20 @@
 
 
 
+::: warning Missing docstring.
 
-::alert{type="info"}
-Missing docstring for `theme`. 
-::
+Missing docstring for `theme`. Check Documenter&#39;s build log for details.
 
+:::
 
+::: warning Missing docstring.
 
+Missing docstring for `deps`. Check Documenter&#39;s build log for details.
 
-::alert{type="info"}
-Missing docstring for `deps`. 
-::
+:::
 
+::: warning Missing docstring.
 
+Missing docstring for `@click`. Check Documenter&#39;s build log for details.
 
-
-::alert{type="info"}
-Missing docstring for `@click`. 
-::
-
-
+:::
