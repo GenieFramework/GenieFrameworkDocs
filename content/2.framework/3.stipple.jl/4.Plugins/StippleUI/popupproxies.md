@@ -62,11 +62,11 @@ julia> btn("Handles click", push=true, color="primary", [
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `PopupProxy`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `PopupProxy`. '/>
 
-:::
+
 ::ApiCard{object='Base.string' category='Function'}
 #docstring
 
@@ -79,7 +79,7 @@ string(n::Integer; base::Integer = 10, pad::Integer = 1)
 
 Convert an integer `n` to a string in the given `base`, optionally specifying a number of digits to pad to.
 
-See also [`digits`](@ref), [`bitstring`](@ref), [`count_zeros`](@ref).
+See also `digits`, `bitstring`, `count_zeros`.
 
 **Examples**
 
@@ -102,11 +102,11 @@ string(xs...)
 ```
 
 
-Create a string from any values using the [`print`](@ref) function.
+Create a string from any values using the `print` function.
 
 `string` should usually not be defined directly. Instead, define a method `print(io::IO, x::MyType)`. If `string(x)` for a certain type needs to be highly efficient, then it may make sense to add a method to `string` and define `print(io::IO, x::MyType) = print(io, string(x))` to ensure the functions are consistent.
 
-See also: [`String`](@ref), [`repr`](@ref), [`sprint`](@ref), [`show`](@ref%20@show).
+See also: `String`, `repr`, `sprint`, [`show`](@ref%20@show).
 
 **Examples**
 

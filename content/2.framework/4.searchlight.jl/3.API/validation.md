@@ -1,31 +1,29 @@
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `ValidationAbstractType`. 
-::
-
+<UAlert title='Missing docstring for  `ValidationAbstractType`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `ValidationResult`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `ValidationResult`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `ValidationError`. 
-::
+<UAlert title='Missing docstring for  `ValidationError`. '/>
 
 
-::ApiCard{object="SearchLight.Validation.ValidationRule" category="Type"}
+::ApiCard{object='SearchLight.Validation.ValidationRule' category='Type'}
 #docstring
 
 
-Creates Validation rule for a Model's field
+
+Creates Validation rule for a Model&#39;s field
 
 **Examples**
 
@@ -57,64 +55,71 @@ julia> ValidationRule(:age, is_int)
 julia> ValidationRule(:email, not_empty)
 ```
 
+
+
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Validation.jl#L53-L84)
+
 ::
-::ApiCard{object="SearchLight.Validation.ModelValidator" category="Type"}
+::ApiCard{object='SearchLight.Validation.ModelValidator' category='Type'}
 #docstring
+
 
 
 The object that defines the rules and stores the validation errors associated with the fields of a `model`.
 
+
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Validation.jl#L95-L97)
+
 ::
 
+ 
 
-::alert{type="info"}
-Missing docstring for `validator`. 
-::
+<UAlert title='Missing docstring for  `validator`. '/>
 
 
-::ApiCard{object="SearchLight.Validation.validate" category="Function"}
+::ApiCard{object='SearchLight.Validation.validate' category='Function'}
 #docstring
+
 
 
 ```julia
 validate(m::T)::Bool where {T<:AbstractModel}
 ```
 
-Validates `m`'s data. A `bool` is return and existing errors are pushed to the validator's error stack.
+
+Validates `m`&#39;s data. A `bool` is return and existing errors are pushed to the validator&#39;s error stack.
+
+
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Validation.jl#L117-L121)
 
 ::
 
+ 
 
-::alert{type="info"}
-Missing docstring for `haserrors`. 
-::
-
+<UAlert title='Missing docstring for  `haserrors`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `haserrorsfor`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `haserrorsfor`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `errorsfor`. 
-::
-
+<UAlert title='Missing docstring for  `errorsfor`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `errorsmessagesfor`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `errorsmessagesfor`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `errors_to_string`. 
-::
+<UAlert title='Missing docstring for  `errors_to_string`. '/>
 
 

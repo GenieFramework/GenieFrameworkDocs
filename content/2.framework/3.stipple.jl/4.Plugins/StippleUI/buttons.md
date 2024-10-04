@@ -116,11 +116,11 @@ julia> btn("Connect to server!", color="green", textcolor="black", @click("btnCo
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `Btn`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `Btn`. '/>
 
-:::
+
 ::ApiCard{object='StippleUI.Buttons.btngroup' category='Function'}
 #docstring
 

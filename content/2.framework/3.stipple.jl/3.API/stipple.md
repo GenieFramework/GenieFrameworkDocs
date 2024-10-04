@@ -57,17 +57,17 @@ end
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `Settings # missing docstring`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `Settings # missing docstring`. '/>
 
-:::
 
-::: warning Missing docstring.
 
-Missing docstring for `MissingPropertyException # missing docstring`. Check Documenter&#39;s build log for details.
+ 
 
-:::
+<UAlert title='Missing docstring for  `MissingPropertyException # missing docstring`. '/>
+
+
 ::ApiCard{object='Stipple.render' category='Function'}
 #docstring
 
@@ -486,17 +486,17 @@ Change the field of a ReactiveModel without triggering the listeners. If keys ar
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `convertvalue # missing docstring`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `convertvalue # missing docstring`. '/>
 
-:::
 
-::: warning Missing docstring.
 
-Missing docstring for `stipple_parse # missing docstring`. Check Documenter&#39;s build log for details.
+ 
 
-:::
+<UAlert title='Missing docstring for  `stipple_parse # missing docstring`. '/>
+
+
 ::ApiCard{object='Stipple.init' category='Function'}
 #docstring
 
@@ -527,11 +527,11 @@ hs_model = Stipple.init(HelloPie)
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `stipple_deps # missing docstring`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `stipple_deps # missing docstring`. '/>
 
-:::
+
 ::ApiCard{object='Stipple.setup' category='Function'}
 #docstring
 
@@ -641,11 +641,11 @@ Replaces all JSONText values on a copy of the input, see [`replace_jsfunction!`]
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `deps_routes # missing docstring`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `deps_routes # missing docstring`. '/>
 
-:::
+
 ::ApiCard{object='Stipple.deps' category='Function'}
 #docstring
 
@@ -701,7 +701,7 @@ on(f, observable::AbstractObservable; weak = false, priority=0, update=false)::O
 
 Adds function `f` as listener to `observable`. Whenever `observable`&#39;s value is set via `observable[] = val`, `f` is called with `val`.
 
-Returns an [`ObserverFunction`](@ref) that wraps `f` and `observable` and allows to disconnect easily by calling `off(observerfunction)` instead of `off(f, observable)`. If instead you want to compute a new `Observable` from an old one, use [`map(f, ::Observable)`](@ref).
+Returns an `ObserverFunction` that wraps `f` and `observable` and allows to disconnect easily by calling `off(observerfunction)` instead of `off(f, observable)`. If instead you want to compute a new `Observable` from an old one, use `map(f, ::Observable)`.
 
 If `weak = true` is set, the new connection will be removed as soon as the returned `ObserverFunction` is not referenced anywhere and is garbage collected. This is useful if some parent object makes connections to outside observables and stores the resulting `ObserverFunction` instances. Then, once that parent object is garbage collected, the weak observable connections are removed automatically.
 

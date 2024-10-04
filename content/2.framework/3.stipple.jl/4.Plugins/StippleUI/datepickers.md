@@ -133,11 +133,11 @@ julia> datepicker(:dateranges, range = true, multiple = true)
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `DatePicker`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `DatePicker`. '/>
 
-:::
+
 ::ApiCard{object='Base.parse' category='Function'}
 #docstring
 
@@ -150,11 +150,11 @@ parse(type, str; base)
 
 Parse a string as a number. For `Integer` types, a base can be specified (the default is 10). For floating-point types, the string is parsed as a decimal floating-point number.  `Complex` types are parsed from decimal strings of the form `"R±Iim"` as a `Complex(R,I)` of the requested type; `"i"` or `"j"` can also be used instead of `"im"`, and `"R"` or `"Iim"` are also permitted. If the string does not contain a valid number, an error is raised.
 
-::: tip Julia 1.1
+ tip Julia 1.1
 
 `parse(Bool, str)` requires at least Julia 1.1.
 
-:::
+
 
 **Examples**
 
@@ -239,13 +239,13 @@ A literal Colorant will parse according to the `desc` string (usually returning 
 - a specific `Colorant` type as specified in the first argument
   
 
-::: tip Note for X11 named colors
+ tip Note for X11 named colors
 
 The X11 color names with spaces (e.g. &quot;sea green&quot;) are not recommended because they are not allowed in the SVG/CSS.
 
-:::
 
-::: tip Note for hex notations
+
+ tip Note for hex notations
 
 You can parse not only the CSS-style hex notations `#RRGGBB`/`#RGB`, but also `0xRRGGBB`/`0xRGB`.
 
@@ -260,7 +260,7 @@ ARGB{N0f8}(0.533,0.0,0.667,1.0)
 ```
 
 
-:::
+
 
 
 [source](https://github.com/JuliaGraphics/Colors.jl/blob/v0.12.11/src/parse.jl#L154-L205)
@@ -310,7 +310,7 @@ convert(T, x)
 
 Convert `x` to a value of type `T`.
 
-If `T` is an [`Integer`](@ref) type, an [`InexactError`](@ref) will be raised if `x` is not representable by `T`, for example if `x` is not integer-valued, or is outside the range supported by `T`.
+If `T` is an `Integer` type, an `InexactError` will be raised if `x` is not representable by `T`, for example if `x` is not integer-valued, or is outside the range supported by `T`.
 
 **Examples**
 
@@ -325,7 +325,7 @@ Stacktrace:
 ```
 
 
-If `T` is a [`AbstractFloat`](@ref) type, then it will return the closest value to `x` representable by `T`.
+If `T` is a `AbstractFloat` type, then it will return the closest value to `x` representable by `T`.
 
 ```julia
 julia> x = 1/3
@@ -351,7 +351,7 @@ true
 ```
 
 
-See also: [`round`](@ref), [`trunc`](@ref), [`oftype`](@ref), [`reinterpret`](@ref).
+See also: `round`, `trunc`, `oftype`, `reinterpret`.
 
 
 [source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/essentials.jl#L237-L283)

@@ -1,50 +1,50 @@
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `Session`. 
-::
-
+<UAlert title='Missing docstring for  `Session`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `id`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `id`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `start`. 
-::
-
+<UAlert title='Missing docstring for  `start`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `set!`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `set!`. '/>
 
 
-::ApiCard{object="Base.get" category="Function"}
+::ApiCard{object='Base.get' category='Function'}
 #docstring
+
 
 
 ```julia
 get(collection, key, default)
 ```
 
+
 Return the value stored for the given key, or the given default value if no mapping for the key is present.
 
-!!! compat "Julia 1.7"
-    For tuples and numbers, this function requires at least Julia 1.7.
+ tip Julia 1.7
+
+For tuples and numbers, this function requires at least Julia 1.7.
+
 
 
 **Examples**
 
-```julia-repl
+```julia
 julia> d = Dict("a"=>1, "b"=>2);
 
 julia> get(d, "a", 3)
@@ -55,12 +55,15 @@ julia> get(d, "c", 3)
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L487-L506' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L487-L506)
 
 
-```
+
+```julia
 get(f::Function, collection, key)
 ```
+
 
 Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use `get!` to also store the default value in the dictionary.
 
@@ -74,18 +77,21 @@ end
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L514-L528' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L514-L528)
 
 
-```
+
+```julia
 get(x::Nullable[, y])
 ```
+
 
 Attempt to access the value of `x`. Returns the value if it is present; otherwise, returns `y` if provided, or throws a `NullException` if not.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> get(Nullable(5))
 5
 
@@ -96,22 +102,33 @@ Stacktrace:
 ```
 
 
-```
+
+[source](https://github.com/JuliaAttic/Nullables.jl/blob/v1.0.0/src/nullable.jl#L82-L98)
+
+
+
+```julia
 get(sd,k,v)
 ```
 
-Returns the value associated with key `k` where `sd` is a SortedDict, or else returns `v` if `k` is not in `sd`. Time: O(*c* log *n*)
+
+Returns the value associated with key `k` where `sd` is a SortedDict, or else returns `v` if `k` is not in `sd`. Time: O(_c_ log _n_)
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/sorted_dict.jl#L388-L394)
+
+
+
+```julia
 get(collection, key, default)
 ```
+
 
 Return the value stored for the given key, or the given default value if no mapping for the key is present.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> d = RobinDict("a"=>1, "b"=>2);
 
 julia> get(d, "a", 3)
@@ -122,9 +139,15 @@ julia> get(d, "c", 3)
 ```
 
 
-```
+
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/robin_dict.jl#L367-L383)
+
+
+
+```julia
 get(f::Function, collection, key)
 ```
+
 
 Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use `get!` to also store the default value in the dictionary.
 
@@ -138,15 +161,21 @@ end
 ```
 
 
-```
+
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/robin_dict.jl#L389-L403)
+
+
+
+```julia
 get(collection, key, default)
 ```
+
 
 Return the value stored for the given key, or the given default value if no mapping for the key is present.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> d = OrderedRobinDict("a"=>1, "b"=>2);
 
 julia> get(d, "a", 3)
@@ -157,9 +186,15 @@ julia> get(d, "c", 3)
 ```
 
 
-```
+
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/ordered_robin_dict.jl#L244-L260)
+
+
+
+```julia
 get(f::Function, collection, key)
 ```
+
 
 Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use `get!` to also store the default value in the dictionary.
 
@@ -173,15 +208,21 @@ end
 ```
 
 
-```
+
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/ordered_robin_dict.jl#L266-L280)
+
+
+
+```julia
 get(collection, key, default)
 ```
+
 
 Return the value stored for the given key, or the given default value if no mapping for the key is present.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> d = SwissDict("a"=>1, "b"=>2);
 
 julia> get(d, "a", 3)
@@ -192,9 +233,15 @@ julia> get(d, "c", 3)
 ```
 
 
-```
+
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/swiss_dict.jl#L473-L489)
+
+
+
+```julia
 get(f::Function, collection, key)
 ```
+
 
 Return the value stored for the given key, or if no mapping for the key is present, return `f()`.  Use `get!` to also store the default value in the dictionary.
 
@@ -207,46 +254,44 @@ get(dict, key) do
 end
 ```
 
+
+
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/swiss_dict.jl#L495-L509)
+
 ::
 
+ 
 
-::alert{type="info"}
-Missing docstring for `unset!`. 
-::
-
+<UAlert title='Missing docstring for  `unset!`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `isset`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `isset`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `persist`. 
-::
-
+<UAlert title='Missing docstring for  `persist`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `load`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `load`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `session`. 
-::
-
+<UAlert title='Missing docstring for  `session`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `init`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `init`. '/>
 
 

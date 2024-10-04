@@ -1,40 +1,38 @@
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `create_relationship_migration`. 
-::
-
+<UAlert title='Missing docstring for  `create_relationship_migration`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `relationship_name`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `relationship_name`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `relationship_field_name`. 
-::
-
+<UAlert title='Missing docstring for  `relationship_field_name`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `Relationship`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `Relationship`. '/>
 
 
-::ApiCard{object="SearchLight.Relationships.Relationship!" category="Function"}
+::ApiCard{object='SearchLight.Relationships.Relationship!' category='Function'}
 #docstring
+
 
 
 ```julia
   Relationship!(r1::T, r2::R; context::Module)::AbstractModel where {T<:AbstractModel, R<:AbstractModel}
 ```
+
 
 Relationship takes two AbstractModel types and 
 
@@ -60,18 +58,20 @@ julia> Relationship!(user, role)
 julia> isrelated(role, permission)
 ```
 
+
+
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Relationships.jl#L46-L71)
+
 ::
 
+ 
 
-::alert{type="info"}
-Missing docstring for `related`. 
-::
-
+<UAlert title='Missing docstring for  `related`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `isrelated`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `isrelated`. '/>
 
 

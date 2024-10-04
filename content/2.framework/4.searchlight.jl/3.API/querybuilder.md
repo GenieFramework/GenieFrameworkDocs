@@ -1,95 +1,86 @@
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `MissingModel`. 
-::
-
+<UAlert title='Missing docstring for  `MissingModel`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `QueryPart`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `QueryPart`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `from`. 
-::
-
+<UAlert title='Missing docstring for  `from`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `select`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `select`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `where`. 
-::
-
+<UAlert title='Missing docstring for  `where`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `limit`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `limit`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `offset`. 
-::
-
+<UAlert title='Missing docstring for  `offset`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `order`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `order`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `group`. 
-::
-
+<UAlert title='Missing docstring for  `group`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `having`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `having`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `prepare`. 
-::
+<UAlert title='Missing docstring for  `prepare`. '/>
 
 
-::ApiCard{object="Base.:+" category="Function"}
+::ApiCard{object='Base.:+' category='Function'}
 #docstring
+
 
 
 ```julia
 +(x, y...)
 ```
 
+
 Addition operator. `x+y+z+...` calls this function with all arguments, i.e. `+(x, y, z, ...)`.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> 1 + 20 + 4
 25
 
@@ -98,23 +89,28 @@ julia> +(1, 20, 4)
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/docs/basedocs.jl#L2579-L2592' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/docs/basedocs.jl#L2579-L2592)
 
 
-```
+
+```julia
 dt::Date + t::Time -> DateTime
 ```
+
 
 The addition of a `Date` with a `Time` produces a `DateTime`. The hour, minute, second, and millisecond parts of the `Time` are used along with the year, month, and day of the `Date` to create the new `DateTime`. Non-zero microseconds or nanoseconds in the `Time` type will result in an `InexactError` being thrown.
 
 ::
-::ApiCard{object="DataFrames.DataFrame" category="Type"}
+::ApiCard{object='DataFrames.DataFrame' category='Type'}
 #docstring
+
 
 
 ```julia
 DataFrame <: AbstractDataFrame
 ```
+
 
 An `AbstractDataFrame` that stores a set of named columns.
 
@@ -138,10 +134,12 @@ DataFrame(::DataFrameRow; copycols::Bool=true)
 DataFrame(::GroupedDataFrame; copycols::Bool=true, keepkeys::Bool=true)
 ```
 
-**Keyword arguments**
 
-  * `copycols` : whether vectors passed as columns should be copied; by default set to `true` and the vectors are copied; if set to `false` then the constructor will still copy the passed columns if it is not possible to construct a `DataFrame` without materializing new columns. Note the `copycols=nothing` default in the Tables.jl compatible constructor; it is provided as certain input table types may have already made a copy of columns or the columns may otherwise be immutable, in which case columns are not copied by default. To force a copy in such cases, or to get mutable columns from an immutable input table (like `Arrow.Table`), pass `copycols=true` explicitly.
-  * `makeunique` : if `false` (the default), an error will be raised
+**Keyword arguments**
+- `copycols` : whether vectors passed as columns should be copied; by default set to `true` and the vectors are copied; if set to `false` then the constructor will still copy the passed columns if it is not possible to construct a `DataFrame` without materializing new columns. Note the `copycols=nothing` default in the Tables.jl compatible constructor; it is provided as certain input table types may have already made a copy of columns or the columns may otherwise be immutable, in which case columns are not copied by default. To force a copy in such cases, or to get mutable columns from an immutable input table (like `Arrow.Table`), pass `copycols=true` explicitly.
+  
+- `makeunique` : if `false` (the default), an error will be raised
+  
 
 (note that not all constructors support these keyword arguments)
 
@@ -175,7 +173,7 @@ Metadata: this function preserves all table and column-level metadata. As a spec
 
 **Examples**
 
-```julia-repl
+```julia
 julia> DataFrame((a=[1, 2], b=[3, 4])) # Tables.jl table constructor
 2×2 DataFrame
  Row │ a      b
@@ -241,14 +239,20 @@ julia> DataFrame([1 0; 2 0], :auto) # matrix constructor
    2 │     2      0
 ```
 
+
+
+[source](https://github.com/JuliaData/DataFrames.jl/blob/v1.7.0/src/dataframe/dataframe.jl#L1-L177)
+
 ::
-::ApiCard{object="SearchLight.find" category="Function"}
+::ApiCard{object='SearchLight.find' category='Function'}
 #docstring
+
 
 
 ```julia
 find(m::Type{T}, q::SQLQuery, j::Union{Nothing,Vector{SQLJoin}} = nothing)::Vector{T} where {T<:AbstractModel}
 ```
+
 
 **Examples**
 
@@ -257,9 +261,15 @@ find(m::Type{T}, q::SQLQuery, j::Union{Nothing,Vector{SQLJoin}} = nothing)::Vect
 ```
 
 
-```
+
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L83-L90)
+
+
+
+```julia
 find(m::Type{T}, w::SQLWhereEntity; order = SQLOrder(pk(m)))::Vector{T} where {T<:AbstractModel}
 ```
+
 
 Return a vector of `AbstractModel` given Model instance where `query` and `order` by
 
@@ -304,22 +314,28 @@ Stat
 | year::Int64          | 2021                                 |
 ```
 
+
+
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L95-L139)
+
 ::
-::ApiCard{object="Base.first" category="Function"}
+::ApiCard{object='Base.first' category='Function'}
 #docstring
+
 
 
 ```julia
 first(coll)
 ```
 
+
 Get the first element of an iterable collection. Return the start point of an `AbstractRange` even if it is empty.
 
-See also: `only`, `firstindex`, [`last`](querybuilder.md#Base.last).
+See also: `only`, `firstindex`, [`last`](/API/querybuilder#Base.last).
 
 **Examples**
 
-```julia-repl
+```julia
 julia> first(2:2:10)
 2
 
@@ -328,24 +344,29 @@ julia> first([1; 2; 3; 4])
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L447-L463' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L447-L463)
 
 
-```
+
+```julia
 first(itr, n::Integer)
 ```
+
 
 Get the first `n` elements of the iterable collection `itr`, or fewer elements if `itr` is not long enough.
 
 See also: `startswith`, `Iterators.take`.
 
-!!! compat "Julia 1.6"
-    This method requires at least Julia 1.6.
+ tip Julia 1.6
+
+This method requires at least Julia 1.6.
+
 
 
 **Examples**
 
-```julia-repl
+```julia
 julia> first(["foo", "bar", "qux"], 2)
 2-element Vector{String}:
  "foo"
@@ -359,18 +380,21 @@ Bool[]
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L470-L494' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L470-L494)
 
 
-```
+
+```julia
 first(s::AbstractString, n::Integer)
 ```
+
 
 Get a string consisting of the first `n` characters of `s`.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> first("∀ϵ≠0: ϵ²>0", 0)
 ""
 
@@ -382,114 +406,189 @@ julia> first("∀ϵ≠0: ϵ²>0", 3)
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/basic.jl#L644-L660' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/basic.jl#L644-L660)
 
 
+
+```julia
+first(node.children::NodeChildren) -> Node
 ```
+
+
+Returns the first child of the `node :: Node`, or throws an error if the node has no children.
+
+
+[source](https://github.com/JuliaDocs/MarkdownAST.jl/blob/v0.1.2/src/node.jl#L247-L252)
+
+
+
+```julia
 first(q::Deque)
 ```
+
 
 Returns the first element of the deque `q`.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/deque.jl#L89-L93)
+
+
+
+```julia
 first(D::CircularDeque)
 ```
+
 
 Get the item at the front of the queue.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/circ_deque.jl#L35-L39)
+
+
+
+```julia
 first(s::Stack)
 ```
+
 
 Get the top item from the stack. Sometimes called peek.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/stack.jl#L38-L42)
+
+
+
+```julia
 first(h::BinaryHeap)
 ```
+
 
 Returns the element at the top of the heap `h`.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/heaps/binary_heap.jl#L95-L99)
+
+
+
+```julia
 first(h::BinaryMinMaxHeap)
 ```
+
 
 Get the first (minimum) of the heap.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/heaps/minmax_heap.jl#L248-L252)
+
+
+
+```julia
 first(sc)
 ```
 
-Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the first item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `first(sc)` is equivalent to `deref((sc,startof(sc)))`. It is an error to call this function on an empty container. Time: O(log *n*)
+
+Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the first item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `first(sc)` is equivalent to `deref((sc,startof(sc)))`. It is an error to call this function on an empty container. Time: O(log _n_)
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/sorted_dict.jl#L343-L352)
+
+
+
+```julia
 first(sc)
 ```
 
-Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the first item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `first(sc)` is equivalent to `deref((sc,startof(sc)))`. It is an error to call this function on an empty container. Time: O(log *n*)
+
+Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the first item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `first(sc)` is equivalent to `deref((sc,startof(sc)))`. It is an error to call this function on an empty container. Time: O(log _n_)
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/sorted_multi_dict.jl#L191-L200)
+
+
+
+```julia
 first(sc)
 ```
 
-Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the first item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `first(sc)` is equivalent to `deref((sc,startof(sc)))`. It is an error to call this function on an empty container. Time: O(log *n*)
+
+Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the first item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `first(sc)` is equivalent to `deref((sc,startof(sc)))`. It is an error to call this function on an empty container. Time: O(log _n_)
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/sorted_set.jl#L139-L148)
+
+
+
+```julia
 first(cb::CircularBuffer)
 ```
+
 
 Get the first element of CircularBuffer.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/circular_buffer.jl#L190-L194)
+
+
+
+```julia
 first(df::AbstractDataFrame)
 ```
+
 
 Get the first row of `df` as a `DataFrameRow`.
 
 Metadata: this function preserves table-level and column-level `:note`-style metadata.
 
 
-```
+[source](https://github.com/JuliaData/DataFrames.jl/blob/v1.7.0/src/abstractdataframe/abstractdataframe.jl#L549-L555)
+
+
+
+```julia
 first(df::AbstractDataFrame, n::Integer; view::Bool=false)
 ```
 
-Get a data frame with the `n` first rows of `df`.
+
+Get a data frame with the `n` first rows of `df`. Get all rows if `n` is greater than the number of rows in `df`. Error if `n` is negative.
 
 If `view=false` a freshly allocated `DataFrame` is returned. If `view=true` then a `SubDataFrame` view into `df` is returned.
 
 Metadata: this function preserves table-level and column-level `:note`-style metadata.
 
 
-```
+[source](https://github.com/JuliaData/DataFrames.jl/blob/v1.7.0/src/abstractdataframe/abstractdataframe.jl#L558-L569)
+
+
+
+```julia
 first(interval::AbstractInterval{T}) -> Union{T,Nothing}
 ```
 
+
 The value of the lower endpoint. When the lower endpoint is unbounded `nothing` will be returned.
 
+
+[source](https://github.com/invenia/Intervals.jl/blob/v1.10.0/src/docstrings.jl#L102-L107)
+
 ::
-::ApiCard{object="Base.last" category="Function"}
+::ApiCard{object='Base.last' category='Function'}
 #docstring
+
 
 
 ```julia
 last(coll)
 ```
 
+
 Get the last element of an ordered collection, if it can be computed in O(1) time. This is accomplished by calling `lastindex` to get the last index. Return the end point of an `AbstractRange` even if it is empty.
 
-See also [`first`](querybuilder.md#Base.first), `endswith`.
+See also [`first`](/API/querybuilder#Base.first), `endswith`.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> last(1:2:10)
 9
 
@@ -498,22 +597,27 @@ julia> last([1; 2; 3; 4])
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L502-L519' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L502-L519)
 
 
-```
+
+```julia
 last(itr, n::Integer)
 ```
 
+
 Get the last `n` elements of the iterable collection `itr`, or fewer elements if `itr` is not long enough.
 
-!!! compat "Julia 1.6"
-    This method requires at least Julia 1.6.
+ tip Julia 1.6
+
+This method requires at least Julia 1.6.
+
 
 
 **Examples**
 
-```julia-repl
+```julia
 julia> last(["foo", "bar", "qux"], 2)
 2-element Vector{String}:
  "bar"
@@ -527,18 +631,21 @@ Float64[]
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L522-L544' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L522-L544)
 
 
-```
+
+```julia
 last(s::AbstractString, n::Integer)
 ```
+
 
 Get a string consisting of the last `n` characters of `s`.
 
 **Examples**
 
-```julia-repl
+```julia
 julia> last("∀ϵ≠0: ϵ²>0", 0)
 ""
 
@@ -550,88 +657,148 @@ julia> last("∀ϵ≠0: ϵ²>0", 3)
 ```
 
 
-<a target='_blank' href='https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/basic.jl#L663-L679' class='documenter-source'>source</a><br>
+
+[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/basic.jl#L663-L679)
 
 
+
+```julia
+last(node.children::NodeChildren) -> Node
 ```
+
+
+Returns the last child of the `node :: Node`, or throws an error if the node has no children.
+
+
+[source](https://github.com/JuliaDocs/MarkdownAST.jl/blob/v0.1.2/src/node.jl#L260-L265)
+
+
+
+```julia
 last(q::Deque)
 ```
+
 
 Returns the last element of the deque `q`.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/deque.jl#L100-L104)
+
+
+
+```julia
 last(D::CircularDeque)
 ```
+
 
 Get the item from the back of the queue.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/circ_deque.jl#L45-L49)
+
+
+
+```julia
 last(sc)
 ```
 
-Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the last item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `last(sc)` is equivalent to `deref((sc,lastindex(sc)))`. It is an error to call this function on an empty container. Time: O(log *n*)
+
+Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the last item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `last(sc)` is equivalent to `deref((sc,lastindex(sc)))`. It is an error to call this function on an empty container. Time: O(log _n_)
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/sorted_dict.jl#L359-L368)
+
+
+
+```julia
 last(sc)
 ```
 
-Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the last item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `last(sc)` is equivalent to `deref((sc,lastindex(sc)))`. It is an error to call this function on an empty container. Time: O(log *n*)
+
+Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the last item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `last(sc)` is equivalent to `deref((sc,lastindex(sc)))`. It is an error to call this function on an empty container. Time: O(log _n_)
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/sorted_multi_dict.jl#L207-L216)
+
+
+
+```julia
 last(sc)
 ```
 
-Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the last item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `last(sc)` is equivalent to `deref((sc,lastindex(sc)))`. It is an error to call this function on an empty container. Time: O(log *n*)
+
+Argument `sc` is a SortedDict, SortedMultiDict or SortedSet. This function returns the last item (a `k=>v` pair for SortedDict and SortedMultiDict or a key for SortedSet) according to the sorted order in the container. Thus, `last(sc)` is equivalent to `deref((sc,lastindex(sc)))`. It is an error to call this function on an empty container. Time: O(log _n_)
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/sorted_set.jl#L155-L164)
+
+
+
+```julia
 last(cb::CircularBuffer)
 ```
+
 
 Get the last element of CircularBuffer.
 
 
-```
+[source](https://github.com/JuliaCollections/DataStructures.jl/blob/v0.18.20/src/circular_buffer.jl#L199-L203)
+
+
+
+```julia
 last(df::AbstractDataFrame)
 ```
+
 
 Get the last row of `df` as a `DataFrameRow`.
 
 Metadata: this function preserves table-level and column-level `:note`-style metadata.
 
 
-```
+[source](https://github.com/JuliaData/DataFrames.jl/blob/v1.7.0/src/abstractdataframe/abstractdataframe.jl#L576-L582)
+
+
+
+```julia
 last(df::AbstractDataFrame, n::Integer; view::Bool=false)
 ```
 
-Get a data frame with the `n` last rows of `df`.
+
+Get a data frame with the `n` last rows of `df`. Get all rows if `n` is greater than the number of rows in `df`. Error if `n` is negative.
 
 If `view=false` a freshly allocated `DataFrame` is returned. If `view=true` then a `SubDataFrame` view into `df` is returned.
 
 Metadata: this function preserves table-level and column-level `:note`-style metadata.
 
 
-```
+[source](https://github.com/JuliaData/DataFrames.jl/blob/v1.7.0/src/abstractdataframe/abstractdataframe.jl#L585-L596)
+
+
+
+```julia
 last(interval::AbstractInterval{T}) -> Union{T,Nothing}
 ```
 
+
 The value of the upper endpoint. When the upper endpoint is unbounded `nothing` will be returned.
 
+
+[source](https://github.com/invenia/Intervals.jl/blob/v1.10.0/src/docstrings.jl#L110-L115)
+
 ::
 
+ 
 
-::alert{type="info"}
-Missing docstring for `SearchLight.count`. 
-::
+<UAlert title='Missing docstring for  `SearchLight.count`. '/>
 
 
-::ApiCard{object="SearchLight.sql" category="Function"}
+::ApiCard{object='SearchLight.sql' category='Function'}
 #docstring
 
 
+
+
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L1041-L1043)
 
 ::

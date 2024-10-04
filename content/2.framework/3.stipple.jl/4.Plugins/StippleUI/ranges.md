@@ -1,11 +1,11 @@
 
 
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `RangeData`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `RangeData`. '/>
 
-:::
+
 ::ApiCard{object='Base.range' category='Function'}
 #docstring
 
@@ -19,10 +19,10 @@ range(;start, length, stop, step)
 ```
 
 
-Construct a specialized array with evenly spaced elements and optimized storage (an [`AbstractRange`](@ref)) from the arguments. Mathematically a range is uniquely determined by any three of `start`, `step`, `stop` and `length`. Valid invocations of range are:
+Construct a specialized array with evenly spaced elements and optimized storage (an `AbstractRange`) from the arguments. Mathematically a range is uniquely determined by any three of `start`, `step`, `stop` and `length`. Valid invocations of range are:
 - Call `range` with any three of `start`, `step`, `stop`, `length`.
   
-- Call `range` with two of `start`, `stop`, `length`. In this case `step` will be assumed to be one. If both arguments are Integers, a [`UnitRange`](@ref) will be returned.
+- Call `range` with two of `start`, `stop`, `length`. In this case `step` will be assumed to be one. If both arguments are Integers, a `UnitRange` will be returned.
   
 - Call `range` with one of `stop` or `length`. `start` and `step` will be assumed to be one.
   
@@ -78,25 +78,25 @@ julia> range(1, 3.5, step=2)
 ```
 
 
-Special care is taken to ensure intermediate values are computed rationally. To avoid this induced overhead, see the [`LinRange`](@ref) constructor.
+Special care is taken to ensure intermediate values are computed rationally. To avoid this induced overhead, see the `LinRange` constructor.
 
-::: tip Julia 1.1
+ tip Julia 1.1
 
 `stop` as a positional argument requires at least Julia 1.1.
 
-:::
 
-::: tip Julia 1.7
+
+ tip Julia 1.7
 
 The versions without keyword arguments and `start` as a keyword argument require at least Julia 1.7.
 
-:::
 
-::: tip Julia 1.8
+
+ tip Julia 1.8
 
 The versions with `stop` as a sole keyword argument, or `length` as a sole keyword argument require at least Julia 1.8.
 
-:::
+
 
 **Extended Help**
 
@@ -222,14 +222,14 @@ julia> slider(1:5:100)
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `Stipple.render`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `Stipple.render`. '/>
 
-:::
 
-::: warning Missing docstring.
 
-Missing docstring for `Base.parse`. Check Documenter&#39;s build log for details.
+ 
 
-:::
+<UAlert title='Missing docstring for  `Base.parse`. '/>
+
+

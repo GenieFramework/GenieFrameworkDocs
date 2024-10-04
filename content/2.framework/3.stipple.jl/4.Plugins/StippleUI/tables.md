@@ -163,11 +163,11 @@ julia> dt = DataTable(t1)
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `active_columns`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `active_columns`. '/>
 
-:::
+
 ::ApiCard{object='StippleUI.Tables.columns' category='Function'}
 #docstring
 
@@ -188,17 +188,17 @@ julia> columns = [Column("x1"), Column("x2", align = :right)]
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `rows`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `rows`. '/>
 
-:::
 
-::: warning Missing docstring.
 
-Missing docstring for `data`. Check Documenter&#39;s build log for details.
+ 
 
-:::
+<UAlert title='Missing docstring for  `data`. '/>
+
+
 ::ApiCard{object='Genie.Renderer.Html.table' category='Function'}
 #docstring
 
@@ -267,11 +267,11 @@ Note the use of the `@slot` macro, which is available from Stipple v0.28.7 on. O
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `Stipple.render`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `Stipple.render`. '/>
 
-:::
+
 ::ApiCard{object='Stipple.watch' category='Function'}
 #docstring
 
@@ -289,8 +289,8 @@ Abstract function. Can be used by plugins to define custom Vue.js watch function
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `Base.parse`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `Base.parse`. '/>
 
-:::
+

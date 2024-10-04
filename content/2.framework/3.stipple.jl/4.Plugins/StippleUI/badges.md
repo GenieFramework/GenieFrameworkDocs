@@ -77,8 +77,8 @@ julia> Html.div("Badge", class="text-h6", [
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `Badge`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `Badge`. '/>
 
-:::
+

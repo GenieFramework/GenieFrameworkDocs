@@ -126,11 +126,11 @@ julia>
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `Font`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `Font`. '/>
 
-:::
+
 ::ApiCard{object='StipplePlotly.Layouts.ErrorBar' category='Type'}
 #docstring
 
@@ -249,17 +249,17 @@ julia>
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `MCenter`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `MCenter`. '/>
 
-:::
 
-::: warning Missing docstring.
 
-Missing docstring for `PlotLayout`. Check Documenter&#39;s build log for details.
+ 
 
-:::
+<UAlert title='Missing docstring for  `PlotLayout`. '/>
+
+
 ::ApiCard{object='StipplePlotly.Layouts.PlotAnnotation' category='Type'}
 #docstring
 
@@ -721,26 +721,26 @@ julia>
 
 ::
 
-::: warning Missing docstring.
+ 
 
-Missing docstring for `PlotLayoutLegend`. Check Documenter&#39;s build log for details.
+<UAlert title='Missing docstring for  `PlotLayoutLegend`. '/>
 
-:::
 
-::: warning Missing docstring.
 
-Missing docstring for `PlotLayoutMapbox`. Check Documenter&#39;s build log for details.
+ 
 
-:::
+<UAlert title='Missing docstring for  `PlotLayoutMapbox`. '/>
 
-::: warning Missing docstring.
 
-Missing docstring for `PlotLayoutTitle`. Check Documenter&#39;s build log for details.
 
-:::
+ 
 
-::: warning Missing docstring.
+<UAlert title='Missing docstring for  `PlotLayoutTitle`. '/>
 
-Missing docstring for `PRotation`. Check Documenter&#39;s build log for details.
 
-:::
+
+ 
+
+<UAlert title='Missing docstring for  `PRotation`. '/>
+
+

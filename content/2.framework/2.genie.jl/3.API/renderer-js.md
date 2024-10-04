@@ -1,37 +1,32 @@
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `get_template`. 
-::
-
+<UAlert title='Missing docstring for  `get_template`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `to_js`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `to_js`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `render`. 
-::
-
+<UAlert title='Missing docstring for  `render`. '/>
 
 
 
-::alert{type="info"}
-Missing docstring for `js`. 
-::
+ 
+
+<UAlert title='Missing docstring for  `js`. '/>
 
 
 
+ 
 
-::alert{type="info"}
-Missing docstring for `Genie.Router.error`. 
-::
+<UAlert title='Missing docstring for  `Genie.Router.error`. '/>
 
 
