@@ -12,6 +12,8 @@ NamedTuple
 
 `NamedTuple`s are, as their name suggests, named `Tuple`s. That is, they&#39;re a tuple-like collection of values, where each entry has a unique name, represented as a `Symbol`. Like `Tuple`s, `NamedTuple`s are immutable; neither the names nor the values can be modified in place after construction.
 
+A named tuple can be created as a tuple literal with keys, e.g. `(a=1, b=2)`, or as a tuple literal with semicolon after the opening parenthesis, e.g. `(; a=1, b=2)` (this form also accepts programmatically generated names as described below), or using a `NamedTuple` type as constructor, e.g. `NamedTuple{(:a, :b)}((1,2))`.
+
 Accessing the value associated with a name in a named tuple can be done using field access syntax, e.g. `x.a`, or using `getindex`, e.g. `x[:a]` or `x[(:a, :b)]`. A tuple of the names can be obtained using `keys`, and a tuple of the values can be obtained using `values`.
 
  tip Note
@@ -55,15 +57,33 @@ julia> collect(pairs(x))
 ```
 
 
-In a similar fashion as to how one can define keyword arguments programmatically, a named tuple can be created by giving a pair `name::Symbol => value` or splatting an iterator yielding such pairs after a semicolon inside a tuple literal:
+In a similar fashion as to how one can define keyword arguments programmatically, a named tuple can be created by giving pairs `name::Symbol => value` after a semicolon inside a tuple literal. This and the `name=value` syntax can be mixed:
 
 ```julia
-julia> (; :a => 1)
-(a = 1,)
+julia> (; :a => 1, :b => 2, c=3)
+(a = 1, b = 2, c = 3)
+```
 
+
+The name-value pairs can also be provided by splatting a named tuple or any iterator that yields two-value collections holding each a symbol as first value:
+
+```julia
 julia> keys = (:a, :b, :c); values = (1, 2, 3);
 
-julia> (; zip(keys, values)...)
+julia> NamedTuple{keys}(values)
+(a = 1, b = 2, c = 3)
+
+julia> (; (keys .=> values)...)
+(a = 1, b = 2, c = 3)
+
+julia> nt1 = (a=1, b=2);
+
+julia> nt2 = (c=3, d=4);
+
+julia> (; nt1..., nt2..., b=20) # the final b overwrites the value from nt1
+(a = 1, b = 20, c = 3, d = 4)
+
+julia> (; zip(keys, values)...) # zip yields tuples such as (:a, 1)
 (a = 1, b = 2, c = 3)
 ```
 
@@ -95,6 +115,6 @@ Use of `getindex` methods with multiple `Symbol`s is available as of Julia 1.7.
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/namedtuple.jl#L3-L85)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/namedtuple.jl#L3-L110)
 
 ::
