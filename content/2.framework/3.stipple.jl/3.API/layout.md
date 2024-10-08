@@ -79,9 +79,9 @@ function row(args...; size=-1, xs=-1, sm=-1, md=-1, lg=-1, xl=-1, kwargs...)
 ```
 
 
-Creates a `div` HTML element with Quasar&#39;s Flexgrid CSS class `row`. Such rows typically contain elements created with [`cell`](/API/layout#Stipple.Layout.cell), `row`, [`column`](/API/layout#Stipple.Layout.column) or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
+Creates a `div` HTML element with Quasar&#39;s Flexgrid CSS class `row`. Such rows typically contain elements created with `cell` or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
 
-The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](/API/layout#Stipple.Layout.cell).
+The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of `cell`.
 
 **Example**
 
@@ -105,9 +105,9 @@ function column(args...; size=-1, xs=-1, sm=-1, md=-1, lg=-1, xl=-1, kwargs...)
 ```
 
 
-Creates a `div` HTML element with Quasar&#39;s Flexgrid CSS class `column`. Such columns typically contain elements created with [`cell`](/API/layout#Stipple.Layout.cell), [`row`](/API/layout#Stipple.Layout.row), `column`, or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
+Creates a `div` HTML element with Quasar&#39;s Flexgrid CSS class `column`. Such columns typically contain elements created with `cell`, `column`, or other elements that manually receive grid classes, e.g. `"col"`, `"col-sm-5"`.
 
-The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of [`cell`](/API/layout#Stipple.Layout.cell).
+The grid size kwargs `size`, `xs`, etc. are explained in more detail in the docs of `cell`.
 
 **Example**
 
@@ -147,7 +147,7 @@ Parameters:
 - `-1` / `nothing`: no specification
   
 
-The cells are typically included within [`row`](/API/layout#Stipple.Layout.row)s or [`column`](/API/layout#Stipple.Layout.column)s. See [Quasar&#39;s Flex Grid](https://quasar.dev/layout/grid/introduction-to-flexbox) for more information.
+The cells are typically included within [`row`](/API/layout#Stipple.Layout.row)s or `column` for more information.
 
 **Example**
 
