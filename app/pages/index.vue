@@ -15,7 +15,7 @@ useSeoMeta({
     <h1 class="text-4xl font-bold text-center mt-10 mb-10">{{ page.features.title }}</h1>
     <ULandingGrid>
     <ULandingSection 
-    class="col-span-6 sm:py-10 mx-auto" style="width:550px"
+    class="col-span-6 sm:py-10 mx-auto" style="width:100%"
       v-for="(section, index) in page.sections"
       :key="index"
       :headline="section.headline"
