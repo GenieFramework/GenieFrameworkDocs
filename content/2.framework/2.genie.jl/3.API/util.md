@@ -19,7 +19,7 @@ file_name_without_extension(file_name, extension = ".jl") :: String
 Removes the file extension `extension` from `file_name`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Util.jl#L7-L11)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Util.jl#L7-L11)
 
 ::
 ::ApiCard{object='Genie.Util.walk_dir' category='Function'}
@@ -35,7 +35,7 @@ function walk_dir(dir, paths = String[]; only_extensions = ["jl"], only_files = 
 Recursively walks dir and `produce`s non directories. If `only_files`, directories will be skipped. If `only_dirs`, files will be skipped.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Util.jl#L17-L21)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Util.jl#L17-L21)
 
 ::
 

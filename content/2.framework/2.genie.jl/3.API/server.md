@@ -13,7 +13,7 @@ SERVERS
 ServersCollection constant containing references to the current app&#39;s web and websockets servers.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L23-L27)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L23-L27)
 
 ::
 ::ApiCard{object='Genie.Server.ServersCollection' category='Type'}
@@ -29,7 +29,7 @@ ServersCollection(webserver::Union{Task,Nothing}, websockets::Union{Task,Nothing
 Represents a object containing references to Genie&#39;s web and websockets servers.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L13-L17)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L13-L17)
 
 ::
 ::ApiCard{object='Genie.Server.down' category='Function'}
@@ -45,7 +45,7 @@ down(; webserver::Bool = true, websockets::Bool = true) :: ServersCollection
 Shuts down the servers optionally indicating which of the `webserver` and `websockets` servers to be stopped. It does not remove the servers from the `SERVERS` collection. Returns the collection.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L250-L255)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L250-L255)
 
 ::
 ::ApiCard{object='Genie.Server.down!' category='Function'}
@@ -61,7 +61,7 @@ function down!(; webserver::Bool = true, websockets::Bool = true) :: Vector{Serv
 Shuts down all the servers and empties the `SERVERS` collection. Returns the empty collection.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L274-L278)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L274-L278)
 
 ::
 ::ApiCard{object='Genie.Server.handle_request' category='Function'}
@@ -77,7 +77,7 @@ handle_request(req::HTTP.Request, res::HTTP.Response) :: HTTP.Response
 Http server handler function - invoked when the server gets a request.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L287-L291)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L287-L291)
 
 ::
 ::ApiCard{object='Genie.Server.handle_ws_request' category='Function'}
@@ -93,7 +93,7 @@ handle_ws_request(req::HTTP.Request, msg::String, ws_client) :: String
 Http server handler function - invoked when the server gets a request.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L405-L409)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L405-L409)
 
 ::
 
@@ -146,7 +146,7 @@ julia> Genie.serve("public", 8888, async = false, verbose = true)
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L194-L213)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L194-L213)
 
 ::
 
@@ -168,7 +168,7 @@ setup_http_listener(req::HTTP.Request, res::HTTP.Response = HTTP.Response()) :: 
 Configures the handler for the HTTP Request and handles errors.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L337-L341)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L337-L341)
 
 ::
 
@@ -190,7 +190,7 @@ setup_ws_handler(stream::HTTP.Stream, ws_client) :: Nothing
 Configures the handler for WebSockets requests.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L367-L371)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L367-L371)
 
 ::
 ::ApiCard{object='Genie.Server.up' category='Function'}
@@ -226,7 +226,7 @@ Web Server starting at http://127.0.0.1:8000
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L51-L69)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L51-L69)
 
 ::
 ::ApiCard{object='Genie.Server.update_config' category='Function'}
@@ -242,6 +242,6 @@ update_config(port::Int, host::String, ws_port::Int) :: Nothing
 Updates the corresponding Genie configurations to the corresponding values for   `port`, `host`, and `ws_port`, if these are passed as arguments when starting up the server.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Server.jl#L230-L235)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Server.jl#L230-L235)
 
 ::

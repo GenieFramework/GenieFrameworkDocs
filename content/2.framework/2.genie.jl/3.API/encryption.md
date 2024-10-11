@@ -13,7 +13,7 @@ decrypt(s::String) :: String
 Decrypts `s` (a `string` previously encrypted by Genie).
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Encryption.jl#L24-L28)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Encryption.jl#L24-L28)
 
 ::
 ::ApiCard{object='Genie.Encryption.encrypt' category='Function'}
@@ -29,7 +29,7 @@ encrypt{T}(s::T) :: String
 Encrypts `s`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Encryption.jl#L11-L15)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Encryption.jl#L11-L15)
 
 ::
 ::ApiCard{object='Genie.Encryption.encryption_sauce' category='Function'}
@@ -45,6 +45,6 @@ encryption_sauce() :: Tuple{Vector{UInt8},Vector{UInt8}}
 Generates a pair of key32 and iv16 with salt for encryption/decryption
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Encryption.jl#L46-L50)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Encryption.jl#L46-L50)
 
 ::

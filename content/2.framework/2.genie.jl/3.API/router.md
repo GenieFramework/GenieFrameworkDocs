@@ -13,7 +13,7 @@ mutable struct Route
 Representation of a route object
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L67-L71)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L67-L71)
 
 ::
 ::ApiCard{object='Genie.Router.Channel' category='Type'}
@@ -29,7 +29,7 @@ mutable struct Channel
 Representation of a WebSocket Channel object
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L84-L88)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L84-L88)
 
 ::
 ::ApiCard{object='Base.show' category='Function'}
@@ -61,7 +61,7 @@ Hello World!
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/show.jl#L427-L453)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/show.jl#L430-L456)
 
 
 
@@ -95,7 +95,7 @@ julia> Day(1)
 Container types generally implement 3-argument `show` by calling `show(io, MIME"text/plain"(), x)` for elements `x`, with `:compact => true` set in an `IOContext` passed as the first argument.
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/multimedia.jl#L79-L121)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/multimedia.jl#L79-L121)
 
 
 
@@ -107,7 +107,7 @@ Base.show(io::IO, ex::RuntimeException)
 Custom printing of `RuntimeException`
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Exceptions.jl#L76-L80)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Exceptions.jl#L76-L80)
 
 
 
@@ -119,7 +119,7 @@ Base.show(io::IO, ex::FileExistsException)
 Custom printing for `FileExistsException`
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Exceptions.jl#L167-L171)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Exceptions.jl#L167-L171)
 
 ::
 ::ApiCard{object='Genie.Router.Params' category='Type'}
@@ -135,7 +135,7 @@ mutable struct Params{T}
 Collection of key value pairs representing the parameters of the current request - response cycle.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L110-L114)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L110-L114)
 
 ::
 ::ApiCard{object='Genie.Router.ispayload' category='Function'}
@@ -151,7 +151,7 @@ ispayload(req::HTTP.Request)
 True if the request can carry a payload - that is, it&#39;s a `POST`, `PUT`, or `PATCH` request
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L126-L130)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L126-L130)
 
 
 
@@ -163,7 +163,7 @@ ispayload()
 True if the request can carry a payload - that is, it&#39;s a `POST`, `PUT`, or `PATCH` request
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L134-L138)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L134-L138)
 
 ::
 ::ApiCard{object='Genie.Router.route_request' category='Function'}
@@ -179,7 +179,7 @@ route_request(req::Request, res::Response) :: Response
 First step in handling a request: sets up params collection, handles query vars, negotiates content.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L142-L146)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L142-L146)
 
 ::
 ::ApiCard{object='Genie.Router.route_ws_request' category='Function'}
@@ -195,7 +195,7 @@ route_ws_request(req::Request, msg::String, ws_client::HTTP.WebSockets.WebSocket
 First step in handling a web socket request: sets up params collection, handles query vars.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L211-L215)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L211-L215)
 
 ::
 ::ApiCard{object='Base.push!' category='Function'}
@@ -231,7 +231,7 @@ See `sizehint!` for notes about the performance model.
 See also `pushfirst!`.
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/array.jl#L1030-L1055)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/array.jl#L1088-L1113)
 
 ::
 ::ApiCard{object='Genie.Router.route' category='Function'}
@@ -242,7 +242,7 @@ See also `pushfirst!`.
 Named Genie routes constructors.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L234-L236)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L234-L236)
 
 ::
 ::ApiCard{object='Genie.Router.channel' category='Function'}
@@ -253,7 +253,7 @@ Named Genie routes constructors.
 Named Genie channels constructors.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L255-L257)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L255-L257)
 
 ::
 ::ApiCard{object='Genie.Router.routename' category='Function'}
@@ -269,7 +269,7 @@ routename(params) :: Symbol
 Computes the name of a route.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L272-L276)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L272-L276)
 
 ::
 ::ApiCard{object='Genie.Router.channelname' category='Function'}
@@ -285,7 +285,7 @@ channelname(params) :: Symbol
 Computes the name of a channel.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L282-L286)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L282-L286)
 
 ::
 ::ApiCard{object='Genie.Router.baptizer' category='Function'}
@@ -301,7 +301,7 @@ baptizer(params::Union{Route,Channel}, parts::Vector{String}) :: Symbol
 Generates default names for routes and channels.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L292-L296)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L292-L296)
 
 ::
 ::ApiCard{object='Genie.Router.named_routes' category='Function'}
@@ -312,7 +312,7 @@ Generates default names for routes and channels.
 The list of the defined named routes.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L312-L314)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L312-L314)
 
 ::
 ::ApiCard{object='Genie.Router.routes' category='Function'}
@@ -328,7 +328,7 @@ routes() :: Vector{Route}
 Returns a vector of defined routes.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L359-L363)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L359-L363)
 
 ::
 ::ApiCard{object='Genie.Router.named_channels' category='Function'}
@@ -344,7 +344,7 @@ named_channels() :: Dict{Symbol,Any}
 The list of the defined named channels.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L326-L330)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L326-L330)
 
 ::
 ::ApiCard{object='Genie.Router.channels' category='Function'}
@@ -360,7 +360,7 @@ channels() :: Vector{Channel}
 Returns a vector of defined channels.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L369-L373)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L369-L373)
 
 ::
 ::ApiCard{object='Genie.Router.get_route' category='Function'}
@@ -371,7 +371,7 @@ Returns a vector of defined channels.
 Gets the `Route` corresponding to `routename`
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L342-L344)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L342-L344)
 
 ::
 
@@ -399,7 +399,7 @@ delete!(route_name::Symbol)
 Removes the route with the corresponding name from the routes collection and returns the collection of remaining routes.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L379-L383)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L379-L383)
 
 ::
 ::ApiCard{object='Genie.Router.to_link' category='Function'}
@@ -410,14 +410,14 @@ Removes the route with the corresponding name from the routes collection and ret
 Generates the HTTP link corresponding to `route_name` using the parameters in `d`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L401-L403)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L401-L403)
 
 
 
 Generates the HTTP link corresponding to `route_name` using the parameters in `route_params`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L455-L457)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L455-L457)
 
 ::
 ::ApiCard{object='Genie.Router.tolink' category='Function'}
@@ -428,14 +428,14 @@ Generates the HTTP link corresponding to `route_name` using the parameters in `r
 Generates the HTTP link corresponding to `route_name` using the parameters in `d`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L401-L403)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L401-L403)
 
 
 
 Generates the HTTP link corresponding to `route_name` using the parameters in `route_params`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L455-L457)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L455-L457)
 
 ::
 ::ApiCard{object='Genie.Router.link_to' category='Function'}
@@ -446,14 +446,14 @@ Generates the HTTP link corresponding to `route_name` using the parameters in `r
 Generates the HTTP link corresponding to `route_name` using the parameters in `d`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L401-L403)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L401-L403)
 
 
 
 Generates the HTTP link corresponding to `route_name` using the parameters in `route_params`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L455-L457)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L455-L457)
 
 ::
 ::ApiCard{object='Genie.Router.linkto' category='Function'}
@@ -464,14 +464,14 @@ Generates the HTTP link corresponding to `route_name` using the parameters in `r
 Generates the HTTP link corresponding to `route_name` using the parameters in `d`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L401-L403)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L401-L403)
 
 
 
 Generates the HTTP link corresponding to `route_name` using the parameters in `route_params`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L455-L457)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L455-L457)
 
 ::
 ::ApiCard{object='Genie.Router.toroute' category='Function'}
@@ -482,14 +482,14 @@ Generates the HTTP link corresponding to `route_name` using the parameters in `r
 Generates the HTTP link corresponding to `route_name` using the parameters in `d`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L401-L403)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L401-L403)
 
 
 
 Generates the HTTP link corresponding to `route_name` using the parameters in `route_params`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L455-L457)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L455-L457)
 
 ::
 ::ApiCard{object='Genie.Router.route_params_to_dict' category='Function'}
@@ -505,7 +505,7 @@ route_params_to_dict(route_params)
 Converts the route params to a `Dict`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L468-L472)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L468-L472)
 
 ::
 ::ApiCard{object='Genie.Router.action_controller_params' category='Function'}
@@ -521,7 +521,7 @@ action_controller_params(action::Function, params::Params) :: Nothing
 Sets up the :action_controller, :action, and :controller key - value pairs of the `params` collection.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L478-L482)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L478-L482)
 
 ::
 
@@ -543,7 +543,7 @@ match_routes(req::Request, res::Response, params::Params) :: Union{Route,Nothing
 Matches the invoked URL to the corresponding route, sets up the execution environment and invokes the controller method.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L492-L496)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L492-L496)
 
 ::
 ::ApiCard{object='Genie.Router.match_channels' category='Function'}
@@ -559,7 +559,7 @@ match_channels(req::Request, msg::String, ws_client::HTTP.WebSockets.WebSocket, 
 Matches the invoked URL to the corresponding channel, sets up the execution environment and invokes the channel controller method.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L586-L590)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L586-L590)
 
 ::
 ::ApiCard{object='Genie.Router.parse_route' category='Function'}
@@ -575,7 +575,7 @@ parse_route(route::String, context::Module = @__MODULE__) :: Tuple{String,Vector
 Parses a route and extracts its named params and types. `context` is used to access optional route parts types.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L643-L647)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L643-L647)
 
 ::
 ::ApiCard{object='Genie.Router.parse_channel' category='Function'}
@@ -591,7 +591,7 @@ parse_channel(channel::String) :: Tuple{String,Vector{String},Vector{Any}}
 Parses a channel and extracts its named parms and types.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L689-L693)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L689-L693)
 
 ::
 ::ApiCard{object='Genie.Router.extract_uri_params' category='Function'}
@@ -607,7 +607,7 @@ extract_uri_params(uri::String, regex_route::Regex, param_names::Vector{String},
 Extracts params from request URI and sets up the `params` `Dict`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L726-L730)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L726-L730)
 
 ::
 ::ApiCard{object='Genie.Router.extract_get_params' category='Function'}
@@ -623,7 +623,7 @@ extract_get_params(uri::URI, params::Params) :: Bool
 Extracts query vars and adds them to the execution `params` `Dict`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L750-L754)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L750-L754)
 
 ::
 ::ApiCard{object='Genie.Router.extract_post_params' category='Function'}
@@ -639,7 +639,7 @@ extract_post_params(req::Request, params::Params) :: Nothing
 Parses POST variables and adds the to the `params` `Dict`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L787-L791)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L787-L791)
 
 ::
 ::ApiCard{object='Genie.Router.extract_request_params' category='Function'}
@@ -655,7 +655,7 @@ extract_request_params(req::HTTP.Request, params::Params) :: Nothing
 Sets up the `params` key-value pairs corresponding to a JSON payload.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L814-L818)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L814-L818)
 
 ::
 ::ApiCard{object='Genie.Router.content_type' category='Function'}
@@ -671,7 +671,7 @@ content_type(req::HTTP.Request) :: String
 Gets the content-type of the request.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L855-L859)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L855-L859)
 
 ::
 ::ApiCard{object='Genie.Router.content_length' category='Function'}
@@ -687,7 +687,7 @@ content_length(req::HTTP.Request) :: Int
 Gets the content-length of the request.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L865-L869)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L865-L869)
 
 ::
 ::ApiCard{object='Genie.Router.request_type_is' category='Function'}
@@ -703,7 +703,7 @@ request_type_is(req::HTTP.Request, request_type::Symbol) :: Bool
 Checks if the request content-type is of a certain type.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L878-L882)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L878-L882)
 
 ::
 ::ApiCard{object='Genie.Router.request_type' category='Function'}
@@ -719,7 +719,7 @@ request_type(req::HTTP.Request) :: Symbol
 Gets the request&#39;s content type.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L894-L898)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L894-L898)
 
 ::
 ::ApiCard{object='Genie.Router.nested_keys' category='Function'}
@@ -735,7 +735,7 @@ nested_keys(k::String, v, params::Params) :: Nothing
 Utility function to process nested keys and set them up in `params`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L914-L918)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L914-L918)
 
 ::
 ::ApiCard{object='Genie.Router.setup_base_params' category='Function'}
@@ -751,7 +751,7 @@ setup_base_params(req::Request, res::Response, params::Dict{Symbol,Any}) :: Dict
 Populates `params` with default environment vars.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L936-L940)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L936-L940)
 
 ::
 ::ApiCard{object='Genie.Router.to_response' category='Function'}
@@ -767,7 +767,7 @@ to_response(action_result) :: Response
 Converts the result of invoking the controller action to a `Response`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L959-L963)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L959-L963)
 
 ::
 ::ApiCard{object='Genie.Router.params' category='Function'}
@@ -783,7 +783,7 @@ function params()
 The collection containing the request variables collection.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L974-L978)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L974-L978)
 
 ::
 
@@ -805,7 +805,7 @@ function request()
 The request object.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1026-L1030)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1026-L1030)
 
 ::
 ::ApiCard{object='Genie.Router.response_type' category='Function'}
@@ -822,7 +822,7 @@ response_type(params::Params) :: Symbol
 Returns the content-type of the current request-response cycle.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1046-L1051)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1046-L1051)
 
 
 
@@ -834,7 +834,7 @@ response_type{T}(check::Symbol, params::Dict{Symbol,T}) :: Bool
 Checks if the content-type of the current request-response cycle matches `check`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1063-L1067)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1063-L1067)
 
 ::
 ::ApiCard{object='Genie.Router.append_to_routes_file' category='Function'}
@@ -850,7 +850,7 @@ append_to_routes_file(content::String) :: Nothing
 Appends `content` to the app&#39;s route file.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1076-L1080)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1076-L1080)
 
 ::
 ::ApiCard{object='Genie.Router.is_static_file' category='Function'}
@@ -866,7 +866,7 @@ is_static_file(resource::String) :: Bool
 Checks if the requested resource is a static file.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1090-L1094)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1090-L1094)
 
 ::
 
@@ -888,7 +888,7 @@ escape_resource_path(resource::String)
 Cleans up paths to resources.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1100-L1104)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1100-L1104)
 
 ::
 ::ApiCard{object='Genie.Router.serve_static_file' category='Function'}
@@ -904,7 +904,7 @@ serve_static_file(resource::String) :: Response
 Reads the static file and returns the content as a `Response`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1128-L1131)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1128-L1131)
 
 ::
 ::ApiCard{object='Genie.Router.preflight_response' category='Function'}
@@ -917,7 +917,7 @@ preflight_response() :: HTTP.Response
 Sets up the preflight CORS response header.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1211-L1215)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1211-L1215)
 
 ::
 ::ApiCard{object='Genie.Router.response_mime' category='Function'}
@@ -933,7 +933,7 @@ response_mime()
 Returns the MIME type of the response.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1221-L1225)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1221-L1225)
 
 ::
 ::ApiCard{object='Genie.Router.file_path' category='Function'}
@@ -949,7 +949,7 @@ file_path(resource::String; within_doc_root = true, root = Genie.config.server_d
 Returns the path to a resource file. If `within_doc_root` it will automatically prepend the document root to `resource`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1272-L1276)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1272-L1276)
 
 ::
 ::ApiCard{object='Genie.Router.filepath' category='Function'}
@@ -965,7 +965,7 @@ file_path(resource::String; within_doc_root = true, root = Genie.config.server_d
 Returns the path to a resource file. If `within_doc_root` it will automatically prepend the document root to `resource`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1272-L1276)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1272-L1276)
 
 ::
 ::ApiCard{object='Genie.Router.pathify' category='Function'}
@@ -981,7 +981,7 @@ pathify(x) :: String
 Returns a proper URI path from a string `x`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1284-L1288)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1284-L1288)
 
 ::
 ::ApiCard{object='Genie.Router.file_extension' category='Function'}
@@ -997,7 +997,7 @@ file_extension(f) :: String
 Returns the file extesion of `f`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1292-L1296)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1292-L1296)
 
 ::
 ::ApiCard{object='Genie.Router.file_headers' category='Function'}
@@ -1013,7 +1013,7 @@ file_headers(f) :: Dict{String,String}
 Returns the file headers of `f`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Router.jl#L1300-L1304)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Router.jl#L1300-L1304)
 
 ::
 

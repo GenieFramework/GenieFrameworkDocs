@@ -22,7 +22,7 @@ isauthenticated() || throw(ExceptionalResponse(redirect(:show_login)))
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Exceptions.jl#L10-L24)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Exceptions.jl#L10-L24)
 
 ::
 ::ApiCard{object='Genie.Exceptions.FileExistsException' category='Type'}
@@ -38,7 +38,7 @@ struct FileExistsException <: Exception
 Custom exception type for signaling that the requested file already exists.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Exceptions.jl#L157-L161)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Exceptions.jl#L157-L161)
 
 ::
 ::ApiCard{object='Genie.Exceptions.InternalServerException' category='Type'}
@@ -62,7 +62,7 @@ Dedicated exception type for server side exceptions. Results in a 500 error by d
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Exceptions.jl#L85-L94)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Exceptions.jl#L85-L94)
 
 ::
 ::ApiCard{object='Genie.Exceptions.NotFoundException' category='Type'}
@@ -88,7 +88,7 @@ Specialized exception representing a not found resources. Results in a 404 respo
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Exceptions.jl#L120-L130)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Exceptions.jl#L120-L130)
 
 ::
 ::ApiCard{object='Genie.Exceptions.RuntimeException' category='Type'}
@@ -116,6 +116,6 @@ It allows defining custom error message and info, as well as an error code, in a
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Exceptions.jl#L37-L51)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Exceptions.jl#L37-L51)
 
 ::

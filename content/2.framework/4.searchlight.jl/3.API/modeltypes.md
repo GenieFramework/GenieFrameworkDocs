@@ -26,7 +26,7 @@
 Provides safe input into SQL queries and operations related to that.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L109-L111)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L109-L111)
 
 ::
 ::ApiCard{object='SearchLight.SQLColumn' category='Type'}
@@ -37,7 +37,7 @@ Provides safe input into SQL queries and operations related to that.
 Represents a SQL column when building SQL queries.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L170-L172)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L170-L172)
 
 ::
 
@@ -54,7 +54,7 @@ Represents a SQL column when building SQL queries.
 Represents the logic operators (OR, AND) as part of SQL queries.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L247-L249)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L247-L249)
 
 ::
 ::ApiCard{object='SearchLight.SQLWhere' category='Type'}
@@ -65,7 +65,7 @@ Represents the logic operators (OR, AND) as part of SQL queries.
 Provides functionality for building and manipulating SQL `WHERE` conditions.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L264-L266)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L264-L266)
 
 ::
 ::ApiCard{object='SearchLight.SQLWhereExpression' category='Type'}
@@ -126,7 +126,7 @@ SearchLight.SQLWhereExpression
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L297-L345)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L297-L345)
 
 ::
 
@@ -143,7 +143,7 @@ SearchLight.SQLWhereExpression
 Wrapper around SQL `limit` operator.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L413-L415)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L413-L415)
 
 ::
 ::ApiCard{object='SearchLight.SQLOrder' category='Type'}
@@ -154,7 +154,7 @@ Wrapper around SQL `limit` operator.
 Wrapper around SQL `order` operator.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L441-L443)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L441-L443)
 
 ::
 ::ApiCard{object='SearchLight.SQLQuery' category='Type'}
@@ -208,7 +208,7 @@ SearchLight.SQLQuery
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L588-L628)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L588-L628)
 
 ::
 ::ApiCard{object='SearchLight.SQLRaw' category='Type'}
@@ -219,7 +219,7 @@ SearchLight.SQLQuery
 Wrapper around a raw SQL query part.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L91-L93)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L91-L93)
 
 ::
 ::ApiCard{object='SearchLight.SQLJoin' category='Type'}
@@ -230,7 +230,7 @@ Wrapper around a raw SQL query part.
 Builds and manipulates SQL `join` expressions.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L538-L540)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L538-L540)
 
 ::
 ::ApiCard{object='SearchLight.SQLOn' category='Type'}
@@ -241,7 +241,7 @@ Builds and manipulates SQL `join` expressions.
 Represents the `ON` operator used in SQL `JOIN`
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L480-L482)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L480-L482)
 
 ::
 ::ApiCard{object='SearchLight.SQLJoinType' category='Type'}
@@ -252,7 +252,7 @@ Represents the `ON` operator used in SQL `JOIN`
 Wrapper around the various types of SQL `join` (`left`, `right`, `inner`, etc).
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L511-L513)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L511-L513)
 
 ::
 

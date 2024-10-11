@@ -90,7 +90,7 @@ julia> +(1, 20, 4)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/docs/basedocs.jl#L2579-L2592)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/docs/basedocs.jl#L2654-L2667)
 
 
 
@@ -262,7 +262,7 @@ find(m::Type{T}, q::SQLQuery, j::Union{Nothing,Vector{SQLJoin}} = nothing)::Vect
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L83-L90)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L83-L90)
 
 
 
@@ -316,7 +316,7 @@ Stat
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L95-L139)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L95-L139)
 
 ::
 ::ApiCard{object='Base.first' category='Function'}
@@ -345,7 +345,7 @@ julia> first([1; 2; 3; 4])
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L447-L463)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/abstractarray.jl#L454-L470)
 
 
 
@@ -381,7 +381,7 @@ Bool[]
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L470-L494)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/abstractarray.jl#L477-L501)
 
 
 
@@ -407,7 +407,7 @@ julia> first("∀ϵ≠0: ϵ²>0", 3)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/basic.jl#L644-L660)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/strings/basic.jl#L676-L692)
 
 
 
@@ -598,7 +598,7 @@ julia> last([1; 2; 3; 4])
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L502-L519)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/abstractarray.jl#L509-L526)
 
 
 
@@ -632,7 +632,7 @@ Float64[]
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/abstractarray.jl#L522-L544)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/abstractarray.jl#L529-L551)
 
 
 
@@ -658,7 +658,7 @@ julia> last("∀ϵ≠0: ϵ²>0", 3)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/basic.jl#L663-L679)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/strings/basic.jl#L695-L711)
 
 
 
@@ -799,6 +799,6 @@ The value of the upper endpoint. When the upper endpoint is unbounded `nothing` 
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L1041-L1043)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L1041-L1043)
 
 ::

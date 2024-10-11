@@ -12,7 +12,7 @@ Automatically invoked callback when a model exception is triggered internally (e
   
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Callbacks.jl#L31-L36)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Callbacks.jl#L31-L36)
 
 ::
 ::ApiCard{object='SearchLight.Callbacks.on_find' category='Function'}
@@ -27,7 +27,7 @@ Automatically invoked when model data is retrieved from the DB (on `find` method
   
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Callbacks.jl#L40-L46)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Callbacks.jl#L40-L46)
 
 ::
 ::ApiCard{object='SearchLight.Callbacks.after_find' category='Function'}
@@ -42,7 +42,7 @@ Automatically invoked after the object is retrieved from the DB
   
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Callbacks.jl#L50-L55)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Callbacks.jl#L50-L55)
 
 ::
 ::ApiCard{object='SearchLight.Callbacks.on_save' category='Function'}
@@ -57,7 +57,7 @@ Automatically invoked when the object is being peristed to the DB
   
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Callbacks.jl#L59-L64)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Callbacks.jl#L59-L64)
 
 ::
 ::ApiCard{object='SearchLight.Callbacks.before_save' category='Function'}
@@ -72,7 +72,7 @@ Automatically invoked before the object is being peristed to the DB
   
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Callbacks.jl#L68-L73)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Callbacks.jl#L68-L73)
 
 ::
 ::ApiCard{object='SearchLight.Callbacks.after_save' category='Function'}
@@ -87,6 +87,6 @@ Automatically invoked after the object is being peristed to the DB
   
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Callbacks.jl#L77-L82)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Callbacks.jl#L77-L82)
 
 ::

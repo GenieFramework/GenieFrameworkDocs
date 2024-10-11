@@ -13,7 +13,7 @@ new_database_migration(module_name::String) :: String
 Default content for a new SearchLight migration.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/FileTemplates.jl#L10-L14)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/FileTemplates.jl#L10-L14)
 
 ::
 ::ApiCard{object='SearchLight.Generator.FileTemplates.new_relationship_table_migration' category='Function'}
@@ -29,7 +29,7 @@ new_relationship_table_migration(module_name::String) :: String
 Default content for a new SearchLight migration.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/FileTemplates.jl#L47-L51)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/FileTemplates.jl#L47-L51)
 
 ::
 
@@ -51,7 +51,7 @@ newmodel(model_name::String, resource_name::String = model_name) :: String
 Default content for a new SearchLight model.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/FileTemplates.jl#L97-L101)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/FileTemplates.jl#L97-L101)
 
 ::
 ::ApiCard{object='SearchLight.Generator.FileTemplates.newvalidator' category='Function'}
@@ -67,7 +67,7 @@ newvalidator(validator_name::String) :: String
 Default content for a new SearchLight validator.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/FileTemplates.jl#L120-L124)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/FileTemplates.jl#L120-L124)
 
 ::
 
@@ -95,6 +95,6 @@ newtest(resource_name::String) :: String
 Default content for a new test file.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/FileTemplates.jl#L172-L176)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/FileTemplates.jl#L172-L176)
 
 ::

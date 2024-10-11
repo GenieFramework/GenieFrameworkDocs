@@ -60,7 +60,7 @@ julia> isrelated(role, permission)
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Relationships.jl#L46-L71)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Relationships.jl#L46-L71)
 
 ::
 

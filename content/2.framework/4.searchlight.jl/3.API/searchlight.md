@@ -82,7 +82,7 @@ julia> import Dates; one(Dates.Day(1))
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/number.jl#L311-L345)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/number.jl#L312-L346)
 
 ::
 
@@ -134,7 +134,7 @@ missing
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/reduce.jl#L1138-L1174)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/reduce.jl#L1143-L1179)
 
 
 
@@ -171,7 +171,7 @@ true
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/reduce.jl#L1246-L1277)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/reduce.jl#L1251-L1282)
 
 
 
@@ -202,7 +202,7 @@ julia> all(A, dims=2)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/reducedim.jl#L843-L864)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/reducedim.jl#L855-L876)
 
 
 
@@ -233,7 +233,7 @@ julia> all(i -> i > 0, A, dims=2)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/reducedim.jl#L867-L888)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/reducedim.jl#L879-L900)
 
 ::
 
@@ -296,7 +296,7 @@ julia> save!(user)
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L277-L290)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L277-L290)
 
 ::
 
@@ -347,7 +347,7 @@ julia> save!(user)
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L277-L290)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L277-L290)
 
 ::
 
@@ -380,7 +380,7 @@ julia>
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L401-L409)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L401-L409)
 
 ::
 
@@ -449,7 +449,7 @@ julia> SearchLight.to_models(Stat, DataFrame(Stat, SQLWhereExpression("date >= ?
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L438-L487)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L438-L487)
 
 ::
 
@@ -528,7 +528,7 @@ columns_from_joins(joins::Vector{SQLJoin})::Vector{SQLColumn}
 Extracts columns from joins param and adds to be used for the SELECT part
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L668-L672)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L668-L672)
 
 ::
 
@@ -755,7 +755,7 @@ escape_column_name(s::String)
 Sanitizes input to be use as column names in SQL queries.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L223-L228)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L223-L228)
 
 ::
 ::ApiCard{object='SearchLight.escape_value' category='Function'}
@@ -771,7 +771,7 @@ escape_value(i::SQLInput)
 Sanitizes input to be used as values in SQL queries.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/model_types.jl#L148-L152)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/model_types.jl#L148-L152)
 
 ::
 
@@ -799,7 +799,7 @@ add_quotes(str::String) :: String
 Adds quotes around `str` and escapes any previously existing quotes.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L1056-L1060)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L1056-L1060)
 
 ::
 ::ApiCard{object='SearchLight.strip_quotes' category='Function'}
@@ -815,7 +815,7 @@ strip_quotes(str::String) :: String
 Unquotes `str`.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L1073-L1077)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L1073-L1077)
 
 ::
 ::ApiCard{object='SearchLight.isquoted' category='Function'}
@@ -831,7 +831,7 @@ isquoted(str::String) :: Bool
 Checks weather or not `str` is quoted.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/SearchLight.jl#L1083-L1087)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/SearchLight.jl#L1083-L1087)
 
 ::
 
@@ -851,6 +851,8 @@ NamedTuple
 
 
 `NamedTuple`s are, as their name suggests, named `Tuple`s. That is, they&#39;re a tuple-like collection of values, where each entry has a unique name, represented as a `Symbol`. Like `Tuple`s, `NamedTuple`s are immutable; neither the names nor the values can be modified in place after construction.
+
+A named tuple can be created as a tuple literal with keys, e.g. `(a=1, b=2)`, or as a tuple literal with semicolon after the opening parenthesis, e.g. `(; a=1, b=2)` (this form also accepts programmatically generated names as described below), or using a `NamedTuple` type as constructor, e.g. `NamedTuple{(:a, :b)}((1,2))`.
 
 Accessing the value associated with a name in a named tuple can be done using field access syntax, e.g. `x.a`, or using `getindex`, e.g. `x[:a]` or `x[(:a, :b)]`. A tuple of the names can be obtained using `keys`, and a tuple of the values can be obtained using `values`.
 
@@ -895,15 +897,33 @@ julia> collect(pairs(x))
 ```
 
 
-In a similar fashion as to how one can define keyword arguments programmatically, a named tuple can be created by giving a pair `name::Symbol => value` or splatting an iterator yielding such pairs after a semicolon inside a tuple literal:
+In a similar fashion as to how one can define keyword arguments programmatically, a named tuple can be created by giving pairs `name::Symbol => value` after a semicolon inside a tuple literal. This and the `name=value` syntax can be mixed:
 
 ```julia
-julia> (; :a => 1)
-(a = 1,)
+julia> (; :a => 1, :b => 2, c=3)
+(a = 1, b = 2, c = 3)
+```
 
+
+The name-value pairs can also be provided by splatting a named tuple or any iterator that yields two-value collections holding each a symbol as first value:
+
+```julia
 julia> keys = (:a, :b, :c); values = (1, 2, 3);
 
-julia> (; zip(keys, values)...)
+julia> NamedTuple{keys}(values)
+(a = 1, b = 2, c = 3)
+
+julia> (; (keys .=> values)...)
+(a = 1, b = 2, c = 3)
+
+julia> nt1 = (a=1, b=2);
+
+julia> nt2 = (c=3, d=4);
+
+julia> (; nt1..., nt2..., b=20) # the final b overwrites the value from nt1
+(a = 1, b = 20, c = 3, d = 4)
+
+julia> (; zip(keys, values)...) # zip yields tuples such as (:a, 1)
 (a = 1, b = 2, c = 3)
 ```
 
@@ -935,6 +955,6 @@ Use of `getindex` methods with multiple `Symbol`s is available as of Julia 1.7.
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/namedtuple.jl#L3-L85)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/namedtuple.jl#L3-L110)
 
 ::

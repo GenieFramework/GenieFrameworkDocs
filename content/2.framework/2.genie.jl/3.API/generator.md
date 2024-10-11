@@ -19,7 +19,7 @@ autostart_app(path::String = "."; autostart::Bool = true) :: Nothing
 If `autostart` is `true`, the newly generated Genie app will be automatically started.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L652-L656)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L652-L656)
 
 ::
 
@@ -41,7 +41,7 @@ controller_file_name(resource_name::Union{String,Symbol})
 Computes the controller file name based on the resource name.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L241-L245)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L241-L245)
 
 ::
 
@@ -63,7 +63,7 @@ db_support(app_path::String = ".") :: Nothing
 Writes files used for interacting with the SearchLight ORM.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L362-L366)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L362-L366)
 
 ::
 ::ApiCard{object='Genie.Generator.fullstack_app' category='Function'}
@@ -79,7 +79,7 @@ fullstack_app(app_name::String) :: Nothing
 Writes the files necessary to create a full stack Genie app.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L274-L278)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L274-L278)
 
 ::
 ::ApiCard{object='Genie.Generator.generate_project' category='Function'}
@@ -95,7 +95,7 @@ generate_project(name)
 Generate the `Project.toml` with a name and a uuid. If this file already exists, generate `Project_sample.toml` as a reference instead.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L490-L495)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L490-L495)
 
 ::
 ::ApiCard{object='Genie.Generator.install_app_dependencies' category='Function'}
@@ -111,7 +111,7 @@ install_app_dependencies(app_path::String = ".") :: Nothing
 Installs the application&#39;s dependencies using Julia&#39;s Pkg
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L452-L456)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L452-L456)
 
 ::
 
@@ -139,7 +139,7 @@ microstack_app(app_name::String, app_path::String = ".") :: Nothing
 Writes the file necessary to create a microstack app.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L332-L336)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L332-L336)
 
 ::
 ::ApiCard{object='Genie.Generator.minimal' category='Function'}
@@ -155,7 +155,7 @@ minimal(app_name::String, app_path::String = abspath(app_name), autostart::Bool 
 Creates a minimal Genie app.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L288-L292)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L288-L292)
 
 ::
 ::ApiCard{object='Genie.Generator.mvc_support' category='Function'}
@@ -171,7 +171,7 @@ mvc_support(app_path::String = ".") :: Nothing
 Writes the files used for rendering resources using the MVC stack and the Genie templating system.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L350-L354)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L350-L354)
 
 ::
 ::ApiCard{object='Genie.Generator.newapp' category='Function'}
@@ -231,7 +231,7 @@ julia> Genie.Generator.newapp("MyGenieApp")
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L683-L723)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L683-L723)
 
 ::
 ::ApiCard{object='Genie.Generator.newapp_fullstack' category='Function'}
@@ -257,7 +257,7 @@ Template for scaffolding a new Genie app suitable for full stack web application
 (one of :MySQL, :SQLite, or :PostgreSQL). If `dbadapter` is `nothing`, an adapter will have to be selected interactivel at the REPL, during the app creation process.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L839-L850)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L839-L850)
 
 ::
 ::ApiCard{object='Genie.Generator.newapp_mvc' category='Function'}
@@ -283,7 +283,7 @@ Template for scaffolding a new Genie app suitable for MVC web applications (incl
 (one of :MySQL, :SQLite, or :PostgreSQL). If `dbadapter` is `nothing`, an adapter will have to be selected interactivel at the REPL, during the app creation process.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L820-L831)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L820-L831)
 
 ::
 ::ApiCard{object='Genie.Generator.newapp_webservice' category='Function'}
@@ -311,7 +311,7 @@ Template for scaffolding a new Genie app suitable for nimble web services.
 (one of :MySQL, :SQLite, or :PostgreSQL). If `dbadapter` is `nothing`, an adapter will have to be selected interactivel at the REPL, during the app creation process.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L799-L811)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L799-L811)
 
 ::
 ::ApiCard{object='Genie.Generator.newcontroller' category='Function'}
@@ -327,7 +327,7 @@ newcontroller(controller_name::Union{String,Symbol}) :: Nothing
 Creates a new `controller` file. If `pluralize` is `false`, the name of the controller is not automatically pluralized.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L18-L22)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L18-L22)
 
 
 
@@ -339,7 +339,7 @@ newcontroller(resource_name::String) :: Nothing
 Generates a new Genie controller file and persists it to the resources folder.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L31-L35)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L31-L35)
 
 ::
 ::ApiCard{object='Genie.Generator.newresource' category='Function'}
@@ -355,7 +355,7 @@ newresource(resource_name::Union{String,Symbol}; pluralize::Bool = true, context
 Creates all the files associated with a new resource. If `pluralize` is `false`, the name of the resource is not automatically pluralized.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L51-L56)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L51-L56)
 
 
 
@@ -367,7 +367,7 @@ newresource(resource_name::String, config::Settings) :: Nothing
 Generates all the files associated with a new resource and persists them to the resources folder.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L65-L69)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L65-L69)
 
 ::
 ::ApiCard{object='Genie.Generator.newtask' category='Function'}
@@ -383,7 +383,7 @@ newtask(task_name::Union{String,Symbol}) :: Nothing
 Creates a new Genie `Task` file.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L88-L92)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L88-L92)
 
 ::
 
@@ -417,7 +417,7 @@ remove_searchlight_initializer(app_path::String = ".") :: Nothing
 Removes the SearchLight initializer file if it&#39;s unused
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L671-L675)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L671-L675)
 
 ::
 ::ApiCard{object='Genie.Generator.resource_does_not_exist' category='Function'}
@@ -433,7 +433,7 @@ resource_does_not_exist(resource_path::String, file_name::String) :: Bool
 Returns `true` if the indicated resources does not exists - false otherwise.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L225-L229)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L225-L229)
 
 ::
 ::ApiCard{object='Genie.Generator.scaffold' category='Function'}
@@ -449,7 +449,7 @@ scaffold(app_name::String, app_path::String = "") :: Nothing
 Writes the file necessary to scaffold a minimal Genie app.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L305-L309)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L305-L309)
 
 ::
 
@@ -471,7 +471,7 @@ setup_resource_path(resource_name::String) :: String
 Computes and creates the directories structure needed to persist a new resource.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L104-L108)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L104-L108)
 
 ::
 ::ApiCard{object='Genie.Generator.setup_nix_bin_files' category='Function'}
@@ -487,7 +487,7 @@ setup_nix_bin_files(path::String = ".") :: Nothing
 Creates the bin/server and bin/repl binaries for *nix systems
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L197-L201)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L197-L201)
 
 ::
 ::ApiCard{object='Genie.Generator.setup_windows_bin_files' category='Function'}
@@ -503,7 +503,7 @@ setup_windows_bin_files(path::String = ".") :: Nothing
 Creates the bin/server and bin/repl binaries for Windows
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L172-L176)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L172-L176)
 
 ::
 
@@ -525,7 +525,7 @@ write_app_custom_files(path::String, app_path::String) :: Nothing
 Writes the Genie app main module file.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L391-L395)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L391-L395)
 
 ::
 
@@ -547,7 +547,7 @@ write_resource_file(resource_path::String, file_name::String, resource_name::Str
 Generates all resource files and persists them to disk.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L123-L127)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L123-L127)
 
 ::
 ::ApiCard{object='Genie.Generator.write_secrets_file' category='Function'}
@@ -563,6 +563,6 @@ write_secrets_file(app_path=".")
 Generates a valid `config/secrets.jl` file with a random secret token.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Generator.jl#L252-L256)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Generator.jl#L252-L256)
 
 ::

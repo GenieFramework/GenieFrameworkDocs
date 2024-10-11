@@ -47,7 +47,7 @@ Dict{String, Int64} with 2 entries:
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L31-L56)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/dict.jl#L31-L56)
 
 ::
 ::ApiCard{object='Genie.WebChannels.ChannelSubscriptionsCollection' category='Type'}
@@ -85,7 +85,7 @@ Dict{String, Int64} with 2 entries:
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L31-L56)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/dict.jl#L31-L56)
 
 ::
 
@@ -156,7 +156,7 @@ Dict{String, Int64} with 2 entries:
 Subscribes a web socket client `ws` to `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L86-L88)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L86-L88)
 
 ::
 ::ApiCard{object='Genie.WebChannels.unsubscribe' category='Function'}
@@ -167,7 +167,7 @@ Subscribes a web socket client `ws` to `channel`.
 Unsubscribes a web socket client `ws` from `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L108-L110)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L108-L110)
 
 ::
 ::ApiCard{object='Genie.WebChannels.unsubscribe_client' category='Function'}
@@ -178,7 +178,7 @@ Unsubscribes a web socket client `ws` from `channel`.
 Unsubscribes a web socket client `ws` from all the channels.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L127-L129)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L127-L129)
 
 ::
 ::ApiCard{object='Genie.WebChannels.unsubscribe_disconnected_clients' category='Function'}
@@ -191,7 +191,7 @@ unsubscribe_disconnected_clients() :: ChannelClientsCollection
 Unsubscribes clients which are no longer connected.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L153-L157)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L153-L157)
 
 ::
 ::ApiCard{object='Genie.WebChannels.push_subscription' category='Function'}
@@ -202,7 +202,7 @@ Unsubscribes clients which are no longer connected.
 Adds a new subscription for `client` to `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L174-L176)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L174-L176)
 
 ::
 ::ApiCard{object='Genie.WebChannels.pop_subscription' category='Function'}
@@ -213,14 +213,14 @@ Adds a new subscription for `client` to `channel`.
 Removes the subscription of `client` to `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L191-L193)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L191-L193)
 
 
 
 Removes all subscriptions of `client`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L209-L211)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L209-L211)
 
 ::
 ::ApiCard{object='Genie.WebChannels.broadcast' category='Function'}
@@ -231,14 +231,14 @@ Removes all subscriptions of `client`.
 Pushes `msg` (and `payload`) to all the clients subscribed to the channels in `channels`, with the exception of `except`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L221-L223)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L221-L223)
 
 
 
 Pushes `msg` (and `payload`) to all the clients subscribed to the channels in `channels`, with the exception of `except`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L266-L268)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L266-L268)
 
 ::
 ::ApiCard{object='Genie.WebChannels.message' category='Function'}
@@ -249,6 +249,6 @@ Pushes `msg` (and `payload`) to all the clients subscribed to the channels in `c
 Writes `msg` to web socket for `client`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebChannels.jl#L293-L295)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebChannels.jl#L293-L295)
 
 ::

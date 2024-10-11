@@ -21,7 +21,7 @@ julia> Configuration.env()
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Configuration.jl#L18-L28)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Configuration.jl#L18-L28)
 
 ::
 ::ApiCard{object='SearchLight.Configuration.read_db_connection_data' category='Function'}
@@ -51,7 +51,7 @@ Dict{Any,Any} with 6 entries:
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Configuration.jl#L32-L50)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Configuration.jl#L32-L50)
 
 ::
 
@@ -73,6 +73,6 @@ mutable struct Settings
 App configuration - sets up the app&#39;s defaults. Individual options are overwritten in the corresponding environment file.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Configuration.jl#L98-L102)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Configuration.jl#L98-L102)
 
 ::

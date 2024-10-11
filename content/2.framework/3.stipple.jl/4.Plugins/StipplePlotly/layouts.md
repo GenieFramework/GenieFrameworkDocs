@@ -122,7 +122,7 @@ julia>
   
 
 
-[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.2/src/Layouts.jl#L94-L151)
+[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.4/src/Layouts.jl#L94-L151)
 
 ::
 
@@ -194,7 +194,7 @@ julia> error_x = ErrorBar(
   
 
 
-[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.2/src/Layouts.jl#L243-L272)
+[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.4/src/Layouts.jl#L243-L272)
 
 ::
 ::ApiCard{object='StipplePlotly.Layouts.GeoProjection' category='Type'}
@@ -245,7 +245,7 @@ julia>
   
 
 
-[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.2/src/Layouts.jl#L897-L917)
+[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.4/src/Layouts.jl#L897-L917)
 
 ::
 
@@ -374,7 +374,7 @@ julia>
   
 
 
-[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.2/src/Layouts.jl#L339-L392)
+[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.4/src/Layouts.jl#L339-L392)
 
 ::
 ::ApiCard{object='StipplePlotly.Layouts.PlotLayoutAxis' category='Type'}
@@ -553,7 +553,7 @@ julia>
   
 
 
-[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.2/src/Layouts.jl#L477-L563)
+[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.4/src/Layouts.jl#L477-L563)
 
 ::
 ::ApiCard{object='StipplePlotly.Layouts.PlotLayoutGeo' category='Type'}
@@ -652,7 +652,7 @@ julia>
   
 
 
-[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.2/src/Layouts.jl#L949-L993)
+[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.4/src/Layouts.jl#L949-L993)
 
 ::
 ::ApiCard{object='StipplePlotly.Layouts.PlotLayoutGrid' category='Type'}
@@ -717,7 +717,7 @@ julia>
   
 
 
-[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.2/src/Layouts.jl#L817-L844)
+[source](https://github.com/GenieFramework/StipplePlotly.jl/blob/v0.14.4/src/Layouts.jl#L817-L844)
 
 ::
 

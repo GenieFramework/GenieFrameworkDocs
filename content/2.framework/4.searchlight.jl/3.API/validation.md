@@ -57,7 +57,7 @@ julia> ValidationRule(:email, not_empty)
 
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Validation.jl#L53-L84)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Validation.jl#L53-L84)
 
 ::
 ::ApiCard{object='SearchLight.Validation.ModelValidator' category='Type'}
@@ -68,7 +68,7 @@ julia> ValidationRule(:email, not_empty)
 The object that defines the rules and stores the validation errors associated with the fields of a `model`.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Validation.jl#L95-L97)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Validation.jl#L95-L97)
 
 ::
 
@@ -90,7 +90,7 @@ validate(m::T)::Bool where {T<:AbstractModel}
 Validates `m`&#39;s data. A `bool` is return and existing errors are pushed to the validator&#39;s error stack.
 
 
-[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.0/src/Validation.jl#L117-L121)
+[source](https://github.com/GenieFramework/SearchLight.jl/blob/v2.11.1/src/Validation.jl#L117-L121)
 
 ::
 

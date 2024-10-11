@@ -177,7 +177,7 @@ julia> parse(Complex{Float64}, "3.2e-1 + 4.5im")
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/parse.jl#L7-L37)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/parse.jl#L7-L37)
 
 
 
@@ -189,7 +189,7 @@ parse(::Type{Platform}, triplet::AbstractString)
 Parses a string platform triplet back into a `Platform` object.
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/binaryplatforms.jl#L665-L669)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/binaryplatforms.jl#L666-L670)
 
 
 
@@ -354,6 +354,6 @@ true
 See also: `round`, `trunc`, `oftype`, `reinterpret`.
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/essentials.jl#L237-L283)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/essentials.jl#L265-L311)
 
 ::

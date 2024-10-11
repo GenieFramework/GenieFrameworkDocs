@@ -59,7 +59,7 @@ Dict{String, Int64} with 2 entries:
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L31-L56)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/dict.jl#L31-L56)
 
 ::
 
@@ -103,7 +103,7 @@ Dict{String, Int64} with 2 entries:
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L31-L56)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/dict.jl#L31-L56)
 
 ::
 ::ApiCard{object='Genie.WebThreads.ClientId' category='Type'}
@@ -119,7 +119,7 @@ UInt64 <: Unsigned
 64-bit unsigned integer type.
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/docs/basedocs.jl#L2021-L2025)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/docs/basedocs.jl#L2096-L2100)
 
 ::
 ::ApiCard{object='Genie.WebThreads.ChannelName' category='Type'}
@@ -137,7 +137,7 @@ The default string type in Julia, used by e.g. string literals.
 `String`s are immutable sequences of `Char`s. A `String` is stored internally as a contiguous byte array, and while they are interpreted as being UTF-8 encoded, they can be composed of any byte sequence. Use `isvalid` to validate that the underlying byte sequence is valid as UTF-8.
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/string.jl#L34-L43)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/strings/string.jl#L34-L43)
 
 ::
 
@@ -154,14 +154,14 @@ The default string type in Julia, used by e.g. string literals.
 Pushes `msg` (and `payload`) to all the clients subscribed to the channels in `channels`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L217-L219)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L217-L219)
 
 
 
 Pushes `msg` (and `payload`) to all the clients subscribed to all the channels.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L252-L254)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L252-L254)
 
 ::
 
@@ -196,14 +196,14 @@ Pushes `msg` (and `payload`) to all the clients subscribed to all the channels.
 Pushes `msg` (and `payload`) to `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L264-L266)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L264-L266)
 
 
 
 Writes `msg` to message queue for `client`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L274-L276)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L274-L276)
 
 ::
 ::ApiCard{object='Genie.WebThreads.pop_subscription' category='Function'}
@@ -214,14 +214,14 @@ Writes `msg` to message queue for `client`.
 Removes the subscription of `client` to `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L185-L187)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L185-L187)
 
 
 
 Removes all subscriptions of `client`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L205-L207)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L205-L207)
 
 ::
 
@@ -244,7 +244,7 @@ Removes all subscriptions of `client`.
 Adds a new subscription for `client` to `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L166-L168)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L166-L168)
 
 ::
 ::ApiCard{object='Genie.WebThreads.subscribe' category='Function'}
@@ -255,7 +255,7 @@ Adds a new subscription for `client` to `channel`.
 Subscribes a web thread client `wt` to `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L78-L80)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L78-L80)
 
 ::
 
@@ -278,7 +278,7 @@ Subscribes a web thread client `wt` to `channel`.
 Unsubscribes a web socket client `wt` from `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L96-L98)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L96-L98)
 
 ::
 ::ApiCard{object='Genie.WebThreads.unsubscribe_client' category='Function'}
@@ -289,7 +289,7 @@ Unsubscribes a web socket client `wt` from `channel`.
 Unsubscribes a web socket client `wt` from all the channels.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L111-L113)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L111-L113)
 
 ::
 
@@ -308,7 +308,7 @@ unsubscribe_disconnected_clients() :: ChannelClientsCollection
 Unsubscribes clients which are no longer connected.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/WebThreads.jl#L132-L136)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/WebThreads.jl#L132-L136)
 
 ::
 

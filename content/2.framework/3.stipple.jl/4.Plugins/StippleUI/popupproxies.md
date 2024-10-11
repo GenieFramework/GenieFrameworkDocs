@@ -93,7 +93,7 @@ julia> string(-13, base = 5, pad = 4)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/intfuncs.jl#L787-L803)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/intfuncs.jl#L864-L880)
 
 
 
@@ -117,6 +117,6 @@ julia> string("a", 1, true)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/strings/io.jl#L166-L184)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/strings/io.jl#L170-L188)
 
 ::

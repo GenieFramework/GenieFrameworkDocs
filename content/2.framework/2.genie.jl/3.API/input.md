@@ -13,7 +13,7 @@ HttpFile
 Represents a file sent over HTTP
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Input.jl#L11-L15)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Input.jl#L11-L15)
 
 ::
 

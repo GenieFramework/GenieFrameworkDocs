@@ -13,7 +13,7 @@ mutable struct WebRenderable
 Represents an object that can be rendered on the web as a HTTP Response
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L72-L76)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L72-L76)
 
 ::
 
@@ -36,7 +36,7 @@ HTTP.Messages.Response: HTTP/1.1 302 Moved Temporarily Content-Type: application
 Redirecting you to /index
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L179-L196)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L179-L196)
 
 ::
 ::ApiCard{object='Genie.Renderer.hasrequested' category='Function'}
@@ -52,7 +52,7 @@ hasrequested(content_type::Symbol) :: Bool
 Checks wheter or not the requested content type matches `content_type`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L206-L210)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L206-L210)
 
 ::
 ::ApiCard{object='Genie.Renderer.respond' category='Function'}
@@ -63,7 +63,7 @@ Checks wheter or not the requested content type matches `content_type`.
 Constructs a `Response` corresponding to the Content-Type of the request.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L219-L221)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L219-L221)
 
 ::
 ::ApiCard{object='Genie.Renderer.registervars' category='Function'}
@@ -79,7 +79,7 @@ registervars(vs...) :: Nothing
 Loads the rendering vars into the task&#39;s scope
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L264-L268)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L264-L268)
 
 ::
 
@@ -101,7 +101,7 @@ view_file_info(path::String, supported_extensions::Vector{String}) :: Tuple{Stri
 Extracts path and extension info about a file
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L293-L297)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L293-L297)
 
 ::
 ::ApiCard{object='Genie.Renderer.vars_signature' category='Function'}
@@ -117,7 +117,7 @@ vars_signature() :: String
 Collects the names of the view vars in order to create a unique hash/salt to identify compiled views with different vars.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L324-L329)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L324-L329)
 
 ::
 ::ApiCard{object='Genie.Renderer.function_name' category='Function'}
@@ -133,7 +133,7 @@ function_name(file_path::String)
 Generates function name for generated HTML+Julia views.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L335-L339)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L335-L339)
 
 ::
 ::ApiCard{object='Genie.Renderer.m_name' category='Function'}
@@ -149,7 +149,7 @@ m_name(file_path::String)
 Generates module name for generated HTML+Julia views.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L345-L349)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L345-L349)
 
 ::
 ::ApiCard{object='Genie.Renderer.build_is_stale' category='Function'}
@@ -165,7 +165,7 @@ build_is_stale(file_path::String, build_path::String) :: Bool
 Checks if the view template has been changed since the last time the template was compiled.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L355-L359)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L355-L359)
 
 ::
 ::ApiCard{object='Genie.Renderer.build_module' category='Function'}
@@ -181,7 +181,7 @@ build_module(content::String, path::String, mod_name::String) :: String
 Persists compiled Julia view data to file and returns the path
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L371-L375)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L371-L375)
 
 ::
 ::ApiCard{object='Genie.Renderer.preparebuilds' category='Function'}
@@ -197,7 +197,7 @@ preparebuilds() :: Bool
 Sets up the build folder and the build module file for generating the compiled views.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L397-L401)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L397-L401)
 
 ::
 ::ApiCard{object='Genie.Renderer.purgebuilds' category='Function'}
@@ -213,7 +213,7 @@ purgebuilds(subfolder = BUILD_NAME) :: Bool
 Removes the views builds folders with all the generated views.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L410-L414)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L410-L414)
 
 ::
 ::ApiCard{object='Genie.Renderer.changebuilds' category='Function'}
@@ -229,7 +229,7 @@ changebuilds(subfolder = BUILD_NAME) :: Bool
 Changes/creates a new builds folder.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L422-L426)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L422-L426)
 
 ::
 ::ApiCard{object='Genie.Renderer.set_negotiated_content' category='Function'}
@@ -245,7 +245,7 @@ set_negotiated_content(req::HTTP.Request, res::HTTP.Response, params::Dict{Symbo
 Configures the request, response, and params response content type based on the request and defaults.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L467-L471)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L467-L471)
 
 ::
 ::ApiCard{object='Genie.Renderer.negotiate_content' category='Function'}
@@ -261,6 +261,6 @@ negotiate_content(req::Request, res::Response, params::Params) :: Response
 Computes the content-type of the `Response`, based on the information in the `Request`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Renderer.jl#L483-L487)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Renderer.jl#L483-L487)
 
 ::

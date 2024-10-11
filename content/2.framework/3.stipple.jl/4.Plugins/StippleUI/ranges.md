@@ -115,7 +115,7 @@ The versions with `stop` as a sole keyword argument, or `length` as a sole keywo
 A `UnitRange` is not produced if `step` is provided even if specified as one.
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/range.jl#L53-L139)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/range.jl#L58-L144)
 
 ::
 ::ApiCard{object='StippleUI.Ranges.slider' category='Function'}

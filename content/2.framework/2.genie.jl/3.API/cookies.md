@@ -35,7 +35,7 @@ Dict{String, Int64} with 2 entries:
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L31-L56)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/dict.jl#L31-L56)
 
 ::
 ::ApiCard{object='Genie.Cookies.get' category='Function'}
@@ -61,7 +61,7 @@ Attempts to get the Cookie value stored at `key` within `payload`. If the `key` 
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Cookies.jl#L10-L21)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Cookies.jl#L10-L21)
 
 
 
@@ -81,7 +81,7 @@ Retrieves a value stored on the cookie as `key` from the `Respose` object.
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Cookies.jl#L28-L37)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Cookies.jl#L28-L37)
 
 
 
@@ -101,7 +101,7 @@ Retrieves a value stored on the cookie as `key` from the `Request` object.
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Cookies.jl#L45-L54)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Cookies.jl#L45-L54)
 
 ::
 ::ApiCard{object='Genie.Cookies.getcookies' category='Function'}
@@ -117,7 +117,7 @@ getcookies(req::HTTP.Request) :: Vector{HTTP.Cookies.Cookie}
 Extracts cookies from within `req`
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Cookies.jl#L160-L164)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Cookies.jl#L160-L164)
 
 
 
@@ -129,7 +129,7 @@ getcookies(req::HTTP.Request) :: Vector{HTTP.Cookies.Cookie}
 Extracts cookies from within `req`, filtering them by `matching` name.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Cookies.jl#L170-L174)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Cookies.jl#L170-L174)
 
 ::
 ::ApiCard{object='Genie.Cookies.set!' category='Function'}
@@ -157,7 +157,7 @@ Sets `value` under the `key` label on the `Cookie`.
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Cookies.jl#L62-L73)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Cookies.jl#L62-L73)
 
 ::
 ::ApiCard{object='Genie.Cookies.nullablevalue' category='Function'}
@@ -181,6 +181,6 @@ Attempts to retrieve a cookie value stored at `key` in the `payload object` and 
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Cookies.jl#L135-L144)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Cookies.jl#L135-L144)
 
 ::

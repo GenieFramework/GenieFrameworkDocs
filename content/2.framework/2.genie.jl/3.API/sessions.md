@@ -56,12 +56,12 @@ julia> get(d, "c", 3)
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L487-L506)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/dict.jl#L501-L520)
 
 
 
 ```julia
-get(f::Function, collection, key)
+get(f::Union{Function, Type}, collection, key)
 ```
 
 
@@ -78,7 +78,7 @@ end
 
 
 
-[source](https://github.com/JuliaLang/julia/blob/bed2cd540a11544ed4be381d471bbf590f0b745e/base/dict.jl#L514-L528)
+[source](https://github.com/JuliaLang/julia/blob/6f3fdf7b36250fb95f512a2b927ad2518c07d2b5/base/dict.jl#L528-L542)
 
 
 

@@ -13,7 +13,7 @@ buildpath() :: String
 Constructs the temp dir where Genie&#39;s view files are built.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L94-L98)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L94-L98)
 
 ::
 ::ApiCard{object='Genie.Configuration.config!' category='Function'}
@@ -29,7 +29,7 @@ config!(; kwargs...)
 Updates Genie.config using the provided keyword arguments.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L127-L131)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L127-L131)
 
 ::
 ::ApiCard{object='Genie.Configuration.env' category='Function'}
@@ -53,7 +53,7 @@ julia> Configuration.env()
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L80-L90)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L80-L90)
 
 ::
 ::ApiCard{object='Genie.Configuration.isdev' category='Function'}
@@ -80,7 +80,7 @@ false
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L29-L42)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L29-L42)
 
 ::
 ::ApiCard{object='Genie.Configuration.isprod' category='Function'}
@@ -107,7 +107,7 @@ false
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L46-L59)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L46-L59)
 
 ::
 ::ApiCard{object='Genie.Configuration.istest' category='Function'}
@@ -134,7 +134,7 @@ false
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L63-L76)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L63-L76)
 
 ::
 ::ApiCard{object='Genie.Configuration.pkginfo' category='Function'}
@@ -150,7 +150,7 @@ pkginfo(pkg::String)
 Returns installed package information for `pkg`
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L11-L15)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L11-L15)
 
 ::
 ::ApiCard{object='Genie.Configuration.Settings' category='Type'}
@@ -210,6 +210,6 @@ App configuration - sets up the app&#39;s defaults. Individual options are overw
   
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Configuration.jl#L166-L193)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Configuration.jl#L166-L193)
 
 ::

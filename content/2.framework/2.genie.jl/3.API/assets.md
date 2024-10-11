@@ -27,7 +27,7 @@ Stipple.DEPS[:qdraggabletree] = draggabletree_deps
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L285-L309)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L285-L309)
 
 ::
 ::ApiCard{object='Genie.Assets.AssetsConfig' category='Type'}
@@ -43,7 +43,7 @@ mutable struct AssetsConfig
 Manages the assets configuration for the current package. Define your own instance of AssetsConfig if you want to add support for asset management for your package through Genie.Assets.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L18-L23)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L18-L23)
 
 ::
 ::ApiCard{object='Genie.Assets.assets_config!' category='Function'}
@@ -67,7 +67,7 @@ Genie.Assets.assets_config!([Genie, Stipple, StippleUI], host = "https://cdn.sta
 
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L41-L52)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L41-L52)
 
 
 
@@ -79,7 +79,7 @@ assets_config!(; config...) :: Nothing
 Updates the assets configuration for the current package.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L69-L73)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L69-L73)
 
 ::
 
@@ -102,7 +102,7 @@ asset_file(; cwd = "", file::String, path::String = "", type::String = "", prefi
 Generates the file system path to an asset file.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L164-L169)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L164-L169)
 
 ::
 ::ApiCard{object='Genie.Assets.asset_path' category='Function'}
@@ -123,7 +123,7 @@ asset_path(ac::AssetsConfig, tp::Union{Symbol,String}; type::String = string(tp)
 Generates the path to an asset file.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L96-L105)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L96-L105)
 
 ::
 ::ApiCard{object='Genie.Assets.asset_route' category='Function'}
@@ -144,7 +144,7 @@ asset_route(ac::AssetsConfig, tp::Union{Symbol,String}; type::String = string(tp
 Generates the route to an asset file.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L131-L140)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L131-L140)
 
 ::
 ::ApiCard{object='Genie.Assets.channels' category='Function'}
@@ -160,7 +160,7 @@ channels(channel::AbstractString = Genie.config.webchannels_default_route) :: St
 Outputs the `channels.js` file included with the Genie package.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L338-L342)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L338-L342)
 
 ::
 
@@ -182,7 +182,7 @@ channels_script(channel::AbstractString = Genie.config.webchannels_default_route
 Outputs the channels JavaScript content within `<script>...</script>` tags, for embedding into the page.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L348-L352)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L348-L352)
 
 ::
 
@@ -204,7 +204,7 @@ channels_subscribe(channel::AbstractString = Genie.config.webchannels_default_ro
 Registers subscription and unsubscription channels for `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L362-L366)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L362-L366)
 
 ::
 ::ApiCard{object='Genie.Assets.channels_support' category='Function'}
@@ -220,7 +220,7 @@ channels_support(channel = Genie.config.webchannels_default_route) :: String
 Provides full web channels support, setting up routes for loading support JS files, web sockets subscription and returning the `<script>` tag for including the linked JS file into the web page.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L411-L416)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L411-L416)
 
 ::
 ::ApiCard{object='Genie.Assets.css_asset' category='Function'}
@@ -236,7 +236,7 @@ css_asset(file_name::String) :: String
 Path to a css asset. The `file_name` should not include the extension.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L188-L192)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L188-L192)
 
 ::
 ::ApiCard{object='Genie.Assets.embedded' category='Function'}
@@ -252,7 +252,7 @@ embeded(path::String) :: String
 Reads and outputs the file at `path`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L266-L270)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L266-L270)
 
 ::
 ::ApiCard{object='Genie.Assets.embedded_path' category='Function'}
@@ -268,7 +268,7 @@ embeded_path(path::String) :: String
 Returns the path relative to Genie&#39;s root package dir.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L276-L280)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L276-L280)
 
 ::
 ::ApiCard{object='Genie.Assets.external_assets' category='Function'}
@@ -286,7 +286,7 @@ external_assets() :: Bool
 Returns true if the current package is using external assets.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L78-L84)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L78-L84)
 
 ::
 ::ApiCard{object='Genie.Assets.favicon_support' category='Function'}
@@ -302,7 +302,7 @@ favicon_support() :: String
 Outputs the `<link>` tag for referencing the favicon file embedded with Genie.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L537-L541)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L537-L541)
 
 ::
 ::ApiCard{object='Genie.Assets.include_asset' category='Function'}
@@ -318,7 +318,7 @@ include_asset(asset_type::Union{String,Symbol}, file_name::Union{String,Symbol})
 Returns the path to an asset. `asset_type` can be one of `:js`, `:css`. The `file_name` should not include the extension.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L178-L182)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L178-L182)
 
 ::
 ::ApiCard{object='Genie.Assets.js_asset' category='Function'}
@@ -334,7 +334,7 @@ js_asset(file_name::String) :: String
 Path to a js asset. `file_name` should not include the extension.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L199-L203)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L199-L203)
 
 ::
 
@@ -356,7 +356,7 @@ js_settings(channel::String = Genie.config.webchannels_default_route) :: String
 Sets up a `window.Genie.Settings` JavaScript object which exposes relevant Genie app settings from `Genie.config`
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L215-L219)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L215-L219)
 
 ::
 ::ApiCard{object='Genie.Assets.webthreads' category='Function'}
@@ -372,7 +372,7 @@ webthreads() :: String
 Outputs the webthreads.js file included with the Genie package
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L427-L431)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L427-L431)
 
 ::
 
@@ -394,7 +394,7 @@ function webthreads_push_pull(channel) :: Nothing
 Registers push and pull routes for `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L477-L481)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L477-L481)
 
 ::
 
@@ -416,7 +416,7 @@ webthreads_script() :: String
 Outputs the channels JavaScript content within `<script>...</script>` tags, for embedding into the page.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L439-L443)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L439-L443)
 
 ::
 
@@ -438,7 +438,7 @@ function webthreads_subscribe(channel) :: Nothing
 Registers subscription and unsubscription routes for `channel`.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L453-L457)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L453-L457)
 
 ::
 ::ApiCard{object='Genie.Assets.webthreads_support' category='Function'}
@@ -454,6 +454,6 @@ webthreads_support(channel = Genie.config.webthreads_default_route) :: String
 Provides full web channels support, setting up routes for loading support JS files, web sockets subscription and returning the `<script>` tag for including the linked JS file into the web page.
 
 
-[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.5/src/Assets.jl#L520-L525)
+[source](https://github.com/GenieFramework/Genie.jl/blob/v5.30.6/src/Assets.jl#L520-L525)
 
 ::
