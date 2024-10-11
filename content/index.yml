@@ -3,7 +3,7 @@ description: Everything you need to start developing Genie apps.
 navigation: false
 
 features:
-  title: Genie documentation site
+  title: Welcome to the Genie documentation site
 sections:
   - headline: "Build data apps quickly with drag and drop"
     title: Genie Builder
@@ -33,7 +33,7 @@ sections:
         class: ml-6
   - headline: "Build production-grade web apps in pure Julia"
     title: Genie Framework
-    description: Build full-stack web apps and backends with the most complete web framework in Julia.
+    description: Build full-stack web apps and backends with the most complete open-source web framework in Julia.
     id: features
     align: left
     features:
