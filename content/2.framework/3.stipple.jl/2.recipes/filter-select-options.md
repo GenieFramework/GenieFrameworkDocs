@@ -1,4 +1,3 @@
-
 ---
 title: Filter select options
 description: Enter text in a select menu to filter the available options.
