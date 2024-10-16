@@ -16,8 +16,8 @@
     </div>
   </div>
   <div style="max-width:1400px; margin-left:auto; margin-right:auto; margin-top:30px">
-    <UPageGrid  >
-    <UCard v-for="post in contentQuery" style="width:450px;padding:0px" :ui="{ header: {padding: ''}, body: {padding:'px-1 py-1 sm:p-4'}}" >
+    <UPageGrid  :ui="{wrapper:'p-4'}">
+    <UCard v-for="post in contentQuery"  :ui="{ header: {padding: ''}, body: {padding:'px-1 py-1 sm:p-4'}}" >
 
     <template #header>
             <NuxtLink :to="post._path">
