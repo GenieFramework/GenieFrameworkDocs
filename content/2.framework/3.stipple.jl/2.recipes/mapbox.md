@@ -1,6 +1,6 @@
 ---
 title: Mapbox map
-description: Plot a geograpbical map with Mapbox.
+description: Plot a geographical map with Mapbox.
 ---
 
 ## Mapbox map
