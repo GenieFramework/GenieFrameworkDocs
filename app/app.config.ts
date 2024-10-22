@@ -62,7 +62,7 @@ export default defineAppConfig({
     toc: {
         title: 'Table of Contents',
         bottom: {
-            title: 'Community',
+            title: 'Resources',
             edit: 'https://github.com/GenieFramework/GenieFrameworkDocs/edit/main/content',
             links: [
                 {
@@ -82,7 +82,7 @@ export default defineAppConfig({
                     label: 'Star on GitHub',
                     to: 'https://github.com/GenieFramework/Genie.jl',
                     target: '_blank'
-                },
+                }
             ]
         }
     }

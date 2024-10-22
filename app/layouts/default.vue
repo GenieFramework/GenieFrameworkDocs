@@ -106,6 +106,21 @@ const links = computed(() => [toc?.bottom?.edit && {
               :title="toc.bottom.title"
               :links="links"
             />
+            <div style="display:flex;margin-top:2px">
+                  <div style="padding-top:2px;display:block">
+                    <UIcon name="i-heroicons-user-group" class="w-5 h-5" />
+                  </div>
+              <ULink
+                  to="https://fantastical.app/pere/office-hours"
+                  active-class="text-primary"
+                  inactive-class="text-blue-500 dark:text-blue-400 hover:text-gray-700 dark:hover:text-gray-200"
+                  class="ml-2"
+                  target="_blank"
+                  >
+               Book a meeting
+              </ULink>
+            </div>
+
           </div>
         </template>
       </UContentToc>
