@@ -73,7 +73,7 @@ export default defineAppConfig({
                 },
                 {
                     icon: 'i-heroicons-chat-bubble-bottom-center',
-                    label: 'Discord',
+                    label: 'Help forum',
                     to: 'https://discord.com/invite/9zyZbD6J7H',
                     target: '_blank'
                 },
