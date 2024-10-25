@@ -57,59 +57,75 @@ const links = computed(() => [toc?.bottom?.edit && {
   to: `${toc.bottom.edit}/${page?.value?._file}`,
   target: '_blank'
 }, ...(toc?.bottom?.links || [])].filter(Boolean))
+
+
+// popover
+const isOpen = ref(false)
 </script>
 
 <template>
   <UContainer>
   <UPage>
 
-      <template #left v-if="root!='tutorials'">
-        <UAside >
-        <!--<PkgSelect v-if="root== 'framework'"/> -->
-          <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="true" default-open style="min-height:600px" :defaultOpen="1"/>
-        </UAside>
-      </template>
+  <template #left v-if="root!='tutorials'">
+    <UAside >
+    <!--<PkgSelect v-if="root== 'framework'"/> -->
+    <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="true" default-open style="min-height:600px" :defaultOpen="1"/>
+    </UAside>
+  </template>
 
-    <UPageBody prose>
-      <ContentRenderer
-        v-if="page.body"
-        :value="page"
+  <UPageBody prose>
+  <ContentRenderer
+      v-if="page.body"
+      :value="page"
       />
 
-      <hr v-if="surround?.length">
+  <hr v-if="surround?.length">
 
-      <UContentSurround :surround="surround" />
-    </UPageBody>
+  <UContentSurround :surround="surround" />
+  </UPageBody>
 
-    <template
+  <template
       v-if="page.toc !== false"
       #right
-    >
-      <UContentToc
-        :title="toc?.title"
-        :links="page.body?.toc?.links"
       >
-        <template
-          v-if="toc?.bottom"
-          #bottom
-        >
-          <div
-            class="hidden lg:block space-y-6"
-            :class="{ '!mt-6': page.body?.toc?.links?.length }"
+      <UContentToc
+          :title="toc?.title"
+          :links="page.body?.toc?.links"
           >
-            <UDivider
-              v-if="page.body?.toc?.links?.length"
-              type="dashed"
-            />
+          <template
+              v-if="toc?.bottom"
+              #bottom
+              >
+              <div
+                  class="hidden lg:block space-y-6"
+                  :class="{ '!mt-6': page.body?.toc?.links?.length }"
+                  >
+                  <UDivider
+                      v-if="page.body?.toc?.links?.length"
+                      type="dashed"
+                      />
 
-            <UPageLinks
-              :title="toc.bottom.title"
-              :links="links"
-            />
-          </div>
-        </template>
+                  <UPageLinks
+                      :title="toc.bottom.title"
+                      :links="links"
+                      />
+
+            <div style="margin-top:4px">
+            <UButton label="Talk to us" @click="isOpen = true" icon="i-heroicons-user-group" variant="link" :padded="false"/>
+            </div>
+
+            <UModal v-model="isOpen" color="secondary">
+            <div class="p-4">
+              <iframe style="width:100%;height:620px" src="https://meetings.hubspot.com/pere-gimenez?embed=true"></iframe>
+            </div>
+            </UModal>
+
+              </div>
+
+          </template>
       </UContentToc>
-    </template>
+  </template>
   </UPage>
   </UContainer>
 </template>
