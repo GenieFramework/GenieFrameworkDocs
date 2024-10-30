@@ -109,6 +109,14 @@ export default defineNuxtConfig({
         devtools: true, // (optional)
     },
 
+nitro: {
+    prerender: {
+      crawlLinks: true,
+      concurrency: 10,
+      failOnError: false,
+      static: false,
+    }
+  }
 // nitro: {
 //     prerender: {
 //       crawlLinks: true,
