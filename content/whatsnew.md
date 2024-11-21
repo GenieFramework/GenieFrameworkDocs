@@ -6,6 +6,55 @@ description: See what's new with Genie Builder and Genie Framework
 
 # Genie change log
 
+
+## Genie Builder 1.1.1 - 2024-11-21
+
+### Added
+- Support for new versions of GenieBuilder.jl, Stipple
+
+### Fixed
+- Support for Julia PATH
+
+
+## Genie Builder 1.0.38 - 2024-11-07
+
+### Added
+- New integrated Theme Editor
+
+### Fixed
+- Uploader component overflow on canvas
+- Fixed UI issues in right-side panel
+
+
+
+## Genie Builder 1.0.37 - 2024-10-23
+
+### Fixed
+- AI Assistant answers can be copied to clipboard
+
+
+## Genie Builder 1.0.36 - 2024-09-27
+
+### Added
+- Improved information message dialogs
+
+### Fixed
+- Stop GenieBuilder server before running Update command
+
+
+## Genie Builder 1.0.35 - 2024-09-26
+
+### Added
+- New TreeMap chart component
+- New Link component
+- New Container component
+
+### Fixed
+- Small fixes in multiple components
+
+
+###################################################
+
 ## Genie Builder 1.0.33 - 2024-09-23
 
 ### Added
