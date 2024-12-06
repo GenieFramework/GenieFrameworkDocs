@@ -43,6 +43,7 @@ useSeoMeta({
           ring: ' ring-2',
           header: { padding: '' },
           body: { padding: 'px-1 py-1 sm:p-4' },
+          footer: { padding: 'px-0' },
         }"
       >
         <template #header>
@@ -103,6 +104,26 @@ useSeoMeta({
         </div>
         <div style="min-height: 100px">
           {{ post.description }}
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <div style="display: flex; gap: 10px">
+            <UBadge
+              v-for="(tag, idx) of post.tags"
+              :key="idx"
+              color="primary"
+              variant="soft"
+              >{{ tag }}</UBadge
+            >
+          </div>
+          <div style="display: flex; gap: 10px">
+            <UBadge
+              v-for="(tag, idx) of post.packages"
+              :key="idx"
+              color="orange"
+              variant="soft"
+              >{{ tag }}</UBadge
+            >
+          </div>
         </div>
       </UCard>
     </UPageGrid>
