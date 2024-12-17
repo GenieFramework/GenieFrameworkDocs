@@ -1,0 +1,17 @@
+name: Links
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 18 * * *"
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write # required for peter-evans/create-issue-from-file
+    steps:
+      - uses: filiph/linkcheck@2.0.23
+        with:
+          arguments: https://learn.genieframework.com
