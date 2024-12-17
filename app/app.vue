@@ -14,7 +14,7 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
-    { rel: 'icon', href: '/public/assets/icon.svg' }
+    { rel: 'icon', href: '/assets/icon.svg' }
   ],
   htmlAttrs: {
     lang: 'en'
