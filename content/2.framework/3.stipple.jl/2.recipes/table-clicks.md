@@ -7,9 +7,9 @@ description: Detect clicks on a table row.
 
 **Detect clicks on a table row.**
 
-Quasar's `v-on:row-click` event generates an event code and a `row` variable with the clicked row's content. You can define an anonymous function to capture these two objedts, and perform any action with them. Note that the anonymous function is executed in the front end and therefore it needs to be in Javascript.
+Quasar's `v-on:row-click` event generates an event code and a `row` variable with the clicked row's content. You can define an anonymous function to capture these two objects, and perform any action with them. Note that the anonymous function is executed in the front end and therefore it needs to be in Javascript.
 
-````julia
+```julia
 module App
 using GenieFramework
 using DataFrames
@@ -35,7 +35,6 @@ function ui()
 end
 @page("/", ui)
 end
-````
-
+```
 
 [source](https://github.com/GenieFramework/CodeExamples/blob/main/src/2.reactive-ui/table-clicks.jl)
